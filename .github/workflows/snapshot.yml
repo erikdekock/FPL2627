@@ -1,0 +1,29 @@
+name: FPL daily snapshot
+on:
+  schedule:
+    - cron: '30 5 * * *'
+  workflow_dispatch: {}
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Pull FPL data
+        env:
+          FPL_TEAM_ID: "6756883"
+          FPL_LEAGUE_ID: "348280"
+        run: python scripts/fpl_pull.py
+      - name: Prune old snapshots
+        run: find data/snapshots -name 'fpl_*.json' -mtime +14 -delete || true
+      - name: Commit
+        run: |
+          git config user.name "fpl-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A data/snapshots
+          git diff --cached --quiet || git commit -m "snapshot: $(date -u +%F)"
+          git push
