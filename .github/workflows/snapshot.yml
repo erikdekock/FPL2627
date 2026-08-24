@@ -20,10 +20,16 @@ jobs:
         run: python scripts/fpl_pull.py
       - name: Prune old snapshots
         run: find data/snapshots -name 'fpl_*.json' -mtime +14 -delete || true
-      - name: Commit
+      - name: Commit and push
         run: |
           git config user.name "fpl-bot"
           git config user.email "actions@users.noreply.github.com"
           git add -A data/snapshots
-          git diff --cached --quiet || git commit -m "snapshot: $(date -u +%F)"
-          git push
+          if git diff --cached --quiet; then
+            echo "Geen wijzigingen — niets te committen."
+            exit 0
+          fi
+          git commit -m "snapshot: $(date -u +%F)"
+          git fetch origin main
+          git rebase origin/main || git rebase --abort
+          git push origin HEAD:main
