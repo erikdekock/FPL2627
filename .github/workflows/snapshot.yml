@@ -18,13 +18,16 @@ jobs:
           FPL_TEAM_ID: "6756883"
           FPL_LEAGUE_ID: "348280"
         run: python scripts/fpl_pull.py
+      - name: Rebuild deadline calendar
+        run: python scripts/make_deadlines.py
+
       - name: Prune old snapshots
         run: find data/snapshots -name 'fpl_*.json' -mtime +14 -delete || true
       - name: Commit and push
         run: |
           git config user.name "fpl-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add -A data/snapshots
+          git add -A data/snapshots data/deadlines.csv strategy/season-calendar.md
           if git diff --cached --quiet; then
             echo "Geen wijzigingen — niets te committen."
             exit 0
