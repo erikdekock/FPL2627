@@ -1,7 +1,7 @@
 name: FPL daily snapshot
 on:
   schedule:
-    - cron: '30 5 * * *'
+    - cron: '0 10 * * *'   # 10:00 UTC = na de 09:00 UK lockdown, ook in de winter
   workflow_dispatch: {}
 jobs:
   snapshot:
