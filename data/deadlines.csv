@@ -1,5 +1,5 @@
 gw,deadline_utc,deadline_uk,deadline_nl,phase,finished
-1,2026-08-21T17:30:00Z,Fri 21 Aug 2026 18:30 BST,Fri 21 Aug 2026 19:30 CEST,1 Evidence,False
+1,2026-08-21T17:30:00Z,Fri 21 Aug 2026 18:30 BST,Fri 21 Aug 2026 19:30 CEST,1 Evidence,True
 2,2026-08-28T17:30:00Z,Fri 28 Aug 2026 18:30 BST,Fri 28 Aug 2026 19:30 CEST,1 Evidence,False
 3,2026-09-04T17:30:00Z,Fri 04 Sep 2026 18:30 BST,Fri 04 Sep 2026 19:30 CEST,1 Evidence,False
 4,2026-09-12T12:30:00Z,Sat 12 Sep 2026 13:30 BST,Sat 12 Sep 2026 14:30 CEST,1 Evidence,False
