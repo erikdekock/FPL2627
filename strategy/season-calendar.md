@@ -1,6 +1,6 @@
 # Season Calendar — FPL 2026/27
 
-Auto-generated from the FPL API on 2026-08-28 21:09 UTC. Do not edit by hand — `scripts/make_deadlines.py` rewrites this file daily, so it follows the API when TV picks move kickoffs.
+Auto-generated from the FPL API on 2026-08-29 14:59 UTC. Do not edit by hand — `scripts/make_deadlines.py` rewrites this file daily, so it follows the API when TV picks move kickoffs.
 
 **Next deadline — GW3: Fri 04 Sep 2026 19:30 CEST** (UK: Fri 04 Sep 2026 18:30 BST)
 
