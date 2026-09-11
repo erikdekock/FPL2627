@@ -1,6 +1,6 @@
 # Season Calendar — FPL 2026/27
 
-Auto-generated from the FPL API on 2026-09-10 14:14 UTC. Do not edit by hand — `scripts/make_deadlines.py` rewrites this file daily, so it follows the API when TV picks move kickoffs.
+Auto-generated from the FPL API on 2026-09-11 14:14 UTC. Do not edit by hand — `scripts/make_deadlines.py` rewrites this file daily, so it follows the API when TV picks move kickoffs.
 
 **Next deadline — GW4: Sat 12 Sep 2026 14:30 CEST** (UK: Sat 12 Sep 2026 13:30 BST)
 
@@ -39,16 +39,16 @@ Deadlines are 90 minutes before each round's first kickoff. No grace period.
 | 14 | Sat 05 Dec 2026 14:30 CET | Sat 05 Dec 2026 13:30 GMT |  |
 | 15 | Sat 12 Dec 2026 14:30 CET | Sat 12 Dec 2026 13:30 GMT |  |
 | 16 | Sat 19 Dec 2026 14:30 CET | Sat 19 Dec 2026 13:30 GMT |  |
-| 17 | Sat 26 Dec 2026 14:30 CET | Sat 26 Dec 2026 13:30 GMT |  |
-| 18 | Wed 30 Dec 2026 19:30 CET | Wed 30 Dec 2026 18:30 GMT |  |
-| 19 | Sat 02 Jan 2027 14:30 CET | Sat 02 Jan 2027 13:30 GMT |  |
+| 17 | Sat 26 Dec 2026 12:00 CET | Sat 26 Dec 2026 11:00 GMT |  |
+| 18 | Tue 29 Dec 2026 19:00 CET | Tue 29 Dec 2026 18:00 GMT |  |
+| 19 | Fri 01 Jan 2027 19:30 CET | Fri 01 Jan 2027 18:30 GMT |  |
 
 ## Phase 4 Winter rebuild — GW20–26
 *January entrants · WC2*
 
 | GW | Deadline (NL) | Deadline (UK) | Status |
 |---|---|---|---|
-| 20 | Wed 06 Jan 2027 19:30 CET | Wed 06 Jan 2027 18:30 GMT |  |
+| 20 | Tue 05 Jan 2027 19:00 CET | Tue 05 Jan 2027 18:00 GMT |  |
 | 21 | Sat 16 Jan 2027 14:30 CET | Sat 16 Jan 2027 13:30 GMT |  |
 | 22 | Sat 23 Jan 2027 14:30 CET | Sat 23 Jan 2027 13:30 GMT |  |
 | 23 | Sat 30 Jan 2027 14:30 CET | Sat 30 Jan 2027 13:30 GMT |  |
