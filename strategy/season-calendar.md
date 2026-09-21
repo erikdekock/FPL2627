@@ -1,6 +1,6 @@
 # Season Calendar — FPL 2026/27
 
-Auto-generated from the FPL API on 2026-09-20 14:04 UTC. Do not edit by hand — `scripts/make_deadlines.py` rewrites this file daily, so it follows the API when TV picks move kickoffs.
+Auto-generated from the FPL API on 2026-09-21 16:22 UTC. Do not edit by hand — `scripts/make_deadlines.py` rewrites this file daily, so it follows the API when TV picks move kickoffs.
 
 **Next deadline — GW6: Sat 10 Oct 2026 12:00 CEST** (UK: Sat 10 Oct 2026 11:00 BST)
 
@@ -15,7 +15,7 @@ Deadlines are 90 minutes before each round's first kickoff. No grace period.
 | 2 | Fri 28 Aug 2026 19:30 CEST | Fri 28 Aug 2026 18:30 BST | ✅ done |
 | 3 | Fri 04 Sep 2026 19:30 CEST | Fri 04 Sep 2026 18:30 BST | ✅ done |
 | 4 | Sat 12 Sep 2026 14:30 CEST | Sat 12 Sep 2026 13:30 BST | ✅ done |
-| 5 | Fri 18 Sep 2026 19:30 CEST | Fri 18 Sep 2026 18:30 BST |  |
+| 5 | Fri 18 Sep 2026 19:30 CEST | Fri 18 Sep 2026 18:30 BST | ✅ done |
 
 ## Phase 2 Reset & Structure — GW6–10
 *WC1 GW6 · TC1 GW7 · BB1 GW8-12*
@@ -26,15 +26,15 @@ Deadlines are 90 minutes before each round's first kickoff. No grace period.
 | 7 | Sat 17 Oct 2026 12:00 CEST | Sat 17 Oct 2026 11:00 BST |  |
 | 8 | Fri 23 Oct 2026 19:30 CEST | Fri 23 Oct 2026 18:30 BST |  |
 | 9 | Sat 31 Oct 2026 12:00 CET | Sat 31 Oct 2026 11:00 GMT |  |
-| 10 | Sat 07 Nov 2026 14:30 CET | Sat 07 Nov 2026 13:30 GMT |  |
+| 10 | Fri 06 Nov 2026 19:30 CET | Fri 06 Nov 2026 18:30 GMT |  |
 
 ## Phase 3 Congestion & chip cliff — GW11–19
 *FH1 burn GW17-18 · all set-1 chips die at GW19*
 
 | GW | Deadline (NL) | Deadline (UK) | Status |
 |---|---|---|---|
-| 11 | Sat 21 Nov 2026 14:30 CET | Sat 21 Nov 2026 13:30 GMT |  |
-| 12 | Sat 28 Nov 2026 14:30 CET | Sat 28 Nov 2026 13:30 GMT |  |
+| 11 | Sat 21 Nov 2026 12:00 CET | Sat 21 Nov 2026 11:00 GMT |  |
+| 12 | Fri 27 Nov 2026 19:30 CET | Fri 27 Nov 2026 18:30 GMT |  |
 | 13 | Wed 02 Dec 2026 19:30 CET | Wed 02 Dec 2026 18:30 GMT |  |
 | 14 | Sat 05 Dec 2026 14:30 CET | Sat 05 Dec 2026 13:30 GMT |  |
 | 15 | Sat 12 Dec 2026 14:30 CET | Sat 12 Dec 2026 13:30 GMT |  |
