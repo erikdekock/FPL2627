@@ -1,0 +1,24 @@
+xp table xp_gw06-10.csv · snapshot fpl_2026-10-07T172241Z.json · horizon GW6-10 · team value £99.7
+
+=== BASELINE: current 15, best XI per GW · cost £99.3 of £99.7 (bank £0.4) ===
+pos name          team £     tag      own%    gw6    gw7    gw8    gw9   gw10    dec
+GK  Verbruggen    BHA  4.5   nailed   21.6   3.08   3.93   3.08   2.44   3.17  11.58
+GK  Steele        BHA  4.0   out       4.1   0.00   0.00   0.00   0.00   0.00   0.00
+DEF Davis         IPS  4.0   nailed    7.0   5.61   3.19   4.87   4.18   5.36  16.87
+DEF Calafiori     ARS  5.9   nailed   50.6   4.70   4.39   4.89   4.04   5.15  16.80
+DEF Egan          HUL  4.1   nailed    7.0   4.62   4.22   4.03   4.52   3.83  15.59
+DEF Senesi        TOT  5.8   doubt     3.5   0.45   0.85   0.49   0.69   0.49   2.16
+DEF Keane         EVE  4.8   out       0.7   0.00   0.00   0.00   0.00   0.00   0.00
+MID B.Fernandes   MUN  11.9  nailed   38.4   7.12   5.08   6.84   6.54   6.83  23.49
+MID Gibbs-White   NFO  8.0   nailed   15.7   6.01   5.36   6.00   5.05   5.89  20.67
+MID Stach         LEE  6.0   nailed    2.5   4.65   5.42   5.27   5.11   5.70  18.79
+MID Szoboszlai    LIV  6.9   nailed   32.4   4.44   3.83   4.55   4.09   4.55  15.56
+MID Hughes        CRY  4.4   doubt     7.2   0.47   0.47   0.51   0.48   0.47   1.74
+FWD Haaland       MCI  15.6  nailed   73.9   6.43   9.04   7.24   8.08   6.36  27.09
+FWD João Pedro    CHE  7.7   likely   64.6   3.80   3.03   3.88   3.79   3.66  13.15
+FWD Brobbey       SUN  5.7   likely    6.8   3.78   3.46   3.35   3.76   4.38  13.46
+GW6: XI xP 61.4 (3-4-3) · C B.Fernandes · bench Steele, Hughes, Senesi, Keane
+GW7: XI xP 60.0 (3-4-3) · C Haaland · bench Steele, Senesi, Hughes, Keane
+GW8: XI xP 61.2 (3-4-3) · C Haaland · bench Steele, Hughes, Senesi, Keane
+GW9: XI xP 59.7 (3-4-3) · C Haaland · bench Steele, Senesi, Hughes, Keane
+GW10: XI xP 61.7 (3-4-3) · C B.Fernandes · bench Steele, Senesi, Hughes, Keane
