@@ -1,6 +1,6 @@
 ---
 name: "fpl-gw-decide"
-description: "Use in Erik's FPL 26/27 project when a chat is named GWxx or a kickoff says 'decide': run the pre-deadline round (data pull, minutes gate, five decisions as A/B with EXP, LOCKED, post-deadline verification, commit)."
+description: "Use in Erik's FPL 26/27 project in a chat named GWxx or when a kickoff says decide: the pre-deadline round (data pull, minutes gate, five A/B decisions with EXP, LOCKED, API verification, commit)."
 ---
 
 # FPL — decide the gameweek (chat `GWxx`)

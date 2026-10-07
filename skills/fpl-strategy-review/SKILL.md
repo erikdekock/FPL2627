@@ -1,6 +1,6 @@
 ---
 name: "fpl-strategy-review"
-description: "Use in Erik's FPL 26/27 project for a chat named 'Strategy Qx', a wildcard or free-hit squad build, or a chip-plan rewrite: grade the six edges against the season evidence, re-window the chips, build and cost squad structures with the solver, and amend strategy.md with a dated changelog."
+description: "Use in Erik's FPL 26/27 project for 'Strategy Qx' chats, wildcard or free-hit builds and chip-plan rewrites: grade the six edges, cost squad structures with the solver, re-window chips, amend strategy with a changelog."
 ---
 
 # FPL — strategy review, squad build, chip plan (chat `Strategy Qx` or `WCx build`)

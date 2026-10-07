@@ -1,6 +1,6 @@
 ---
 name: "fpl-gw-review"
-description: "Use in Erik's FPL 26/27 project when a chat is named 'GWxx review' or a kickoff says 'review' (Tuesday after lockdown): grade last gameweek's decisions process x outcome from the API and the decide chat, write log, lessons, rules and the next kickoff."
+description: "Use in Erik's FPL 26/27 project in a chat named 'GWxx review' (Tuesday after lockdown): grade last GW's decisions process x outcome from the API and the decide chat; write log, lessons, rules, next kickoff."
 ---
 
 # FPL — review the gameweek (chat `GWxx review`)
