@@ -14,7 +14,7 @@
 | # | Step | When (NL) | Owner | Status | Output |
 |---|---|---|---|---|---|
 | 0 | Inventory & diagnosis | Wed 7 Oct | Claude | ✅ done | `docs/06-retro-phase1-gw1-5.md`, log rows GW1–5 backfilled, this plan |
-| 1 | Way of work v3 — decide the operating changes | Wed 7 Oct (today) | Erik decides D1–D2 | 🔲 | `docs/08-protocol-v3.md` (one page), `CLAUDE.md` updated |
+| 1 | Way of work v3 — decide the operating changes | Wed 7 Oct (today) | Erik decides D1–D2 | 🟡 proposal written | `docs/08-operating-system-v3.md` (the learning loop; project-instructions text in §7.1); `CLAUDE.md` rewrite follows acceptance |
 | 2 | Chip plan v1 — WC1 rationale written, TC1/BB1/FH1 re-windowed | Thu 8 Oct morning | Claude drafts, Erik reads | 🔲 | `strategy/chip-plan.md` v1 with log entry |
 | 3 | Strategy amendments v2.2 (not a full rewrite) | Thu 8 Oct morning | Claude drafts, Erik decides D3–D5 | 🔲 | `strategy/strategy.md` changelog entry |
 | 4 | WC squad build v0.1 — three structures, candidate pool with minutes evidence | Thu 8 Oct afternoon | Claude | 🔲 | `strategy/wc1-squad.md` v0.1 + watchlist theses |
