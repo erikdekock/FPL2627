@@ -14,10 +14,10 @@
 | # | Step | When (NL) | Owner | Status | Output |
 |---|---|---|---|---|---|
 | 0 | Inventory & diagnosis | Wed 7 Oct | Claude | ✅ done | `docs/06-retro-phase1-gw1-5.md`, log rows GW1–5 backfilled, this plan |
-| 1 | Way of work v3 — decide the operating changes | Wed 7 Oct (today) | Erik decides D1–D2 | 🟡 proposal written | `docs/08-operating-system-v3.md` (the learning loop; project-instructions text in §7.1); `CLAUDE.md` rewrite follows acceptance |
+| 1 | Way of work v3 — built | Wed 7 Oct | Claude built, Erik confirms D1–D2 | ✅ built | `docs/08` (design), `docs/09` (model stack), `CLAUDE.md` v3, `strategy/rules.md`, `strategy/lessons.md`, `data/decisions.csv`, `briefs/GW06.md`, skills in `skills/` (install via the card in chat), scripts `xp_model.py` + `wc_solver.py` + `review_table.py`, rivals in `fpl_pull.py`, Action runs the models daily + Thu 16:00 UTC, scheduled tasks: decide prep Fri 09:10 NL, review prep Tue 10:40 NL, GW6 verification Sat 12:10 NL |
 | 2 | Chip plan v1 — WC1 rationale written, TC1/BB1/FH1 re-windowed | Thu 8 Oct morning | Claude drafts, Erik reads | 🔲 | `strategy/chip-plan.md` v1 with log entry |
 | 3 | Strategy amendments v2.2 (not a full rewrite) | Thu 8 Oct morning | Claude drafts, Erik decides D3–D5 | 🔲 | `strategy/strategy.md` changelog entry |
-| 4 | WC squad build v0.1 — three structures, candidate pool with minutes evidence | Thu 8 Oct afternoon | Claude | 🔲 | `strategy/wc1-squad.md` v0.1 + watchlist theses |
+| 4 | WC squad build v0.1 — three structures, candidate pool with minutes evidence | Thu 8 Oct afternoon | Claude | 🟡 machine drafts done (`data/xp/wc_drafts_gw06.md`: baseline 61 xP, free draft 73) | `strategy/wc1-squad.md` v0.1 + watchlist theses |
 | 5 | Erik's review of v0.1 → v0.2 | Thu 8 Oct evening | Erik | 🔲 | feedback in chat |
 | 6 | Pressers, injuries from the break, predicted XIs, Rival Radar → squad v1.0, captain/vice, XI, bench | Fri 9 Oct 14:00–18:00 | Claude | 🔲 | `strategy/wc1-squad.md` v1.0 |
 | 7 | Sleep rule + final go | Fri 9 Oct evening | Erik decides D6 | 🔲 | "GO" in chat |

@@ -1,7 +1,8 @@
-name: FPL daily snapshot
+name: FPL daily snapshot + models
 on:
   schedule:
-    - cron: '0 10 * * *'   # 10:00 UTC = na de 09:00 UK lockdown, ook in de winter
+    - cron: '0 10 * * *'   # 10:00 UTC = after the 09:00 UK lockdown, also in winter
+    - cron: '0 16 * * 4'   # Thursday 16:00 UTC: fresh xP after most pressers, before the decide chat
   workflow_dispatch: {}
 jobs:
   snapshot:
@@ -13,23 +14,29 @@ jobs:
       - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
-      - name: Pull FPL data
+      - name: Install model dependencies
+        run: pip install "pulp<4" highspy
+      - name: Pull FPL data (bootstrap, fixtures, our entry, league, every rival)
         env:
           FPL_TEAM_ID: "6756883"
           FPL_LEAGUE_ID: "348280"
         run: python scripts/fpl_pull.py
       - name: Rebuild deadline calendar
         run: python scripts/make_deadlines.py
-
+      - name: Run xP model (next 5 GWs) and the no-transfer baseline
+        run: |
+          python scripts/xp_model.py --horizon 5
+          python scripts/wc_solver.py --baseline > data/xp/baseline_latest.txt
+          python scripts/wc_solver.py > data/xp/wildcard_draft_latest.txt
       - name: Prune old snapshots
         run: find data/snapshots -name 'fpl_*.json' -mtime +14 -delete || true
       - name: Commit and push
         run: |
           git config user.name "fpl-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add -A data/snapshots data/deadlines.csv strategy/season-calendar.md
+          git add -A data/snapshots data/deadlines.csv data/rivals.csv data/xp strategy/season-calendar.md
           if git diff --cached --quiet; then
-            echo "Geen wijzigingen — niets te committen."
+            echo "No changes - nothing to commit."
             exit 0
           fi
           git commit -m "snapshot: $(date -u +%F)"
