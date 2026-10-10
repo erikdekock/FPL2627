@@ -1,1 +1,6 @@
 gw,id,type,A,B,inputs,exp,prob,status,outcome,pts_a,pts_b,delta,process_grade,outcome_grade,bias,reviewed_in
+6,D1,chip,"Fire WC1 now (free draft, 15 playing, bank 0.3)","No chip: Brobbey->Barry 1 FT, WC1 to GW7",snapshot 2026-10-09T165550Z; xp_model v0; wc_solver free draft 73.2 vs baseline 58.0 xP GW6; FFScout team news 10 Oct 02:00; docs/07 reset plan,WC XI beats the no-chip baseline XI by >= 8 pts in GW6,0.6,open,,,,,,,,
+6,D2,squad,"Free draft (Saka, no Bruno)","Draft B (lock Haaland + B.Fernandes, E.Le Fee for Saka)","solver objective 276.2 vs 275.5; league-EO Bruno 4/9 rivals, Saka 2/9; sword posture rule 18",Saka >= B.Fernandes over GW6-9,0.5,open,,,,,,,,
+6,D3,captain,"Mbeumo (TOT H Sat 17:30, 0/9 rivals own)","Haaland (LIV A Sun 16:30, 8/9 own, 7/9 captained GW5)",xP 7.15 vs 6.43; rule 16/18 sword: -69 to Alex who captains Haaland,Mbeumo >= Haaland in GW6,0.45,open,,,,,,,,
+6,D4,bench,"Bench order Emersonn, Barry, Bogle (GK Trafford)",Barry first,xP 5.05 / 4.63 / 4.30; FFScout: Bogle may be displaced by Bijol,No autosub loss: all 11 starters play,0.85,open,,,,,,,,
+6,D5,gw,GW >= 60 pts,GW < 60,WC XI 73.2 xP; GW5 average 48,GW6 >= 60 vs average ~52,0.55,open,,,,,,,,
