@@ -1,25 +1,25 @@
-xp table xp_gw06-10.csv · snapshot fpl_2026-10-09T165550Z.json · horizon GW6-10 · team value £99.7
+xp table xp_gw07-11.csv · snapshot fpl_2026-10-10T104305Z.json · horizon GW7-11 · team value £99.4
 
-=== WILDCARD draft · min tag likely · cost £99.1 of £99.4 (bank £0.3) ===
-pos name          team £     tag      own%    gw6    gw7    gw8    gw9   gw10    dec
-GK  Tzolakis      HUL  4.7   nailed   13.1   5.19   4.82   4.60   5.21   4.32  17.72
-GK  Trafford      LEE  5.0   nailed    5.5   4.77   5.26   4.98   5.22   6.34  18.95
-DEF Hall          NEW  5.3   nailed   19.1   5.86   6.01   5.02   5.22   4.92  19.99
-DEF Tarkowski     EVE  6.2   nailed   17.8   5.64   5.98   5.04   5.55   7.09  21.04
-DEF Davis         IPS  4.0   nailed    7.3   5.61   3.19   4.87   4.18   5.36  16.87
-DEF De Cuyper     BHA  5.0   nailed   29.5   5.24   6.61   4.34   3.92   4.91  18.62
-DEF Bogle         LEE  4.6   nailed    7.8   4.30   5.71   5.31   5.26   6.88  19.39
-MID Mbeumo        MUN  7.9   nailed   20.3   7.15   5.00   6.86   6.55   6.84  23.48
-MID Saka          ARS  9.6   nailed   15.6   6.55   5.86   6.68   5.85   7.03  23.15
-MID Tavernier     BOU  6.1   nailed    7.0   6.23   7.00   5.67   5.65   6.06  22.48
-MID Groß          BHA  5.9   nailed   32.6   6.11   6.86   5.08   5.25   5.65  21.38
-MID Gibbs-White   NFO  8.0   nailed   15.8   6.01   5.36   6.00   5.05   5.89  20.67
-FWD Haaland       MCI  15.6  nailed   74.1   6.43   9.04   7.24   8.08   6.36  27.09
-FWD Emersonn      IPS  5.5   nailed    4.0   5.05   4.23   4.37   4.17   4.85  16.57
-FWD Barry         EVE  5.7   nailed    8.6   4.63   6.53   4.20   5.49   6.39  19.51
-GW6: XI xP 73.2 (4-5-1) · C Mbeumo · bench Trafford, Emersonn, Barry, Bogle
-GW7: XI xP 79.3 (4-4-2) · C Haaland · bench Tzolakis, Mbeumo, Emersonn, Davis
-GW8: XI xP 70.0 (4-5-1) · C Haaland · bench Tzolakis, Emersonn, De Cuyper, Barry
-GW9: XI xP 71.2 (3-5-2) · C Haaland · bench Tzolakis, Davis, Emersonn, De Cuyper
-GW10: XI xP 77.0 (3-5-2) · C Tarkowski · bench Tzolakis, Hall, De Cuyper, Emersonn
-objective (decayed horizon xP incl. captain, bench x0.1): 276.2
+=== WILDCARD draft · min tag likely · cost £99.1 of £99.1 (bank £0.0) ===
+pos name          team £     tag      own%    gw7    gw8    gw9   gw10   gw11    dec
+GK  Trafford      LEE  5.0   nailed    5.5   5.26   4.98   5.22   6.34   4.86  19.30
+GK  Leno          FUL  4.5   nailed    4.1   4.21   4.47   4.08   3.96   2.67  14.52
+DEF De Cuyper     BHA  5.0   nailed   31.8   6.61   4.34   3.92   4.91   4.89  18.37
+DEF Hall          NEW  5.3   nailed   21.4   6.01   5.02   5.22   4.92   4.78  19.21
+DEF Tarkowski     EVE  6.2   nailed   18.8   5.98   5.04   5.55   7.09   4.81  20.73
+DEF Bogle         LEE  4.6   nailed    8.3   5.71   5.31   5.26   6.88   5.24  20.57
+DEF Guéhi         MCI  6.0   nailed   17.7   5.70   5.24   4.40   4.57   5.82  18.81
+MID Tavernier     BOU  6.1   nailed    7.3   7.00   5.67   5.65   6.06   5.76  22.21
+MID Groß          BHA  5.9   nailed   36.7   6.86   5.08   5.25   5.65   5.30  20.82
+MID Saka          ARS  9.6   nailed   17.8   5.86   6.68   5.85   7.03   7.25  23.38
+MID E.Le Fée      SUN  5.7   nailed    3.1   5.02   4.90   5.62   6.42   5.04  19.42
+MID Mbeumo        MUN  7.9   nailed   19.9   5.00   6.86   6.55   6.84   5.10  21.98
+FWD Haaland       MCI  15.6  nailed   74.3   9.04   7.24   8.08   6.36   8.90  29.02
+FWD Barry         EVE  5.7   nailed    8.8   6.53   4.20   5.49   6.39   4.49  19.95
+FWD Calvert-Lewin LEE  6.0   nailed   22.5   5.07   4.87   4.45   5.21   4.97  17.86
+GW7: XI xP 79.6 (5-3-2) · C Haaland · bench Leno, Calvert-Lewin, E.Le Fée, Mbeumo
+GW8: XI xP 69.3 (4-5-1) · C Haaland · bench Leno, Calvert-Lewin, De Cuyper, Barry
+GW9: XI xP 71.8 (3-5-2) · C Haaland · bench Leno, Calvert-Lewin, Guéhi, De Cuyper
+GW10: XI xP 77.1 (3-5-2) · C Tarkowski · bench Leno, Calvert-Lewin, De Cuyper, Guéhi
+GW11: XI xP 72.0 (3-5-2) · C Haaland · bench Leno, Tarkowski, Hall, Barry
+objective (decayed horizon xP incl. captain, bench x0.1): 276.6
