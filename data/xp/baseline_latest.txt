@@ -1,24 +1,24 @@
-xp table xp_gw07-11.csv · snapshot fpl_2026-10-11T161347Z.json · horizon GW7-11 · team value £99.4
+xp table xp_gw07-11.csv · snapshot fpl_2026-10-12T194442Z.json · horizon GW7-11 · team value £99.4
 
-=== BASELINE: current 15, best XI per GW · cost £98.8 of £99.4 (bank £0.6) ===
+=== BASELINE: current 15, best XI per GW · cost £99.0 of £99.4 (bank £0.4) ===
 pos name          team £     tag      own%    gw7    gw8    gw9   gw10   gw11    dec
-GK  Tzolakis      HUL  4.7   nailed   13.4   4.31   4.22   4.74   3.81   3.75  15.32
-GK  Verbruggen    BHA  4.5   nailed   21.4   3.98   3.30   2.69   3.38   3.61  12.45
-DEF De Cuyper     BHA  5.0   nailed   32.9   6.49   4.46   4.08   5.28   5.07  18.77
-DEF Hall          NEW  5.3   nailed   20.9   5.80   4.76   5.13   4.80   4.62  18.56
-DEF Tarkowski     EVE  6.2   nailed   18.2   5.70   4.72   5.35   6.88   4.63  19.82
-DEF Bogle         LEE  4.6   nailed    8.5   5.15   4.71   4.61   6.15   4.61  18.30
-DEF Davis         IPS  4.0   nailed    7.7   2.70   4.28   3.67   4.70   4.43  13.88
-MID Groß          BHA  6.0   nailed   37.2   6.47   4.81   5.00   5.67   5.20  19.99
+GK  Tzolakis      HUL  4.7   nailed   13.4   4.32   4.22   4.74   3.81   3.76  15.34
+GK  Verbruggen    BHA  4.5   nailed   21.7   3.97   3.25   2.61   3.38   3.62  12.35
+DEF De Cuyper     BHA  5.1   nailed   34.2   6.48   4.53   4.07   5.28   5.06  18.81
+DEF Tarkowski     EVE  6.2   nailed   18.3   5.70   4.72   5.31   6.80   4.63  19.75
+DEF Bogle         LEE  4.7   nailed    8.7   5.15   4.71   4.61   6.15   4.61  18.30
+DEF Hall          NEW  5.3   nailed   21.0   5.09   4.07   4.46   4.11   3.97  16.07
+DEF Davis         IPS  4.0   nailed    7.7   2.68   4.25   3.67   4.70   4.43  13.83
+MID Groß          BHA  6.0   nailed   38.4   6.47   4.94   5.07   5.67   5.19  20.14
 MID Tavernier     BOU  6.1   nailed    7.3   6.06   4.92   5.05   5.09   5.11  19.32
-MID Saka          ARS  9.6   nailed   17.0   5.87   6.55   5.54   6.96   6.83  22.81
-MID Gibbs-White   NFO  8.0   nailed   15.6   5.14   5.67   5.03   5.62   5.51  19.53
-MID Mbeumo        MUN  7.9   nailed   20.0   5.13   6.68   6.40   6.65   4.89  21.63
-FWD Haaland       MCI  15.6  nailed   74.6   7.90   6.56   7.24   6.03   8.01  26.08
-FWD Barry         EVE  5.7   nailed    8.6   6.85   4.30   5.55   6.48   4.82  20.62
-FWD Emersonn      IPS  5.6   nailed    4.0   4.13   4.47   4.18   4.84   4.44  15.91
-GW7: XI xP 73.6 (4-4-2) · C Haaland · bench Verbruggen, Mbeumo, Emersonn, Davis
-GW8: XI xP 64.8 (3-5-2) · C Mbeumo · bench Verbruggen, De Cuyper, Barry, Davis
-GW9: XI xP 66.9 (3-5-2) · C Haaland · bench Verbruggen, Emersonn, De Cuyper, Davis
-GW10: XI xP 71.6 (3-5-2) · C Saka · bench Verbruggen, Emersonn, Hall, Davis
-GW11: XI xP 66.5 (3-5-2) · C Haaland · bench Verbruggen, Bogle, Emersonn, Davis
+MID Saka          ARS  9.6   nailed   16.8   5.87   6.55   5.73   6.95   6.96  23.00
+MID Gibbs-White   NFO  8.0   nailed   15.2   5.14   5.67   5.03   5.71   5.51  19.58
+MID Mbeumo        MUN  7.9   nailed   20.0   5.13   6.68   6.40   6.65   5.06  21.72
+FWD Haaland       MCI  15.6  nailed   74.9   8.22   6.79   7.52   6.23   8.33  27.07
+FWD Barry         EVE  5.7   nailed    8.6   6.85   4.30   5.67   6.60   4.82  20.77
+FWD Emersonn      IPS  5.6   nailed    4.0   4.18   4.47   4.17   4.84   4.44  15.96
+GW7: XI xP 73.6 (3-5-2) · C Haaland · bench Verbruggen, Hall, Emersonn, Davis
+GW8: XI xP 65.0 (3-5-2) · C Haaland · bench Verbruggen, Barry, Davis, Hall
+GW9: XI xP 67.1 (3-5-2) · C Haaland · bench Verbruggen, Emersonn, De Cuyper, Davis
+GW10: XI xP 71.9 (3-5-2) · C Saka · bench Verbruggen, Emersonn, Davis, Hall
+GW11: XI xP 67.4 (3-5-2) · C Haaland · bench Verbruggen, Emersonn, Davis, Hall
