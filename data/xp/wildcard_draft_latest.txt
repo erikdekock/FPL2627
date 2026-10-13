@@ -1,25 +1,25 @@
-xp table xp_gw07-11.csv · snapshot fpl_2026-10-12T194442Z.json · horizon GW7-11 · team value £99.4
+xp table xp_gw07-11.csv · snapshot fpl_2026-10-13T173100Z.json · horizon GW7-11 · team value £99.4
 
-=== WILDCARD draft · min tag likely · cost £99.1 of £99.1 (bank £0.0) ===
+=== WILDCARD draft · min tag likely · cost £98.9 of £99.1 (bank £0.2) ===
 pos name          team £     tag      own%    gw7    gw8    gw9   gw10   gw11    dec
-GK  Trafford      LEE  5.0   nailed    5.6   4.78   4.49   4.66   5.76   4.34  17.41
-GK  Tzolakis      HUL  4.7   nailed   13.4   4.32   4.22   4.74   3.81   3.76  15.34
-DEF De Cuyper     BHA  5.1   nailed   34.2   6.48   4.53   4.07   5.28   5.06  18.81
-DEF Tarkowski     EVE  6.2   nailed   18.3   5.70   4.72   5.31   6.80   4.63  19.75
-DEF Bogle         LEE  4.7   nailed    8.7   5.15   4.71   4.61   6.15   4.61  18.30
-DEF Thomas        COV  4.0   nailed    8.7   4.81   4.89   4.79   3.95   4.85  17.05
-DEF Mendy         HUL  4.1   nailed    6.2   4.49   4.38   5.03   3.80   3.96  15.94
-MID Cherki        MCI  7.8   nailed   30.5   6.67   5.67   6.03   5.21   6.77  22.15
-MID Groß          BHA  6.0   nailed   38.4   6.47   4.94   5.07   5.67   5.19  20.14
-MID Saka          ARS  9.6   nailed   16.8   5.87   6.55   5.73   6.95   6.96  23.00
-MID Rudoni        COV  4.9   nailed    0.1   5.34   6.20   6.42   4.66   6.09  20.87
-MID Mbeumo        MUN  7.9   nailed   20.0   5.13   6.68   6.40   6.65   5.06  21.72
-FWD Haaland       MCI  15.6  nailed   74.9   8.22   6.79   7.52   6.23   8.33  27.07
-FWD Barry         EVE  5.7   nailed    8.6   6.85   4.30   5.67   6.60   4.82  20.77
-FWD João Pedro    CHE  7.8   nailed   68.8   5.32   6.75   6.72   6.43   5.99  22.52
-GW7: XI xP 75.1 (3-4-3) · C Haaland · bench Tzolakis, Mbeumo, Thomas, Mendy
-GW8: XI xP 69.2 (3-5-2) · C Haaland · bench Tzolakis, De Cuyper, Mendy, Barry
-GW9: XI xP 71.9 (3-4-3) · C Haaland · bench Trafford, Groß, Bogle, De Cuyper
-GW10: XI xP 74.7 (3-4-3) · C Saka · bench Tzolakis, Rudoni, Thomas, Mendy
-GW11: XI xP 71.6 (3-5-2) · C Haaland · bench Tzolakis, Barry, Bogle, Mendy
-objective (decayed horizon xP incl. captain, bench x0.1): 270.3
+GK  Trafford      LEE  5.0   nailed    5.6   4.99   4.78   4.88   5.84   4.28  18.04
+GK  Tzolakis      HUL  4.7   nailed   13.5   4.56   4.46   4.90   4.04   4.02  16.16
+DEF De Cuyper     BHA  5.1   nailed   35.0   6.43   5.13   4.24   5.63   5.33  19.72
+DEF Tarkowski     EVE  6.2   nailed   18.4   5.56   4.87   5.42   6.45   4.80  19.69
+DEF Thomas        COV  4.0   nailed    8.8   5.25   5.41   5.39   4.46   5.18  18.82
+DEF Bogle         LEE  4.7   nailed    8.9   5.22   4.90   4.94   6.08   4.38  18.61
+DEF Calafiori     ARS  5.9   nailed   52.3   4.79   5.35   4.70   5.64   5.17  18.52
+MID Groß          BHA  6.0   nailed   39.2   6.18   5.10   4.87   5.66   5.19  19.84
+MID Saka          ARS  9.6   nailed   16.7   5.90   6.44   5.80   6.76   6.96  22.87
+MID Tavernier     BOU  6.1   nailed    7.3   5.88   4.79   5.06   4.91   5.21  18.98
+MID Mbeumo        MUN  7.9   nailed   19.9   5.10   6.91   5.96   6.43   5.17  21.49
+MID Ødegaard      ARS  6.8   nailed   19.8   5.00   5.40   4.92   5.63   5.73  19.20
+FWD Haaland       MCI  15.6  nailed   75.1   7.63   6.53   6.90   6.22   7.89  25.60
+FWD Barry         EVE  5.7   nailed    8.6   6.28   4.17   5.65   6.23   4.69  19.80
+FWD Emersonn      IPS  5.6   nailed    4.0   3.98   4.46   4.09   4.91   4.24  15.63
+GW7: XI xP 72.0 (4-4-2) · C Haaland · bench Tzolakis, Ødegaard, Calafiori, Emersonn
+GW8: XI xP 67.7 (5-4-1) · C Mbeumo · bench Tzolakis, Tavernier, Emersonn, Barry
+GW9: XI xP 66.7 (3-5-2) · C Haaland · bench Trafford, Calafiori, De Cuyper, Emersonn
+GW10: XI xP 73.3 (4-4-2) · C Saka · bench Tzolakis, Tavernier, Emersonn, Thomas
+GW11: XI xP 68.8 (4-5-1) · C Haaland · bench Tzolakis, Barry, Bogle, Emersonn
+objective (decayed horizon xP incl. captain, bench x0.1): 260.3

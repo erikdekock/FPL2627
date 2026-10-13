@@ -4,7 +4,7 @@ gw,deadline_utc,deadline_uk,deadline_nl,phase,finished
 3,2026-09-04T17:30:00Z,Fri 04 Sep 2026 18:30 BST,Fri 04 Sep 2026 19:30 CEST,1 Evidence,True
 4,2026-09-12T12:30:00Z,Sat 12 Sep 2026 13:30 BST,Sat 12 Sep 2026 14:30 CEST,1 Evidence,True
 5,2026-09-18T17:30:00Z,Fri 18 Sep 2026 18:30 BST,Fri 18 Sep 2026 19:30 CEST,1 Evidence,True
-6,2026-10-10T10:00:00Z,Sat 10 Oct 2026 11:00 BST,Sat 10 Oct 2026 12:00 CEST,2 Reset & Structure,False
+6,2026-10-10T10:00:00Z,Sat 10 Oct 2026 11:00 BST,Sat 10 Oct 2026 12:00 CEST,2 Reset & Structure,True
 7,2026-10-17T10:00:00Z,Sat 17 Oct 2026 11:00 BST,Sat 17 Oct 2026 12:00 CEST,2 Reset & Structure,False
 8,2026-10-23T17:30:00Z,Fri 23 Oct 2026 18:30 BST,Fri 23 Oct 2026 19:30 CEST,2 Reset & Structure,False
 9,2026-10-31T11:00:00Z,Sat 31 Oct 2026 11:00 GMT,Sat 31 Oct 2026 12:00 CET,2 Reset & Structure,False
