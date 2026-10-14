@@ -1,0 +1,25 @@
+
+=== WC1 v0.2: Erik's 15, best XI per GW · cost £98.5 of £99.1 (bank £0.6) ===
+pos name          team £     tag      own%    gw7    gw8    gw9   gw10   gw11   gw12    dec
+GK  Trafford      LEE  5.0   nailed    5.6   4.99   4.78   4.88   5.84   4.28   5.72  20.43
+GK  Tzolakis      HUL  4.7   nailed   13.5   4.56   4.46   4.90   4.04   4.02   4.37  17.99
+DEF De Cuyper     BHA  5.1   nailed   35.4   6.43   5.13   4.24   5.63   5.33   7.03  22.66
+DEF Tarkowski     EVE  6.2   nailed   18.4   5.56   4.87   5.42   6.45   4.80   5.87  22.14
+DEF Bogle         LEE  4.7   nailed    9.0   5.22   4.90   4.94   6.08   4.38   6.22  21.21
+DEF Vuskovic      BHA  5.1   nailed    4.6   5.11   4.45   3.62   4.58   4.60   5.33  18.64
+DEF Muharemović   LEE  5.0   nailed    4.6   4.58   4.35   4.45   5.43   3.85   5.35  18.75
+MID Groß          BHA  6.0   nailed   39.5   6.18   5.10   4.87   5.66   5.19   6.79  22.68
+MID Cherki        MCI  7.9   nailed   31.9   5.29   4.64   4.75   4.42   5.47   3.93  19.53
+MID Mbeumo        MUN  7.9   nailed   19.9   5.10   6.91   5.96   6.43   5.17   5.87  23.95
+MID Ødegaard      ARS  6.8   nailed   19.7   5.00   5.40   4.92   5.63   5.73   5.25  21.39
+MID Janelt        BRE  5.0   nailed    2.5   4.13   3.92   4.17   3.74   4.08   3.92  16.25
+FWD Haaland       MCI  15.6  nailed   75.2   7.63   6.53   6.90   6.22   7.89   5.47  27.89
+FWD Barry         EVE  5.7   nailed    8.7   6.28   4.17   5.65   6.23   4.69   5.29  22.01
+FWD João Pedro    CHE  7.8   nailed   69.7   4.38   5.31   5.29   5.12   4.91   4.54  19.95
+GW7: XI xP 70.4 (4-4-2) · C Haaland · bench Tzolakis, Muharemović, João Pedro, Janelt
+GW8: XI xP 64.9 (4-4-2) · C Mbeumo · bench Tzolakis, Muharemović, Barry, Janelt
+GW9: XI xP 65.0 (3-4-3) · C Haaland · bench Trafford, De Cuyper, Janelt, Vuskovic
+GW10: XI xP 71.2 (4-3-3) · C Tarkowski · bench Tzolakis, Vuskovic, Cherki, Janelt
+GW11: XI xP 66.0 (3-4-3) · C Haaland · bench Tzolakis, Bogle, Janelt, Muharemović
+GW12: XI xP 71.2 (5-3-2) · C De Cuyper · bench Tzolakis, João Pedro, Cherki, Janelt
+objective: 282.5

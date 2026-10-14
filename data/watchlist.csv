@@ -1,8 +1,15 @@
 player,club,position,price,status,note,updated
-Mbeumo,MUN,MID,7.9,owned,"Thesis: top xP mid at a club 0/9 rivals own; captain-grade home fixtures GW6 TOT, GW8-10. Exit: two blanks in a row or Bruno-Mbeumo role swap evidence.",2026-10-10
-Tavernier,BOU,MID,6.1,owned,"Thesis: set-piece + penalty mid, predicted XI every week, 7% owned, 1/9 rivals. Exit: loses set pieces or two starts under 60 min.",2026-10-10
-Emersonn,IPS,FWD,5.5,owned,"Thesis: nailed cheap striker (ep 7.0), Ipswich home run GW6-9, 4% owned. Exit: benched once without injury or xG/90 < 0.25 over 4 GWs.",2026-10-10
-Barry,EVE,FWD,5.7,owned,"Thesis: Everton first-choice striker, fixtures GW7 and GW10 strong, 8.6% owned. Exit: Beto or Norgaard preferred twice.",2026-10-10
-Bogle,LEE,DEF,4.6,owned,"Thesis: cheapest nailed scorer at Leeds (rule 10 origin), DefCon + attacking returns. Exit: FFScout note materialises (Bijol displaces him) in two consecutive GWs.",2026-10-10
-Trafford,LEE,GK,5.0,owned,Thesis: second GK with real xP (18.9 dec) so the GK slot rotates by fixture instead of a dead £4.0. Exit: loses Leeds number one.,2026-10-10
-Tzolakis,HUL,GK,4.7,owned,"Thesis: high-save keeper at a promoted club, 13% owned; starts when fixture beats Trafford's. Exit: Butland fit and preferred.",2026-10-10
+Haaland,MCI,FWD,15.6,owned,"Thesis: 0.91 xGI/90, 9/9 rivals, default captain; City verdict priced as a January risk not a GW7-12 one. Exit: two of three matches under 60 min without injury, confirmed January exit, Maresca out, or City lose 3 of 5.",2026-10-14
+Mbeumo,MUN,MID,7.9,owned,"Thesis: top-four on every perspective (23.9 xP, 0/9 rivals), four captain weeks; Sesko out so he leads the line. Exit: two blanks in a row or a role change away from the box.",2026-10-14
+Cherki,MCI,MID,7.9,owned,"Thesis: City's creator, 44 pts in 5 starts, 1/9 rivals, lightest fixtures. Deviation: City exposure 2. Exit: benched twice in three without injury, or sanction news that changes City's XI.",2026-10-14
+Tarkowski,EVE,DEF,6.2,owned,"Thesis: top-scoring defender in the game (46), DefCon 11.3/90, 0/9 rivals. Exit: Everton concede 2+ in three straight or he loses the DefCon floor for three GWs.",2026-10-14
+Vuskovic,BHA,DEF,5.1,owned,"Thesis (Erik's conviction): nailed CB at the best defence in the league (5 conceded), 40 pts, 0/9 rivals; Struijk suspended GW7. Exit: benched once after Struijk returns, or two GWs with no CS and no DefCon.",2026-10-14
+Bogle,LEE,DEF,4.7,owned,"Thesis: best value on both pages (4.51 xP/£), 43 pts, 2G 4CS. Exit: Bijol displaces him in two consecutive GWs (FFScout note), or subbed before 60 twice.",2026-10-14
+Muharemović,LEE,DEF,5.0,owned,"Thesis: nailed with Rodon out to 31 Oct, DefCon 11.3/90, rule 10 pick. Exit: Rodon back and preferred, or two GWs under the DefCon threshold.",2026-10-14
+Barry,EVE,FWD,5.7,owned,"Thesis: best underlying cheap striker (0.82 xGI/90), penalty taker, 1/9 rivals. Exit: Beto preferred twice, or xGI/90 under 0.4 over four GWs.",2026-10-14
+Trafford,LEE,GK,5.0,owned,"Thesis: 30 pts, 24 saves, Leeds 5 conceded, 0/9 rivals; rotates with Tzolakis by fixture. Exit: loses the Leeds number one.",2026-10-14
+Tzolakis,HUL,GK,4.7,owned,"Thesis: high-save keeper, Butland out to December; starts when the fixture beats Trafford's. Exit: Butland fit and preferred.",2026-10-14
+Janelt,BRE,MID,5.0,owned,"Thesis: DefCon 13.0/90, 2 pts most weeks, bench 1 by design. Exit: role change out of the double pivot.",2026-10-14
+Tavernier,BOU,MID,6.1,watch,"Thesis: set-piece taker at a thin Bournemouth, 1/9 rivals; first replacement if Odegaard or Cherki fail the minutes gate. Exit: loses set pieces.",2026-10-14
+Emersonn,IPS,FWD,5.6,watch,"Thesis: nailed cheap striker, Ipswich home run GW8-10, 0/9; first replacement for Barry. Exit: benched once without injury.",2026-10-14
+Timber,ARS,DEF,6.5,watch,"Thesis: back from injury, good v Lille; trigger two consecutive 90-min PL starts with White benched. Not buyable under rule 8 (1 start of 6).",2026-10-14

@@ -1,5 +1,5 @@
 # WC1 squad — GW7 (deadline Sat 17 Oct 2026 11:00 BST / 12:00 CEST)
-**v0.1 · Wed 14 Oct 2026 · build in progress, band by band in chat; v1.0 freezes Friday after the pressers (minutes gate, two sources per player).** Research: `briefs/GW07.md`, pool `data/xp/wc_candidates_gw07.md`, solver `data/xp/wc_drafts_gw07.md`. Budget: est. £99.1 (to be confirmed from the app), bank floor £0.3 → £98.8 to spend.
+**v0.2 · Wed 14 Oct 2026 17:40 NL · fifteen chosen band by band in chat; v1.0 freezes Friday after the pressers (minutes gate, two sources per player), then LOCKED.** Research: `briefs/GW07.md`, pool `data/xp/wc_candidates_gw07.md`, solver `data/xp/wc_drafts_gw07.md`. Budget: est. £99.1 (to be confirmed from the app), bank floor £0.3 → £98.8 to spend.
 
 > The GW6 version of this file (the squad that was executed on the Free Hit, not the Wildcard) is preserved in git history (commit 6ed6587 and earlier). The GW7 build starts from the same evidence base one week on.
 
@@ -52,21 +52,68 @@ Running total after D-FORK: £48.7 + João Pedro 7.8 = **£56.5** decided; incl.
 |---|---|---|---|---|
 | D-RADAR | Under-the-radar slots: Erik proposed Muharemović, Janelt, Branthwaite (page `Under the radar`, 17:26) | **A: Muharemović + Janelt + De Cuyper** (14 Oct 17:29) | Muharemović: nailed with Rodon out, DefCon 11.3/90, rule 10 (cheapest nailed scorer at a 5-conceded defence) — Leeds becomes a trio (Bogle, Trafford, Muharemović). Janelt: DefCon 13.0/90, 5.2 ppg, bench 1 by design (model benches him all six weeks). Branthwaite rejected once by Claude and accepted by Erik: correlated with Tarkowski, lowest xP of the defenders (17.0), and he displaced De Cuyper (22.7 xP, best defender in the model); solver 282.5 vs 277.7. Brighton becomes a trio (Groß, Vuskovic, De Cuyper). | high |
 
+| # | Decision | Taken | Reasoning in one line | Confidence |
+|---|---|---|---|---|
+| D-LAST | Fifth midfielder + third striker (page `Last two slots`) | **Ødegaard + Barry** (14 Oct 17:36) | Ødegaard: highest xP of the three (21.4), "a sure shot"; costs the template count (5/9 rivals, Alex owns him) — accepted. Barry: double Kostoulas's xP (22.0 vs 12.0), 0.82 xGI/90, Everton's penalty taker; Erik preferred Kostoulas as "someone I found" but took the numbers. Everton becomes a pair (Tarkowski, Barry). | medium-high |
+
 Running total after D-RADAR: **13 players, £86.0** (Trafford, Tzolakis · Tarkowski, Vuskovic, Bogle, Muharemović, De Cuyper · Mbeumo, Groß, Cherki, Janelt · Haaland, João Pedro). Bogle, Trafford and Tzolakis are no longer provisional: confirmed by the picks around them. **£13.1 left for 1 MID + 1 FWD, bank floor £0.3 → £12.8.** Club counts: BHA 3, LEE 3, MCI 2, EVE 1 (+1 if Barry), MUN 1, CHE 1, HUL 1, BRE 1.
 
 Solver with the six locked (budget £98.8), the fork that was left: **(i) Saka** £9.6 + E.Le Fée 5.7 + Barry + Emersonn, De Cuyper + Thomas + Bogle, Trafford + Tzolakis → objective 288.1, GW7 XI 71.5; **(ii) no Saka:** Tavernier 6.1 + Ødegaard 6.8 + Barry + João Pedro 7.8, same defence and keepers → 285.8, GW7 XI 71.5. Same GW7, −2.3 over six weeks for (ii); (ii) buys the 8/9 shield striker and loses the second captain option.
 
 Solver with the four locked (budget £98.8): it still buys **Saka** as the fifth midfielder (objective 289.1, GW7 XI 72.2) with Tavernier, a £4.0–6.2 defence (De Cuyper, Tarkowski, Thomas, Bogle, Justin), Trafford/Tzolakis, Barry + Emersonn. With João Pedro also locked: 287.6, Tarkowski drops to Davis. So the second star is back on the table by budget, not by the shortlist.
 
-## Open, in order
-1. Last midfielder (£12.8 shared with the forward): Ødegaard £6.8 (21.4 xP, 5/9) · Dewsbury-Hall £6.6 (20.6, 1/9) · Tavernier £6.1 (21.1, 1/9).
-2. Last forward: Barry £5.7 (22.0 xP, 0.82 xGI/90, 1/9) · Emersonn £5.6 (17.6, 0/9) · Kostoulas £5.7 (12.0, rotation).
-3. Bench order (Janelt + the two weakest by fixture each week), GW7 XI, captain plan GW7–12 in writing, watchlist rows for every differential, Friday minutes gate → v1.0 → LOCKED.
+## Open, in order (to LOCKED)
+1. **Erik, in the app:** confirm the wildcard is active and read the budget figure (expected £99.0–99.2).
+2. **Thu/Fri pressers, two sources per player** (rule 8): Cherki (minutes), Bogle (Bijol), João Pedro (knee), Vuskovic/De Cuyper (Struijk back GW8), Groß (Thursday rotation), Barry/Tarkowski (Moyes Friday), Mbeumo, Ødegaard, Trafford, Muharemović. Anyone below *likely* is replaced from the pages' alternatives (Tavernier, Emersonn, Justin, Thomas, Dewsbury-Hall).
+3. **GW7 XI and bench order** (João Pedro in or out of the XI; bench 1 Janelt vs Muharemović), captain and vice.
+4. **Captain plan GW7–12 in writing** (rule 16): which GWs off-pool (model: Mbeumo GW8, Tarkowski GW10, De Cuyper GW12) and the trigger for each.
+5. **Watchlist rows** for every differential (thesis + exit): Tarkowski, Vuskovic, Bogle, Muharemović, Mbeumo, Barry, Cherki, Trafford, Janelt; Timber as a watch.
+6. `decisions.csv` rows D1–D5 for GW7, `briefs/GW07.md` §3–4, LOCKED, then API verification after Sat 11:00 BST.
 4. Band 4 enablers (£5.0–5.9).
 5. Band 5 budget / bench (£4.0–4.9), keeper pair.
 6. Captain plan GW7–12 (which GWs off-pool, written before GW7) and 3–4 differentials with thesis + exit in `data/watchlist.csv`.
 
-## Squad (fills as decisions land)
+## Squad v0.2 — fifteen, £98.5, bank £0.5–0.7 (budget £99.0–99.2, exact figure to be read in the app)
+Solver on this 15 (`data/xp/wc1_v02_gw07.txt`): **GW7 best XI 70.4 xP** (4-4-2, C Haaland), objective 282.5 over GW7–12 vs 290.8 for the free draft (−8.3, almost all of it Saka) and 222.7 for the no-chip baseline (**+60**). Club counts: BHA 3, LEE 3, MCI 2, EVE 2, ARS 1, MUN 1, CHE 1, HUL 1, BRE 1.
+
+**Model XI GW7 (4-4-2):** Trafford · De Cuyper, Tarkowski, Bogle, Vuskovic · Groß, Cherki, Mbeumo, Ødegaard · Haaland, Barry · C Haaland · bench 1 João Pedro, 2 Muharemović, 3 Janelt · GK Tzolakis. The model benches João Pedro at Everton (A) on 4.4 xP; on form (9.0 ppg) the decide chat will weigh him over Vuskovic (3-4-3) or over Barry — Friday's call, written in the brief.
+**Model captains GW7–12:** Haaland (GW7 IPS H, GW9, GW11) · Mbeumo (GW8 BOU H) · Tarkowski (GW10 COV H) · De Cuyper (GW12 NEW H). Rule 16: off-pool captains need a written trigger; the plan is written before the GW7 deadline.
+| Pos | Player | Club | £ | Tag (sources) | Rivals (of 9) | Role |
+|---|---|---|---|---|---|---|
+| GK | Trafford | LEE | 5.0 | nailed (6/6; Rodon out) | 0/9 | GK1 by fixture |
+| GK | Tzolakis | HUL | 4.7 | nailed (6/6; Butland out to Dec) | 2/9 | GK2 by fixture |
+| DEF | Tarkowski | EVE | 6.2 | nailed (6/6, 540 min) | 0/9 | differential, DefCon floor |
+| DEF | Vuskovic | BHA | 5.1 | nailed (6/6, 527 min; Struijk suspended GW7) | 0/9 | conviction differential |
+| DEF | Bogle | LEE | 4.7 | nailed (6/6, 450 min; Bijol note is the Friday check) | 1/9 | value |
+| DEF | Muharemović | LEE | 5.0 | nailed (6/6, 540 min; Rodon out to 31 Oct) | 1/9 | DefCon floor, rule 10 |
+| DEF | De Cuyper | BHA | 5.1 | nailed (6/6, 490 min) | 5/9 | best defender in the model; shield |
+| MID | Mbeumo | MUN | 7.9 | nailed (6/6, 540 min) | 0/9 | sword, off-pool captain GW8 |
+| MID | Groß | BHA | 6.0 | nailed (6/6, 540 min; UECL Thursday) | 7/9 | shield, value |
+| MID | Cherki | MCI | 7.9 | 5/6 starts (392 min) — presser check Friday | 1/9 | form pick; City exposure 2 (deviation logged) |
+| MID | Ødegaard | ARS | 6.8 | nailed (6/6, 466 min) | 5/9 | shield, set pieces |
+| MID | Janelt | BRE | 5.0 | nailed (6/6, 540 min) | 0/9 | bench 1, DefCon floor |
+| FWD | Haaland | MCI | 15.6 | nailed (6/6, 529 min) | 9/9 | anchor, default captain |
+| FWD | João Pedro | CHE | 7.8 | nailed (5/6, 431 min; 100 % after the knee flag) | 8/9 | shield striker |
+| FWD | Barry | EVE | 5.7 | nailed (6/6, 502 min; penalties) | 1/9 | differential striker |
+
+Spent £98.5 · bank £0.5–0.7.
+
+## Open, in order (to LOCKED)
+1. **Erik, in the app:** confirm the wildcard is active and read the budget figure (expected £99.0–99.2).
+2. **Thu/Fri pressers, two sources per player** (rule 8): Cherki (minutes), Bogle (Bijol), João Pedro (knee), Vuskovic/De Cuyper (Struijk back GW8), Groß (Thursday rotation), Barry/Tarkowski (Moyes Friday), Mbeumo, Ødegaard, Trafford, Muharemović. Anyone below *likely* is replaced from the pages' alternatives (Tavernier, Emersonn, Justin, Thomas, Dewsbury-Hall).
+3. **GW7 XI and bench order** (João Pedro in or out of the XI; bench 1 Janelt vs Muharemović), captain and vice.
+4. **Captain plan GW7–12 in writing** (rule 16): which GWs off-pool (model: Mbeumo GW8, Tarkowski GW10, De Cuyper GW12) and the trigger for each.
+5. **Watchlist rows** for every differential (thesis + exit): Tarkowski, Vuskovic, Bogle, Muharemović, Mbeumo, Barry, Cherki, Trafford, Janelt; Timber as a watch.
+6. `decisions.csv` rows D1–D5 for GW7, `briefs/GW07.md` §3–4, LOCKED, then API verification after Sat 11:00 BST.
+4. Band 4 enablers (£5.0–5.9).
+5. Band 5 budget / bench (£4.0–4.9), keeper pair.
+6. Captain plan GW7–12 (which GWs off-pool, written before GW7) and 3–4 differentials with thesis + exit in `data/watchlist.csv`.
+
+## Squad v0.2 — fifteen, £98.5, bank £0.5–0.7 (budget £99.0–99.2, exact figure to be read in the app)
+Solver on this 15 (`data/xp/wc1_v02_gw07.txt`): **GW7 best XI 70.4 xP** (4-4-2, C Haaland), objective 282.5 over GW7–12 vs 290.8 for the free draft (−8.3, almost all of it Saka) and 222.7 for the no-chip baseline (**+60**). Club counts: BHA 3, LEE 3, MCI 2, EVE 2, ARS 1, MUN 1, CHE 1, HUL 1, BRE 1.
+
+**Model XI GW7 (4-4-2):** Trafford · De Cuyper, Tarkowski, Bogle, Vuskovic · Groß, Cherki, Mbeumo, Ødegaard · Haaland, Barry · C Haaland · bench 1 João Pedro, 2 Muharemović, 3 Janelt · GK Tzolakis. The model benches João Pedro at Everton (A) on 4.4 xP; on form (9.0 ppg) the decide chat will weigh him over Vuskovic (3-4-3) or over Barry — Friday's call, written in the brief.
+**Model captains GW7–12:** Haaland (GW7 IPS H, GW9, GW11) · Mbeumo (GW8 BOU H) · Tarkowski (GW10 COV H) · De Cuyper (GW12 NEW H). Rule 16: off-pool captains need a written trigger; the plan is written before the GW7 deadline.
 | Pos | Player | Club | £ | Tag (sources) | Rivals (of 9) | Role |
 |---|---|---|---|---|---|---|
 | FWD | Haaland | MCI | 15.6 | nailed (6/6 starts, 529 min; Maresca 13 Oct: no flags) | 9/9 | anchor, default captain |
