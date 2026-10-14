@@ -1,0 +1,25 @@
+
+=== BASELINE: pre-Free-Hit 15 (returns at the GW7 deadline), best XI per GW · cost £99.5 of £99.1 (bank £-0.4) ===
+pos name          team £     tag      own%    gw7    gw8    gw9   gw10   gw11   gw12    dec
+GK  Verbruggen    BHA  4.6   nailed   21.9   4.20   3.78   2.98   3.78   3.92   4.29  15.46
+GK  Steele        BHA  4.0   out       3.9   0.00   0.00   0.00   0.00   0.00   0.00   0.00
+DEF Calafiori     ARS  5.9   nailed   52.3   4.79   5.35   4.70   5.64   5.17   4.65  20.46
+DEF Egan          HUL  4.1   nailed    7.3   4.05   3.95   4.37   3.55   3.51   3.86  15.92
+DEF Davis         IPS  4.0   nailed    7.7   2.83   4.64   3.88   5.17   4.53   5.09  16.91
+DEF Senesi        TOT  5.8   doubt     3.3   1.21   0.71   1.02   0.85   1.01   0.88   3.90
+DEF Keane         EVE  4.8   doubt     0.7   0.55   0.45   0.53   0.70   0.44   0.61   2.19
+MID Gibbs-White   NFO  8.0   nailed   14.8   5.01   5.37   4.94   5.34   5.61   6.36  21.62
+MID Stach         LEE  6.0   nailed    2.3   4.92   4.81   4.78   5.10   4.72   5.27  19.91
+MID B.Fernandes   MUN  11.9  nailed   34.6   4.72   6.34   5.48   5.92   4.78   5.41  22.06
+MID Szoboszlai    LIV  6.9   likely   27.9   2.32   2.56   2.37   2.52   2.79   2.31   9.99
+MID Hughes        CRY  4.4   doubt     6.6   0.38   0.43   0.39   0.40   0.40   0.40   1.62
+FWD Haaland       MCI  15.6  nailed   75.2   7.63   6.53   6.90   6.22   7.89   5.47  27.89
+FWD João Pedro    CHE  7.8   nailed   69.7   4.38   5.31   5.29   5.12   4.91   4.54  19.95
+FWD Brobbey       SUN  5.7   out       5.1   0.00   0.00   0.00   0.00   0.00   0.00   0.00
+GW7: XI xP 53.7 (4-4-2) · C Haaland · bench Steele, Keane, Hughes, Brobbey
+GW8: XI xP 55.9 (4-4-2) · C Haaland · bench Steele, Keane, Hughes, Brobbey
+GW9: XI xP 53.6 (4-4-2) · C Haaland · bench Steele, Keane, Hughes, Brobbey
+GW10: XI xP 55.4 (4-4-2) · C Haaland · bench Steele, Keane, Hughes, Brobbey
+GW11: XI xP 56.7 (4-4-2) · C Haaland · bench Steele, Keane, Hughes, Brobbey
+GW12: XI xP 54.5 (4-4-2) · C Gibbs-White · bench Steele, Keane, Hughes, Brobbey
+objective: 222.7
