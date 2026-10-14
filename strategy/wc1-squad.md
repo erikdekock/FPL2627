@@ -41,14 +41,22 @@ Fourteen players with 30+ pts, ≤ 1 of 9 rivals, < 21 % field. The league's dif
 
 Running total after D-DEF1: £37.4 + Tarkowski 6.2 + Vuskovic 5.1 = **£48.7** · £50.1 left for 9 (2 GK, 3 DEF, 2 MID, 2 FWD), avg £5.57; with Bogle, Trafford and Tzolakis provisionally in: **£63.1**, £35.7 left for 6 (2 DEF, 2 MID, 2 FWD), avg £5.95.
 
-Solver with the six locked (budget £98.8), the fork that is left: **(i) Saka** £9.6 + E.Le Fée 5.7 + Barry + Emersonn, De Cuyper + Thomas + Bogle, Trafford + Tzolakis → objective 288.1, GW7 XI 71.5; **(ii) no Saka:** Tavernier 6.1 + Ødegaard 6.8 + Barry + João Pedro 7.8, same defence and keepers → 285.8, GW7 XI 71.5. Same GW7, −2.3 over six weeks for (ii); (ii) buys the 8/9 shield striker and loses the second captain option.
+| # | Decision | Taken | Reasoning in one line | Confidence |
+|---|---|---|---|---|
+| D-FORK | Saka or João Pedro | **João Pedro** (14 Oct 17:15) | Erik: João Pedro wins the first four rows (points 45, 9.0 ppg, 12 in GW6, form) and the rest is close; "Saka underperforms when expectations are high". Claude's advice was Saka (0.65) for the second captain option; the shield reading (8/9 rivals) is accepted as the league logic. Structure (ii): no £9.5+ midfielder; Tavernier + Ødegaard class fill the last two midfield slots. Caveat on record: João Pedro has 5 goals on 2.77 xG. | medium (0.5) |
+| D-DEF3 (leaning) | De Cuyper £5.1 | Erik "very interested" (17:15), not yet confirmed | Best defender in the model (22.7 xP), 53 pts, 5/9 rivals; would make Brighton three (Groß, Vuskovic, De Cuyper) = club maximum. | — |
+
+Running total after D-FORK: £48.7 + João Pedro 7.8 = **£56.5** decided; incl. provisional Bogle, Trafford, Tzolakis **£70.9**; £27.9 left for 5 (2 DEF, 2 MID, 1 FWD), avg £5.58 — or £22.8 for 4 if De Cuyper confirms.
+
+Solver with the six locked (budget £98.8), the fork that was left: **(i) Saka** £9.6 + E.Le Fée 5.7 + Barry + Emersonn, De Cuyper + Thomas + Bogle, Trafford + Tzolakis → objective 288.1, GW7 XI 71.5; **(ii) no Saka:** Tavernier 6.1 + Ødegaard 6.8 + Barry + João Pedro 7.8, same defence and keepers → 285.8, GW7 XI 71.5. Same GW7, −2.3 over six weeks for (ii); (ii) buys the 8/9 shield striker and loses the second captain option.
 
 Solver with the four locked (budget £98.8): it still buys **Saka** as the fifth midfielder (objective 289.1, GW7 XI 72.2) with Tavernier, a £4.0–6.2 defence (De Cuyper, Tarkowski, Thomas, Bogle, Justin), Trafford/Tzolakis, Barry + Emersonn. With João Pedro also locked: 287.6, Tarkowski drops to Davis. So the second star is back on the table by budget, not by the shortlist.
 
 ## Open, in order
-1. **The fork: Saka** £9.6 (+ E.Le Fée, Barry, Emersonn) **or no Saka** (Tavernier + Ødegaard + João Pedro). Same GW7 xP, −2.3 over six weeks without him, +the shield striker.
-2. Defenders 4 and 5: De Cuyper £5.1 (5/9, 22.7 xP, best defender in the model) and Thomas £4.0 (COV, DefCon 12.6/90) per the solver, or Justin £4.5 (0/9) for a third Leeds name.
-3. Confirm the provisional names (Bogle, Trafford, Tzolakis) in band 5.
+1. ~~The fork~~ → João Pedro taken.
+2. Under-the-radar slots (page `Under the radar`, 17 names incl. strikers): one midfielder and the third forward from Barry / Emersonn / Kostoulas / Evanilson / Gonzalo, and the midfield pair from Tavernier / Dewsbury-Hall / Janelt / Le Fée / Stach / Gomez class.
+3. Defenders 4 and 5: De Cuyper £5.1 (leaning) + Thomas £4.0 / Justin £4.5 / Muharemović £5.0 / Branthwaite £5.5.
+4. Confirm the provisional names (Bogle, Trafford, Tzolakis); bench order; captain plan; watchlist rows.
 4. Band 4 enablers (£5.0–5.9).
 5. Band 5 budget / bench (£4.0–4.9), keeper pair.
 6. Captain plan GW7–12 (which GWs off-pool, written before GW7) and 3–4 differentials with thesis + exit in `data/watchlist.csv`.
@@ -60,10 +68,11 @@ Solver with the four locked (budget £98.8): it still buys **Saka** as the fifth
 | MID | Mbeumo | MUN | 7.9 | nailed (6/6, 540 min; no flag) | 0/9 | sword, off-pool captain GW8/9/10/12 |
 | MID | Groß | BHA | 6.0 | nailed (6/6, 540 min; UECL Thursday rotation to watch) | 7/9 | shield, value |
 | MID | Cherki | MCI | 7.9 | nailed by flag, 5/6 starts (392 min) — presser check Friday | 1/9 | form pick; City exposure 2 (deviation logged) |
+| FWD | João Pedro | CHE | 7.8 | nailed (5/6, 431 min; 100 % after the knee flag) | 8/9 | shield striker |
 | DEF | Tarkowski | EVE | 6.2 | nailed (6/6, 540 min; no flag) | 0/9 | differential, DefCon floor |
 | DEF | Vuskovic | BHA | 5.1 | nailed (6/6, 527 min; Struijk suspended GW7) | 0/9 | conviction differential |
 | DEF | Bogle (provisional) | LEE | 4.7 | nailed (6/6, 450 min; Bijol note) | 1/9 | value, confirm Friday |
 | GK | Trafford (provisional) | LEE | 5.0 | nailed (6/6; Rodon out) | 0/9 | GK1 by fixture |
 | GK | Tzolakis (provisional) | HUL | 4.7 | nailed (6/6; Butland out to Dec) | 2/9 | GK2 by fixture |
 
-Spent £48.7 decided (£63.1 incl. provisional) · remaining £50.1 for 9 players (£35.7 for 6 incl. provisional).
+Spent £56.5 decided (£70.9 incl. provisional) · remaining £27.9 for 5 players (2 DEF, 2 MID, 1 FWD).
