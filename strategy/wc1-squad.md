@@ -23,10 +23,19 @@ Erik read the five perspectives (xP, differential, value per £, fixtures, point
 
 Model note: Cherki's and Rogers' xP sit below their points because the model shrinks 5–6 starts toward the position average; their real output so far is higher than the table says. That is an argument for the top two of them in band 2, not against the ranking.
 
+| # | Decision | Taken | Reasoning in one line | Confidence |
+|---|---|---|---|---|
+| D-MID1 | Mbeumo + Groß in | **In** (14 Oct 16:39) | Mbeumo: top four on all five perspectives, 0/9 rivals, four captain weeks. Groß: best value and raw scorer; template (7/9) so he is the shield pick in midfield. They are complements, not alternatives. | high |
+| D-MID2 | Third attacking mid: Gibbs-White or Cherki | **Cherki** (14 Oct 16:43) | Erik's call on form (44 pts in 5 starts, 7.3 ppg, 1/9 rivals, lightest fixtures Σ18). **Written deviation (rule 5) from D-WC1:** City exposure becomes 2 (Haaland + Cherki). Claude's objection, stated once: it contradicts the "City trouble" thesis and the model prices his minutes (392 of 540) at 19.5. Thesis for the watchlist: City's creator at 0.69 xGI/90 behind Haaland; **exit:** benched twice in three without injury, or any sanction news that changes City's XI. | medium (0.55) |
+
+Running total after D-MID2: Haaland 15.6 + Mbeumo 7.9 + Groß 6.0 + Cherki 7.9 = **£37.4** · £61.4 left for 11 (2 GK, 5 DEF, 2 MID, 2 FWD), avg £5.58 · bank floor £0.3 → £61.1 to spend.
+
+Solver with the four locked (budget £98.8): it still buys **Saka** as the fifth midfielder (objective 289.1, GW7 XI 72.2) with Tavernier, a £4.0–6.2 defence (De Cuyper, Tarkowski, Thomas, Bogle, Justin), Trafford/Tzolakis, Barry + Emersonn. With João Pedro also locked: 287.6, Tarkowski drops to Davis. So the second star is back on the table by budget, not by the shortlist.
+
 ## Open, in order
-1. Band 1, second star: Saka £9.6 (A) · none, money into band 2 (B) · Bruno £11.9 (dominated) · Palmer £9.7 (model says no, xGI/90 0.37).
-2. Band 2 (£7.5–9.4), 2–3 slots incl. the João Pedro shield question (8/9 rivals).
-3. Band 3 value core (£6.0–7.4).
+1. ~~Band 1 second star~~ → reopened as **fifth midfielder**: Saka £9.6 (solver's pick even with the four locked) · Gibbs-White £8.0 · Tavernier £6.1 and the money into Tarkowski / João Pedro.
+2. Forwards 2 and 3: João Pedro £7.8 (8/9 rivals, shield) + Barry · or Barry 5.7 + Emersonn 5.6 and the money into the fifth mid / defence.
+3. Band 3 value core (£6.0–7.4): Tarkowski, Tavernier, Dewsbury-Hall, Guéhi, Raya.
 4. Band 4 enablers (£5.0–5.9).
 5. Band 5 budget / bench (£4.0–4.9), keeper pair.
 6. Captain plan GW7–12 (which GWs off-pool, written before GW7) and 3–4 differentials with thesis + exit in `data/watchlist.csv`.
@@ -35,5 +44,8 @@ Model note: Cherki's and Rogers' xP sit below their points because the model shr
 | Pos | Player | Club | £ | Tag (sources) | Rivals (of 9) | Role |
 |---|---|---|---|---|---|---|
 | FWD | Haaland | MCI | 15.6 | nailed (6/6 starts, 529 min; Maresca 13 Oct: no flags) | 9/9 | anchor, default captain |
+| MID | Mbeumo | MUN | 7.9 | nailed (6/6, 540 min; no flag) | 0/9 | sword, off-pool captain GW8/9/10/12 |
+| MID | Groß | BHA | 6.0 | nailed (6/6, 540 min; UECL Thursday rotation to watch) | 7/9 | shield, value |
+| MID | Cherki | MCI | 7.9 | nailed by flag, 5/6 starts (392 min) — presser check Friday | 1/9 | form pick; City exposure 2 (deviation logged) |
 
-Spent £15.6 · remaining £83.2 for 14 players (avg £5.94).
+Spent £37.4 · remaining £61.4 for 11 players (avg £5.58).
