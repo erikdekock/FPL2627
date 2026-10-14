@@ -1,22 +1,22 @@
-xp table xp_gw07-11.csv · snapshot fpl_2026-10-13T173100Z.json · horizon GW7-11 · team value £99.4
+xp table xp_gw07-11.csv · snapshot fpl_2026-10-14T133012Z.json · horizon GW7-11 · team value £99.4
 
 === WILDCARD draft · min tag likely · cost £98.9 of £99.1 (bank £0.2) ===
 pos name          team £     tag      own%    gw7    gw8    gw9   gw10   gw11    dec
 GK  Trafford      LEE  5.0   nailed    5.6   4.99   4.78   4.88   5.84   4.28  18.04
 GK  Tzolakis      HUL  4.7   nailed   13.5   4.56   4.46   4.90   4.04   4.02  16.16
-DEF De Cuyper     BHA  5.1   nailed   35.0   6.43   5.13   4.24   5.63   5.33  19.72
+DEF De Cuyper     BHA  5.1   nailed   35.4   6.43   5.13   4.24   5.63   5.33  19.72
 DEF Tarkowski     EVE  6.2   nailed   18.4   5.56   4.87   5.42   6.45   4.80  19.69
 DEF Thomas        COV  4.0   nailed    8.8   5.25   5.41   5.39   4.46   5.18  18.82
-DEF Bogle         LEE  4.7   nailed    8.9   5.22   4.90   4.94   6.08   4.38  18.61
+DEF Bogle         LEE  4.7   nailed    9.0   5.22   4.90   4.94   6.08   4.38  18.61
 DEF Calafiori     ARS  5.9   nailed   52.3   4.79   5.35   4.70   5.64   5.17  18.52
-MID Groß          BHA  6.0   nailed   39.2   6.18   5.10   4.87   5.66   5.19  19.84
+MID Groß          BHA  6.0   nailed   39.5   6.18   5.10   4.87   5.66   5.19  19.84
 MID Saka          ARS  9.6   nailed   16.7   5.90   6.44   5.80   6.76   6.96  22.87
 MID Tavernier     BOU  6.1   nailed    7.3   5.88   4.79   5.06   4.91   5.21  18.98
 MID Mbeumo        MUN  7.9   nailed   19.9   5.10   6.91   5.96   6.43   5.17  21.49
-MID Ødegaard      ARS  6.8   nailed   19.8   5.00   5.40   4.92   5.63   5.73  19.20
-FWD Haaland       MCI  15.6  nailed   75.1   7.63   6.53   6.90   6.22   7.89  25.60
-FWD Barry         EVE  5.7   nailed    8.6   6.28   4.17   5.65   6.23   4.69  19.80
-FWD Emersonn      IPS  5.6   nailed    4.0   3.98   4.46   4.09   4.91   4.24  15.63
+MID Ødegaard      ARS  6.8   nailed   19.7   5.00   5.40   4.92   5.63   5.73  19.20
+FWD Haaland       MCI  15.6  nailed   75.2   7.63   6.53   6.90   6.22   7.89  25.60
+FWD Barry         EVE  5.7   nailed    8.7   6.28   4.17   5.65   6.23   4.69  19.80
+FWD Emersonn      IPS  5.6   nailed    3.9   3.98   4.46   4.09   4.91   4.24  15.63
 GW7: XI xP 72.0 (4-4-2) · C Haaland · bench Tzolakis, Ødegaard, Calafiori, Emersonn
 GW8: XI xP 67.7 (5-4-1) · C Mbeumo · bench Tzolakis, Tavernier, Emersonn, Barry
 GW9: XI xP 66.7 (3-5-2) · C Haaland · bench Trafford, Calafiori, De Cuyper, Emersonn
