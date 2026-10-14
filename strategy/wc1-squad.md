@@ -54,7 +54,7 @@ Running total after D-FORK: £48.7 + João Pedro 7.8 = **£56.5** decided; incl.
 
 | # | Decision | Taken | Reasoning in one line | Confidence |
 |---|---|---|---|---|
-| D-LAST | Fifth midfielder + third striker (page `Last two slots`) | **Ødegaard + Barry** (14 Oct 17:36) | Ødegaard: highest xP of the three (21.4), "a sure shot"; costs the template count (5/9 rivals, Alex owns him) — accepted. Barry: double Kostoulas's xP (22.0 vs 12.0), 0.82 xGI/90, Everton's penalty taker; Erik preferred Kostoulas as "someone I found" but took the numbers. Everton becomes a pair (Tarkowski, Barry). | medium-high |
+| D-LAST | Fifth midfielder + third striker (pages `Last two slots`, `Pairs for the last two slots`) | **Ødegaard + Barry** (14 Oct 17:36, re-confirmed 19:08 after the nine-pair comparison: 282.5 vs Tavernier + Barry 282.2, the template cost of 6/9 accepted) | Ødegaard: highest xP of the three (21.4), "a sure shot"; costs the template count (5/9 rivals, Alex owns him) — accepted. Barry: double Kostoulas's xP (22.0 vs 12.0), 0.82 xGI/90, Everton's penalty taker; Erik preferred Kostoulas as "someone I found" but took the numbers. Everton becomes a pair (Tarkowski, Barry). | medium-high |
 
 Running total after D-RADAR: **13 players, £86.0** (Trafford, Tzolakis · Tarkowski, Vuskovic, Bogle, Muharemović, De Cuyper · Mbeumo, Groß, Cherki, Janelt · Haaland, João Pedro). Bogle, Trafford and Tzolakis are no longer provisional: confirmed by the picks around them. **£13.1 left for 1 MID + 1 FWD, bank floor £0.3 → £12.8.** Club counts: BHA 3, LEE 3, MCI 2, EVE 1 (+1 if Barry), MUN 1, CHE 1, HUL 1, BRE 1.
 
