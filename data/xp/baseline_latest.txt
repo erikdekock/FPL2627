@@ -1,4 +1,4 @@
-xp table xp_gw07-12.csv · snapshot fpl_2026-10-15T193845Z.json · horizon GW7-12 · team value £99.4
+xp table xp_gw07-12.csv · snapshot fpl_2026-10-16T080220Z.json · horizon GW7-12 · team value £99.4
 
 === BASELINE: current 15, best XI per GW · cost £99.1 of £99.4 (bank £0.3) ===
 pos name          team £     tag      own%    gw7    gw8    gw9   gw10   gw11   gw12    dec
