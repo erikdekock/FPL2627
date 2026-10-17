@@ -1,26 +1,25 @@
-xp table xp_gw07-12.csv · snapshot fpl_2026-10-17T080415Z.json · horizon GW7-12 · team value £99.4
+xp table xp_gw08-12.csv · snapshot fpl_2026-10-17T133515Z.json · horizon GW8-12 · team value £99.1
 
-=== WILDCARD draft · min tag likely · cost £98.9 of £99.1 (bank £0.2) ===
-pos name          team £     tag      own%    gw7    gw8    gw9   gw10   gw11   gw12    dec
-GK  Trafford      LEE  5.0   nailed    5.6   4.99   4.78   4.88   5.84   4.28   5.72  20.43
-GK  Tzolakis      HUL  4.7   nailed   13.5   4.56   4.46   4.90   4.04   4.02   4.37  17.99
-DEF De Cuyper     BHA  5.1   nailed   35.4   6.43   5.13   4.24   5.63   5.33   7.03  22.66
-DEF Tarkowski     EVE  6.2   nailed   18.4   5.56   4.87   5.42   6.45   4.80   5.87  22.14
-DEF Thomas        COV  4.0   nailed    8.8   5.25   5.41   5.39   4.46   5.18   4.50  20.70
-DEF Bogle         LEE  4.7   nailed    9.0   5.22   4.90   4.94   6.08   4.38   6.22  21.21
-DEF Calafiori     ARS  5.9   nailed   52.3   4.79   5.35   4.70   5.64   5.17   4.65  20.46
-MID Groß          BHA  6.0   nailed   39.5   6.18   5.10   4.87   5.66   5.19   6.79  22.68
-MID Saka          ARS  9.6   nailed   16.7   5.90   6.44   5.80   6.76   6.96   6.30  25.51
-MID Tavernier     BOU  6.1   nailed    7.3   5.88   4.79   5.06   4.91   5.21   5.06  21.09
-MID Mbeumo        MUN  7.9   nailed   19.9   5.10   6.91   5.96   6.43   5.17   5.87  23.95
-MID Ødegaard      ARS  6.8   nailed   19.7   5.00   5.40   4.92   5.63   5.73   5.25  21.39
-FWD Haaland       MCI  15.6  nailed   75.2   7.63   6.53   6.90   6.22   7.89   5.47  27.89
-FWD Barry         EVE  5.7   nailed    8.7   6.28   4.17   5.65   6.23   4.69   5.29  22.01
-FWD Emersonn      IPS  5.6   nailed    3.9   3.98   4.46   4.09   4.91   4.24   4.64  17.57
-GW7: XI xP 72.0 (4-4-2) · C Haaland · bench Tzolakis, Ødegaard, Calafiori, Emersonn
-GW8: XI xP 67.7 (5-4-1) · C Mbeumo · bench Tzolakis, Tavernier, Emersonn, Barry
-GW9: XI xP 66.7 (3-5-2) · C Haaland · bench Trafford, Calafiori, De Cuyper, Emersonn
-GW10: XI xP 73.3 (4-4-2) · C Saka · bench Tzolakis, Tavernier, Emersonn, Thomas
-GW11: XI xP 68.8 (4-5-1) · C Haaland · bench Tzolakis, Barry, Bogle, Emersonn
-GW12: XI xP 71.9 (3-5-2) · C De Cuyper · bench Tzolakis, Calafiori, Emersonn, Thomas
-objective (decayed horizon xP incl. captain, bench x0.1): 291.1
+=== WILDCARD draft · min tag likely · cost £98.7 of £98.8 (bank £0.1) ===
+pos name          team £     tag      own%    gw8    gw9   gw10   gw11   gw12    dec
+GK  Trafford      LEE  5.0   nailed    5.7   4.78   4.88   5.84   4.19   5.72  18.33
+GK  Tzolakis      HUL  4.7   nailed   14.0   4.46   4.90   4.04   4.02   4.37  15.98
+DEF Calafiori     ARS  5.9   nailed   53.2   5.43   4.70   5.64   5.17   4.65  18.74
+DEF Thomas        COV  4.0   nailed    9.2   5.41   5.39   4.46   5.18   4.50  18.40
+DEF De Cuyper     BHA  5.2   nailed   39.7   5.13   4.24   5.63   5.33   7.03  19.32
+DEF Bogle         LEE  4.7   nailed    9.5   4.90   4.94   6.08   4.31   6.22  18.99
+DEF Davis         IPS  4.0   nailed    7.5   4.64   3.88   5.17   4.53   5.09  16.77
+MID Mbeumo        MUN  7.8   nailed   19.5   6.91   5.98   6.43   5.17   5.87  22.46
+MID Saka          ARS  9.6   nailed   17.0   6.67   5.80   6.76   6.96   6.30  23.57
+MID Ødegaard      ARS  6.8   nailed   19.0   5.56   4.92   5.63   5.73   5.25  19.68
+MID Groß          BHA  6.1   nailed   44.0   5.10   4.87   5.66   5.19   6.79  19.64
+MID E.Le Fée      SUN  5.7   nailed    3.0   4.81   4.98   5.65   4.61   5.34  18.37
+FWD Haaland       MCI  15.7  nailed   76.3   6.53   6.90   6.22   7.89   5.47  24.11
+FWD João Pedro    CHE  7.8   nailed   72.3   5.79   5.77   5.59   5.36   4.98  20.24
+FWD Barry         EVE  5.7   nailed    8.8   3.96   5.31   5.85   4.44   4.99  17.66
+GW8: XI xP 69.1 (4-4-2) · C Mbeumo · bench Tzolakis, E.Le Fée, Davis, Barry
+GW9: XI xP 66.5 (3-4-3) · C Haaland · bench Trafford, Groß, De Cuyper, Davis
+GW10: XI xP 72.2 (3-5-2) · C Saka · bench Tzolakis, João Pedro, Davis, Thomas
+GW11: XI xP 68.7 (3-5-2) · C Haaland · bench Tzolakis, Davis, Barry, Bogle
+GW12: XI xP 71.1 (3-5-2) · C De Cuyper · bench Tzolakis, João Pedro, Calafiori, Thomas
+objective (decayed horizon xP incl. captain, bench x0.1): 258.6
