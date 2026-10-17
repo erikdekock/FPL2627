@@ -4,3 +4,8 @@ gw,id,type,A,B,inputs,exp,prob,status,outcome,pts_a,pts_b,delta,process_grade,ou
 6,D3,captain,"Mbeumo (TOT H Sat 17:30, 0/9 rivals own)","Haaland (LIV A Sun 16:30, 8/9 own, 7/9 captained GW5)",xP 7.15 vs 6.43; rule 16/18 sword: -69 to Alex who captains Haaland,Mbeumo >= Haaland in GW6,0.45,open,,,,,,,,
 6,D4,bench,"Bench order Emersonn, Barry, Bogle (GK Trafford)",Barry first,xP 5.05 / 4.63 / 4.30; FFScout: Bogle may be displaced by Bijol,No autosub loss: all 11 starters play,0.85,open,,,,,,,,
 6,D5,gw,GW >= 60 pts,GW < 60,WC XI 73.2 xP; GW5 average 48,GW6 >= 60 vs average ~52,0.55,open,,,,,,,,
+7,D1,chip,"Fire WC1 (15 playing, bank >=0.3)",No chip: Brobbey->Barry 1 FT,snapshot 2026-10-17T080415Z; xp_model GW7-12; pre-chip best XI 53.7 vs v1.0 XI ~70; chip-plan rationale 14 Oct,WC XI beats pre-chip best XI by >= 10 in GW7,0.65,open,,,,,,,,
+7,D2,squad,"v1.0 built in chat (no Saka; Cherki, Vuskovic, Odegaard, Joao Pedro by Erik)","solver free draft (Saka, Le Fee, Emersonn, Thomas)",solver 282.5 vs 290.8 over GW7-12; league-EO: 4 differentials at 0-1/9 rivals,v1.0 15 outscores the free draft 15 over GW7-10,0.45,open,,,,,,,,
+7,D3,captain,"Haaland (IPS H Sat 15:00, 9/9 rivals)","Mbeumo (LEE A Sun, 0/9)",xP 7.6 vs 5.1; rule 16 pool; sword weeks written for GW8,Haaland >= 8 pts,0.5,open,,,,,,,,
+7,D4,xi,"4-3-3: Joao Pedro in, Cherki bench 1","4-4-2: Cherki in, Joao Pedro bench","FFScout Cherki ""far from secure""; JP 100% + predicted start, 9.0 ppg; model 5.3 vs 4.4",Joao Pedro >= Cherki in GW7,0.55,open,,,,,,,,
+7,D5,gw,GW >= 65,GW < 65,v1.0 XI ~70 xP; GW6 avg 58,GW7 >= 65,0.5,open,,,,,,,,

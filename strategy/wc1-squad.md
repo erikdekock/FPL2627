@@ -1,5 +1,5 @@
 # WC1 squad — GW7 (deadline Sat 17 Oct 2026 11:00 BST / 12:00 CEST)
-**v0.2 · Wed 14 Oct 2026 17:40 NL · fifteen chosen band by band in chat; v1.0 freezes Friday after the pressers (minutes gate, two sources per player), then LOCKED.** Research: `briefs/GW07.md`, pool `data/xp/wc_candidates_gw07.md`, solver `data/xp/wc_drafts_gw07.md`. Budget: est. £99.1 (to be confirmed from the app), bank floor £0.3 → £98.8 to spend.
+**v1.0 · Sat 17 Oct 2026 10:10 NL · LOCKED.** Minutes gate: API snapshot 08:04 UTC (no flags on the 15) + FFScout predicted XIs Fri 16/Sat 17 (all 15 start; Struijk 75 % doubt, Vuskovic starts; Cherki "far from secure" → bench 1). Prices overnight: £98.7. XI 4-3-3 Trafford · De Cuyper, Tarkowski, Bogle, Vuskovic · Groß, Mbeumo, Ødegaard · Haaland, João Pedro, Barry · C Haaland, VC Mbeumo · bench Cherki, Muharemović, Janelt, Tzolakis. Fallback if the app budget < £99.0: Ødegaard → Tavernier. Research: `briefs/GW07.md`, pool `data/xp/wc_candidates_gw07.md`, solver `data/xp/wc_drafts_gw07.md`. Budget: est. £99.1 (to be confirmed from the app), bank floor £0.3 → £98.8 to spend.
 
 > The GW6 version of this file (the squad that was executed on the Free Hit, not the Wildcard) is preserved in git history (commit 6ed6587 and earlier). The GW7 build starts from the same evidence base one week on.
 
