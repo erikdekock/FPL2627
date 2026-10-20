@@ -1,25 +1,25 @@
-xp table xp_gw08-12.csv · snapshot fpl_2026-10-19T165416Z.json · horizon GW8-12 · team value £99.1
+xp table xp_gw08-12.csv · snapshot fpl_2026-10-20T145359Z.json · horizon GW8-12 · team value £99.1
 
-=== WILDCARD draft · min tag likely · cost £95.3 of £98.8 (bank £3.5) ===
+=== WILDCARD draft · min tag likely · cost £98.5 of £98.8 (bank £0.3) ===
 pos name          team £     tag      own%    gw8    gw9   gw10   gw11   gw12    dec
-GK  Raya          ARS  6.1   nailed   44.1   4.87   4.32   5.07   4.40   4.01  16.68
-GK  Trafford      LEE  5.0   nailed    5.8   4.51   4.25   5.55   3.89   5.42  17.00
-DEF Thomas        COV  4.0   nailed    9.3   5.30   5.52   4.47   5.18   4.41  18.36
-DEF Khalaili      CRY  5.0   nailed    0.3   5.24   4.74   4.63   4.75   4.96  17.77
-DEF Bogle         LEE  4.7   nailed    9.9   4.92   4.38   5.85   4.08   5.99  18.13
-DEF De Cuyper     BHA  5.2   nailed   40.7   4.63   3.78   5.23   4.98   6.49  17.68
-DEF Tarkowski     EVE  6.2   nailed   18.4   4.23   4.77   5.85   4.19   5.17  17.42
-MID Mbeumo        MUN  7.8   nailed   20.0   6.94   6.06   6.63   5.31   6.17  22.93
-MID Saka          ARS  9.6   nailed   16.8   6.13   5.43   6.40   6.53   6.01  22.07
-MID Tavernier     BOU  6.2   nailed    8.8   5.63   5.92   5.63   6.14   5.83  21.12
-MID Ødegaard      ARS  6.8   nailed   18.8   5.13   4.60   5.33   5.39   5.00  18.44
-MID Groß          BHA  6.1   nailed   45.0   4.61   4.47   5.22   4.75   6.23  17.97
-FWD Isak          LIV  9.0   nailed   12.8   6.34   5.71   6.24   6.85   5.63  22.40
-FWD João Pedro    CHE  7.9   nailed   72.6   5.83   5.98   6.02   5.51   5.11  20.91
-FWD Barry         EVE  5.7   nailed    8.5   4.03   5.42   5.80   4.57   5.06  17.90
-GW8: XI xP 67.9 (4-4-2) · C Mbeumo · bench Trafford, Groß, Tarkowski, Barry
-GW9: XI xP 64.5 (3-4-3) · C Mbeumo · bench Trafford, Groß, Bogle, De Cuyper
-GW10: XI xP 71.2 (3-4-3) · C Mbeumo · bench Raya, Groß, Khalaili, Thomas
-GW11: XI xP 66.6 (3-5-2) · C Isak · bench Trafford, Barry, Tarkowski, Bogle
-GW12: XI xP 69.6 (3-4-3) · C De Cuyper · bench Raya, Ødegaard, Khalaili, Thomas
-objective (decayed horizon xP incl. captain, bench x0.1): 252.9
+GK  Raya          ARS  6.1   nailed   44.2   5.19   4.53   5.35   4.73   4.26  17.69
+GK  Trafford      LEE  5.0   nailed    5.9   4.80   4.41   5.46   4.08   5.53  17.53
+DEF Calafiori     ARS  6.0   nailed   53.8   5.52   4.57   5.72   5.17   4.61  18.75
+DEF Thomas        COV  4.0   nailed    9.3   5.18   5.51   4.52   5.29   4.37  18.31
+DEF Bogle         LEE  4.7   nailed   10.0   5.17   4.44   5.76   4.17   6.18  18.51
+DEF De Cuyper     BHA  5.3   nailed   40.9   4.85   4.09   5.59   5.30   6.69  18.70
+DEF Vuskovic      BHA  5.1   nailed    5.6   4.74   3.96   5.17   5.15   5.93  17.72
+MID Mbeumo        MUN  7.8   nailed   20.3   6.60   5.78   6.34   5.24   6.20  22.12
+MID Saka          ARS  9.6   nailed   16.8   6.17   5.35   6.29   6.33   6.03  21.86
+MID Tavernier     BOU  6.2   nailed    9.1   5.59   5.92   5.77   6.13   5.69  21.10
+MID B.Fernandes   MUN  11.8  nailed   29.3   5.38   4.71   5.19   4.31   5.05  18.07
+MID Groß          BHA  6.2   nailed   45.3   4.63   4.56   5.32   4.78   6.13  18.10
+FWD Isak          LIV  9.0   nailed   12.9   5.23   4.75   5.54   5.71   4.83  18.92
+FWD Calvert-Lewin LEE  6.0   nailed   23.2   5.00   4.48   4.89   4.56   5.43  17.62
+FWD Barry         EVE  5.7   nailed    8.4   3.90   5.20   5.87   4.54   4.93  17.56
+GW8: XI xP 66.5 (4-4-2) · C Mbeumo · bench Trafford, Vuskovic, Groß, Barry
+GW9: XI xP 61.2 (3-5-2) · C Tavernier · bench Trafford, Calvert-Lewin, De Cuyper, Vuskovic
+GW10: XI xP 69.2 (3-5-2) · C Mbeumo · bench Raya, Vuskovic, Calvert-Lewin, Thomas
+GW11: XI xP 64.7 (4-4-2) · C Saka · bench Trafford, Barry, B.Fernandes, Bogle
+GW12: XI xP 70.5 (3-5-2) · C De Cuyper · bench Raya, Isak, Calafiori, Thomas
+objective (decayed horizon xP incl. captain, bench x0.1): 246.7
