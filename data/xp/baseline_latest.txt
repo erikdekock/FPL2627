@@ -1,23 +1,22 @@
-xp table xp_gw08-13.csv · snapshot fpl_2026-10-23T145236Z.json · horizon GW8-13 · team value £99.1
+xp table xp_gw09-13.csv · snapshot fpl_2026-10-23T184222Z.json · horizon GW9-13 · team value £99.6
 
-=== BASELINE: current 15, best XI per GW · cost £99.2 of £99.1 (bank £-0.1) ===
-pos name          team £     tag      own%    gw8    gw9   gw10   gw11   gw12   gw13    dec
-GK  Trafford      LEE  5.0   nailed    6.0   4.80   4.41   5.46   4.08   5.53   3.67  19.06
-GK  Tzolakis      HUL  4.7   nailed   14.1   4.54   4.78   4.08   3.86   4.51   5.07  18.09
-DEF Bogle         LEE  4.7   nailed   10.5   5.17   4.44   5.76   4.17   6.18   3.51  19.98
-DEF De Cuyper     BHA  5.3   nailed   41.6   4.85   4.09   5.59   5.30   6.69   5.08  20.83
-DEF Vuskovic      BHA  5.1   nailed    6.0   4.74   3.96   5.17   5.15   5.93   4.80  19.73
-DEF Muharemović   LEE  5.0   nailed    5.2   4.50   4.05   5.15   3.73   5.30   3.27  17.75
-DEF Tarkowski     EVE  6.2   nailed   18.2   4.41   4.98   5.93   4.40   5.26   5.06  20.12
-MID Mbeumo        MUN  7.9   nailed   21.2   6.60   5.78   6.34   5.24   6.20   6.27  24.74
-MID Ødegaard      ARS  6.8   nailed   18.4   5.20   4.58   5.30   5.29   5.05   4.66  20.39
-MID Groß          BHA  6.2   nailed   45.8   4.63   4.56   5.32   4.78   6.13   4.97  20.18
-MID Cherki        MCI  8.0   likely   38.6   3.88   3.96   3.80   4.48   3.35   4.13  15.94
-MID Janelt        BRE  5.0   out       2.0   0.00   0.00   0.00   0.00   0.00   0.00   0.00
-FWD Haaland       MCI  15.7  nailed   77.1   6.64   7.01   6.49   7.82   5.66   7.10  27.53
-FWD João Pedro    CHE  7.9   nailed   73.3   4.95   4.99   5.05   4.64   4.31   5.46  19.88
-FWD Barry         EVE  5.7   nailed    8.0   3.90   5.20   5.87   4.54   4.93   4.56  19.46
-GW8: XI xP 63.1 (5-3-2) · C Haaland · bench Tzolakis, Barry, Cherki, Janelt
+=== BASELINE: current 15, best XI per GW · cost £99.2 of £99.6 (bank £0.4) ===
+pos name          team £     tag      own%    gw9   gw10   gw11   gw12   gw13    dec
+GK  Tzolakis      HUL  4.7   nailed   14.1   4.78   4.08   3.86   4.51   5.07  16.13
+GK  Trafford      LEE  5.0   nailed    6.0   4.41   5.46   4.08   5.53   3.67  16.98
+DEF Tarkowski     EVE  6.2   nailed   18.2   4.98   5.93   4.40   5.26   5.06  18.70
+DEF Bogle         LEE  4.7   nailed   10.8   4.44   5.76   4.17   6.18   3.51  17.63
+DEF De Cuyper     BHA  5.3   nailed   42.1   4.09   5.59   5.30   6.69   5.08  19.02
+DEF Muharemović   LEE  5.0   nailed    5.5   4.05   5.15   3.73   5.30   3.27  15.78
+DEF Vuskovic      BHA  5.1   nailed    6.2   3.96   5.17   5.15   5.93   4.80  17.84
+MID Mbeumo        MUN  7.9   nailed   21.8   5.78   6.34   5.24   6.20   6.27  21.60
+MID Ødegaard      ARS  6.8   nailed   18.4   4.58   5.30   5.29   5.05   4.66  18.08
+MID Groß          BHA  6.2   nailed   46.3   4.56   5.32   4.78   6.13   4.97  18.51
+MID Cherki        MCI  8.0   likely   39.3   3.96   3.80   4.48   3.35   4.13  14.35
+MID Janelt        BRE  5.0   out       1.9   0.00   0.00   0.00   0.00   0.00   0.00
+FWD Haaland       MCI  15.7  nailed   77.4   7.01   6.49   7.82   5.66   7.10  24.87
+FWD Barry         EVE  5.7   nailed    7.8   5.20   5.87   4.54   4.93   4.56  18.53
+FWD João Pedro    CHE  7.9   nailed   73.8   4.99   5.05   4.64   4.31   5.46  17.78
 GW9: XI xP 61.5 (4-3-3) · C Haaland · bench Trafford, Vuskovic, Cherki, Janelt
 GW10: XI xP 68.9 (5-3-2) · C Haaland · bench Tzolakis, João Pedro, Cherki, Janelt
 GW11: XI xP 63.5 (3-4-3) · C Haaland · bench Tzolakis, Bogle, Muharemović, Janelt
