@@ -1,4 +1,4 @@
-# Handover — from the GW7 wildcard chat to the next decide chat
+# Handover — from the GW7 wildcard chat to the chat `GW08` (GW8 review + GW9 decide)
 **Written Fri 23 Oct 2026 21:00 NL. Closes the chat that built WC1 (14–17 Oct), decided GW8 (23 Oct) and reviewed GW7.** Read this, `strategy/selection-method.md`, `CLAUDE.md` and `strategy/rules.md` before anything else.
 
 ## 0. Where we are (API, snapshot 2026-10-23T18:42Z)
@@ -42,8 +42,10 @@ Re-run after GW8 with `python scripts/xp_model.py --horizon 6 && python scripts/
 
 **Captain GW9:** Haaland vs Mbeumo was a tie on xP in GW8 and the GW8 sword was not executed. The next chat writes the GW9–12 captain plan before it picks (rule 16): which week is the off-pool week and why.
 
-**Chips:** none in GW9. **TC1 → GW11** (Haaland v Fulham at home, Sat 21 Nov, after the international break) per `chip-plan.md`. **BB1 → GW10 or GW12** when the 15 all play (Janelt back, no Thursday-rotation week for the Brighton trio). Rationale written the night before (rule 17).
-
+**Chips — the layered view (Erik, 23 Oct): chip weeks are built by the transfers before them, not found afterwards.**
+- **TC1 in GW7 was a real loss of 13 points** (Haaland 13 v Ipswich at home, the original TC week). It could not ride on the wildcard (one chip per GW). In expectation the wildcard was still right (+16 xP vs ~+7.6 for TC; actual +22 vs +13); the loss comes from GW6, where the Free Hit was played instead of the Wildcard — had WC1 fired in GW6 as planned, TC1 was free for GW7. Lesson: a chip mistake costs the next chip window too.
+- **TC1 → GW11** (Haaland v Fulham at home, Sat 21 Nov, after the break; FPL difficulty 2). Alternatives: GW16 (Hull H), GW19 (Spurs H).
+- **BB1 — target GW10 (Fri 6 Nov deadline), built by the GW9 transfers.** Model bench xP (four bench players, GW9–13): current 15 → GW10 12.9 · after Cherki → Tavernier → 14.3 · after Cherki → Tavernier **and** Janelt → Iwobi → **19.4** (GW12 18.7). Caveat: the model scores the suspended Janelt at 0 for every GW (he is back for GW9), so the Iwobi gain is overstated by roughly his 3–4 xP a week. Layer: if the GW9 chat uses both FTs, GW10 becomes the BB week; if it rolls one, GW12 is the fallback. Check before firing: all four bench players nailed, no Thursday-Europe club among them that week (Brighton, Bournemouth, Palace, Sunderland play UECL/UEL the Thursday before GW10), rationale written the night before.
 ## 3. Open items for the next chat
 1. **GW8 review** after lockdown (Tue 27 Oct 09:00 GMT): grade the GW8 rows in `data/decisions.csv` (status "not executed"), log row 8.
 2. Bias review at GW9 (every fourth review): two named biases so far — *plan-not-executed* (GW4, GW7, GW8) and *club-exposure deviation* (Cherki).
@@ -52,12 +54,12 @@ Re-run after GW8 with `python scripts/xp_model.py --horizon 6 && python scripts/
 ## 4. Where everything lives
 `strategy/selection-method.md` (the method) · `strategy/wc1-squad.md` (every build decision with its reasoning) · `briefs/GW07.md`, `briefs/GW08.md` · `data/decisions.csv` (graded GW7, open GW8) · `data/watchlist.csv` (thesis + exit per player) · `docs/outputs/gw07/*.html` (the six comparison pages: second star, differentials, under the radar, Saka v João Pedro, last two slots, pairs) · `scripts/one_transfer.py`.
 
-## Kickoff prompt for the next chat
+## Kickoff prompt for the next chat (name it `GW08`)
 ```
-GW09 · Fase 2 · deadline za 31 okt 11:00 UK / 12:00 NL · je bent de GW09-beslischat (en doe eerst de GW08-review na lockdown)
-Lees eerst: docs/10-handover-gw07-wildcard.md, strategy/selection-method.md, CLAUDE.md, strategy/rules.md, briefs/GW08.md, laatste 3 logrijen, watchlist, chip-plan.
-Stand na GW7: 439 pt · OR 3,168,399 · league P7 (−78 op Alex) · bank £0.4 · FT 2 · chips: BB1, TC1
-Draagt over: 1) Cherki → Tavernier is de transfer die er al twee weken ligt; 2) captain-plan GW9–12 op papier vóór de keuze; 3) LOCKED ≥ 3 uur vóór de deadline, tweede screenshot na elke correctie.
-Regel die deze week niet mag breken: regel 4, plan ≠ uitgevoerd tot de API het bevestigt.
-Read-back eerst: deadline uit de API in de eerste regel, dan de stand in 5 regels en wat je niet kon vinden.
+GW08 · Fase 2 · je bent de GW08-chat: eerst de GW08-review (na lockdown di 27 okt 09:00 UK), daarna de GW09-beslissing · deadline GW09 za 31 okt 11:00 UK / 12:00 NL (check in de API)
+Lees eerst, in deze volgorde: docs/10-handover-gw07-wildcard.md (de overdracht: stand, spelersoordeel GW7, transferprep GW9, chiplagen), strategy/selection-method.md (hoe we kiezen: per prijsband, vergelijkingspagina's met perspectieven), CLAUDE.md, strategy/rules.md, briefs/GW08.md (LOCKED én verificatie: app ≠ LOCKED), laatste 3 logrijen, data/watchlist.csv, strategy/chip-plan.md.
+Stand na GW7: 439 pt · OR 3,168,399 · league P7 (−78 op Alex) · bank £0.4 · FT 2 voor GW9 · chips: BB1, TC1
+Draagt over: 1) Cherki → Tavernier ligt er al twee weken, opnieuw toetsen met scripts/one_transfer.py en een vergelijkingspagina; 2) tweede FT bouwt richting Bench Boost GW10 (gelaagd denken: welke transfer maakt de bank sterk); 3) captain-plan GW9–12 op papier vóór de keuze, TC1 → GW11.
+Regel die deze week niet mag breken: regel 4, plan ≠ uitgevoerd tot de API het bevestigt; LOCKED ≥ 3 uur vóór de deadline, tweede screenshot na elke correctie.
+Read-back eerst: regel 1 = de deadline uit de API (UK + NL, uren te gaan), dan de stand in 5 regels en wat je niet kon vinden.
 ```
