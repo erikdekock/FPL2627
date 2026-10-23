@@ -1,25 +1,26 @@
-xp table xp_gw08-12.csv · snapshot fpl_2026-10-23T113519Z.json · horizon GW8-12 · team value £99.1
+xp table xp_gw08-13.csv · snapshot fpl_2026-10-23T145236Z.json · horizon GW8-13 · team value £99.1
 
-=== WILDCARD draft · min tag likely · cost £98.6 of £98.8 (bank £0.2) ===
-pos name          team £     tag      own%    gw8    gw9   gw10   gw11   gw12    dec
-GK  Raya          ARS  6.1   nailed   44.9   5.19   4.53   5.35   4.73   4.26  17.69
-GK  Trafford      LEE  5.0   nailed    6.0   4.80   4.41   5.46   4.08   5.53  17.53
-DEF Calafiori     ARS  6.0   nailed   54.4   5.52   4.57   5.72   5.17   4.61  18.75
-DEF Thomas        COV  4.0   nailed    9.5   5.18   5.51   4.52   5.29   4.37  18.31
-DEF Bogle         LEE  4.7   nailed   10.5   5.17   4.44   5.76   4.17   6.18  18.51
-DEF De Cuyper     BHA  5.3   nailed   41.6   4.85   4.09   5.59   5.30   6.69  18.70
-DEF Vuskovic      BHA  5.1   nailed    6.0   4.74   3.96   5.17   5.15   5.93  17.72
-MID Mbeumo        MUN  7.9   nailed   21.2   6.60   5.78   6.34   5.24   6.20  22.12
-MID Tavernier     BOU  6.2   nailed   11.3   5.59   5.92   5.77   6.13   5.69  21.10
-MID Ødegaard      ARS  6.8   nailed   18.4   5.20   4.58   5.30   5.29   5.05  18.44
-MID Groß          BHA  6.2   nailed   45.8   4.63   4.56   5.32   4.78   6.13  18.10
-MID Rudoni        COV  4.9   nailed    0.5   3.87   4.41   3.20   4.20   3.13  13.88
-FWD Haaland       MCI  15.7  nailed   77.1   6.64   7.01   6.49   7.82   5.66  24.56
-FWD Isak          LIV  9.0   nailed   13.5   5.23   4.75   5.54   5.71   4.83  18.92
-FWD Barry         EVE  5.7   nailed    8.0   3.90   5.20   5.87   4.54   4.93  17.56
-GW8: XI xP 66.5 (5-3-2) · C Haaland · bench Trafford, Groß, Barry, Rudoni
-GW9: XI xP 63.9 (3-4-3) · C Haaland · bench Trafford, Rudoni, De Cuyper, Vuskovic
-GW10: XI xP 69.6 (3-4-3) · C Haaland · bench Raya, Vuskovic, Thomas, Rudoni
-GW11: XI xP 68.4 (4-4-2) · C Haaland · bench Trafford, Barry, Rudoni, Bogle
-GW12: XI xP 69.5 (3-4-3) · C De Cuyper · bench Raya, Calafiori, Thomas, Rudoni
-objective (decayed horizon xP incl. captain, bench x0.1): 250.7
+=== WILDCARD draft · min tag likely · cost £98.8 of £98.8 (bank £0.0) ===
+pos name          team £     tag      own%    gw8    gw9   gw10   gw11   gw12   gw13    dec
+GK  Trafford      LEE  5.0   nailed    6.0   4.80   4.41   5.46   4.08   5.53   3.67  19.06
+GK  Tzolakis      HUL  4.7   nailed   14.1   4.54   4.78   4.08   3.86   4.51   5.07  18.09
+DEF Calafiori     ARS  6.0   nailed   54.4   5.52   4.57   5.72   5.17   4.61   4.35  20.57
+DEF Thomas        COV  4.0   nailed    9.5   5.18   5.51   4.52   5.29   4.37   4.96  20.38
+DEF Bogle         LEE  4.7   nailed   10.5   5.17   4.44   5.76   4.17   6.18   3.51  19.98
+DEF De Cuyper     BHA  5.3   nailed   41.6   4.85   4.09   5.59   5.30   6.69   5.08  20.83
+DEF Tarkowski     EVE  6.2   nailed   18.2   4.41   4.98   5.93   4.40   5.26   5.06  20.12
+MID Mbeumo        MUN  7.9   nailed   21.2   6.60   5.78   6.34   5.24   6.20   6.27  24.74
+MID Tavernier     BOU  6.2   nailed   11.3   5.59   5.92   5.77   6.13   5.69   5.70  23.48
+MID Ødegaard      ARS  6.8   nailed   18.4   5.20   4.58   5.30   5.29   5.05   4.66  20.39
+MID Iwobi         FUL  5.4   nailed    1.3   4.74   4.36   5.27   4.12   4.91   4.43  18.86
+MID Groß          BHA  6.2   nailed   45.8   4.63   4.56   5.32   4.78   6.13   4.97  20.18
+FWD Haaland       MCI  15.7  nailed   77.1   6.64   7.01   6.49   7.82   5.66   7.10  27.53
+FWD Isak          LIV  9.0   nailed   13.5   5.23   4.75   5.54   5.71   4.83   6.58  21.67
+FWD Barry         EVE  5.7   nailed    8.0   3.90   5.20   5.87   4.54   4.93   4.56  19.46
+GW8: XI xP 66.2 (4-4-2) · C Haaland · bench Tzolakis, Groß, Tarkowski, Barry
+GW9: XI xP 64.7 (3-4-3) · C Haaland · bench Trafford, Bogle, Iwobi, De Cuyper
+GW10: XI xP 70.3 (4-3-3) · C Haaland · bench Tzolakis, Ødegaard, Iwobi, Thomas
+GW11: XI xP 67.2 (3-4-3) · C Haaland · bench Tzolakis, Tarkowski, Bogle, Iwobi
+GW12: XI xP 68.9 (3-5-2) · C De Cuyper · bench Tzolakis, Isak, Calafiori, Thomas
+GW13: XI xP 67.1 (3-4-3) · C Haaland · bench Trafford, Iwobi, Calafiori, Bogle
+objective (decayed horizon xP incl. captain, bench x0.1): 279.4
