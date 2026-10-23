@@ -15,3 +15,6 @@ Status: `seen-once` · `recurring` · `rule` (promoted, see `rules.md`) · `reti
 | 2026-09-18 | 5 | A recommendation with 0-minute players in the XI must never reach Erik. | First GW5 XI had Senesi + Keane starting | rule (8) |
 | 2026-10-07 | break | A review date in a document is not a meeting. | Q1 review 21–24 Sep not held; no chat 18 Sep → 7 Oct; WC built in three days instead of three weeks | rule (3) |
 | 2026-10-07 | 1–5 | The protocol was abandoned, not simplified. | 82-minute three-session week never run; one long chat per GW | rule (3, 6) |
+| 2026-10-23 | 6 | The wrong chip can be played with the right plan: name the chip on the confirm screen. | FH1 fired instead of WC1; squad reverted at GW7 | seen-once |
+| 2026-10-23 | 7 | A LOCKED fix that is not re-screenshotted is not executed. | Three app differences from LOCKED in GW7 (+3 by luck) | recurring (rule 4) |
+| 2026-10-23 | 7 | Two players from one defence share one result. | Tarkowski 0 + Barry 2 v Chelsea; flagged at build | seen-once |
