@@ -1,0 +1,76 @@
+<title>Saka or João Pedro</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one wide comparison table, sticky player column, perspective sorts above it */
+:root{--bg:#f7f6f2;--fg:#1e1d1a;--muted:#6b685f;--line:#dcd9d0;--head:#ecebe4;--accent:#1d5fa8;--accent-bg:#e2edf9;
+--d2:#d9efd3;--d2t:#1f5a15;--d3:#eeede8;--d3t:#4a4942;--d4:#fbe4c4;--d4t:#7a4a0a;--d5:#f7cfcf;--d5t:#7b1d1d;
+--eo0:#d6efe7;--eo0t:#0c5440;--eo1:#eeede8;--eo1t:#4a4942;--eo2:#e6e2f7;--eo2t:#3b3184;--bar:#b9d0ea;
+--star:#fff6dd;--sans:"IBM Plex Sans",system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,monospace}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#16181c;--fg:#ecebe5;--muted:#a3a198;--line:#2e3137;--head:#1f2227;--accent:#7fb0ea;--accent-bg:#1b2d44;
+--d2:#1d3b1a;--d2t:#b9e3ae;--d3:#262930;--d3t:#c9c7bf;--d4:#4a3414;--d4t:#f3cf96;--d5:#4f1d1d;--d5t:#f5b6b6;
+--eo0:#143f33;--eo0t:#a7e3cf;--eo1:#262930;--eo1t:#c9c7bf;--eo2:#2a2456;--eo2t:#cfc7f5;--bar:#2f4f78;--star:#3a3215;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#16181c;--fg:#ecebe5;--muted:#a3a198;--line:#2e3137;--head:#1f2227;--accent:#7fb0ea;--accent-bg:#1b2d44;
+--d2:#1d3b1a;--d2t:#b9e3ae;--d3:#262930;--d3t:#c9c7bf;--d4:#4a3414;--d4t:#f3cf96;--d5:#4f1d1d;--d5t:#f5b6b6;
+--eo0:#143f33;--eo0t:#a7e3cf;--eo1:#262930;--eo1t:#c9c7bf;--eo2:#2a2456;--eo2t:#cfc7f5;--bar:#2f4f78;--star:#3a3215;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:14px;line-height:1.5;padding-block:16px 32px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1{font-size:20px;font-weight:600;margin:0 0 4px;text-wrap:balance}
+.lead{color:var(--muted);margin:0 0 14px;max-width:62ch}
+.sorts{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.sorts button{font:inherit;font-size:13px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--fg);cursor:pointer}
+.sorts button[aria-pressed="true"]{background:var(--accent-bg);border-color:var(--accent);color:var(--accent)}
+.sorts button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.legend{display:flex;flex-wrap:wrap;gap:10px 16px;font-size:12px;color:var(--muted);margin:0 0 12px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.sw{width:14px;height:14px;border-radius:3px;display:inline-block;border:1px solid var(--line)}
+.wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;min-width:0}
+table{border-collapse:separate;border-spacing:0;min-width:1180px;width:100%;font-variant-numeric:tabular-nums}
+thead th{position:sticky;top:0;background:var(--head);font-size:11px;font-weight:500;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);padding:8px 8px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap;z-index:2}
+thead th.pl{z-index:3}
+td,th.pl{padding:8px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th.pl{position:sticky;left:0;background:var(--bg);text-align:left;font-weight:500;min-width:112px;z-index:1}
+tr.band-star th.pl{background:var(--star)}
+.nm{display:block;font-size:14px}.tm{display:block;font-size:12px;color:var(--muted)}
+.num{font-family:var(--mono);font-size:13px;white-space:nowrap}
+.sub{display:block;font-family:var(--sans);font-size:11px;color:var(--muted)}
+.tx{font-size:12px;white-space:nowrap}.note{white-space:normal;min-width:190px;color:var(--muted)}
+.bar{display:block;height:6px;width:64px;background:var(--line);border-radius:3px;overflow:hidden;margin:6px 0 3px}
+.bar span{display:block;height:100%;background:var(--bar)}
+.fx{text-align:center;min-width:46px;font-family:var(--mono);font-size:12px;border-left:1px solid var(--line)}
+.fx .opp{display:block;font-weight:500}.fx .ven{display:block;font-size:11px}
+.d2{background:var(--d2);color:var(--d2t)}.d3{background:var(--d3);color:var(--d3t)}.d4{background:var(--d4);color:var(--d4t)}.d5{background:var(--d5);color:var(--d5t)}
+.eo{display:inline-block;padding:2px 8px;border-radius:999px;font-family:var(--mono);font-size:12px}
+.eo0{background:var(--eo0);color:var(--eo0t)}.eo1{background:var(--eo1);color:var(--eo1t)}.eo2{background:var(--eo2);color:var(--eo2t)}
+.foot{font-size:12px;color:var(--muted);margin:12px 0 0;max-width:70ch}
+</style>
+<style>
+.h2h{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;font-variant-numeric:tabular-nums;table-layout:fixed}
+.h2h th,.h2h td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top;font-size:13px}
+.h2h thead th{background:var(--head);font-size:12px;font-weight:500;letter-spacing:.03em;text-transform:uppercase;color:var(--muted);text-align:left}
+.h2h th.row{font-weight:500;color:var(--muted);font-size:12px;text-align:left;width:34%}
+.h2h td{font-family:var(--mono)}
+.h2h td.win{background:var(--accent-bg);color:var(--accent)}
+.h2h td .why{display:block;font-family:var(--sans);font-size:11px;color:var(--muted);margin-top:2px}
+.h2h td.win .why{color:var(--accent)}
+.fixrow{display:flex;gap:4px;flex-wrap:wrap}
+.fixrow span{display:inline-block;padding:2px 6px;border-radius:4px;font-size:11px;font-family:var(--mono)}
+h2{font-size:16px;font-weight:600;margin:20px 0 8px}
+.pk{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;table-layout:fixed}
+.pk th,.pk td{padding:8px 10px;border-bottom:1px solid var(--line);font-size:13px;vertical-align:top}
+.pk thead th{background:var(--head);font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:.03em;color:var(--muted);text-align:left}
+.pk th.row{font-weight:500;color:var(--muted);font-size:12px;text-align:left;width:34%}
+.pk td{font-family:var(--mono)}
+.verdict{margin:16px 0 0;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--head);font-size:13px}
+</style>
+<h1>Saka or João Pedro: the last big slot</h1>
+<p class="lead">Head to head on every perspective used so far. The highlighted cell wins the row. Snapshot Wed 14 Oct 13:30 UTC; xP from the repo model over GW7–12; rivals = the nine Fantasy Fellas managers.</p>
+<table class="h2h">
+<thead><tr><th scope="col">Perspective</th><th scope="col">Saka · ARS · MID</th><th scope="col">João Pedro · CHE · FWD</th></tr></thead>
+<tbody><tr><th class="row" scope="row">Price</th><td class="">£9.6<span class="why"></span></td><td class="win">£7.8<span class="why">£1.8 cheaper</span></td></tr><tr><th class="row" scope="row">Points GW1–6</th><td class="">34 · 5.7 per game<span class="why">3G 0A 4 bonus</span></td><td class="win">45 · 9.0 per game<span class="why">5G 3A 9 bonus in 5 starts</span></td></tr><tr><th class="row" scope="row">GW6</th><td class="">2<span class="why">2 at home to Leeds</span></td><td class="win">12<span class="why">12 v Bournemouth</span></td></tr><tr><th class="row" scope="row">Form (FPL, last 30 days)</th><td class="">2.0<span class="why"></span></td><td class="win">6.0<span class="why"></span></td></tr><tr><th class="row" scope="row">Starts · minutes</th><td class="win">6/6 · 506<span class="why">nailed</span></td><td class="">5/6 · 431<span class="why">missed GW5 on a knee flag; 100% now</span></td></tr><tr><th class="row" scope="row">xGI per 90</th><td class="win">0.83<span class="why">xG 3.63, xA 1.04: 0 assists on 1.04 xA, due</span></td><td class="">0.64<span class="why">xG 2.77: 5 goals on 2.77 xG, running hot</span></td></tr><tr><th class="row" scope="row">xP GW7</th><td class="win">5.9<span class="why">NFO (A) Sun 16:30</span></td><td class="">4.4<span class="why">EVE (A) Sat 12:30</span></td></tr><tr><th class="row" scope="row">xP GW7–12 (decayed)</th><td class="win">25.5<span class="why"></span></td><td class="">19.9<span class="why">model shrinks 5 starts; real output higher</span></td></tr><tr><th class="row" scope="row">xP per £</th><td class="win">2.66<span class="why"></span></td><td class="">2.56<span class="why"></span></td></tr><tr><th class="row" scope="row">Captain weeks (within 1.0 of Haaland)</th><td class="win">4: GW8, 10, 11, 12<span class="why">covers Haaland away at AVL, NFO, ARS</span></td><td class="">1: GW12<span class="why">no armband case</span></td></tr><tr><th class="row" scope="row">Field ownership</th><td class="">16.7%<span class="why">−51k transfers this week</span></td><td class="">69.7%<span class="why">+375k transfers this week</span></td></tr><tr><th class="row" scope="row">Fantasy Fellas rivals</th><td class="">2/9<span class="why">sword: a haul gains on 7</span></td><td class="">8/9<span class="why">shield: a haul without him loses to 8</span></td></tr><tr><th class="row" scope="row">Fixtures GW7–12</th><td class=""><div class="fixrow"><span class="d3">NFO A</span><span class="d3">EVE H</span><span class="d4">LIV A</span><span class="d2">HUL H</span><span class="d3">NEW A</span><span class="d4">MCI H</span></div><span class="why">Σ 19</span></td><td class="win"><div class="fixrow"><span class="d3">EVE A</span><span class="d2">TOT H</span><span class="d4">MUN H</span><span class="d3">SUN A</span><span class="d3">LEE H</span><span class="d3">NFO A</span></div><span class="why">Σ 18</span></td></tr><tr><th class="row" scope="row">Midweek load</th><td class="">UCL Tue/Wed before GW8, 10, 12<span class="why"></span></td><td class="win">none: Chelsea not in Europe<span class="why"></span></td></tr><tr><th class="row" scope="row">Set pieces</th><td class="win">penalties, corners<span class="why"></span></td><td class="">none<span class="why"></span></td></tr><tr><th class="row" scope="row">Club context</th><td class="">Saliba, Hincapié, Zubimendi out: defence thinner, attack intact; Arteta spoke Mon 12 Oct<span class="why"></span></td><td class="">Chelsea 15 scored, 13 conceded: chaos both ways; Rogers (6/9) and Palmer beside him<span class="why"></span></td></tr></tbody>
+</table>
+<h2>What each one does to the rest of the squad</h2>
+<table class="pk">
+<thead><tr><th scope="col">Package</th><th scope="col">With Saka</th><th scope="col">With João Pedro</th></tr></thead>
+<tbody><tr><th class="row" scope="row">Package (solver, six locked)</th><td>Saka 9.6 + E.Le Fée 5.7 + Emersonn 5.6</td><td>João Pedro 7.8 + Tavernier 6.1 + Ødegaard 6.8</td></tr><tr><th class="row" scope="row">Package cost</th><td>£20.9</td><td>£20.7</td></tr><tr><th class="row" scope="row">Objective GW7–12</th><td>288.1</td><td>285.8</td></tr><tr><th class="row" scope="row">GW7 XI xP</th><td>71.5</td><td>71.5</td></tr><tr><th class="row" scope="row">Second captain option</th><td>yes (Saka, 4 weeks)</td><td>no</td></tr><tr><th class="row" scope="row">Template cover</th><td>Saka 2/9 only</td><td>João Pedro 8/9 + Ødegaard 5/9</td></tr><tr><th class="row" scope="row">Differential count in 15</th><td>higher</td><td>lower</td></tr><tr><th class="row" scope="row">Bench quality</th><td>Le Fée (20.3 xP) + Emersonn (17.6)</td><td>Tavernier (21.1) + Ødegaard (21.4)</td></tr></tbody>
+</table>
+<div class="verdict">Rows won: Saka 8, João Pedro 6, two neutral. Saka wins the forward-looking rows (xP, captaincy, set pieces, minutes); João Pedro wins the backward-looking ones (points, form, GW6) plus price, fixtures and load. The league question is not on either side of the table: 8 of 9 rivals own João Pedro, 2 own Saka. At −75, the Saka package is the sword and the João Pedro package is the shield.</div>

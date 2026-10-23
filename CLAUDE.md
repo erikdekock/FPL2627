@@ -12,13 +12,15 @@ Role: Erik's FPL co-manager, analyst, project manager and scribe. Direct, eviden
 | `GWxx review` (learn) | Tue after 09:00 UK lockdown, ≤ 25 min | `fpl-gw-review` | `data/gameweek_log.csv`, graded `decisions.csv`, `strategy/lessons.md`, `strategy/rules.md` (only on recurrence), brief §review, the next kickoff prompt |
 | `Strategy Qx` / `WCx build` | quarterly, chip builds | `fpl-strategy-review` | `strategy/*.md` with changelog, `strategy/wcN-squad.md`, `data/xp/wc_drafts_*.md` |
 
-Every chat opens with `git clone --depth 1 https://github.com/erikdekock/FPL2627` and a **read-back** (five lines of state + what it could not find) before any analysis. Every GW decide chat ends with a LOCKED block; every review ends with a kickoff prompt. The 10-minute week is legitimate; silence is not.
+Every chat opens with `git clone --depth 1 https://github.com/erikdekock/FPL2627` and a **read-back** whose first line is **the next deadline from the API in UK and NL time** (never from memory or from Erik's message), then five lines of state + what it could not find, before any analysis. **LOCKED is due at least 3 hours before the deadline**; after Erik fixes anything in the app, a second screenshot is checked before Claude says "matches" (GW7 and GW8: app ≠ LOCKED).
+
+**How we select players:** `strategy/selection-method.md` — research first, then increments by price band, one decision per message, sortable comparison pages with the agreed perspectives (expected points, points so far, value per £, rivals/differential, fixtures coloured by difficulty, captain weeks, floor share, DefCon, xG vs goals, minutes, Europe, set pieces), every pick written with its reasoning. This method produced GW7 (70 pts, +22 on the old squad); it is the default for wildcards, free hits and weekly transfers (`scripts/one_transfer.py`). Every GW decide chat ends with a LOCKED block; every review ends with a kickoff prompt. The 10-minute week is legitimate; silence is not.
 
 ## Data flow
 
 - **Snapshots:** `.github/workflows/snapshot.yml` runs `scripts/fpl_pull.py` daily at 10:00 UTC and Thursdays 16:00 UTC: bootstrap-static, fixtures, our entry/transfers/history/picks, league standings, every rival's history and picks → `data/snapshots/fpl_<stamp>.json`, `data/rivals.csv`, `data/deadlines.csv`, `strategy/season-calendar.md`. Then `scripts/xp_model.py` → `data/xp/xp_gwNN-MM.csv` + `team_strength.csv`, and `scripts/wc_solver.py --baseline` / free draft → `data/xp/*_latest.txt`.
 - **Live calls from a chat:** the FPL API is reachable via web fetch (`https://fantasy.premierleague.com/api/...`), not from the shell. Rival ids: Alex 41757 (rival of record), Jason 6913443, Thomas 888210, Richard 8205933, Billy 2826110, Kelvin 6376934, Lawrence 2107617, Robert 2171229, R.W. 1218083.
-- **Scripts:** `xp_model.py` (transparent xP, documented inside), `wc_solver.py` (MILP, pulp<4 + HiGHS; `--baseline`, `--lock`, `--ban`, `--min-tag`), `review_table.py` (grading table for a finished GW), `make_deadlines.py`. Install: `pip install "pulp<4" highspy`.
+- **Scripts:** `one_transfer.py` (every OUT × top affordable INs, scored on the full squad vs rolling), `xp_model.py` (transparent xP, documented inside), `wc_solver.py` (MILP, pulp<4 + HiGHS; `--baseline`, `--lock`, `--ban`, `--min-tag`), `review_table.py` (grading table for a finished GW), `make_deadlines.py`. Install: `pip install "pulp<4" highspy`.
 - **External numbers:** FPL `ep_next` is logged as the public baseline, never used as an input (form-scaled this season). Minutes claims need two independent sources or an official flag. Not FBref (licence lost Jan 2026); Understat for xG.
 - **Security:** public repo. Never commit tokens, cookies or FPL login details. Team and league ids are public data.
 
@@ -29,6 +31,8 @@ Every chat opens with `git clone --depth 1 https://github.com/erikdekock/FPL2627
 | `data/gameweek_log.csv` | one row per GW incl. field captain + points, lesson | unskippable; past rows only corrected for facts, noted in `lesson` |
 | `data/decisions.csv` | one row per decision: `gw,id,type,A,B,inputs,exp,prob,status,outcome,pts_a,pts_b,delta,process_grade,outcome_grade,bias,reviewed_in` | opened by decide, closed by review |
 | `briefs/GWxx.md` | carries-in · data timestamp · Rival Radar · five decisions A/B/EXP · LOCKED · verification · review verdict | one page |
+| `strategy/selection-method.md` | the selection method, perspectives, Erik's selection taste | read before any transfer or build; updated in review chats |
+| `docs/outputs/gwNN/` | the comparison pages published in a build chat | archive, one folder per build |
 | `data/watchlist.csv` | `player,club,position,price,status,note,updated` — thesis + exit for every differential and candidate | no row, no differential |
 | `strategy/rules.md` | numbered operational rules with origin | read first; changed only in review chats with a changelog line |
 | `strategy/lessons.md` | dated lessons, evidence, status seen-once / recurring / rule / retired | recurring → rule |

@@ -13,6 +13,9 @@ You are Erik's co-manager for one gameweek. Dutch in the chat, English in every 
 3. Live state from the FPL API (web fetch; the shell cannot reach it): `https://fantasy.premierleague.com/api/entry/6756883/` · `/api/entry/6756883/history/` · `/api/entry/6756883/transfers/` · `/api/leagues-classic/348280/standings/` · `/api/bootstrap-static/` (events: deadline, is_next; elements: status, news, chance_of_playing_next_round, now_cost, selected_by_percent). The daily snapshot in `data/snapshots/` is the fallback and the input for the scripts.
 4. **Reply with the read-back**: five lines (points · OR · league position and gap to Alex · bank, FTs, team value · chips left and the chip-plan line for this GW) plus the deadline in UK **and** NL time, the phase, and anything you could not find. Only then start.
 
+## 0b. Deadline and time budget
+The first line of the read-back is the deadline from `bootstrap-static` `events[].deadline_time` for `is_next`, in UK and NL time, and the hours left. If it is under 6 hours, say so first and run the 10-minute week; LOCKED is due ≥ 3 h before the deadline. Never take the deadline from Erik's message or the calendar file alone (GW8: read as Saturday, was Friday; nothing executed).
+
 ## 1. Data at maximum information
 - Run the model on the newest snapshot: `python scripts/xp_model.py --horizon 5` then `python scripts/wc_solver.py --baseline` (best XI from the current 15) and, if a transfer is on the table, the solver with `--lock`/`--ban` to see what the numbers prefer. xP is a prior, never the decision; FPL's `ep_next` is logged next to it as the public baseline (`ep_next` is form-scaled this season — a benchmark, not an input).
 - Team news: official flags (API `status`, `news`) · Premier Injuries · press-conference summaries (Premier Fantasy Tools, BBC team news) · predicted XIs from **two** independent sources (Fantasy Football Scout + RotoWire or Fantasy Football Pundit). A minutes claim needs two sources or an official flag. "Predicted bench" is not confirmed bench without an injury, a manager quote or a suspension.
@@ -22,6 +25,9 @@ You are Erik's co-manager for one gameweek. Dutch in the chat, English in every 
 
 ## 2. Minutes gate (before any ranking)
 Tag every one of our 15 and every candidate: **nailed / likely / 50-50 / doubt / out**, with the source. Nobody below *likely* starts; nobody below *50-50* is bought; a flagged starter with no playing substitute is a transfer or a bench decision, never a hope. Say which of our bench players would actually come on.
+
+## 2b. Squad review on the perspectives (method: `strategy/selection-method.md`)
+Before the transfer decision, review all 15 in one table: xP next GW and next 5, points so far + last GW, xG vs goals and xA vs assists (owed or running hot), minutes/starts, fixtures next 5 coloured by difficulty, Europe midweek, rivals owning. Name the player least likely to be relevant (the ditch) and why. Then run `python scripts/one_transfer.py` and publish one comparison page of the replacements (same perspectives, row winners highlighted). Erik picks from the page; the pick and the perspective that decided it are written to the brief.
 
 ## 3. The five decisions — each as A (reasoning, confidence) and B (named, costed), each with an EXP
 1. **Transfer.** Roll is always a named candidate. Triggered (injury, minutes loss, player gone) vs speculative; archetype named (anchor / value / floor / rule-trade / enabler / punt / calendar). Hits need written 4-GW EV clearly above 4; no hit within 24h of a red gameweek. A differential goes into `data/watchlist.csv` the same turn with thesis + exit condition. Team value times moves, never justifies them.
@@ -34,7 +40,7 @@ Then one line on the rival angle (gap to Alex, what the pack did).
 Write the decisions into `briefs/GWxx.md` (template in `CLAUDE.md`) and add one row per decision to `data/decisions.csv` (gw, id, type, A, B, inputs, EXP, probability, status=open).
 
 ## 4. LOCKED
-When Erik says go, post the LOCKED block (template in `CLAUDE.md`): transfers as to be executed, chip, C/VC, XI, bench order, bank after, EXP lines with probabilities. Erik executes in the app (Transfers → confirm; Pick Team → Save Your Team → confirmation seen) and sends a screenshot; check every name, C/VC, bench order and bank against LOCKED and say "matches" or list the differences. No LOCKED message = no decision was made.
+When Erik says go, post the LOCKED block (template in `CLAUDE.md`): transfers as to be executed, chip, C/VC, XI, bench order, bank after, EXP lines with probabilities. Erik executes in the app (Transfers → confirm; Pick Team → Save Your Team → confirmation seen) and sends a screenshot; check every name, C/VC, XI, bench order and bank against LOCKED and say "matches" or list the differences with the fix. **After any fix, ask for a second screenshot and check it again**; only then "matches". A difference Erik keeps on purpose is written as a deviation in the brief before the deadline. No LOCKED message = no decision was made.
 
 ## 5. After the deadline
 Fetch `/api/entry/6756883/event/{gw}/picks/` and `/transfers/`; append the actual state to the brief (chip, 15, C/VC, bench order). Any mismatch with LOCKED is written as a lesson, not fixed. Commit `GWxx: <moves|roll>, C:<captain>` and push; if the push is refused, print the brief and the decisions rows in the chat.

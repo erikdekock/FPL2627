@@ -1,0 +1,314 @@
+<title>Differentials nobody owns</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one wide comparison table, sticky player column, perspective sorts above it */
+:root{--bg:#f7f6f2;--fg:#1e1d1a;--muted:#6b685f;--line:#dcd9d0;--head:#ecebe4;--accent:#1d5fa8;--accent-bg:#e2edf9;
+--d2:#d9efd3;--d2t:#1f5a15;--d3:#eeede8;--d3t:#4a4942;--d4:#fbe4c4;--d4t:#7a4a0a;--d5:#f7cfcf;--d5t:#7b1d1d;
+--eo0:#d6efe7;--eo0t:#0c5440;--eo1:#eeede8;--eo1t:#4a4942;--eo2:#e6e2f7;--eo2t:#3b3184;--bar:#b9d0ea;
+--star:#fff6dd;--sans:"IBM Plex Sans",system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,monospace}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#16181c;--fg:#ecebe5;--muted:#a3a198;--line:#2e3137;--head:#1f2227;--accent:#7fb0ea;--accent-bg:#1b2d44;
+--d2:#1d3b1a;--d2t:#b9e3ae;--d3:#262930;--d3t:#c9c7bf;--d4:#4a3414;--d4t:#f3cf96;--d5:#4f1d1d;--d5t:#f5b6b6;
+--eo0:#143f33;--eo0t:#a7e3cf;--eo1:#262930;--eo1t:#c9c7bf;--eo2:#2a2456;--eo2t:#cfc7f5;--bar:#2f4f78;--star:#3a3215;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#16181c;--fg:#ecebe5;--muted:#a3a198;--line:#2e3137;--head:#1f2227;--accent:#7fb0ea;--accent-bg:#1b2d44;
+--d2:#1d3b1a;--d2t:#b9e3ae;--d3:#262930;--d3t:#c9c7bf;--d4:#4a3414;--d4t:#f3cf96;--d5:#4f1d1d;--d5t:#f5b6b6;
+--eo0:#143f33;--eo0t:#a7e3cf;--eo1:#262930;--eo1t:#c9c7bf;--eo2:#2a2456;--eo2t:#cfc7f5;--bar:#2f4f78;--star:#3a3215;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:14px;line-height:1.5;padding-block:16px 32px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1{font-size:20px;font-weight:600;margin:0 0 4px;text-wrap:balance}
+.lead{color:var(--muted);margin:0 0 14px;max-width:62ch}
+.sorts{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.sorts button{font:inherit;font-size:13px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--fg);cursor:pointer}
+.sorts button[aria-pressed="true"]{background:var(--accent-bg);border-color:var(--accent);color:var(--accent)}
+.sorts button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.legend{display:flex;flex-wrap:wrap;gap:10px 16px;font-size:12px;color:var(--muted);margin:0 0 12px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.sw{width:14px;height:14px;border-radius:3px;display:inline-block;border:1px solid var(--line)}
+.wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;min-width:0}
+table{border-collapse:separate;border-spacing:0;min-width:1180px;width:100%;font-variant-numeric:tabular-nums}
+thead th{position:sticky;top:0;background:var(--head);font-size:11px;font-weight:500;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);padding:8px 8px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap;z-index:2}
+thead th.pl{z-index:3}
+td,th.pl{padding:8px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th.pl{position:sticky;left:0;background:var(--bg);text-align:left;font-weight:500;min-width:112px;z-index:1}
+tr.band-star th.pl{background:var(--star)}
+.nm{display:block;font-size:14px}.tm{display:block;font-size:12px;color:var(--muted)}
+.num{font-family:var(--mono);font-size:13px;white-space:nowrap}
+.sub{display:block;font-family:var(--sans);font-size:11px;color:var(--muted)}
+.tx{font-size:12px;white-space:nowrap}.note{white-space:normal;min-width:190px;color:var(--muted)}
+.bar{display:block;height:6px;width:64px;background:var(--line);border-radius:3px;overflow:hidden;margin:6px 0 3px}
+.bar span{display:block;height:100%;background:var(--bar)}
+.fx{text-align:center;min-width:46px;font-family:var(--mono);font-size:12px;border-left:1px solid var(--line)}
+.fx .opp{display:block;font-weight:500}.fx .ven{display:block;font-size:11px}
+.d2{background:var(--d2);color:var(--d2t)}.d3{background:var(--d3);color:var(--d3t)}.d4{background:var(--d4);color:var(--d4t)}.d5{background:var(--d5);color:var(--d5t)}
+.eo{display:inline-block;padding:2px 8px;border-radius:999px;font-family:var(--mono);font-size:12px}
+.eo0{background:var(--eo0);color:var(--eo0t)}.eo1{background:var(--eo1);color:var(--eo1t)}.eo2{background:var(--eo2);color:var(--eo2t)}
+.foot{font-size:12px;color:var(--muted);margin:12px 0 0;max-width:70ch}
+</style>
+<h1>Differentials nobody owns, GW7 wildcard</h1>
+<p class="lead">Fourteen players with 30+ points so far that at most one of the nine Fantasy Fellas rivals holds and that under 21% of the field owns, any position. Snapshot Wed 14 Oct 13:30 UTC; xP from the repo model over GW7–12. Already-chosen players (Haaland, Mbeumo, Groß, Cherki) are left out.</p>
+<div class="sorts" role="group" aria-label="Sort perspective">
+<button type="button" id="s-pts" data-key="pts" aria-pressed="true">Points so far</button>
+<button type="button" id="s-xp" data-key="xp">Expected points</button>
+<button type="button" id="s-own" data-key="own">Least owned</button>
+<button type="button" id="s-val" data-key="val">Value per £</button>
+<button type="button" id="s-fix" data-key="fix">Fixtures GW7–12</button>
+</div>
+<div class="legend">
+<span><i class="sw" style="background:var(--d2)"></i>easy (2)</span><span><i class="sw" style="background:var(--d3)"></i>neutral (3)</span><span><i class="sw" style="background:var(--d4)"></i>hard (4)</span><span><i class="sw" style="background:var(--d5)"></i>hardest (5)</span>
+<span><i class="sw" style="background:var(--eo0)"></i>0–1 rivals own him</span>
+</div>
+<div class="wrap"><table>
+<thead><tr>
+<th class="pl" scope="col">Player</th><th scope="col">Pts GW1–6</th><th scope="col">GW6</th><th scope="col">xP GW7</th><th scope="col">xP GW7–12</th><th scope="col">xP per £</th><th scope="col">xGI/90</th><th scope="col">DefCon/90</th><th scope="col">Starts</th><th scope="col">Field own</th><th scope="col">Rivals</th>
+<th scope="col">GW7</th><th scope="col">GW8</th><th scope="col">GW9</th><th scope="col">GW10</th><th scope="col">GW11</th><th scope="col">GW12</th><th scope="col">Σ diff</th><th scope="col">Europe</th><th scope="col">Set pieces</th><th scope="col">Note</th>
+</tr></thead>
+<tbody id="rows">
+<tr data-xp="22.14" data-own="18.4" data-val="3.57" data-fix="21" data-pts="46">
+<th scope="row" class="pl"><span class="nm">Tarkowski</span><span class="tm">EVE · DEF · £6.2</span></th>
+<td class="num">46<span class="sub">7.7 pg · 1G 1A 3CS 7B</span></td>
+<td class="num">3</td>
+<td class="num">5.6</td>
+<td class="num"><span class="bar"><span style="width:96%"></span></span><span class="bv">22.1</span></td>
+<td class="num">3.57</td>
+<td class="num">0.04</td>
+<td class="num">11.3</td>
+<td class="num">6/6<span class="sub">540 min</span></td>
+<td class="num">18.4%</td>
+<td class="num"><span class="eo eo0">0/9</span></td>
+<td class="fx d4"><span class="opp">CHE</span><span class="ven">H</span></td><td class="fx d5"><span class="opp">ARS</span><span class="ven">A</span></td><td class="fx d3"><span class="opp">NEW</span><span class="ven">A</span></td><td class="fx d2"><span class="opp">COV</span><span class="ven">H</span></td><td class="fx d3"><span class="opp">BRE</span><span class="ven">A</span></td><td class="fx d4"><span class="opp">LIV</span><span class="ven">H</span></td>
+<td class="num">21</td>
+<td class="tx">none</td>
+<td class="tx">—</td>
+<td class="tx note">0 of 9 rivals despite 46 pts; DefCon machine; hard start CHE(H), ARS(A)</td>
+</tr><tr data-xp="21.21" data-own="9.0" data-val="4.51" data-fix="18" data-pts="43">
+<th scope="row" class="pl"><span class="nm">Bogle</span><span class="tm">LEE · DEF · £4.7</span></th>
+<td class="num">43<span class="sub">7.2 pg · 2G 4CS 6B</span></td>
+<td class="num">1</td>
+<td class="num">5.2</td>
+<td class="num"><span class="bar"><span style="width:92%"></span></span><span class="bv">21.2</span></td>
+<td class="num">4.51</td>
+<td class="num">0.32</td>
+<td class="num">3.4</td>
+<td class="num">6/6<span class="sub">450 min</span></td>
+<td class="num">9.0%</td>
+<td class="num"><span class="eo eo0">1/9</span></td>
+<td class="fx d4"><span class="opp">MUN</span><span class="ven">H</span></td><td class="fx d3"><span class="opp">SUN</span><span class="ven">A</span></td><td class="fx d3"><span class="opp">BOU</span><span class="ven">A</span></td><td class="fx d2"><span class="opp">TOT</span><span class="ven">H</span></td><td class="fx d4"><span class="opp">CHE</span><span class="ven">A</span></td><td class="fx d2"><span class="opp">COV</span><span class="ven">H</span></td>
+<td class="num">18</td>
+<td class="tx">none</td>
+<td class="tx">—</td>
+<td class="tx note">2 goals + 4 clean sheets at £4.7; subbed off ~75 min; FFScout: Bijol could displace him</td>
+</tr><tr data-xp="18.64" data-own="4.6" data-val="3.65" data-fix="19" data-pts="40">
+<th scope="row" class="pl"><span class="nm">Vuskovic</span><span class="tm">BHA · DEF · £5.1</span></th>
+<td class="num">40<span class="sub">6.7 pg · 1G 4CS 2B</span></td>
+<td class="num">8</td>
+<td class="num">5.1</td>
+<td class="num"><span class="bar"><span style="width:81%"></span></span><span class="bv">18.6</span></td>
+<td class="num">3.65</td>
+<td class="num">0.13</td>
+<td class="num">9.9</td>
+<td class="num">6/6<span class="sub">527 min</span></td>
+<td class="num">4.6%</td>
+<td class="num"><span class="eo eo0">0/9</span></td>
+<td class="fx d2"><span class="opp">CRY</span><span class="ven">H</span></td><td class="fx d4"><span class="opp">LIV</span><span class="ven">A</span></td><td class="fx d5"><span class="opp">MCI</span><span class="ven">A</span></td><td class="fx d3"><span class="opp">BRE</span><span class="ven">H</span></td><td class="fx d2"><span class="opp">HUL</span><span class="ven">A</span></td><td class="fx d3"><span class="opp">NEW</span><span class="ven">H</span></td>
+<td class="num">19</td>
+<td class="tx">UECL Thu</td>
+<td class="tx">—</td>
+<td class="tx note">Struijk suspended GW7, so nailed; Brighton 5 conceded in 6</td>
+</tr><tr data-xp="14.66" data-own="13.7" data-val="1.77" data-fix="18" data-pts="36">
+<th scope="row" class="pl"><span class="nm">Semenyo</span><span class="tm">MCI · MID · £8.3</span></th>
+<td class="num">36<span class="sub">6.0 pg · 2G 3A 3CS 2B</span></td>
+<td class="num">3</td>
+<td class="num">3.9</td>
+<td class="num"><span class="bar"><span style="width:63%"></span></span><span class="bv">14.7</span></td>
+<td class="num">1.77</td>
+<td class="num">0.30</td>
+<td class="num">4.2</td>
+<td class="num">6/6<span class="sub">540 min</span></td>
+<td class="num">13.7%</td>
+<td class="num"><span class="eo eo0">1/9</span></td>
+<td class="fx d2"><span class="opp">IPS</span><span class="ven">H</span></td><td class="fx d3"><span class="opp">AVL</span><span class="ven">A</span></td><td class="fx d3"><span class="opp">BHA</span><span class="ven">H</span></td><td class="fx d3"><span class="opp">NFO</span><span class="ven">A</span></td><td class="fx d2"><span class="opp">FUL</span><span class="ven">H</span></td><td class="fx d5"><span class="opp">ARS</span><span class="ven">A</span></td>
+<td class="num">18</td>
+<td class="tx">UCL</td>
+<td class="tx">—</td>
+<td class="tx note">Would make City exposure 3; model low on 0.30 xGI/90</td>
+</tr><tr data-xp="18.45" data-own="6.4" data-val="2.34" data-fix="20" data-pts="36">
+<th scope="row" class="pl"><span class="nm">Cunha</span><span class="tm">MUN · MID · £7.9</span></th>
+<td class="num">36<span class="sub">6.0 pg · 1G 3A 1CS 7B</span></td>
+<td class="num">10</td>
+<td class="num">4.2</td>
+<td class="num"><span class="bar"><span style="width:80%"></span></span><span class="bv">18.4</span></td>
+<td class="num">2.34</td>
+<td class="num">0.32</td>
+<td class="num">4.9</td>
+<td class="num">6/6<span class="sub">497 min</span></td>
+<td class="num">6.4%</td>
+<td class="num"><span class="eo eo0">1/9</span></td>
+<td class="fx d3"><span class="opp">LEE</span><span class="ven">A</span></td><td class="fx d3"><span class="opp">BOU</span><span class="ven">H</span></td><td class="fx d4"><span class="opp">CHE</span><span class="ven">A</span></td><td class="fx d3"><span class="opp">AVL</span><span class="ven">H</span></td><td class="fx d4"><span class="opp">LIV</span><span class="ven">A</span></td><td class="fx d3"><span class="opp">BRE</span><span class="ven">H</span></td>
+<td class="num">20</td>
+<td class="tx">UCL</td>
+<td class="tx">—</td>
+<td class="tx note">10 in GW6; Billy captained him; United exposure 2 with Mbeumo</td>
+</tr><tr data-xp="20.63" data-own="5.8" data-val="3.13" data-fix="21" data-pts="33">
+<th scope="row" class="pl"><span class="nm">Dewsbury-Hall</span><span class="tm">EVE · MID · £6.6</span></th>
+<td class="num">33<span class="sub">5.5 pg · 2G 1A 3CS 6B</span></td>
+<td class="num">13</td>
+<td class="num">5.6</td>
+<td class="num"><span class="bar"><span style="width:89%"></span></span><span class="bv">20.6</span></td>
+<td class="num">3.13</td>
+<td class="num">0.38</td>
+<td class="num">8.7</td>
+<td class="num">6/6<span class="sub">540 min</span></td>
+<td class="num">5.8%</td>
+<td class="num"><span class="eo eo0">1/9</span></td>
+<td class="fx d4"><span class="opp">CHE</span><span class="ven">H</span></td><td class="fx d5"><span class="opp">ARS</span><span class="ven">A</span></td><td class="fx d3"><span class="opp">NEW</span><span class="ven">A</span></td><td class="fx d2"><span class="opp">COV</span><span class="ven">H</span></td><td class="fx d3"><span class="opp">BRE</span><span class="ven">A</span></td><td class="fx d4"><span class="opp">LIV</span><span class="ven">H</span></td>
+<td class="num">21</td>
+<td class="tx">none</td>
+<td class="tx">corners</td>
+<td class="tx note">13 in GW6; two hard fixtures first, then COV(H)</td>
+</tr><tr data-xp="21.09" data-own="7.3" data-val="3.46" data-fix="18" data-pts="32">
+<th scope="row" class="pl"><span class="nm">Tavernier</span><span class="tm">BOU · MID · £6.1</span></th>
+<td class="num">32<span class="sub">5.3 pg · 3G 8B</span></td>
+<td class="num">1</td>
+<td class="num">5.9</td>
+<td class="num"><span class="bar"><span style="width:91%"></span></span><span class="bv">21.1</span></td>
+<td class="num">3.46</td>
+<td class="num">0.48</td>
+<td class="num">8.5</td>
+<td class="num">6/6<span class="sub">496 min</span></td>
+<td class="num">7.3%</td>
+<td class="num"><span class="eo eo0">1/9</span></td>
+<td class="fx d3"><span class="opp">SUN</span><span class="ven">H</span></td><td class="fx d4"><span class="opp">MUN</span><span class="ven">A</span></td><td class="fx d3"><span class="opp">LEE</span><span class="ven">H</span></td><td class="fx d2"><span class="opp">IPS</span><span class="ven">A</span></td><td class="fx d3"><span class="opp">NFO</span><span class="ven">H</span></td><td class="fx d3"><span class="opp">FUL</span><span class="ven">A</span></td>
+<td class="num">18</td>
+<td class="tx">UEL Thu</td>
+<td class="tx">corners, FKs</td>
+<td class="tx note">Set-piece taker, 3 goals; Scott/Kroupi/Adli/Kluivert out so more of the ball; Thursday rotation</td>
+</tr><tr data-xp="19.01" data-own="1.6" data-val="4.22" data-fix="18" data-pts="32">
+<th scope="row" class="pl"><span class="nm">Justin</span><span class="tm">LEE · DEF · £4.5</span></th>
+<td class="num">32<span class="sub">5.3 pg · 1G 2CS 4B</span></td>
+<td class="num">6</td>
+<td class="num">4.7</td>
+<td class="num"><span class="bar"><span style="width:82%"></span></span><span class="bv">19.0</span></td>
+<td class="num">4.22</td>
+<td class="num">0.14</td>
+<td class="num">8.5</td>
+<td class="num">6/6<span class="sub">528 min</span></td>
+<td class="num">1.6%</td>
+<td class="num"><span class="eo eo0">0/9</span></td>
+<td class="fx d4"><span class="opp">MUN</span><span class="ven">H</span></td><td class="fx d3"><span class="opp">SUN</span><span class="ven">A</span></td><td class="fx d3"><span class="opp">BOU</span><span class="ven">A</span></td><td class="fx d2"><span class="opp">TOT</span><span class="ven">H</span></td><td class="fx d4"><span class="opp">CHE</span><span class="ven">A</span></td><td class="fx d2"><span class="opp">COV</span><span class="ven">H</span></td>
+<td class="num">18</td>
+<td class="tx">none</td>
+<td class="tx">—</td>
+<td class="tx note">1.6% field, 0 rivals: the purest differential; DC/90 8.5</td>
+</tr><tr data-xp="18.02" data-own="20.7" data-val="3.40" data-fix="20" data-pts="31">
+<th scope="row" class="pl"><span class="nm">Hall</span><span class="tm">NEW · DEF · £5.3</span></th>
+<td class="num">31<span class="sub">5.2 pg · 1G 1A 1CS 6B</span></td>
+<td class="num">0</td>
+<td class="num">5.2</td>
+<td class="num"><span class="bar"><span style="width:78%"></span></span><span class="bv">18.0</span></td>
+<td class="num">3.40</td>
+<td class="num">0.19</td>
+<td class="num">8.7</td>
+<td class="num">6/6<span class="sub">539 min</span></td>
+<td class="num">20.7%</td>
+<td class="num"><span class="eo eo0">0/9</span></td>
+<td class="fx d3"><span class="opp">AVL</span><span class="ven">H</span></td><td class="fx d3"><span class="opp">CRY</span><span class="ven">A</span></td><td class="fx d3"><span class="opp">EVE</span><span class="ven">H</span></td><td class="fx d3"><span class="opp">FUL</span><span class="ven">A</span></td><td class="fx d4"><span class="opp">ARS</span><span class="ven">H</span></td><td class="fx d4"><span class="opp">BHA</span><span class="ven">A</span></td>
+<td class="num">20</td>
+<td class="tx">none</td>
+<td class="tx">corners, FKs</td>
+<td class="tx note">0 in GW6; Newcastle have conceded 13, so clean sheets are rare</td>
+</tr><tr data-xp="16.25" data-own="2.5" data-val="3.25" data-fix="20" data-pts="31">
+<th scope="row" class="pl"><span class="nm">Janelt</span><span class="tm">BRE · MID · £5.0</span></th>
+<td class="num">31<span class="sub">5.2 pg · 2G 2CS 3B</span></td>
+<td class="num">3</td>
+<td class="num">4.1</td>
+<td class="num"><span class="bar"><span style="width:70%"></span></span><span class="bv">16.2</span></td>
+<td class="num">3.25</td>
+<td class="num">0.17</td>
+<td class="num">13.0</td>
+<td class="num">6/6<span class="sub">540 min</span></td>
+<td class="num">2.5%</td>
+<td class="num"><span class="eo eo0">0/9</span></td>
+<td class="fx d4"><span class="opp">LIV</span><span class="ven">H</span></td><td class="fx d2"><span class="opp">HUL</span><span class="ven">A</span></td><td class="fx d3"><span class="opp">NFO</span><span class="ven">H</span></td><td class="fx d4"><span class="opp">BHA</span><span class="ven">A</span></td><td class="fx d3"><span class="opp">EVE</span><span class="ven">H</span></td><td class="fx d4"><span class="opp">MUN</span><span class="ven">A</span></td>
+<td class="num">20</td>
+<td class="tx">none</td>
+<td class="tx">—</td>
+<td class="tx note">DefCon every week (13.0/90); floor play, low ceiling</td>
+</tr><tr data-xp="17.04" data-own="2.6" data-val="3.10" data-fix="21" data-pts="30">
+<th scope="row" class="pl"><span class="nm">Branthwaite</span><span class="tm">EVE · DEF · £5.5</span></th>
+<td class="num">30<span class="sub">5.0 pg · 3CS</span></td>
+<td class="num">3</td>
+<td class="num">4.2</td>
+<td class="num"><span class="bar"><span style="width:74%"></span></span><span class="bv">17.0</span></td>
+<td class="num">3.10</td>
+<td class="num">0.05</td>
+<td class="num">10.7</td>
+<td class="num">6/6<span class="sub">540 min</span></td>
+<td class="num">2.6%</td>
+<td class="num"><span class="eo eo0">0/9</span></td>
+<td class="fx d4"><span class="opp">CHE</span><span class="ven">H</span></td><td class="fx d5"><span class="opp">ARS</span><span class="ven">A</span></td><td class="fx d3"><span class="opp">NEW</span><span class="ven">A</span></td><td class="fx d2"><span class="opp">COV</span><span class="ven">H</span></td><td class="fx d3"><span class="opp">BRE</span><span class="ven">A</span></td><td class="fx d4"><span class="opp">LIV</span><span class="ven">H</span></td>
+<td class="num">21</td>
+<td class="tx">none</td>
+<td class="tx">—</td>
+<td class="tx note">DC/90 10.7, 0 attacking output; Everton CB partner to Tarkowski</td>
+</tr><tr data-xp="20.43" data-own="5.6" data-val="4.09" data-fix="18" data-pts="30">
+<th scope="row" class="pl"><span class="nm">Trafford</span><span class="tm">LEE · GK · £5.0</span></th>
+<td class="num">30<span class="sub">5.0 pg · 2CS 5B 24sv</span></td>
+<td class="num">2</td>
+<td class="num">5.0</td>
+<td class="num"><span class="bar"><span style="width:88%"></span></span><span class="bv">20.4</span></td>
+<td class="num">4.09</td>
+<td class="num">0.00</td>
+<td class="num">0.0</td>
+<td class="num">6/6<span class="sub">540 min</span></td>
+<td class="num">5.6%</td>
+<td class="num"><span class="eo eo0">0/9</span></td>
+<td class="fx d4"><span class="opp">MUN</span><span class="ven">H</span></td><td class="fx d3"><span class="opp">SUN</span><span class="ven">A</span></td><td class="fx d3"><span class="opp">BOU</span><span class="ven">A</span></td><td class="fx d2"><span class="opp">TOT</span><span class="ven">H</span></td><td class="fx d4"><span class="opp">CHE</span><span class="ven">A</span></td><td class="fx d2"><span class="opp">COV</span><span class="ven">H</span></td>
+<td class="num">18</td>
+<td class="tx">none</td>
+<td class="tx">—</td>
+<td class="tx note">24 saves, Rodon out to 31 Oct in front of him; pairs with Tzolakis</td>
+</tr><tr data-xp="15.83" data-own="8.1" data-val="2.60" data-fix="20" data-pts="30">
+<th scope="row" class="pl"><span class="nm">Barnes</span><span class="tm">NEW · MID · £6.1</span></th>
+<td class="num">30<span class="sub">5.0 pg · 1G 3A 1CS 3B</span></td>
+<td class="num">2</td>
+<td class="num">4.2</td>
+<td class="num"><span class="bar"><span style="width:68%"></span></span><span class="bv">15.8</span></td>
+<td class="num">2.60</td>
+<td class="num">0.30</td>
+<td class="num">6.7</td>
+<td class="num">6/6<span class="sub">540 min</span></td>
+<td class="num">8.1%</td>
+<td class="num"><span class="eo eo0">0/9</span></td>
+<td class="fx d3"><span class="opp">AVL</span><span class="ven">H</span></td><td class="fx d3"><span class="opp">CRY</span><span class="ven">A</span></td><td class="fx d3"><span class="opp">EVE</span><span class="ven">H</span></td><td class="fx d3"><span class="opp">FUL</span><span class="ven">A</span></td><td class="fx d4"><span class="opp">ARS</span><span class="ven">H</span></td><td class="fx d4"><span class="opp">BHA</span><span class="ven">A</span></td>
+<td class="num">20</td>
+<td class="tx">none</td>
+<td class="tx">—</td>
+<td class="tx note">Newcastle leak goals; 3 assists; no Europe</td>
+</tr><tr data-xp="21.62" data-own="14.8" data-val="2.70" data-fix="20" data-pts="30">
+<th scope="row" class="pl"><span class="nm">Gibbs-White</span><span class="tm">NFO · MID · £8.0</span></th>
+<td class="num">30<span class="sub">5.0 pg · 1G 2A 1CS 6B</span></td>
+<td class="num">2</td>
+<td class="num">5.0</td>
+<td class="num"><span class="bar"><span style="width:94%"></span></span><span class="bv">21.6</span></td>
+<td class="num">2.70</td>
+<td class="num">0.59</td>
+<td class="num">4.8</td>
+<td class="num">6/6<span class="sub">540 min</span></td>
+<td class="num">14.8%</td>
+<td class="num"><span class="eo eo0">1/9</span></td>
+<td class="fx d4"><span class="opp">ARS</span><span class="ven">H</span></td><td class="fx d2"><span class="opp">IPS</span><span class="ven">A</span></td><td class="fx d3"><span class="opp">BRE</span><span class="ven">A</span></td><td class="fx d4"><span class="opp">MCI</span><span class="ven">H</span></td><td class="fx d3"><span class="opp">BOU</span><span class="ven">A</span></td><td class="fx d4"><span class="opp">CHE</span><span class="ven">H</span></td>
+<td class="num">20</td>
+<td class="tx">none</td>
+<td class="tx">pens, FKs</td>
+<td class="tx note">ARS(H) first; 2 in GW6, −102k transfers out</td>
+</tr>
+</tbody></table></div>
+<p class="foot">DefCon/90 = defensive contributions per 90; the 2-point bonus triggers at 10 for defenders and 12 for midfielders and forwards, so a figure near or above the threshold is a weekly floor. xGI/90 = expected goals plus assists per 90. Σ diff = sum of the six FPL fixture difficulties, lower is easier. No official flags on any of the fourteen on 14 Oct; Thursday and Friday pressers still to come.</p>
+<script>
+(function(){
+var tb=document.getElementById('rows');var btns=document.querySelectorAll('.sorts button');
+var desc={xp:true,own:false,val:true,fix:false,pts:true};
+function sortBy(k){var rs=Array.prototype.slice.call(tb.querySelectorAll('tr'));rs.sort(function(a,b){var x=parseFloat(a.dataset[k]),y=parseFloat(b.dataset[k]);return desc[k]?y-x:x-y;});rs.forEach(function(r){tb.appendChild(r);});
+btns.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.key===k?'true':'false');});}
+btns.forEach(function(b){b.addEventListener('click',function(){sortBy(b.dataset.key);});});
+})();
+</script>

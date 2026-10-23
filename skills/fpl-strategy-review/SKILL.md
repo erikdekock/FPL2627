@@ -24,6 +24,13 @@ Slower work than the weekly chats, done between gameweeks. Dutch in the chat, En
 5. Chip rule: the rationale is written in `chip-plan.md` **the day before** the fire; the file's log table gets the baseline (best XI xP of the old 15) so the review can grade the chip.
 6. Hand the LOCKED-ready squad to the decide chat (or run the decide steps here if it is deadline week).
 
+## B2. How the build is run in chat (the GW7 method, `strategy/selection-method.md`)
+1. Research and write the brief first (state, rivals, fixtures + Europe + breaks, availability, price-band points table, structures costed). No names chosen yet.
+2. Build **by price band**: stars → mid-premium → value core → enablers → budget/bench. Running budget after every decision.
+3. Per open slot, publish a **comparison page** (HTML artifact, sortable, colours for fixture difficulty and rival ownership, ~10 candidates) with the perspectives: expected points, points so far + per game + last GW, value per £, rivals owning (sword/template), field ownership, fixtures GW..GW+5 with Σ difficulty, captain weeks, floor share, DefCon/90 vs threshold, xGI/90 and xG vs goals, starts/minutes, midweek load, set pieces, notes. Useful special pages: second star, differentials nobody owns, under the radar (strikers included), head-to-head, pairs (all combinations scored by the solver on the full squad with bank and club limits). Copy each page to `docs/outputs/gwNN/`.
+4. Erik picks from the page; Claude writes a decision code (D-…) with the reasoning in `strategy/wcN-squad.md`, challenges once when a pick breaks a rule or an earlier decision, logs it as a deviation if kept, commits the same turn.
+5. Close with the squad table (position, price, xP next GW and horizon, points so far, role), the solver XI/captains on the final 15, watchlist rows for every differential, and LOCKED ≥ 3 h before the deadline.
+
 ## C. Chip plan rewrite
 Inputs: chips held (ours and every rival's), the GW19 cliff for set 1 (verify the date in `bootstrap-static` events), Ben Crellin's blank/double map once cup rounds are drawn, the scoring environment, each candidate's fixture and minutes outlook. For each chip: window (GW range), trigger that fires it, the baseline to grade it against, the rival-state consideration (if the chasing rival holds the same chip for the same week, ours is shield; if he has burned his, ours is sword). Table + a dated changelog line. Reactive fires are banned; a proposal sleeps one night.
 

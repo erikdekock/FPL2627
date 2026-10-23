@@ -1,0 +1,252 @@
+<title>Second star midfielder</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one wide comparison table, sticky player column, perspective sorts above it */
+:root{--bg:#f7f6f2;--fg:#1e1d1a;--muted:#6b685f;--line:#dcd9d0;--head:#ecebe4;--accent:#1d5fa8;--accent-bg:#e2edf9;
+--d2:#d9efd3;--d2t:#1f5a15;--d3:#eeede8;--d3t:#4a4942;--d4:#fbe4c4;--d4t:#7a4a0a;--d5:#f7cfcf;--d5t:#7b1d1d;
+--eo0:#d6efe7;--eo0t:#0c5440;--eo1:#eeede8;--eo1t:#4a4942;--eo2:#e6e2f7;--eo2t:#3b3184;--bar:#b9d0ea;
+--star:#fff6dd;--sans:"IBM Plex Sans",system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,monospace}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#16181c;--fg:#ecebe5;--muted:#a3a198;--line:#2e3137;--head:#1f2227;--accent:#7fb0ea;--accent-bg:#1b2d44;
+--d2:#1d3b1a;--d2t:#b9e3ae;--d3:#262930;--d3t:#c9c7bf;--d4:#4a3414;--d4t:#f3cf96;--d5:#4f1d1d;--d5t:#f5b6b6;
+--eo0:#143f33;--eo0t:#a7e3cf;--eo1:#262930;--eo1t:#c9c7bf;--eo2:#2a2456;--eo2t:#cfc7f5;--bar:#2f4f78;--star:#3a3215;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#16181c;--fg:#ecebe5;--muted:#a3a198;--line:#2e3137;--head:#1f2227;--accent:#7fb0ea;--accent-bg:#1b2d44;
+--d2:#1d3b1a;--d2t:#b9e3ae;--d3:#262930;--d3t:#c9c7bf;--d4:#4a3414;--d4t:#f3cf96;--d5:#4f1d1d;--d5t:#f5b6b6;
+--eo0:#143f33;--eo0t:#a7e3cf;--eo1:#262930;--eo1t:#c9c7bf;--eo2:#2a2456;--eo2t:#cfc7f5;--bar:#2f4f78;--star:#3a3215;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:14px;line-height:1.5;padding-block:16px 32px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1{font-size:20px;font-weight:600;margin:0 0 4px;text-wrap:balance}
+.lead{color:var(--muted);margin:0 0 14px;max-width:62ch}
+.sorts{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.sorts button{font:inherit;font-size:13px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--fg);cursor:pointer}
+.sorts button[aria-pressed="true"]{background:var(--accent-bg);border-color:var(--accent);color:var(--accent)}
+.sorts button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.legend{display:flex;flex-wrap:wrap;gap:10px 16px;font-size:12px;color:var(--muted);margin:0 0 12px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.sw{width:14px;height:14px;border-radius:3px;display:inline-block;border:1px solid var(--line)}
+.wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;min-width:0}
+table{border-collapse:separate;border-spacing:0;min-width:1180px;width:100%;font-variant-numeric:tabular-nums}
+thead th{position:sticky;top:0;background:var(--head);font-size:11px;font-weight:500;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);padding:8px 8px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap;z-index:2}
+thead th.pl{z-index:3}
+td,th.pl{padding:8px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th.pl{position:sticky;left:0;background:var(--bg);text-align:left;font-weight:500;min-width:112px;z-index:1}
+tr.band-star th.pl{background:var(--star)}
+.nm{display:block;font-size:14px}.tm{display:block;font-size:12px;color:var(--muted)}
+.num{font-family:var(--mono);font-size:13px;white-space:nowrap}
+.sub{display:block;font-family:var(--sans);font-size:11px;color:var(--muted)}
+.tx{font-size:12px;white-space:nowrap}.note{white-space:normal;min-width:190px;color:var(--muted)}
+.bar{display:block;height:6px;width:64px;background:var(--line);border-radius:3px;overflow:hidden;margin:6px 0 3px}
+.bar span{display:block;height:100%;background:var(--bar)}
+.fx{text-align:center;min-width:46px;font-family:var(--mono);font-size:12px;border-left:1px solid var(--line)}
+.fx .opp{display:block;font-weight:500}.fx .ven{display:block;font-size:11px}
+.d2{background:var(--d2);color:var(--d2t)}.d3{background:var(--d3);color:var(--d3t)}.d4{background:var(--d4);color:var(--d4t)}.d5{background:var(--d5);color:var(--d5t)}
+.eo{display:inline-block;padding:2px 8px;border-radius:999px;font-family:var(--mono);font-size:12px}
+.eo0{background:var(--eo0);color:var(--eo0t)}.eo1{background:var(--eo1);color:var(--eo1t)}.eo2{background:var(--eo2);color:var(--eo2t)}
+.foot{font-size:12px;color:var(--muted);margin:12px 0 0;max-width:70ch}
+</style>
+<h1>Second star midfielder, GW7 wildcard</h1>
+<p class="lead">Ten candidates for the slot next to Haaland, plus Groß as the £6.0 benchmark. Snapshot Wed 14 Oct 13:30 UTC; xP from the repo model over GW7–12; rivals = the nine Fantasy Fellas managers (A = Alex owns him).</p>
+<div class="sorts" role="group" aria-label="Sort perspective">
+<button type="button" id="s-xp" data-key="xp" aria-pressed="true">Expected points</button>
+<button type="button" id="s-eo" data-key="eo">Differential (rivals)</button>
+<button type="button" id="s-val" data-key="val">Value per £</button>
+<button type="button" id="s-fix" data-key="fix">Fixtures GW7–12</button>
+<button type="button" id="s-pts" data-key="pts">Points so far</button>
+</div>
+<div class="legend">
+<span><i class="sw" style="background:var(--d2)"></i>easy (2)</span><span><i class="sw" style="background:var(--d3)"></i>neutral (3)</span><span><i class="sw" style="background:var(--d4)"></i>hard (4)</span><span><i class="sw" style="background:var(--d5)"></i>hardest (5)</span>
+<span><i class="sw" style="background:var(--eo0)"></i>0–1 rivals: differential</span><span><i class="sw" style="background:var(--eo2)"></i>5+ rivals: template</span><span><i class="sw" style="background:var(--star)"></i>£9.5+ star band</span>
+</div>
+<div class="wrap"><table>
+<thead><tr>
+<th class="pl" scope="col">Player</th><th scope="col">xP GW7</th><th scope="col">xP GW7–12</th><th scope="col">xP per £</th><th scope="col">Pts GW1–6</th><th scope="col">GW6</th><th scope="col">xGI/90</th><th scope="col">Captain weeks</th><th scope="col">Field own</th><th scope="col">Rivals</th>
+<th scope="col">GW7</th><th scope="col">GW8</th><th scope="col">GW9</th><th scope="col">GW10</th><th scope="col">GW11</th><th scope="col">GW12</th><th scope="col">Σ diff</th><th scope="col">Europe</th><th scope="col">Set pieces</th><th scope="col">Note</th>
+</tr></thead>
+<tbody id="rows">
+<tr data-xp="25.51" data-eo="2" data-own="16.7" data-val="2.66" data-fix="19" data-pts="34" data-price="9.6" class="band-star">
+<th scope="row" class="pl"><span class="nm">Saka</span><span class="tm">ARS · £9.6</span></th>
+<td class="num">5.9</td>
+<td class="num"><span class="bar"><span style="width:98%"></span></span><span class="bv">25.5</span></td>
+<td class="num">2.66</td>
+<td class="num">34<span class="sub">5.7 pg</span></td>
+<td class="num">2</td>
+<td class="num">0.83<span class="sub">3G 0A 4B</span></td>
+<td class="num">4<span class="sub">of 6</span></td>
+<td class="num">17%</td>
+<td class="num"><span class="eo eo1">2/9</span></td>
+<td class="fx d3"><span class="opp">NFO</span><span class="ven">A</span></td><td class="fx d3"><span class="opp">EVE</span><span class="ven">H</span></td><td class="fx d4"><span class="opp">LIV</span><span class="ven">A</span></td><td class="fx d2"><span class="opp">HUL</span><span class="ven">H</span></td><td class="fx d3"><span class="opp">NEW</span><span class="ven">A</span></td><td class="fx d4"><span class="opp">MCI</span><span class="ven">H</span></td>
+<td class="num">19</td>
+<td class="tx">UCL</td>
+<td class="tx">pens, corners</td>
+<td class="tx note">Saliba, Hincapié, Zubimendi out; attack intact</td>
+</tr><tr data-xp="22.06" data-eo="3" data-own="34.6" data-val="1.85" data-fix="20" data-pts="32" data-price="11.9" class="band-star">
+<th scope="row" class="pl"><span class="nm">B.Fernandes</span><span class="tm">MUN · £11.9</span></th>
+<td class="num">4.7</td>
+<td class="num"><span class="bar"><span style="width:84%"></span></span><span class="bv">22.1</span></td>
+<td class="num">1.85</td>
+<td class="num">32<span class="sub">5.3 pg</span></td>
+<td class="num">1</td>
+<td class="num">0.67<span class="sub">3G 1A 3B</span></td>
+<td class="num">3<span class="sub">of 6</span></td>
+<td class="num">35%</td>
+<td class="num"><span class="eo eo1">3/9 ·A</span></td>
+<td class="fx d3"><span class="opp">LEE</span><span class="ven">A</span></td><td class="fx d3"><span class="opp">BOU</span><span class="ven">H</span></td><td class="fx d4"><span class="opp">CHE</span><span class="ven">A</span></td><td class="fx d3"><span class="opp">AVL</span><span class="ven">H</span></td><td class="fx d4"><span class="opp">LIV</span><span class="ven">A</span></td><td class="fx d3"><span class="opp">BRE</span><span class="ven">H</span></td>
+<td class="num">20</td>
+<td class="tx">UCL</td>
+<td class="tx">pens, corners, FKs</td>
+<td class="tx note">1 pt GW6, −275k transfers out; Alex captains him</td>
+</tr><tr data-xp="16.48" data-eo="3" data-own="25.3" data-val="1.70" data-fix="18" data-pts="36" data-price="9.7" class="band-star">
+<th scope="row" class="pl"><span class="nm">Palmer</span><span class="tm">CHE · £9.7</span></th>
+<td class="num">3.6</td>
+<td class="num"><span class="bar"><span style="width:63%"></span></span><span class="bv">16.5</span></td>
+<td class="num">1.70</td>
+<td class="num">36<span class="sub">6.0 pg</span></td>
+<td class="num">8</td>
+<td class="num">0.37<span class="sub">2G 4A 3B</span></td>
+<td class="num">0<span class="sub">of 6</span></td>
+<td class="num">25%</td>
+<td class="num"><span class="eo eo1">3/9</span></td>
+<td class="fx d3"><span class="opp">EVE</span><span class="ven">A</span></td><td class="fx d2"><span class="opp">TOT</span><span class="ven">H</span></td><td class="fx d4"><span class="opp">MUN</span><span class="ven">H</span></td><td class="fx d3"><span class="opp">SUN</span><span class="ven">A</span></td><td class="fx d3"><span class="opp">LEE</span><span class="ven">H</span></td><td class="fx d3"><span class="opp">NFO</span><span class="ven">A</span></td>
+<td class="num">18</td>
+<td class="tx">none</td>
+<td class="tx">pens</td>
+<td class="tx note">Points from pens and bonus; underlying xGI low</td>
+</tr><tr data-xp="23.95" data-eo="0" data-own="19.9" data-val="3.03" data-fix="20" data-pts="33" data-price="7.9" class="band-mid">
+<th scope="row" class="pl"><span class="nm">Mbeumo</span><span class="tm">MUN · £7.9</span></th>
+<td class="num">5.1</td>
+<td class="num"><span class="bar"><span style="width:92%"></span></span><span class="bv">23.9</span></td>
+<td class="num">3.03</td>
+<td class="num">33<span class="sub">5.5 pg</span></td>
+<td class="num">8</td>
+<td class="num">0.70<span class="sub">3G 1A 4B</span></td>
+<td class="num">4<span class="sub">of 6</span></td>
+<td class="num">20%</td>
+<td class="num"><span class="eo eo0">0/9</span></td>
+<td class="fx d3"><span class="opp">LEE</span><span class="ven">A</span></td><td class="fx d3"><span class="opp">BOU</span><span class="ven">H</span></td><td class="fx d4"><span class="opp">CHE</span><span class="ven">A</span></td><td class="fx d3"><span class="opp">AVL</span><span class="ven">H</span></td><td class="fx d4"><span class="opp">LIV</span><span class="ven">A</span></td><td class="fx d3"><span class="opp">BRE</span><span class="ven">H</span></td>
+<td class="num">20</td>
+<td class="tx">UCL</td>
+<td class="tx">corners</td>
+<td class="tx note">0 of 9 rivals; Šeško out so he leads the line</td>
+</tr><tr data-xp="19.53" data-eo="1" data-own="31.9" data-val="2.47" data-fix="18" data-pts="44" data-price="7.9" class="band-mid">
+<th scope="row" class="pl"><span class="nm">Cherki</span><span class="tm">MCI · £7.9</span></th>
+<td class="num">5.3</td>
+<td class="num"><span class="bar"><span style="width:75%"></span></span><span class="bv">19.5</span></td>
+<td class="num">2.47</td>
+<td class="num">44<span class="sub">7.3 pg</span></td>
+<td class="num">10</td>
+<td class="num">0.69<span class="sub">4G 2A 7B</span></td>
+<td class="num">0<span class="sub">of 6</span></td>
+<td class="num">32%</td>
+<td class="num"><span class="eo eo0">1/9</span></td>
+<td class="fx d2"><span class="opp">IPS</span><span class="ven">H</span></td><td class="fx d3"><span class="opp">AVL</span><span class="ven">A</span></td><td class="fx d3"><span class="opp">BHA</span><span class="ven">H</span></td><td class="fx d3"><span class="opp">NFO</span><span class="ven">A</span></td><td class="fx d2"><span class="opp">FUL</span><span class="ven">H</span></td><td class="fx d5"><span class="opp">ARS</span><span class="ven">A</span></td>
+<td class="num">18</td>
+<td class="tx">UCL</td>
+<td class="tx">corners, FKs</td>
+<td class="tx note">44 pts from 5 starts; City exposure would be 2</td>
+</tr><tr data-xp="18.86" data-eo="6" data-own="45.0" data-val="2.39" data-fix="18" data-pts="38" data-price="7.9" class="band-mid">
+<th scope="row" class="pl"><span class="nm">Rogers</span><span class="tm">CHE · £7.9</span></th>
+<td class="num">4.1</td>
+<td class="num"><span class="bar"><span style="width:72%"></span></span><span class="bv">18.9</span></td>
+<td class="num">2.39</td>
+<td class="num">38<span class="sub">6.3 pg</span></td>
+<td class="num">9</td>
+<td class="num">0.55<span class="sub">4G 1A 2B</span></td>
+<td class="num">0<span class="sub">of 6</span></td>
+<td class="num">45%</td>
+<td class="num"><span class="eo eo2">6/9 ·A</span></td>
+<td class="fx d3"><span class="opp">EVE</span><span class="ven">A</span></td><td class="fx d2"><span class="opp">TOT</span><span class="ven">H</span></td><td class="fx d4"><span class="opp">MUN</span><span class="ven">H</span></td><td class="fx d3"><span class="opp">SUN</span><span class="ven">A</span></td><td class="fx d3"><span class="opp">LEE</span><span class="ven">H</span></td><td class="fx d3"><span class="opp">NFO</span><span class="ven">A</span></td>
+<td class="num">18</td>
+<td class="tx">none</td>
+<td class="tx">—</td>
+<td class="tx note">Template at 6/9; Chelsea no Europe</td>
+</tr><tr data-xp="21.62" data-eo="1" data-own="14.8" data-val="2.70" data-fix="20" data-pts="30" data-price="8.0" class="band-mid">
+<th scope="row" class="pl"><span class="nm">Gibbs-White</span><span class="tm">NFO · £8.0</span></th>
+<td class="num">5.0</td>
+<td class="num"><span class="bar"><span style="width:83%"></span></span><span class="bv">21.6</span></td>
+<td class="num">2.70</td>
+<td class="num">30<span class="sub">5.0 pg</span></td>
+<td class="num">2</td>
+<td class="num">0.59<span class="sub">1G 2A 6B</span></td>
+<td class="num">2<span class="sub">of 6</span></td>
+<td class="num">15%</td>
+<td class="num"><span class="eo eo0">1/9</span></td>
+<td class="fx d4"><span class="opp">ARS</span><span class="ven">H</span></td><td class="fx d2"><span class="opp">IPS</span><span class="ven">A</span></td><td class="fx d3"><span class="opp">BRE</span><span class="ven">A</span></td><td class="fx d4"><span class="opp">MCI</span><span class="ven">H</span></td><td class="fx d3"><span class="opp">BOU</span><span class="ven">A</span></td><td class="fx d4"><span class="opp">CHE</span><span class="ven">H</span></td>
+<td class="num">20</td>
+<td class="tx">none</td>
+<td class="tx">pens, FKs</td>
+<td class="tx note">Milenković out; ARS home first</td>
+</tr><tr data-xp="18.45" data-eo="1" data-own="6.4" data-val="2.34" data-fix="20" data-pts="36" data-price="7.9" class="band-mid">
+<th scope="row" class="pl"><span class="nm">Cunha</span><span class="tm">MUN · £7.9</span></th>
+<td class="num">4.2</td>
+<td class="num"><span class="bar"><span style="width:70%"></span></span><span class="bv">18.4</span></td>
+<td class="num">2.34</td>
+<td class="num">36<span class="sub">6.0 pg</span></td>
+<td class="num">10</td>
+<td class="num">0.32<span class="sub">1G 3A 7B</span></td>
+<td class="num">1<span class="sub">of 6</span></td>
+<td class="num">6%</td>
+<td class="num"><span class="eo eo0">1/9</span></td>
+<td class="fx d3"><span class="opp">LEE</span><span class="ven">A</span></td><td class="fx d3"><span class="opp">BOU</span><span class="ven">H</span></td><td class="fx d4"><span class="opp">CHE</span><span class="ven">A</span></td><td class="fx d3"><span class="opp">AVL</span><span class="ven">H</span></td><td class="fx d4"><span class="opp">LIV</span><span class="ven">A</span></td><td class="fx d3"><span class="opp">BRE</span><span class="ven">H</span></td>
+<td class="num">20</td>
+<td class="tx">UCL</td>
+<td class="tx">—</td>
+<td class="tx note">10 in GW6; 36 pts on 0.32 xGI/90</td>
+</tr><tr data-xp="14.66" data-eo="1" data-own="13.7" data-val="1.77" data-fix="18" data-pts="36" data-price="8.3" class="band-mid">
+<th scope="row" class="pl"><span class="nm">Semenyo</span><span class="tm">MCI · £8.3</span></th>
+<td class="num">3.9</td>
+<td class="num"><span class="bar"><span style="width:56%"></span></span><span class="bv">14.7</span></td>
+<td class="num">1.77</td>
+<td class="num">36<span class="sub">6.0 pg</span></td>
+<td class="num">3</td>
+<td class="num">0.30<span class="sub">2G 3A 2B</span></td>
+<td class="num">0<span class="sub">of 6</span></td>
+<td class="num">14%</td>
+<td class="num"><span class="eo eo0">1/9</span></td>
+<td class="fx d2"><span class="opp">IPS</span><span class="ven">H</span></td><td class="fx d3"><span class="opp">AVL</span><span class="ven">A</span></td><td class="fx d3"><span class="opp">BHA</span><span class="ven">H</span></td><td class="fx d3"><span class="opp">NFO</span><span class="ven">A</span></td><td class="fx d2"><span class="opp">FUL</span><span class="ven">H</span></td><td class="fx d5"><span class="opp">ARS</span><span class="ven">A</span></td>
+<td class="num">18</td>
+<td class="tx">UCL</td>
+<td class="tx">—</td>
+<td class="tx note">City exposure 2; third attacker there</td>
+</tr><tr data-xp="21.39" data-eo="5" data-own="19.7" data-val="3.15" data-fix="19" data-pts="30" data-price="6.8" class="band-val">
+<th scope="row" class="pl"><span class="nm">Ødegaard</span><span class="tm">ARS · £6.8</span></th>
+<td class="num">5.0</td>
+<td class="num"><span class="bar"><span style="width:82%"></span></span><span class="bv">21.4</span></td>
+<td class="num">3.15</td>
+<td class="num">30<span class="sub">5.0 pg</span></td>
+<td class="num">1</td>
+<td class="num">0.65<span class="sub">2G 0A 6B</span></td>
+<td class="num">2<span class="sub">of 6</span></td>
+<td class="num">20%</td>
+<td class="num"><span class="eo eo2">5/9 ·A</span></td>
+<td class="fx d3"><span class="opp">NFO</span><span class="ven">A</span></td><td class="fx d3"><span class="opp">EVE</span><span class="ven">H</span></td><td class="fx d4"><span class="opp">LIV</span><span class="ven">A</span></td><td class="fx d2"><span class="opp">HUL</span><span class="ven">H</span></td><td class="fx d3"><span class="opp">NEW</span><span class="ven">A</span></td><td class="fx d4"><span class="opp">MCI</span><span class="ven">H</span></td>
+<td class="num">19</td>
+<td class="tx">UCL</td>
+<td class="tx">—</td>
+<td class="tx note">5/9 rivals incl. Alex; 466 min</td>
+</tr><tr data-xp="22.68" data-eo="7" data-own="39.5" data-val="3.78" data-fix="19" data-pts="53" data-price="6.0" class="band-val">
+<th scope="row" class="pl"><span class="nm">Groß</span><span class="tm">BHA · £6.0</span></th>
+<td class="num">6.2</td>
+<td class="num"><span class="bar"><span style="width:87%"></span></span><span class="bv">22.7</span></td>
+<td class="num">3.78</td>
+<td class="num">53<span class="sub">8.8 pg</span></td>
+<td class="num">6</td>
+<td class="num">0.52<span class="sub">3G 5A 9B</span></td>
+<td class="num">2<span class="sub">of 6</span></td>
+<td class="num">40%</td>
+<td class="num"><span class="eo eo2">7/9 ·A</span></td>
+<td class="fx d2"><span class="opp">CRY</span><span class="ven">H</span></td><td class="fx d4"><span class="opp">LIV</span><span class="ven">A</span></td><td class="fx d5"><span class="opp">MCI</span><span class="ven">A</span></td><td class="fx d3"><span class="opp">BRE</span><span class="ven">H</span></td><td class="fx d2"><span class="opp">HUL</span><span class="ven">A</span></td><td class="fx d3"><span class="opp">NEW</span><span class="ven">H</span></td>
+<td class="num">19</td>
+<td class="tx">UECL Thu</td>
+<td class="tx">pens, corners, FKs</td>
+<td class="tx note">Benchmark: what £6.0 buys (7/9 rivals)</td>
+</tr>
+</tbody></table></div>
+<p class="foot">Captain weeks = gameweeks GW7–12 in which the player's xP is within 1.0 of Haaland's, i.e. a credible off-pool armband. xP per £ = decayed GW7–12 xP divided by price. Σ diff = sum of the six FPL fixture difficulties, lower is easier. Flags: none of the ten carries an official flag on 14 Oct; Thursday and Friday pressers still to come.</p>
+<script>
+(function(){
+var tb=document.getElementById('rows');var btns=document.querySelectorAll('.sorts button');
+var desc={xp:true,eo:false,val:true,fix:false,pts:true};
+function sortBy(k){var rs=Array.prototype.slice.call(tb.querySelectorAll('tr'));rs.sort(function(a,b){var x=parseFloat(a.dataset[k]),y=parseFloat(b.dataset[k]);return desc[k]?y-x:x-y;});rs.forEach(function(r){tb.appendChild(r);});
+btns.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.key===k?'true':'false');});}
+btns.forEach(function(b){b.addEventListener('click',function(){sortBy(b.dataset.key);});});
+})();
+</script>

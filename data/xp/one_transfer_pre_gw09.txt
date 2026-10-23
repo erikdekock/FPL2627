@@ -1,0 +1,16 @@
+fpl_2026-10-23T184222Z.json · xp_gw09-13.csv · bank £0.4 · ROLL objective 241.8, GW9 XI 61.5
+ +5.0 obj | +1.9 GW9 | Cherki (sell £7.9) -> Tavernier BOU £6.2 · own 13.3% · bank after £2.1
+ +3.2 obj | +1.3 GW9 | Ødegaard (sell £6.8) -> Tavernier BOU £6.2 · own 13.3% · bank after £1.0
+ +2.8 obj | +1.4 GW9 | Groß (sell £6.1) -> Tavernier BOU £6.2 · own 13.3% · bank after £0.3
+ +2.2 obj | +0.3 GW9 | Janelt (sell £5.0) -> Iwobi FUL £5.4 · own 1.4% · bank after £0.0
+ +1.9 obj | +1.5 GW9 | Muharemović (sell £5.0) -> Thomas COV £4.0 · own 9.7% · bank after £1.4
+ +1.7 obj | +0.4 GW9 | Janelt (sell £5.0) -> Rudoni COV £4.9 · own 0.6% · bank after £0.5
+ +1.5 obj | +0.0 GW9 | Janelt (sell £5.0) -> Xhaka SUN £5.4 · own 3.1% · bank after £0.0
+ +1.4 obj | +0.0 GW9 | Janelt (sell £5.0) -> Tonali TOT £5.3 · own 1.7% · bank after £0.1
+ +1.4 obj | +0.0 GW9 | Janelt (sell £5.0) -> McGinn AVL £5.4 · own 2.7% · bank after £0.0
+ +1.4 obj | +0.7 GW9 | Cherki (sell £7.9) -> Rogers CHE £8.0 · own 49.7% · bank after £0.3
+ +1.2 obj | +0.8 GW9 | Cherki (sell £7.9) -> Dewsbury-Hall EVE £6.6 · own 5.9% · bank after £1.7
+ +1.1 obj | +0.0 GW9 | Janelt (sell £5.0) -> Belloumi HUL £5.2 · own 9.2% · bank after £0.2
+ +0.8 obj | +0.3 GW9 | Cherki (sell £7.9) -> Gibbs-White NFO £7.9 · own 12.4% · bank after £0.4
+ +0.6 obj | +0.8 GW9 | Muharemović (sell £5.0) -> Silva BOU £5.0 · own 0.7% · bank after £0.4
+ +0.6 obj | +1.5 GW9 | Vuskovic (sell £5.1) -> Thomas COV £4.0 · own 9.7% · bank after £1.5
