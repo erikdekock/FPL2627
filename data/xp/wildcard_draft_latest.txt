@@ -1,25 +1,25 @@
-xp table xp_gw09-13.csv · snapshot fpl_2026-10-24T135534Z.json · horizon GW9-13 · team value £99.6
+xp table xp_gw09-13.csv · snapshot fpl_2026-10-25T141353Z.json · horizon GW9-13 · team value £99.6
 
-=== WILDCARD draft · min tag likely · cost £99.3 of £99.3 (bank £0.0) ===
+=== WILDCARD draft · min tag likely · cost £99.2 of £99.3 (bank £0.1) ===
 pos name          team £     tag      own%    gw9   gw10   gw11   gw12   gw13    dec
-GK  Suzuki        AVL  5.0   nailed    2.1   4.77   3.98   4.94   4.00   4.79  16.35
-GK  Trafford      LEE  5.0   nailed    6.0   4.41   5.46   4.08   5.53   3.59  16.94
-DEF Thomas        COV  4.0   nailed    9.8   5.51   4.52   5.29   4.37   5.02  18.13
-DEF Tarkowski     EVE  6.2   nailed   18.2   4.98   5.93   4.40   5.26   5.04  18.69
-DEF Bogle         LEE  4.7   nailed   10.9   4.44   5.76   4.17   6.18   3.46  17.61
-DEF De Cuyper     BHA  5.3   nailed   42.3   4.05   5.59   5.30   6.69   5.08  18.98
-DEF Vuskovic      BHA  5.1   nailed    6.3   3.90   5.17   5.15   5.93   4.80  17.78
-MID Tavernier     BOU  6.3   nailed   13.8   5.92   6.02   6.15   5.69   5.70  21.53
-MID Mbeumo        MUN  7.9   nailed   21.9   5.78   6.56   5.24   6.20   6.27  21.78
-MID Gibbs-White   NFO  7.9   nailed   12.3   5.14   5.67   5.41   6.21   5.19  19.98
-MID Groß          BHA  6.2   nailed   46.4   4.60   5.32   4.78   6.13   4.97  18.55
-MID Tonali        TOT  5.3   nailed    1.7   4.04   3.51   3.97   3.84   3.89  14.00
-FWD Haaland       MCI  15.7  nailed   77.5   6.81   6.37   7.57   5.54   6.89  24.22
-FWD Barry         EVE  5.7   nailed    7.7   5.20   5.87   4.54   4.93   4.71  18.60
-FWD Isak          LIV  9.0   nailed   14.0   4.75   5.54   5.71   4.83   6.58  19.57
-GW9: XI xP 64.7 (3-4-3) · C Haaland · bench Trafford, De Cuyper, Tonali, Vuskovic
-GW10: XI xP 70.7 (3-4-3) · C Mbeumo · bench Suzuki, Vuskovic, Thomas, Tonali
-GW11: XI xP 67.7 (3-4-3) · C Haaland · bench Trafford, Tarkowski, Bogle, Tonali
-GW12: XI xP 71.0 (4-4-2) · C De Cuyper · bench Suzuki, Isak, Thomas, Tonali
-GW13: XI xP 67.2 (4-4-2) · C Haaland · bench Trafford, Barry, Tonali, Bogle
-objective (decayed horizon xP incl. captain, bench x0.1): 253.4
+GK  Suzuki        AVL  5.0   nailed    2.3   4.75   4.00   4.96   4.02   4.78  16.37
+GK  Trafford      LEE  5.0   nailed    6.0   4.38   5.40   4.06   5.50   3.60  16.83
+DEF Gabriel       ARS  7.9   nailed   21.5   4.98   6.09   5.56   4.93   4.74  19.30
+DEF Bogle         LEE  4.7   nailed   10.9   4.42   5.73   4.14   6.18   3.47  17.54
+DEF O'Shea        IPS  4.0   nailed    2.9   4.01   4.13   4.09   4.52   4.23  15.15
+DEF Justin        LEE  4.5   nailed    2.2   3.95   5.06   3.64   5.27   3.11  15.44
+DEF De Cuyper     BHA  5.3   nailed   42.5   3.75   5.22   5.00   6.33   4.71  17.76
+MID Tavernier     BOU  6.3   nailed   14.5   5.41   5.50   5.62   5.23   5.20  19.68
+MID Mbeumo        MUN  7.9   nailed   22.0   5.29   5.98   4.83   5.67   5.83  19.98
+MID Gibbs-White   NFO  7.9   nailed   12.2   5.14   5.67   5.41   6.21   5.20  19.99
+MID Rudoni        COV  4.9   nailed    0.6   4.94   3.76   4.70   3.58   4.62  15.84
+MID McGinn        AVL  5.4   nailed    2.9   4.51   3.98   4.98   4.20   4.39  16.04
+FWD Haaland       MCI  15.7  nailed   77.7   6.81   6.37   7.64   5.61   6.89  24.31
+FWD Barry         EVE  5.7   nailed    7.6   5.11   5.72   4.40   4.77   4.54  18.11
+FWD Isak          LIV  9.0   nailed   14.1   5.09   5.81   6.02   5.26   6.85  20.75
+GW9: XI xP 62.8 (3-4-3) · C Haaland · bench Trafford, McGinn, Justin, De Cuyper
+GW10: XI xP 68.9 (4-3-3) · C Haaland · bench Suzuki, O'Shea, McGinn, Rudoni
+GW11: XI xP 66.5 (3-5-2) · C Haaland · bench Trafford, Barry, O'Shea, Justin
+GW12: XI xP 67.3 (4-3-3) · C De Cuyper · bench Suzuki, O'Shea, McGinn, Rudoni
+GW13: XI xP 64.5 (3-4-3) · C Haaland · bench Trafford, McGinn, Bogle, Justin
+objective (decayed horizon xP incl. captain, bench x0.1): 245.4
