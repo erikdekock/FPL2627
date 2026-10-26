@@ -1,25 +1,25 @@
-xp table xp_gw09-13.csv · snapshot fpl_2026-10-25T141353Z.json · horizon GW9-13 · team value £99.6
+xp table xp_gw09-13.csv · snapshot fpl_2026-10-26T164146Z.json · horizon GW9-13 · team value £99.6
 
-=== WILDCARD draft · min tag likely · cost £99.2 of £99.3 (bank £0.1) ===
+=== WILDCARD draft · min tag likely · cost £99.0 of £99.3 (bank £0.3) ===
 pos name          team £     tag      own%    gw9   gw10   gw11   gw12   gw13    dec
-GK  Suzuki        AVL  5.0   nailed    2.3   4.75   4.00   4.96   4.02   4.78  16.37
-GK  Trafford      LEE  5.0   nailed    6.0   4.38   5.40   4.06   5.50   3.60  16.83
-DEF Gabriel       ARS  7.9   nailed   21.5   4.98   6.09   5.56   4.93   4.74  19.30
-DEF Bogle         LEE  4.7   nailed   10.9   4.42   5.73   4.14   6.18   3.47  17.54
-DEF O'Shea        IPS  4.0   nailed    2.9   4.01   4.13   4.09   4.52   4.23  15.15
-DEF Justin        LEE  4.5   nailed    2.2   3.95   5.06   3.64   5.27   3.11  15.44
-DEF De Cuyper     BHA  5.3   nailed   42.5   3.75   5.22   5.00   6.33   4.71  17.76
-MID Tavernier     BOU  6.3   nailed   14.5   5.41   5.50   5.62   5.23   5.20  19.68
-MID Mbeumo        MUN  7.9   nailed   22.0   5.29   5.98   4.83   5.67   5.83  19.98
-MID Gibbs-White   NFO  7.9   nailed   12.2   5.14   5.67   5.41   6.21   5.20  19.99
-MID Rudoni        COV  4.9   nailed    0.6   4.94   3.76   4.70   3.58   4.62  15.84
-MID McGinn        AVL  5.4   nailed    2.9   4.51   3.98   4.98   4.20   4.39  16.04
-FWD Haaland       MCI  15.7  nailed   77.7   6.81   6.37   7.64   5.61   6.89  24.31
-FWD Barry         EVE  5.7   nailed    7.6   5.11   5.72   4.40   4.77   4.54  18.11
-FWD Isak          LIV  9.0   nailed   14.1   5.09   5.81   6.02   5.26   6.85  20.75
-GW9: XI xP 62.8 (3-4-3) · C Haaland · bench Trafford, McGinn, Justin, De Cuyper
-GW10: XI xP 68.9 (4-3-3) · C Haaland · bench Suzuki, O'Shea, McGinn, Rudoni
-GW11: XI xP 66.5 (3-5-2) · C Haaland · bench Trafford, Barry, O'Shea, Justin
-GW12: XI xP 67.3 (4-3-3) · C De Cuyper · bench Suzuki, O'Shea, McGinn, Rudoni
-GW13: XI xP 64.5 (3-4-3) · C Haaland · bench Trafford, McGinn, Bogle, Justin
-objective (decayed horizon xP incl. captain, bench x0.1): 245.4
+GK  Tzolakis      HUL  4.7   nailed   14.2   4.81   3.98   3.95   4.51   4.94  16.07
+GK  Trafford      LEE  5.0   nailed    6.1   4.65   5.77   4.62   6.02   4.13  18.38
+DEF Gabriel       ARS  7.9   nailed   22.2   5.11   6.25   5.61   5.26   4.98  19.92
+DEF Van Hecke     TOT  4.9   nailed    7.3   5.03   4.10   4.76   4.54   4.85  16.94
+DEF Egan          HUL  4.1   nailed    7.2   4.35   3.54   3.50   4.05   4.49  14.43
+DEF Bogle         LEE  4.7   nailed   11.1   4.11   5.42   4.15   6.00   3.48  16.88
+DEF De Cuyper     BHA  5.3   nailed   42.5   4.00   5.43   5.10   6.31   4.65  18.21
+MID Tavernier     BOU  6.3   nailed   17.2   6.16   6.23   6.40   5.85   6.19  22.46
+MID Mbeumo        MUN  7.9   nailed   21.7   5.48   6.08   4.95   5.95   5.85  20.52
+MID Ødegaard      ARS  6.8   nailed   17.8   4.53   5.34   5.20   5.11   4.68  18.04
+MID Groß          BHA  6.2   nailed   46.4   4.42   5.13   4.63   5.74   4.66  17.72
+MID Rudoni        COV  4.9   nailed    0.6   4.21   3.30   4.14   3.09   3.97  13.71
+FWD Haaland       MCI  15.7  nailed   78.0   7.04   6.30   7.38   5.50   6.80  24.18
+FWD Barry         EVE  5.6   nailed    7.4   4.96   5.59   4.46   4.75   4.48  17.85
+FWD Isak          LIV  9.0   nailed   15.2   4.88   5.74   6.17   5.17   6.56  20.39
+GW9: XI xP 63.8 (3-4-3) · C Haaland · bench Trafford, Rudoni, Bogle, De Cuyper
+GW10: XI xP 69.6 (3-4-3) · C Haaland · bench Tzolakis, Van Hecke, Egan, Rudoni
+GW11: XI xP 66.7 (3-4-3) · C Haaland · bench Tzolakis, Bogle, Rudoni, Egan
+GW12: XI xP 68.0 (3-4-3) · C De Cuyper · bench Tzolakis, Van Hecke, Egan, Rudoni
+GW13: XI xP 65.5 (4-4-2) · C Haaland · bench Trafford, Barry, Rudoni, Bogle
+objective (decayed horizon xP incl. captain, bench x0.1): 248.0

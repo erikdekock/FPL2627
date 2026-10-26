@@ -1,6 +1,6 @@
 # Season Calendar — FPL 2026/27
 
-Auto-generated from the FPL API on 2026-10-25 14:14 UTC. Do not edit by hand — `scripts/make_deadlines.py` rewrites this file daily, so it follows the API when TV picks move kickoffs.
+Auto-generated from the FPL API on 2026-10-26 16:41 UTC. Do not edit by hand — `scripts/make_deadlines.py` rewrites this file daily, so it follows the API when TV picks move kickoffs.
 
 **Next deadline — GW9: Sat 31 Oct 2026 12:00 CET** (UK: Sat 31 Oct 2026 11:00 GMT)
 
@@ -24,7 +24,7 @@ Deadlines are 90 minutes before each round's first kickoff. No grace period.
 |---|---|---|---|
 | 6 | Sat 10 Oct 2026 12:00 CEST | Sat 10 Oct 2026 11:00 BST | ✅ done |
 | 7 | Sat 17 Oct 2026 12:00 CEST | Sat 17 Oct 2026 11:00 BST | ✅ done |
-| 8 | Fri 23 Oct 2026 19:30 CEST | Fri 23 Oct 2026 18:30 BST |  |
+| 8 | Fri 23 Oct 2026 19:30 CEST | Fri 23 Oct 2026 18:30 BST | ✅ done |
 | 9 | Sat 31 Oct 2026 12:00 CET | Sat 31 Oct 2026 11:00 GMT | ▶️ current |
 | 10 | Fri 06 Nov 2026 19:30 CET | Fri 06 Nov 2026 18:30 GMT |  |
 
