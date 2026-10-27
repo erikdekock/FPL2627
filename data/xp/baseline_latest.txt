@@ -1,4 +1,4 @@
-xp table xp_gw09-13.csv · snapshot fpl_2026-10-26T164146Z.json · horizon GW9-13 · team value £99.6
+xp table xp_gw09-13.csv · snapshot fpl_2026-10-27T154912Z.json · horizon GW9-13 · team value £99.6
 
 === BASELINE: current 15, best XI per GW · cost £99.2 of £99.6 (bank £0.4) ===
 pos name          team £     tag      own%    gw9   gw10   gw11   gw12   gw13    dec
@@ -6,19 +6,19 @@ GK  Tzolakis      HUL  4.7   nailed   14.2   4.81   3.98   3.95   4.51   4.94  1
 GK  Trafford      LEE  5.0   nailed    6.1   4.65   5.77   4.62   6.02   4.13  18.38
 DEF Tarkowski     EVE  6.2   nailed   18.4   4.50   5.56   4.02   4.80   4.62  17.15
 DEF Muharemović   LEE  5.1   nailed    5.7   4.21   5.36   4.19   5.68   3.66  16.86
-DEF Bogle         LEE  4.7   nailed   11.1   4.11   5.42   4.15   6.00   3.48  16.88
-DEF De Cuyper     BHA  5.3   nailed   42.5   4.00   5.43   5.10   6.31   4.65  18.21
-DEF Vuskovic      BHA  5.1   nailed    6.5   3.82   4.98   4.91   5.62   4.40  16.99
-MID Mbeumo        MUN  7.9   nailed   21.7   5.48   6.08   4.95   5.95   5.85  20.52
-MID Ødegaard      ARS  6.8   nailed   17.8   4.53   5.34   5.20   5.11   4.68  18.04
-MID Groß          BHA  6.2   nailed   46.4   4.42   5.13   4.63   5.74   4.66  17.72
-MID Cherki        MCI  8.0   likely   38.7   4.02   3.70   4.32   3.24   4.02  14.10
+DEF Bogle         LEE  4.8   nailed   11.1   4.11   5.42   4.15   6.00   3.48  16.88
+DEF De Cuyper     BHA  5.3   nailed   42.6   4.00   5.43   5.10   6.31   4.65  18.21
+DEF Vuskovic      BHA  5.1   nailed    6.6   3.82   4.98   4.91   5.62   4.40  16.99
+MID Mbeumo        MUN  7.9   nailed   21.6   5.48   6.08   4.95   5.95   5.85  20.52
+MID Ødegaard      ARS  6.7   nailed   17.7   4.53   5.34   5.20   5.11   4.68  18.04
+MID Groß          BHA  6.2   nailed   46.3   4.42   5.13   4.63   5.74   4.66  17.72
+MID Cherki        MCI  8.0   likely   38.5   4.02   3.70   4.32   3.24   4.02  14.10
 MID Janelt        BRE  5.0   nailed    1.8   3.33   2.98   3.40   3.20   3.08  11.66
-FWD Haaland       MCI  15.7  nailed   78.0   7.04   6.30   7.38   5.50   6.80  24.18
+FWD Haaland       MCI  15.7  nailed   78.1   7.04   6.30   7.38   5.50   6.80  24.18
 FWD Barry         EVE  5.6   nailed    7.4   4.96   5.59   4.46   4.75   4.48  17.85
-FWD João Pedro    CHE  7.9   50-50    71.2   3.45   3.25   3.02   2.83   3.62  11.79
-GW9: XI xP 59.1 (4-4-2) · C Haaland · bench Trafford, Vuskovic, João Pedro, Janelt
-GW10: XI xP 67.3 (5-3-2) · C Haaland · bench Tzolakis, Cherki, João Pedro, Janelt
+FWD João Pedro    CHE  7.9   out      69.8   0.00   0.00   0.00   0.00   0.00   0.00
+GW9: XI xP 59.1 (4-4-2) · C Haaland · bench Trafford, Vuskovic, Janelt, João Pedro
+GW10: XI xP 67.3 (5-3-2) · C Haaland · bench Tzolakis, Cherki, Janelt, João Pedro
 GW11: XI xP 61.3 (4-4-2) · C Haaland · bench Tzolakis, Tarkowski, Janelt, João Pedro
 GW12: XI xP 67.8 (5-3-2) · C De Cuyper · bench Tzolakis, Cherki, Janelt, João Pedro
-GW13: XI xP 59.6 (4-4-2) · C Haaland · bench Trafford, João Pedro, Bogle, Janelt
+GW13: XI xP 59.6 (4-4-2) · C Haaland · bench Trafford, Bogle, Janelt, João Pedro
