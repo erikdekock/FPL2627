@@ -1,22 +1,22 @@
-xp table xp_gw09-13.csv · snapshot fpl_2026-10-29T165012Z.json · horizon GW9-13 · team value £99.6
+xp table xp_gw09-13.csv · snapshot fpl_2026-10-29T204741Z.json · horizon GW9-13 · team value £99.6
 
 === WILDCARD draft · min tag likely · cost £99.3 of £99.3 (bank £0.0) ===
 pos name          team £     tag      own%    gw9   gw10   gw11   gw12   gw13    dec
 GK  Tzolakis      HUL  4.7   nailed   14.3   4.81   3.98   3.95   4.51   4.94  16.07
 GK  Trafford      LEE  5.0   nailed    6.2   4.65   5.77   4.62   6.02   4.13  18.38
-DEF Gabriel       ARS  7.9   nailed   23.0   5.11   6.25   5.61   5.26   4.98  19.92
-DEF Van Hecke     TOT  4.9   nailed    8.2   5.03   4.10   4.76   4.54   4.85  16.94
+DEF Gabriel       ARS  7.9   nailed   23.1   5.11   6.25   5.61   5.26   4.98  19.92
+DEF Van Hecke     TOT  4.9   nailed    8.3   5.03   4.10   4.76   4.54   4.85  16.94
 DEF Egan          HUL  4.1   nailed    7.2   4.35   3.54   3.50   4.05   4.49  14.43
 DEF Bogle         LEE  4.8   nailed   11.2   4.11   5.42   4.15   6.00   3.48  16.88
 DEF De Cuyper     BHA  5.3   nailed   42.5   4.00   5.43   5.10   6.31   4.65  18.21
-MID Tavernier     BOU  6.4   nailed   20.4   6.16   6.23   6.40   5.85   6.19  22.46
+MID Tavernier     BOU  6.4   nailed   20.7   6.16   6.23   6.40   5.85   6.19  22.46
 MID Mbeumo        MUN  7.9   nailed   21.4   5.48   6.08   4.95   5.95   5.85  20.52
 MID Ødegaard      ARS  6.7   nailed   17.4   4.53   5.34   5.20   5.11   4.68  18.04
 MID Groß          BHA  6.2   nailed   46.1   4.42   5.13   4.63   5.74   4.66  17.72
 MID Rudoni        COV  4.9   nailed    0.7   4.21   3.30   4.14   3.09   3.97  13.71
-FWD Haaland       MCI  15.8  nailed   78.3   7.04   6.30   7.38   5.50   6.80  24.18
+FWD Haaland       MCI  15.8  nailed   78.4   7.04   6.30   7.38   5.50   6.80  24.18
 FWD Barry         EVE  5.6   nailed    7.3   4.96   5.59   4.46   4.75   4.48  17.85
-FWD Isak          LIV  9.1   nailed   17.4   4.88   5.74   6.17   5.17   6.56  20.39
+FWD Isak          LIV  9.1   nailed   17.6   4.88   5.74   6.17   5.17   6.56  20.39
 GW9: XI xP 63.8 (3-4-3) · C Haaland · bench Trafford, Rudoni, Bogle, De Cuyper
 GW10: XI xP 69.6 (3-4-3) · C Haaland · bench Tzolakis, Van Hecke, Egan, Rudoni
 GW11: XI xP 66.7 (3-4-3) · C Haaland · bench Tzolakis, Bogle, Rudoni, Egan
