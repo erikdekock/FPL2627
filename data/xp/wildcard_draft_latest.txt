@@ -1,25 +1,25 @@
-xp table xp_gw10-14.csv · snapshot fpl_2026-10-31T154114Z.json · horizon GW10-14 · team value £99.6
+xp table xp_gw10-14.csv · snapshot fpl_2026-11-01T164309Z.json · horizon GW10-14 · team value £99.6
 
-=== WILDCARD draft · min tag likely · cost £99.3 of £99.3 (bank £0.0) ===
+=== WILDCARD draft · min tag likely · cost £99.1 of £99.3 (bank £0.2) ===
 pos name          team £     tag      own%   gw10   gw11   gw12   gw13   gw14    dec
-GK  Trafford      LEE  5.0   nailed    6.3   5.48   4.20   5.70   3.83   5.08  17.83
-GK  Tzolakis      HUL  4.7   nailed   14.2   3.76   3.70   4.28   4.70   3.82  14.58
-DEF Gabriel       ARS  8.0   nailed   23.8   6.27   5.61   5.27   4.98   5.62  20.45
-DEF De Cuyper     BHA  5.3   nailed   43.6   5.27   5.00   6.09   4.50   4.70  18.77
-DEF Muharemović   LEE  5.1   nailed    6.1   5.12   3.81   5.42   3.42   4.78  16.55
-DEF Bogle         LEE  4.8   nailed   11.5   5.11   3.71   5.64   3.22   4.95  16.58
-DEF Van Hecke     TOT  4.9   nailed    9.4   4.09   4.73   4.53   4.85   4.14  16.20
-MID Tavernier     BOU  6.5   nailed   25.4   5.66   5.83   5.33   5.66   6.04  20.68
-MID Mbeumo        MUN  7.9   nailed   21.2   5.60   4.55   5.51   5.38   6.27  19.62
-MID Ødegaard      ARS  6.7   nailed   16.8   5.38   5.20   5.15   4.71   4.75  18.54
-MID Rudoni        COV  4.9   nailed    0.7   3.64   4.51   3.45   4.32   3.90  14.36
-MID Janelt        BRE  5.0   nailed    1.7   3.49   3.93   3.76   3.61   3.74  13.45
-FWD Haaland       MCI  15.8  nailed   78.9   5.88   6.85   5.15   6.39   6.10  22.09
-FWD Isak          LIV  9.1   nailed   20.3   5.74   6.42   5.17   6.59   5.43  21.39
-FWD Barry         EVE  5.6   nailed    7.4   5.62   4.48   4.75   4.48   5.05  17.90
-GW10: XI xP 67.4 (4-3-3) · C Gabriel · bench Tzolakis, Van Hecke, Rudoni, Janelt
-GW11: XI xP 64.2 (3-4-3) · C Haaland · bench Tzolakis, Janelt, Muharemović, Bogle
-GW12: XI xP 65.3 (4-3-3) · C De Cuyper · bench Tzolakis, Van Hecke, Janelt, Rudoni
-GW13: XI xP 63.2 (3-4-3) · C Isak · bench Trafford, Janelt, Muharemović, Bogle
-GW14: XI xP 65.0 (4-3-3) · C Mbeumo · bench Tzolakis, Van Hecke, Rudoni, Janelt
-objective (decayed horizon xP incl. captain, bench x0.1): 242.7
+GK  Trafford      LEE  5.0   nailed    6.3   5.32   4.24   5.76   3.84   5.12  17.77
+GK  Suzuki        AVL  5.0   nailed    3.0   3.95   4.80   3.95   4.83   4.73  15.99
+DEF De Cuyper     BHA  5.4   nailed   44.2   5.13   4.80   5.97   4.31   4.50  18.17
+DEF Muharemović   LEE  5.1   nailed    6.1   5.01   3.90   5.53   3.48   4.87  16.68
+DEF Bogle         LEE  4.8   nailed   11.5   4.90   3.69   5.71   3.17   4.97  16.38
+DEF Van Hecke     TOT  5.0   nailed   10.1   4.60   5.58   5.17   5.53   4.64  18.52
+DEF Silva         BOU  5.0   nailed    2.1   4.23   4.90   4.26   3.95   5.16  16.26
+MID Tavernier     BOU  6.6   nailed   26.3   5.83   5.98   5.56   5.90   6.22  21.37
+MID Mbeumo        MUN  7.9   nailed   20.9   5.80   4.55   5.56   5.38   6.41  19.93
+MID Gibbs-White   NFO  7.9   nailed   11.1   5.56   5.16   5.94   5.13   5.49  19.86
+MID Iwobi         FUL  5.4   nailed    1.4   5.42   4.33   5.04   4.43   4.49  17.47
+MID McGinn        AVL  5.4   nailed    3.4   4.54   5.30   4.46   4.72   5.19  17.52
+FWD Haaland       MCI  15.8  nailed   78.9   6.07   7.29   5.26   6.67   6.32  23.00
+FWD Isak          LIV  9.2   nailed   21.0   5.97   6.69   5.40   6.85   5.66  22.28
+FWD Barry         EVE  5.6   nailed    7.4   5.76   4.52   4.75   4.64   5.22  18.26
+GW10: XI xP 66.8 (3-4-3) · C Haaland · bench Suzuki, Van Hecke, McGinn, Silva
+GW11: XI xP 66.9 (3-4-3) · C Haaland · bench Trafford, Iwobi, Muharemović, Bogle
+GW12: XI xP 66.9 (4-4-2) · C De Cuyper · bench Suzuki, Barry, McGinn, Silva
+GW13: XI xP 64.8 (3-4-3) · C Isak · bench Trafford, Iwobi, Muharemović, Bogle
+GW14: XI xP 67.0 (3-4-3) · C Mbeumo · bench Suzuki, Van Hecke, De Cuyper, Iwobi
+objective (decayed horizon xP incl. captain, bench x0.1): 248.1
