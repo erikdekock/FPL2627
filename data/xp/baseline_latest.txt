@@ -1,24 +1,24 @@
-xp table xp_gw10-14.csv · snapshot fpl_2026-11-01T164309Z.json · horizon GW10-14 · team value £99.6
+xp table xp_gw10-14.csv · snapshot fpl_2026-11-02T201110Z.json · horizon GW10-14 · team value £99.6
 
 === BASELINE: current 15, best XI per GW · cost £99.4 of £99.6 (bank £0.2) ===
 pos name          team £     tag      own%   gw10   gw11   gw12   gw13   gw14    dec
 GK  Trafford      LEE  5.0   nailed    6.3   5.32   4.24   5.76   3.84   5.12  17.77
-GK  Tzolakis      HUL  4.7   nailed   14.1   3.73   3.66   4.24   4.64   3.75  14.41
-DEF Tarkowski     EVE  6.2   nailed   18.9   5.54   4.01   4.80   4.52   4.95  17.44
-DEF De Cuyper     BHA  5.4   nailed   44.2   5.13   4.80   5.97   4.31   4.50  18.17
+GK  Tzolakis      HUL  4.7   nailed   14.0   3.68   3.66   4.24   4.64   3.75  14.36
+DEF De Cuyper     BHA  5.4   nailed   44.7   5.13   4.80   5.97   4.31   4.50  18.17
+DEF Tarkowski     EVE  6.2   nailed   18.9   5.12   3.61   4.34   4.12   4.54  15.92
 DEF Muharemović   LEE  5.1   nailed    6.1   5.01   3.90   5.53   3.48   4.87  16.68
-DEF Bogle         LEE  4.8   nailed   11.5   4.90   3.69   5.71   3.17   4.97  16.38
-DEF Vuskovic      BHA  5.2   nailed    7.1   4.71   4.63   5.32   4.09   4.40  16.97
-MID Tavernier     BOU  6.6   nailed   26.3   5.83   5.98   5.56   5.90   6.22  21.37
-MID Mbeumo        MUN  7.9   nailed   20.9   5.80   4.55   5.56   5.38   6.41  19.93
-MID Ødegaard      ARS  6.7   nailed   16.8   5.10   4.89   4.87   4.47   4.46  17.51
-MID Groß          BHA  6.2   nailed   46.8   4.75   4.29   5.25   4.29   4.15  16.67
-MID Janelt        BRE  5.0   nailed    1.7   3.73   4.15   3.99   3.83   3.97  14.28
-FWD Haaland       MCI  15.8  nailed   78.9   6.07   7.29   5.26   6.67   6.32  23.00
-FWD Isak          LIV  9.2   nailed   21.0   5.97   6.69   5.40   6.85   5.66  22.28
-FWD Barry         EVE  5.6   nailed    7.4   5.76   4.52   4.75   4.64   5.22  18.26
-GW10: XI xP 66.5 (4-3-3) · C Haaland · bench Tzolakis, Groß, Vuskovic, Janelt
-GW11: XI xP 63.2 (3-4-3) · C Haaland · bench Tzolakis, Janelt, Muharemović, Bogle
-GW12: XI xP 66.2 (4-4-2) · C De Cuyper · bench Tzolakis, Tarkowski, Barry, Janelt
-GW13: XI xP 62.6 (3-4-3) · C Isak · bench Trafford, Janelt, Muharemović, Bogle
-GW14: XI xP 65.1 (4-3-3) · C Mbeumo · bench Tzolakis, Vuskovic, Groß, Janelt
+DEF Bogle         LEE  4.8   nailed   11.4   4.90   3.69   5.71   3.17   4.97  16.38
+DEF Vuskovic      BHA  5.2   nailed    7.2   4.71   4.63   5.32   4.09   4.40  16.97
+MID Tavernier     BOU  6.6   nailed   27.1   5.83   5.98   5.56   5.90   6.22  21.37
+MID Mbeumo        MUN  7.9   nailed   20.6   5.80   4.62   5.56   5.38   6.41  19.98
+MID Ødegaard      ARS  6.7   nailed   16.7   5.13   4.92   4.90   4.49   4.48  17.61
+MID Groß          BHA  6.2   nailed   46.8   4.75   4.29   5.26   4.29   4.15  16.67
+MID Janelt        BRE  5.0   nailed    1.7   3.73   4.15   3.99   3.84   3.97  14.28
+FWD Isak          LIV  9.2   nailed   21.4   6.09   6.83   5.50   7.01   5.77  22.74
+FWD Haaland       MCI  15.8  nailed   79.0   6.07   7.29   5.37   6.67   6.32  23.08
+FWD Barry         EVE  5.6   nailed    7.4   5.33   4.24   4.52   4.34   4.86  17.07
+GW10: XI xP 65.8 (4-3-3) · C Isak · bench Tzolakis, Groß, Vuskovic, Janelt
+GW11: XI xP 63.0 (3-4-3) · C Haaland · bench Tzolakis, Janelt, Bogle, Tarkowski
+GW12: XI xP 66.4 (4-4-2) · C De Cuyper · bench Tzolakis, Barry, Tarkowski, Janelt
+GW13: XI xP 62.2 (3-4-3) · C Isak · bench Trafford, Janelt, Muharemović, Bogle
+GW14: XI xP 64.5 (4-3-3) · C Mbeumo · bench Tzolakis, Vuskovic, Groß, Janelt
