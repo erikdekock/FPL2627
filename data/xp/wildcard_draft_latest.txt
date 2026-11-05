@@ -1,22 +1,22 @@
-xp table xp_gw10-14.csv · snapshot fpl_2026-11-04T175454Z.json · horizon GW10-14 · team value £99.6
+xp table xp_gw10-14.csv · snapshot fpl_2026-11-05T175619Z.json · horizon GW10-14 · team value £99.6
 
 === WILDCARD draft · min tag likely · cost £99.3 of £99.3 (bank £0.0) ===
 pos name          team £     tag      own%   gw10   gw11   gw12   gw13   gw14    dec
 GK  Trafford      LEE  5.0   nailed    6.3   5.33   4.30   5.68   4.01   5.17  17.90
 GK  Tzolakis      HUL  4.7   nailed   13.8   3.83   3.83   4.42   4.82   3.84  14.93
-DEF Gabriel       ARS  8.0   nailed   24.6   6.11   5.56   5.22   4.87   5.25  19.96
-DEF De Cuyper     BHA  5.4   nailed   45.2   5.25   4.99   6.26   4.45   4.84  18.91
-DEF Van Hecke     TOT  5.0   nailed   11.5   4.93   5.77   5.43   5.72   4.86  19.42
-DEF Vuskovic      BHA  5.2   nailed    7.4   4.86   4.79   5.54   4.25   4.69  17.65
-DEF Silva         BOU  5.1   nailed    2.6   4.45   5.24   4.52   4.21   5.35  17.20
-MID Tavernier     BOU  6.6   nailed   27.9   5.87   6.09   5.56   5.81   6.29  21.48
-MID Mbeumo        MUN  7.9   nailed   20.3   5.74   4.62   5.42   5.48   6.28  19.82
+DEF Gabriel       ARS  8.0   nailed   24.7   6.11   5.56   5.22   4.87   5.25  19.96
+DEF De Cuyper     BHA  5.4   nailed   45.4   5.25   4.99   6.26   4.45   4.84  18.91
+DEF Van Hecke     TOT  5.0   nailed   11.7   4.93   5.77   5.43   5.72   4.86  19.42
+DEF Vuskovic      BHA  5.2   nailed    7.5   4.86   4.79   5.54   4.25   4.69  17.65
+DEF Silva         BOU  5.1   nailed    2.8   4.45   5.24   4.52   4.21   5.35  17.20
+MID Tavernier     BOU  6.6   nailed   28.3   5.87   6.09   5.56   5.81   6.29  21.48
+MID Mbeumo        MUN  7.9   nailed   20.2   5.74   4.62   5.42   5.48   6.28  19.82
 MID Iwobi         FUL  5.4   nailed    1.5   5.49   4.31   4.93   4.36   4.46  17.39
 MID Enciso        IPS  5.5   nailed    1.0   4.55   3.96   4.71   4.48   3.97  15.83
 MID Rudoni        COV  4.9   nailed    0.9   3.50   4.38   3.42   4.24   3.82  14.01
-FWD Barry         EVE  5.6   nailed    7.7   6.38   4.95   5.41   5.15   5.81  20.30
-FWD Haaland       MCI  15.8  nailed   79.0   6.09   7.16   5.26   6.70   6.13  22.84
-FWD Isak          LIV  9.2   nailed   21.9   5.38   6.04   4.86   6.25   5.00  20.08
+FWD Barry         EVE  5.6   nailed    7.8   6.38   4.95   5.41   5.15   5.81  20.30
+FWD Haaland       MCI  15.8  nailed   79.1   6.09   7.16   5.26   6.70   6.13  22.84
+FWD Isak          LIV  9.2   nailed   22.3   5.38   6.04   4.86   6.25   5.00  20.08
 GW10: XI xP 67.8 (4-3-3) · C Barry · bench Tzolakis, Enciso, Silva, Rudoni
 GW11: XI xP 66.7 (5-2-3) · C Haaland · bench Tzolakis, Rudoni, Iwobi, Enciso
 GW12: XI xP 65.8 (4-3-3) · C De Cuyper · bench Tzolakis, Enciso, Silva, Rudoni
