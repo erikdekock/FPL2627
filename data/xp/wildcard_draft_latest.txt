@@ -1,26 +1,25 @@
-xp table xp_gw10-15.csv · snapshot fpl_2026-11-06T172107Z.json · horizon GW10-15 · team value £99.6
+xp table xp_gw11-15.csv · snapshot fpl_2026-11-07T161637Z.json · horizon GW11-15 · team value £99.9
 
-=== WILDCARD draft · min tag likely · cost £99.3 of £99.3 (bank £0.0) ===
-pos name          team £     tag      own%   gw10   gw11   gw12   gw13   gw14   gw15    dec
-GK  Trafford      LEE  5.0   nailed    6.3   5.33   4.30   5.68   4.01   5.17   4.68  19.86
-GK  Tzolakis      HUL  4.7   nailed   13.7   3.83   3.83   4.42   4.82   3.84   4.77  16.93
-DEF Gabriel       ARS  8.0   nailed   24.9   6.11   5.56   5.22   4.87   5.25   5.64  22.32
-DEF De Cuyper     BHA  5.4   nailed   45.6   5.25   4.99   6.26   4.45   4.84   5.74  21.31
-DEF Van Hecke     TOT  5.0   nailed   12.0   4.93   5.77   5.43   5.72   4.86   5.08  21.54
-DEF Vuskovic      BHA  5.2   nailed    7.5   4.86   4.79   5.54   4.25   4.69   5.33  19.88
-DEF Silva         BOU  5.1   nailed    2.9   4.45   5.24   4.52   4.21   5.35   3.89  18.83
-MID Tavernier     BOU  6.6   nailed   28.7   5.87   6.09   5.56   5.81   6.29   4.66  23.43
-MID Mbeumo        MUN  7.9   nailed   20.1   5.74   4.62   5.42   5.48   6.28   5.44  22.09
-MID Iwobi         FUL  5.4   nailed    1.5   5.49   4.31   4.93   4.36   4.46   4.85  19.42
-MID Enciso        IPS  5.5   nailed    1.0   4.55   3.96   4.71   4.48   3.97   5.11  17.97
-MID Rudoni        COV  4.9   nailed    1.0   3.50   4.38   3.42   4.24   3.82   4.06  15.71
-FWD Barry         EVE  5.6   nailed    8.0   6.38   4.95   5.41   5.15   5.81   4.82  22.32
-FWD Haaland       MCI  15.8  nailed   79.1   6.09   7.16   5.26   6.70   6.13   7.21  25.85
-FWD Isak          LIV  9.2   nailed   22.6   5.38   6.04   4.86   6.25   5.00   5.23  22.26
-GW10: XI xP 67.8 (4-3-3) · C Barry · bench Tzolakis, Enciso, Silva, Rudoni
-GW11: XI xP 66.7 (5-2-3) · C Haaland · bench Tzolakis, Rudoni, Iwobi, Enciso
-GW12: XI xP 65.8 (4-3-3) · C De Cuyper · bench Tzolakis, Enciso, Silva, Rudoni
-GW13: XI xP 64.8 (3-4-3) · C Haaland · bench Trafford, Vuskovic, Rudoni, Silva
-GW14: XI xP 66.0 (5-2-3) · C Tavernier · bench Tzolakis, Iwobi, Enciso, Rudoni
-GW15: XI xP 66.4 (4-3-3) · C Haaland · bench Trafford, Tavernier, Rudoni, Silva
-objective (decayed horizon xP incl. captain, bench x0.1): 276.0
+=== WILDCARD draft · min tag likely · cost £99.5 of £99.6 (bank £0.1) ===
+pos name          team £     tag      own%   gw11   gw12   gw13   gw14   gw15    dec
+GK  Trafford      LEE  5.0   nailed    6.3   4.46   5.82   4.17   5.36   4.84  17.88
+GK  Tzolakis      HUL  4.7   nailed   13.6   3.82   4.41   4.81   3.83   4.73  15.54
+DEF Van Hecke     TOT  5.0   nailed   13.3   5.51   5.18   5.49   4.65   4.85  18.91
+DEF Gabriel       ARS  8.1   nailed   25.5   5.27   4.96   4.63   5.03   5.37  18.36
+DEF Silva         BOU  5.1   nailed    3.5   5.24   4.51   4.21   5.35   3.87  17.10
+DEF De Cuyper     BHA  5.4   nailed   46.7   4.99   6.24   4.45   4.84   5.73  19.09
+DEF Vuskovic      BHA  5.2   nailed    7.9   4.78   5.52   4.25   4.69   5.29  17.83
+MID Tavernier     BOU  6.6   nailed   30.6   6.09   5.59   5.81   6.32   4.68  20.96
+MID Rudoni        COV  4.9   nailed    1.1   4.91   3.87   4.74   4.29   4.56  16.32
+MID Mbeumo        MUN  7.9   nailed   19.7   4.62   5.42   5.49   6.39   5.44  19.54
+MID Iwobi         FUL  5.4   nailed    1.5   4.33   4.92   4.46   4.52   4.84  16.70
+MID Enciso        IPS  5.5   nailed    1.1   4.05   4.71   4.54   3.98   5.12  16.12
+FWD Haaland       MCI  15.8  nailed   79.2   7.22   5.29   6.79   6.13   7.21  23.68
+FWD Isak          LIV  9.2   nailed   24.2   6.04   4.93   6.25   5.00   5.29  20.19
+FWD Barry         EVE  5.7   nailed    9.3   5.28   5.77   5.50   6.26   5.15  20.28
+GW11: XI xP 67.0 (5-2-3) · C Haaland · bench Tzolakis, Mbeumo, Iwobi, Enciso
+GW12: XI xP 65.9 (4-3-3) · C De Cuyper · bench Tzolakis, Enciso, Silva, Rudoni
+GW13: XI xP 65.3 (3-4-3) · C Haaland · bench Trafford, Iwobi, Vuskovic, Silva
+GW14: XI xP 66.4 (5-2-3) · C Mbeumo · bench Tzolakis, Iwobi, Rudoni, Enciso
+GW15: XI xP 66.3 (4-3-3) · C Haaland · bench Tzolakis, Tavernier, Rudoni, Silva
+objective (decayed horizon xP incl. captain, bench x0.1): 247.0
