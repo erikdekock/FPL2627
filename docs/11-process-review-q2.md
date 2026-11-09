@@ -136,3 +136,4 @@ _To be written in step H._
 | 2026-11-09 | **D-G3 decided (Erik): A.** Six weekly leading indicators: execution score (green >= 90%, red < 70%), captain result vs league sum, bench points 4-week sum <= league mean, Brier of non-execution EXPs <= 0.22, days between written chip rationale and play (>= 1), gap to leader and to Alex (trend). Baselines GW6-10 in section 6. |
 | 2026-11-09 | **D-G4 decided: A** (rival of service = leader; rule 18 v3.1). **D-S1 decided: A** (TC1 on a modelled window GW11/16/19, not auto-fired in GW11). |
 | 2026-11-09 | **D-S3 decided: A** (rule 17 same-day exception with three checks). |
+| 2026-11-09 | **D-W3 decided: A** (rules 4a and 4b added). |

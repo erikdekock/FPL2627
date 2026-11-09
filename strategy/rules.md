@@ -6,6 +6,8 @@
 2. **Nothing counts until it is committed.** Claude writes and commits log, decisions, brief, lessons; Erik never pastes. *(Origin: 0 of 5 log rows in Phase 1.)*
 3. **LOCKED closes a decide chat; a kickoff closes a review chat.** No LOCKED = no decision; no kickoff = the next week starts blind. *(Origin: GW04 chat ended with open questions; the transfer was never made.)*
 4. **Plan ≠ executed until the API confirms it.** After every deadline Claude reads picks and transfers and writes the actual state into the brief. *(Origin: GW4 Collins→Bogle, 15 points.)*
+4a. **The deadline is line 1, LOCKED is T−3h.** Every decide chat opens with the next deadline from the API (`events[].deadline_time`) in UK and NL time. LOCKED is posted at least 3 hours before the deadline. At T−3h Erik sends one app screenshot; Claude compares it line by line with LOCKED and says "matches" only when every line matches. *(Origin: GW8, Friday deadline read as Saturday, nothing executed; GW7 and GW8 app ≠ LOCKED.)*
+4b. **A change after LOCKED is a decision.** Every change after LOCKED, good or bad, is posted in one line with a new screenshot and logged in `decisions.csv` with its A and B. *(Origin: unwritten deadline swaps GW1, GW9, GW10.)*
 5. **Deviation is written before acting.** Rule-breaking is allowed, never free. *(Origin: GW2 Watkins→João Pedro executed first, written after.)*
 6. **The log row and the EXP are unskippable**, including 10-minute weeks. *(Origin: strategy pre-mortem #1.)*
 
@@ -33,5 +35,6 @@
 | Date | Change |
 |---|---|
 | 2026-10-07 | v3.0 — first operational rule book, consolidated from `strategy.md` §11 and the Phase 1 retro (`docs/06`). |
-| 2026-11-09 | v3.1 — rule 18 amended (rival of service = league leader, sword beyond 20 behind) by D-G4, agreed by Erik. Rules 4a, 4b and 17 follow in step F. |
+| 2026-11-09 | v3.1 — rule 18 amended (rival of service = league leader, sword beyond 20 behind) by D-G4, agreed by Erik.  |
 | 2026-11-09 | v3.1 — rule 17 amended (same-day chip with value check, minutes gate and confirm-screen screenshot) by D-S3, agreed by Erik. |
+| 2026-11-09 | v3.1 — rules 4a (deadline line 1, LOCKED at T−3h with screenshot check) and 4b (change after LOCKED = logged decision with screenshot) added by D-W3, agreed by Erik. |
