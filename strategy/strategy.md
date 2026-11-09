@@ -1,5 +1,5 @@
 # Season Strategy — FPL 2026/27
-**v2.1-ACTIVE · 15 August 2026 · supersedes v2.0-PROPOSAL (same day)**
+**v2.2-ACTIVE (Q2 review, 9 Nov 2026: §1, §10 amended by D-G1..G4) · supersedes v2.1 (15 Aug 2026)**
 Six days before GW1. Q0 decisions taken 15 Aug: rank target, risk posture, conflict rule (changelog). Still open: rival names + team ID. Everything else is operative now. This revision applies the same treatment the protocol received: criticised, validated where possible, qualified where not, and fleshed out where v1.0 was thin.
 
 **What changed from v1.0 and why (revision notes):**
@@ -14,8 +14,8 @@ Six days before GW1. Q0 decisions taken 15 Aug: rank target, risk posture, confl
 
 ## 1. Objectives — and the rule for when they conflict
 
-- **Primary: win the mini-league.** **[ERIK]** name the league(s) and rank the rivals (the cousin + who else?). Rival Radar (protocol A6) tracks them weekly.
-- **Secondary: top 10k overall** — decided 15 Aug. Stated honestly: that is roughly the top 0.1% of the game, so even an excellent season lands outside it more often than inside it. The KPI therefore grades trajectory checkpoints (§10), not only the endpoint — the target's real function is to calibrate posture (§7), and it does: this is an aggressive season by design.
+- **Primary: win the mini-league** (Fantasy Fellas, league 348280, ten managers). **The rival of service is whoever leads the league** (9 Nov: Jason, 27 ahead; Alex, 9 behind us, is watched for his open WC and FH). *(D-G1, D-G4, decided 9 Nov.)*
+- **Secondary: an honest overall-rank band for GW38**, set once GW10 is final (the 15 Aug top-10k target is retired as a goal; it stays a stretch marker). OR 806k after GW10 came from one 123-point week, so the band is set from the season-plan, not extrapolated.
 - **Tertiary: a complete decision log by GW38** proving which reasoning patterns earn points. Achieved by discipline alone; immune to variance; the compounding asset for season two and Project Beane.
 
 **Conflict rule — decided 15 Aug: the league always wins.** Whenever league-EV and rank-EV genuinely diverge — mirror-vs-EV captaincy, blocking moves, chip timing against a rival — the league decision is taken, at any gameweek. Accepted consequence, stated plainly: the top-10k push runs at full aggression only where the league is not at stake; in direct-conflict weeks the league throttles it. Most weeks there is no conflict — good percentage play serves both — so the rule bites rarely but absolutely.
@@ -163,6 +163,16 @@ One line at the top of every GWxx chat names the phase.
 | Decision quality (E4) | "Good process" share rising each quarter; ≥ 2 named biases by Q2 | A3 grading |
 | Log completeness | 38/38 rows | repo |
 
+### Weekly leading indicators (added Q2, D-G3; reported in every review)
+| Indicator | Green / red | Baseline GW6-10 |
+|---|---|---|
+| Execution score (app = LOCKED, with screenshot) | >= 90% / < 70% | 0 of 5 weeks fully |
+| Captain result vs sum of league captains | >= league mean / > 10 below | us 90, league 34-84 |
+| Bench points, 4-week sum | <= league mean | us 36, league mean 43 |
+| Brier of EXP lines excluding execution | <= 0.22 | 0.218 (n=22) |
+| Days between written chip rationale and play | >= 1 | 0 in 3 of 3 |
+| Gap to leader and to Alex | trend, no threshold | -27 and +9 (provisional) |
+
 ## 11. Standing discipline rules (consolidated)
 
 1. Bank-first on transfers while the window is open (to 1 Sep); rolling is a decision, not a failure.
@@ -190,3 +200,4 @@ One line at the top of every GWxx chat names the phase.
 | 2026-08-15 | v1.0-PROPOSAL | Theory of victory E1–E6, doctrine, triggers, phase map, KPIs |
 | 2026-08-15 | v2.0-PROPOSAL | Per-edge failure modes + evidence status · objective-conflict rule · decision-inputs hierarchy · captain pool, bench, cash-buffer, TV doctrine · expanded trigger table · phase exit criteria · pre-mortem · KPI targets · governance. |
 | 2026-08-15 | v2.1-ACTIVE | Q0 decisions encoded: rank target **top 10k** · default posture **calculated aggression** (2–3 differential budget, aggression in positioning not churn) · conflict rule **league always wins**. Trigger table and KPI bands recalibrated to the 10k trajectory; pre-mortem gains the aggression-vs-league tension and differential-addiction modes. Still open: rival names, team ID. |
+| 2026-11-09 | v2.2 | Q2 review: §1 goals rewritten (league first, rival of service = leader, OR band instead of top 10k), §10 weekly leading indicators added. Phase exit criteria (D-G2, provisional A) and the rest of v3.0 follow in step C6. |

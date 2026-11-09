@@ -1,5 +1,5 @@
 # Standing rules — read first in every chat
-**v3.0 · 7 Oct 2026 · operational rules only; the theory lives in `strategy.md`. Changed only in a review chat, with a changelog line. Each rule names its origin.**
+**v3.1 · 9 Nov 2026 · operational rules only; the theory lives in `strategy.md`. Changed only in a review chat, with a changelog line. Each rule names its origin.**
 
 ## Process
 1. **Read-back before analysis.** Every chat opens with the repo state in five lines plus what it could not find. *(Origin: Phase 1 — every chat re-derived context from zero.)*
@@ -23,7 +23,7 @@
 15. **Team value times moves, never justifies them.** *(Origin: strategy §11.10.)*
 16. **Captain from the pool** (Haaland default, Bruno home vs promoted) unless a written trigger says sword. **League-EO decides shield vs sword**, not field-EO; the vice is a nailed starter. *(Origin: GW2, −20 to Alex.)*
 17. **Chips fire only from a rationale written in `chip-plan.md` the day before**, with the baseline logged; never reactive. TC/BB cancellable before the deadline; WC/FH not. *(Origin: strategy E5; chip set 1 expires at the GW19 deadline — verify the date in the API.)*
-18. **League beats overall rank in any conflict.** Behind the rival of record by more than 30: sword posture (differential captaincy first, structural differentials second). *(Origin: strategy §1, §7; −69 to Alex after GW5.)*
+18. **League beats overall rank in any conflict.** The rival of service is the league leader. More than 20 points behind the leader: sword posture (differential captaincy first, structural differentials second). Within 20 or ahead: shield (league-EO). Alex and the pack are watched weekly for open chips. *(Origin: strategy §1, §7; amended 9 Nov by D-G4 after the leader changed from Alex to Jason.)*
 
 ## Evidence
 19. **Pull, never remember.** Prices, flags, ownership, squads, points come from the API or the snapshot, every time. `ep_next` is a baseline, never an input. xP and the solver are a prior to argue with, never the decision. *(Origin: every documented LLM-for-FPL failure is a number from memory.)*
@@ -33,3 +33,4 @@
 | Date | Change |
 |---|---|
 | 2026-10-07 | v3.0 — first operational rule book, consolidated from `strategy.md` §11 and the Phase 1 retro (`docs/06`). |
+| 2026-11-09 | v3.1 — rule 18 amended (rival of service = league leader, sword beyond 20 behind) by D-G4, agreed by Erik. Rules 4a, 4b and 17 follow in step F. |
