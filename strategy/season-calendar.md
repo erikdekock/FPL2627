@@ -1,6 +1,6 @@
 # Season Calendar — FPL 2026/27
 
-Auto-generated from the FPL API on 2026-11-08 19:22 UTC. Do not edit by hand — `scripts/make_deadlines.py` rewrites this file daily, so it follows the API when TV picks move kickoffs.
+Auto-generated from the FPL API on 2026-11-09 10:30 UTC. Do not edit by hand — `scripts/make_deadlines.py` rewrites this file daily, so it follows the API when TV picks move kickoffs.
 
 **Next deadline — GW11: Sat 21 Nov 2026 12:00 CET** (UK: Sat 21 Nov 2026 11:00 GMT)
 
@@ -18,7 +18,7 @@ Deadlines are 90 minutes before each round's first kickoff. No grace period.
 | 5 | Fri 18 Sep 2026 19:30 CEST | Fri 18 Sep 2026 18:30 BST | ✅ done |
 
 ## Phase 2 Reset & Structure — GW6–10
-*WC1 GW6 · TC1 GW7 · BB1 GW8-12*
+*WC1 GW7 (FH1 burned in GW6 by mistake) · BB1 GW10 played*
 
 | GW | Deadline (NL) | Deadline (UK) | Status |
 |---|---|---|---|
@@ -29,7 +29,7 @@ Deadlines are 90 minutes before each round's first kickoff. No grace period.
 | 10 | Fri 06 Nov 2026 19:30 CET | Fri 06 Nov 2026 18:30 GMT |  |
 
 ## Phase 3 Congestion & chip cliff — GW11–19
-*FH1 burn GW17-18 · all set-1 chips die at GW19*
+*TC1 is the only set-1 chip left: plan GW11, else GW16/GW19 · set 1 dies at the GW19 deadline*
 
 | GW | Deadline (NL) | Deadline (UK) | Status |
 |---|---|---|---|
