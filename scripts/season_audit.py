@@ -76,3 +76,36 @@ if __name__ == "__main__":
         extract()
     else:
         print(__doc__)
+
+
+# ---------------------------------------------------------------- stage 2
+def latest():
+    fs = sorted(glob.glob(SNAP))
+    return json.load(open(fs[-1])), fs[-1]
+
+
+def rivals_gw():
+    """One row per (entry, gw) from the newest snapshot's histories (GW1..now)."""
+    d, f = latest()
+    names = {str(r["entry"]): (r["player_name"], r["entry_name"])
+             for r in d["league"]["standings"]["results"]}
+    rows = []
+    ents = dict(d.get("rivals") or {})
+    ents.setdefault("6756883", {"history": d["history"]})
+    for eid, rv in ents.items():
+        h = rv.get("history") or {}
+        chips = {c["event"]: c["name"] for c in h.get("chips", [])}
+        for c in h.get("current", []):
+            rows.append(dict(entry=eid, manager=names.get(eid, ("?", "?"))[0], gw=c["event"],
+                             points=c["points"], total=c["total_points"], rank=c["rank"],
+                             overall_rank=c["overall_rank"], bench=c["points_on_bench"],
+                             transfers=c["event_transfers"], hit=c["event_transfers_cost"],
+                             value=c["value"], bank=c["bank"], chip=chips.get(c["event"], "")))
+    with open(f"{OUT}/rivals_gw.csv", "w", newline="") as fh:
+        w = csv.DictWriter(fh, fieldnames=list(rows[0].keys()))
+        w.writeheader(); w.writerows(sorted(rows, key=lambda r: (r["gw"], r["entry"])))
+    print("rivals_gw", len(rows), os.path.basename(f))
+
+
+if __name__ == "__main__" and sys.argv[1:] == ["rivals"]:
+    rivals_gw()

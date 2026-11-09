@@ -107,8 +107,21 @@ Legend: **Erik decides** = a decision Erik takes in chat (one per message, A wit
 ## 5. Definition of done (before the GW11 deadline)
 Every step's output committed with `Strategy Q2 review: <part>` · audit reproducible by script · `strategy.md` v3.0, `rules.md` v4, `chip-plan.md` v2, `campaign-plan.md` v2.0, `strategy/season-plan.md`, `docs/12-week-system.md`, `docs/09` v0.2 with calibration · models adopted only with a backtest better than v0 · dispatcher task live with one observed run · calendar GW11–38 · skills saved and identical in the repo · project instructions pasted (Erik confirms) · GW11 kickoff written.
 
-## 6. Audit GW1–10
-_To be filled in step B._
+## 6. Audit GW1–10 (v0.2, 9 Nov 2026)
+Data: `data/audit/{player_gw,picks_gw,entry_gw,rivals_gw}.csv`, built by `python3 scripts/season_audit.py extract|rivals` from the last snapshot of each GW. Page with charts: https://claude.ai/artifact/CsKNLhxkaVnTCRSbd8kHTM. **GW10 is provisional** (newest snapshot is mid-update: player points give 123, entry history 82); the lockdown check sets the final figure and the GW10 average.
+
+### Findings
+1. **Execution, not prediction, is the weak link.** Brier of the 22 forecast EXP lines 0.218 (coin flip 0.25). The 3 "executed as locked" lines: mean p 0.83, 0 of 3 true, Brier 0.70. In every GW6–10 the app differed from LOCKED. Net effect of the deviations was positive (GW6 -4, GW7 +3, GW8 -3, GW9 +8, GW10 +14) which hides the problem.
+2. **The league is the yardstick, not the field average.** GW1–9: us +21 vs average (529 vs 508), P4 to P8. Seven of nine rivals scored +27 to +81 (Alex +78, Jason +81). Only Robert (-2) and R.W. (+19) are below us.
+3. **Budget starters carry the points.** 652 pts GW1–10: players under £6 gave 250, Haaland incl. captain bonus 138, £6+ others 178+. GW10: budget 42, captain bonus 16 (Barry), Bench Boost 27.
+4. **Plan-anchoring test: inconclusive.** 15 measurable A vs B contests: A won 9 (+63), B won 5 (+43), 1 tie. A won structural calls (WC +22, transfer +10, squad +8). B won 4 of 5 scored contests in GW9–10, all tactical (captain, XI, chip timing). Too small for a verdict; track from GW11.
+5. **Bench points are not the leak.** GW6–9 bench 36 vs league mean 43 (16 to 63).
+
+### Also graded in step A
+GW6 D1–D5 and GW7 D2 closed from the API (commit 18539de). GW6: FH played instead of WC (wrong chip), captain swapped unwritten (-4), GW 59 vs average 58, model said 73.2 xP.
+
+### Not yet done in B
+B4 time per chat and B5 template/top-10k comparison; GW10 final after lockdown. Rival picks exist only for GW6–10 in snapshots (GW1–5: histories only).
 
 ## 7. Closing summary
 _To be written in step H._
@@ -117,3 +130,4 @@ _To be written in step H._
 | Date | Change |
 |---|---|
 | 2026-11-08 | v0.1 — programme written after the read-back; nothing decided yet. |
+| 2026-11-09 | v0.2: step A1/A3 done, audit B1-B3 written (section 6), artifact published. |
