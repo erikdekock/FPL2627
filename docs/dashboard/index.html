@@ -1,0 +1,294 @@
+<meta name="dash-one-writer">
+<style>
+.ws{display:flex;flex-direction:column;gap:var(--cds-gap-xl);font-family:var(--font-anthropic-sans);color:var(--color-fg)}
+.ws h1{font-family:var(--font-anthropic-serif);font-weight:400;font-size:var(--cds-font-size-title);margin:0}
+.ws h2{font-size:var(--cds-font-size-heading);font-weight:var(--cds-font-weight-medium);margin:0}
+.ws p{margin:0}
+.ws-muted{color:var(--color-fg-muted);font-size:var(--cds-font-size-caption)}
+.ws-head{display:flex;flex-direction:column;gap:var(--cds-gap-sm)}
+.ws-lead{font-size:var(--cds-font-size-heading);max-width:62ch}
+.ws-tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:var(--cds-gap-md)}
+.ws-tile{background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:var(--cds-pad-md);display:flex;flex-direction:column;gap:4px;min-width:0}
+.ws-tile .ws-big{font-family:var(--font-anthropic-serif);font-size:var(--cds-font-size-title);font-variant-numeric:tabular-nums;line-height:1.1}
+.ws-sec{display:flex;flex-direction:column;gap:var(--cds-gap-sm);min-width:0}
+.ws-grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:var(--cds-gap-lg)}
+.ws-grid2>*{min-width:0}
+.ws-scroll{overflow-x:auto}
+.ws table{border-collapse:collapse;width:100%;font-size:var(--cds-font-size-caption);font-variant-numeric:tabular-nums}
+.ws th,.ws td{padding:5px 8px;border-bottom:1px solid var(--color-border-line);text-align:right;white-space:nowrap}
+.ws th{color:var(--color-fg-muted);font-weight:var(--cds-font-weight-medium)}
+.ws th.l,.ws td.l{text-align:left}
+.ws tr.ws-me td{font-weight:var(--cds-font-weight-medium)}
+.ws tr.ws-bench td{color:var(--color-fg-muted)}
+.ws td.wrap{white-space:normal;min-width:220px}
+.ws .fd1{background:color-mix(in srgb,var(--color-ok) 38%,transparent)}
+.ws .fd2{background:color-mix(in srgb,var(--color-ok) 18%,transparent)}
+.ws .fd3{background:transparent}
+.ws .fd4{background:color-mix(in srgb,var(--color-bad) 18%,transparent)}
+.ws .fd5{background:color-mix(in srgb,var(--color-bad) 36%,transparent)}
+.ws .fd0{background:color-mix(in srgb,var(--color-warn) 40%,transparent)}
+.ws-pill{display:inline-block;padding:1px 8px;border-radius:999px;font-size:var(--cds-font-size-caption);border:1px solid var(--color-border-line)}
+.ws-pill.ok{background:color-mix(in srgb,var(--color-ok) 22%,transparent)}
+.ws-pill.bad{background:color-mix(in srgb,var(--color-bad) 22%,transparent)}
+.ws-pill.warn{background:color-mix(in srgb,var(--color-warn) 26%,transparent)}
+.ws-chart{position:relative;min-height:240px}
+.ws-tip{position:absolute;pointer-events:none;background:var(--cds-surface-popover);border:1px solid var(--cds-border);box-shadow:var(--cds-shadow-popover);border-radius:var(--cds-radius);padding:6px 9px;font-size:var(--cds-font-size-caption);color:var(--color-fg)}
+.ws-chart text{fill:var(--cds-text-secondary);font-size:var(--cds-font-size-caption)}
+.ws-legend{display:flex;gap:14px;flex-wrap:wrap;font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.ws-legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+[data-dash-source-state=refreshing]{opacity:.5}
+</style>
+
+<div class="ws">
+  <header class="ws-head" id="kop">
+    <p class="ws-muted">Brobbeytrap · Fantasy Fellas · weekscherm</p>
+    <h1>Op weg naar GW<span data-draw="gw" data-source="meta" data-field="gw" data-row="0">—</span></h1>
+    <p class="ws-lead" data-draw="headline" data-source="meta" data-field="headline" data-row="0">—</p>
+  </header>
+
+  <section class="ws-tiles" id="tegels">
+    <div class="ws-tile"><span class="ws-muted">Deadline</span><span class="ws-big" data-draw="dl" data-source="meta" data-field="deadline_nl" data-row="0">—</span><span class="ws-muted" data-draw="dluk" data-source="meta" data-field="deadline_uk" data-row="0">—</span></div>
+    <div class="ws-tile"><span class="ws-muted">LOCKED uiterlijk (regel 4a)</span><span class="ws-big" data-draw="locked" data-source="meta" data-field="locked_by" data-row="0">—</span><span class="ws-muted">op de deadlinedag, met screenshot</span></div>
+    <div class="ws-tile"><span class="ws-muted">League</span><span class="ws-big">P<span data-draw="lrank" data-source="meta" data-field="league_rank" data-row="0">—</span></span><span class="ws-muted">gat naar de leider: <span data-draw="gap" data-source="meta" data-field="gap_leader" data-row="0">—</span> · houding: <span data-draw="posture" data-source="meta" data-field="posture" data-row="0">—</span> (regel 18)</span></div>
+    <div class="ws-tile"><span class="ws-muted">Chips over (set 1)</span><span class="ws-big" data-draw="chips" data-source="meta" data-field="chips_left" data-row="0">—</span><span class="ws-muted"><span data-draw="todl" data-source="meta" data-field="deadlines_to_gw19" data-row="0">—</span> deadlines tot ze vervallen (GW19)</span></div>
+    <div class="ws-tile"><span class="ws-muted">Totaal · OR</span><span class="ws-big" data-draw="total" data-source="meta" data-field="total" data-row="0">—</span><span class="ws-muted">OR <span data-draw="or" data-source="meta" data-field="overall_rank" data-row="0">—</span> · bank £<span data-draw="bank" data-source="meta" data-field="bank" data-row="0">—</span></span></div>
+  </section>
+
+  <section class="ws-sec" id="league">
+    <h2>De league</h2>
+    <p class="ws-muted">Stand na de laatste speelweek, het gat naar de leider en welke chips iedereen nog heeft. Een open Wildcard of Free Hit is gemarkeerd: daarmee kan een rivaal in één week veel goedmaken.</p>
+    <div class="ws-scroll"><table data-source="league" data-row-key="manager">
+      <thead><tr><th>#</th><th class="l" data-field="manager">Manager</th><th data-field="total">Totaal</th><th data-field="gw_points">Vorige GW</th><th data-field="gap_leader">Gat leider</th><th class="l" data-field="chips_left">Chips over</th><th class="l" data-field="trend">Totaal laatste 6 GW</th></tr></thead>
+      <tbody data-draw="t-league"></tbody>
+    </table></div>
+  </section>
+
+  <section class="ws-sec" id="seizoen">
+    <h2>Onze punten per speelweek</h2>
+    <p class="ws-muted">Onze score tegen het league-gemiddelde en het veldgemiddelde. De league is de maatstaf (D-G1).</p>
+    <div class="ws-legend"><span><i data-draw="lg0"></i>Brobbeytrap</span><span><i data-draw="lg1"></i>League-gemiddelde</span><span><i data-draw="lg2"></i>Veldgemiddelde</span></div>
+    <div class="ws-chart" data-draw="season" data-source="season" role="img" aria-label="Punten per speelweek tegen league- en veldgemiddelde"></div>
+  </section>
+
+  <section class="ws-sec" id="vorige-week">
+    <h2>Vorige week</h2>
+    <p class="ws-muted">GW<span data-draw="lgw" data-source="meta" data-field="last_gw" data-row="0">—</span>: <span data-draw="lpts" data-source="meta" data-field="last_points" data-row="0">—</span> punten, veldgemiddelde <span data-draw="lavg" data-source="meta" data-field="last_avg" data-row="0">—</span>. Les van de week: <span data-draw="lesson" data-source="meta" data-field="last_lesson" data-row="0">—</span></p>
+    <div class="ws-grid2">
+      <div class="ws-scroll"><table data-source="lastweek" data-row-key="manager">
+        <thead><tr><th class="l" data-field="manager">Manager</th><th data-field="points">Punten</th><th class="l" data-field="captain">Captain</th><th data-field="captain_pts">Captainpunten</th></tr></thead>
+        <tbody data-draw="t-lastweek"></tbody>
+      </table></div>
+      <div class="ws-scroll"><table data-source="decisions" data-row-key="id">
+        <thead><tr><th class="l" data-field="id">Besluit</th><th class="l" data-field="type">Soort</th><th class="l" data-field="process">Proces</th><th class="l" data-field="result">Uitkomst</th><th class="l" data-field="outcome">Wat er gebeurde</th></tr></thead>
+        <tbody data-draw="t-decisions"></tbody>
+      </table></div>
+    </div>
+  </section>
+
+  <section class="ws-sec" id="team">
+    <h2>Mijn team</h2>
+    <p class="ws-muted">De 15 met status, minuten van de laatste drie speelweken, xP voor volgende week en de komende zes tegenstanders. Kleur: groen is makkelijk, rood is zwaar, op teamsterkte (model v0). T = thuis, U = uit. Grijze rijen staan op de bank.</p>
+    <div class="ws-scroll"><table data-source="team" data-row-key="name">
+      <thead><tr><th class="l" data-field="name">Speler</th><th class="l" data-field="pos">Pos</th><th class="l" data-field="club">Club</th><th data-field="price">£</th><th class="l" data-field="status">Status</th><th class="l" data-field="min_last3">Minuten</th><th data-field="pts">Punten</th><th data-field="xp_next">xP volgende</th><th data-field="xp_6">xP 6 GW</th><th data-field="league_owners">In league</th><th class="l" data-field="f1">GW+1</th><th class="l" data-field="f2">+2</th><th class="l" data-field="f3">+3</th><th class="l" data-field="f4">+4</th><th class="l" data-field="f5">+5</th><th class="l" data-field="f6">+6</th></tr></thead>
+      <tbody data-draw="t-team"></tbody>
+    </table></div>
+  </section>
+
+  <section class="ws-sec" id="suggesties">
+    <h2>Suggesties voor deze week</h2>
+    <p class="ws-muted">Uit het model; een startpunt voor de beslischat, geen besluit. Captain-label: shield als de helft of meer van de rivalen hem heeft, anders sword. TC1-regel (D-S1): alleen als xP minstens 3 boven het seizoensgemiddelde ligt. Grootste marge deze week: <b data-draw="tcbest" data-source="captains" data-field="tc_margin">—</b>.</p>
+    <div class="ws-grid2">
+      <div class="ws-scroll"><table data-source="captains" data-row-key="name">
+        <thead><tr><th class="l" data-field="name">Captain</th><th class="l" data-field="fixture">Wedstrijd</th><th data-field="xp">xP</th><th data-field="league_owners">Rivalen</th><th class="l" data-field="label">Label</th><th data-field="season_ppg">Gem./wedstr.</th><th data-field="tc_margin">TC-marge</th></tr></thead>
+        <tbody data-draw="t-captains"></tbody>
+      </table></div>
+      <div class="ws-scroll"><table data-source="transfers" data-row-key="move">
+        <thead><tr><th class="l" data-field="move">Transfer</th><th data-field="obj_delta">Δ 6 GW</th><th data-field="next_gw_delta">Δ volgende</th><th data-field="bank_after">Bank na</th><th class="l" data-field="note">Toelichting</th></tr></thead>
+        <tbody data-draw="t-transfers"></tbody>
+      </table></div>
+    </div>
+  </section>
+
+  <section class="ws-sec" id="vooruitblik">
+    <h2>Fixture-ticker, alle clubs</h2>
+    <p class="ws-muted">De komende zes speelweken per club. Oranje is een blank (geen wedstrijd).</p>
+    <div class="ws-scroll"><table data-source="fixtures" data-row-key="club">
+      <thead><tr><th class="l" data-field="club">Club</th><th data-field="strength">Sterkte</th><th class="l" data-field="f1">GW+1</th><th class="l" data-field="f2">+2</th><th class="l" data-field="f3">+3</th><th class="l" data-field="f4">+4</th><th class="l" data-field="f5">+5</th><th class="l" data-field="f6">+6</th></tr></thead>
+      <tbody data-draw="t-fixtures"></tbody>
+    </table></div>
+  </section>
+
+  <section class="ws-sec" id="potentie">
+    <h2>Spelers met potentie</h2>
+    <p class="ws-muted">Hoogste xP over zes speelweken per positie, niet in onze 15, alleen vaste of waarschijnlijke starters. "In league" is het aantal rivalen dat hem heeft.</p>
+    <div class="ws-scroll"><table data-source="potential" data-row-key="name">
+      <thead><tr><th class="l" data-field="name">Speler</th><th class="l" data-field="pos">Pos</th><th class="l" data-field="club">Club</th><th data-field="price">£</th><th data-field="xp_6">xP 6 GW</th><th data-field="xp_per_m">xP per £</th><th data-field="sel">Eigenaar %</th><th data-field="league_owners">In league</th><th class="l" data-field="fixtures">Tegenstanders</th></tr></thead>
+      <tbody data-draw="t-potential"></tbody>
+    </table></div>
+  </section>
+
+  <section class="ws-sec" id="voortgang">
+    <h2>Voortgang</h2>
+    <p class="ws-muted">De zes weekindicatoren (D-G3) en de exitcriteria van deze fase (D-G2).</p>
+    <div class="ws-grid2">
+      <div class="ws-scroll"><table data-source="indicators" data-row-key="indicator">
+        <thead><tr><th class="l" data-field="indicator">Indicator</th><th class="l" data-field="value">Nu</th><th class="l" data-field="target">Doel</th><th class="l" data-field="state">Stand</th><th class="l" data-field="basis">Over</th></tr></thead>
+        <tbody data-draw="t-indicators"></tbody>
+      </table></div>
+      <div class="ws-scroll"><table data-source="phase" data-row-key="criterion">
+        <thead><tr><th class="l" data-field="criterion">Fase 3 exitcriterium</th><th class="l" data-field="status">Status</th><th class="l" data-field="note">Toelichting</th></tr></thead>
+        <tbody data-draw="t-phase"></tbody>
+      </table></div>
+    </div>
+    <p class="ws-muted">Data: snapshot <span data-draw="snap" data-source="meta" data-field="snapshot" data-row="0">—</span>, xP-tabel <span data-draw="xpt" data-source="meta" data-field="xp_table" data-row="0">—</span>, gemaakt <span data-draw="gen" data-source="meta" data-field="generated" data-row="0">—</span>.</p>
+  </section>
+</div>
+
+<script>
+dash.loader('meta', {description: 'Takes the "meta" part of weekscherm.json', fn: ({answer}) => answer.meta});
+dash.loader('league', {description: 'Takes the "league" part of weekscherm.json', fn: ({answer}) => answer.league});
+dash.loader('team', {description: 'Takes the "team" part of weekscherm.json', fn: ({answer}) => answer.team});
+dash.loader('captains', {description: 'Takes the "captains" part of weekscherm.json', fn: ({answer}) => answer.captains});
+dash.loader('transfers', {description: 'Takes the "transfers" part of weekscherm.json', fn: ({answer}) => answer.transfers});
+dash.loader('potential', {description: 'Takes the "potential" part of weekscherm.json', fn: ({answer}) => answer.potential});
+dash.loader('fixtures', {description: 'Takes the "fixtures" part of weekscherm.json', fn: ({answer}) => answer.fixtures});
+dash.loader('lastweek', {description: 'Takes the "lastweek" part of weekscherm.json', fn: ({answer}) => answer.lastweek});
+dash.loader('decisions', {description: 'Takes the "decisions" part of weekscherm.json', fn: ({answer}) => answer.decisions});
+dash.loader('season', {description: 'Takes the "season" part of weekscherm.json', fn: ({answer}) => answer.season});
+dash.loader('indicators', {description: 'Takes the "indicators" part of weekscherm.json', fn: ({answer}) => answer.indicators});
+dash.loader('phase', {description: 'Takes the "phase" part of weekscherm.json', fn: ({answer}) => answer.phase});
+</script>
+
+<script>
+window.wsFmt = (v) => v === null || v === undefined ? '' : String(v);
+window.wsMeta = (field, fmt) => (el) => {
+  const g = dash.data('meta');
+  if (g.status !== 'ok' || !g.data.length) { el.textContent = '—'; return; }
+  const v = g.data[0][field];
+  el.textContent = fmt ? fmt(v) : wsFmt(v);
+};
+window.wsRows = (el, id, cols, rowFn) => {
+  const g = dash.data(id);
+  if (g.status !== 'ok') { el.replaceChildren(); return; }
+  const trs = g.data.map((r) => {
+    const tr = document.createElement('tr');
+    cols.forEach((c) => {
+      const td = document.createElement('td');
+      if (c.l) td.className = 'l';
+      if (c.wrap) td.classList.add('wrap');
+      if (c.cls) { const k = c.cls(r); if (k) td.classList.add(k); }
+      if (c.pill) { const sp = document.createElement('span'); sp.className = 'ws-pill ' + (c.pill(r) || ''); sp.textContent = wsFmt(r[c.f]); td.appendChild(sp); }
+      else td.textContent = wsFmt(r[c.f]);
+      tr.appendChild(td);
+    });
+    if (rowFn) rowFn(tr, r);
+    return tr;
+  });
+  el.replaceChildren(...trs);
+};
+</script>
+
+<script>
+const nf = new Intl.NumberFormat('nl-NL');
+dash.draw('gw', wsMeta('gw'));
+dash.draw('headline', wsMeta('headline'));
+dash.draw('dl', wsMeta('deadline_nl'));
+dash.draw('dluk', wsMeta('deadline_uk'));
+dash.draw('locked', wsMeta('locked_by'));
+dash.draw('lrank', wsMeta('league_rank'));
+dash.draw('gap', wsMeta('gap_leader'));
+dash.draw('posture', wsMeta('posture'));
+dash.draw('chips', wsMeta('chips_left'));
+dash.draw('todl', wsMeta('deadlines_to_gw19'));
+dash.draw('total', wsMeta('total'));
+dash.draw('or', wsMeta('overall_rank', (v) => nf.format(v)));
+dash.draw('bank', wsMeta('bank'));
+dash.draw('lgw', wsMeta('last_gw'));
+dash.draw('lpts', wsMeta('last_points'));
+dash.draw('lavg', wsMeta('last_avg'));
+dash.draw('lesson', wsMeta('last_lesson'));
+dash.draw('snap', wsMeta('snapshot'));
+dash.draw('xpt', wsMeta('xp_table'));
+dash.draw('gen', wsMeta('generated'));
+
+const fdc = (k) => (r) => 'fd' + r['d' + k];
+const fixCols = [1, 2, 3, 4, 5, 6].map((k) => ({f: 'f' + k, l: true, cls: fdc(k)}));
+
+dash.draw('t-league', (el) => wsRows(el, 'league', [
+  {f: 'rank'}, {f: 'manager', l: true}, {f: 'total'}, {f: 'gw_points'}, {f: 'gap_leader'},
+  {f: 'chips_left', l: true, pill: (r) => r.open_wc_fh ? 'warn' : ''}, {f: 'trend', l: true}
+], (tr, r) => { if (r.me) tr.className = 'ws-me'; }));
+
+dash.draw('t-lastweek', (el) => wsRows(el, 'lastweek', [{f: 'manager', l: true}, {f: 'points'}, {f: 'captain', l: true}, {f: 'captain_pts'}], (tr, r) => { if (r.me) tr.className = 'ws-me'; }));
+const grade = (v) => (v || '').startsWith('good') ? 'ok' : (v || '').startsWith('bad') ? 'bad' : 'warn';
+dash.draw('t-decisions', (el) => wsRows(el, 'decisions', [
+  {f: 'id', l: true}, {f: 'type', l: true}, {f: 'process', l: true, pill: (r) => grade(r.process)},
+  {f: 'result', l: true, pill: (r) => grade(r.result)}, {f: 'outcome', l: true, wrap: true}]));
+
+const st = (r) => r.status === 'fit' ? 'ok' : r.status === 'twijfel' ? 'warn' : 'bad';
+dash.draw('t-team', (el) => wsRows(el, 'team', [
+  {f: 'name', l: true}, {f: 'pos', l: true}, {f: 'club', l: true}, {f: 'price'}, {f: 'status', l: true, pill: st},
+  {f: 'min_last3', l: true}, {f: 'pts'}, {f: 'xp_next'}, {f: 'xp_6'}, {f: 'league_owners'}, ...fixCols
+], (tr, r) => { if (r.bench) tr.className = 'ws-bench'; }));
+
+dash.draw('t-captains', (el) => wsRows(el, 'captains', [
+  {f: 'name', l: true}, {f: 'fixture', l: true}, {f: 'xp'}, {f: 'league_owners'},
+  {f: 'label', l: true, pill: (r) => r.label === 'sword' ? 'warn' : 'ok'}, {f: 'season_ppg'},
+  {f: 'tc_margin', cls: (r) => r.tc_margin >= 3 ? 'fd1' : ''}]));
+dash.draw('tcbest', (el) => {
+  const g = dash.data('captains');
+  if (g.status !== 'ok' || !g.data.length) { el.textContent = '—'; return; }
+  const best = g.data.reduce((a, b) => (b.tc_margin > a.tc_margin ? b : a));
+  el.setAttribute('data-where', 'name=' + encodeURIComponent(best.name));
+  el.textContent = (best.tc_margin > 0 ? '+' : '') + best.tc_margin;
+});
+
+dash.draw('t-transfers', (el) => wsRows(el, 'transfers', [
+  {f: 'move', l: true}, {f: 'obj_delta'}, {f: 'next_gw_delta'}, {f: 'bank_after'}, {f: 'note', l: true}]));
+dash.draw('t-fixtures', (el) => wsRows(el, 'fixtures', [{f: 'club', l: true}, {f: 'strength'}, ...fixCols]));
+dash.draw('t-potential', (el) => wsRows(el, 'potential', [
+  {f: 'name', l: true}, {f: 'pos', l: true}, {f: 'club', l: true}, {f: 'price'}, {f: 'xp_6'}, {f: 'xp_per_m'},
+  {f: 'sel'}, {f: 'league_owners'}, {f: 'fixtures', l: true}]));
+const ind = (r) => r.state === 'groen' || r.state === 'op koers' ? 'ok' : r.state === 'rood' || r.state === 'achter' ? 'bad' : 'warn';
+dash.draw('t-indicators', (el) => wsRows(el, 'indicators', [
+  {f: 'indicator', l: true}, {f: 'value', l: true}, {f: 'target', l: true}, {f: 'state', l: true, pill: ind}, {f: 'basis', l: true}]));
+dash.draw('t-phase', (el) => wsRows(el, 'phase', [
+  {f: 'criterion', l: true}, {f: 'status', l: true, pill: (r) => ind({state: r.status})}, {f: 'note', l: true, wrap: true}]));
+
+['lg0', 'lg1', 'lg2'].forEach((n, i) => dash.draw(n, (el) => { el.style.background = dash.colors[i]; }));
+
+dash.draw('season', (el) => {
+  const g = dash.data('season');
+  if (g.status !== 'ok' || !g.data.length) { el.replaceChildren(); return; }
+  const rows = g.data.map((r) => ({gw: +r.gw, points: +r.points, league: +r.league_avg, field: +r.field_avg}));
+  const W = el.clientWidth || 600, H = 240, m = {t: 12, r: 12, b: 26, l: 36};
+  el.replaceChildren();
+  const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img')
+    .attr('aria-label', 'Punten per speelweek tegen league- en veldgemiddelde');
+  const x = d3.scaleBand().domain(rows.map((r) => r.gw)).range([m.l, W - m.r]).padding(0.3);
+  const ymax = d3.max(rows, (r) => Math.max(r.points, r.league, r.field));
+  const y = d3.scaleLinear().domain([0, ymax]).nice().range([H - m.b, m.t]);
+  svg.append('g').selectAll('line').data(y.ticks(5)).join('line').attr('x1', m.l).attr('x2', W - m.r)
+    .attr('y1', (d) => y(d)).attr('y2', (d) => y(d)).style('stroke', 'var(--cds-chart-grid)');
+  svg.append('g').selectAll('text').data(y.ticks(5)).join('text').attr('x', m.l - 6).attr('y', (d) => y(d) + 4)
+    .attr('text-anchor', 'end').text((d) => d);
+  svg.append('g').selectAll('text').data(rows).join('text').attr('x', (r) => x(r.gw) + x.bandwidth() / 2)
+    .attr('y', H - 8).attr('text-anchor', 'middle').text((r) => 'GW' + r.gw);
+  svg.append('g').selectAll('rect').data(rows).join('rect').attr('x', (r) => x(r.gw)).attr('width', x.bandwidth())
+    .attr('y', (r) => y(r.points)).attr('height', (r) => y(0) - y(r.points)).attr('rx', 3).style('fill', dash.colors[0]);
+  [['league', 1], ['field', 2]].forEach(([k, i]) => {
+    const line = d3.line().x((r) => x(r.gw) + x.bandwidth() / 2).y((r) => y(r[k]));
+    svg.append('path').datum(rows).attr('d', line).style('fill', 'none').style('stroke', dash.colors[i]).style('stroke-width', 2);
+    svg.append('g').selectAll('circle').data(rows).join('circle').attr('cx', (r) => x(r.gw) + x.bandwidth() / 2)
+      .attr('cy', (r) => y(r[k])).attr('r', 3).style('fill', dash.colors[i]);
+  });
+  const tip = d3.select(el).append('div').attr('class', 'ws-tip').property('hidden', true);
+  svg.append('g').selectAll('rect').data(rows).join('rect').attr('x', (r) => x(r.gw) - x.step() * x.padding() / 2)
+    .attr('width', x.step()).attr('y', m.t).attr('height', H - m.b - m.t).style('fill', 'transparent')
+    .on('pointermove', (ev, r) => {
+      const [px, py] = d3.pointer(ev, el);
+      tip.property('hidden', false).style('left', Math.min(px + 12, el.clientWidth - 170) + 'px').style('top', (py + 8) + 'px')
+        .text(`GW${r.gw}: wij ${r.points} · league ${r.league} · veld ${r.field}`);
+    }).on('pointerleave', () => tip.property('hidden', true));
+});
+</script>
