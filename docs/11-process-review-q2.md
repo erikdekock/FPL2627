@@ -132,3 +132,4 @@ _To be written in step H._
 | 2026-11-08 | v0.1 — programme written after the read-back; nothing decided yet. |
 | 2026-11-09 | v0.2: step A1/A3 done, audit B1-B3 written (section 6), artifact published. |
 | 2026-11-09 | **D-G1 decided (Erik): A.** Season goal = win league 348280; plus an honest OR band for GW38 set once GW10 is final. GW10 Monday snapshot confirms 123 pts, GW rank 37, OR 806,347 (still data_checked=false). |
+| 2026-11-09 | **D-G2 provisional A (Erik said 'continue', no objection):** three exit criteria per phase. Phase 3: no chip expires, execution score >= 90% (app = LOCKED with screenshot), >= P2 in the league at GW19. Phase 4: WC2 on a written rationale, gap to leader <= 25. Phase 5-6: each chip on a verified blank/double, league beats OR. Thresholds are proposals, to be checked against the season-plan. Interim project instructions delivered to Erik in chat (A5). |
