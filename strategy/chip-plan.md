@@ -19,7 +19,7 @@ Two sets of four chips (Wildcard, Free Hit, Triple Captain, Bench Boost) — 8 t
 
 ## Firing rule
 
-No chip fires without a written rationale in this file *before* the deadline. Reactive chip use is banned; a chip proposal mid-week goes through one night's sleep.
+No chip fires without a written rationale in this file *before* the deadline, written the day before. Same-day fire only under rule 17's exception (value vs window, minutes gate, confirm-screen screenshot naming the chip). Reactive chip use after a bad week is banned.
 
 ## Log
 

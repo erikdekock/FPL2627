@@ -22,7 +22,7 @@
 14. **Roll is always a named candidate.** Hits need written 4-GW EV clearly above 4; close calls are a no; no hit within 24h of a red gameweek. *(Origin: strategy §11.4, §11.6.)*
 15. **Team value times moves, never justifies them.** *(Origin: strategy §11.10.)*
 16. **Captain from the pool** (Haaland default, Bruno home vs promoted) unless a written trigger says sword. **League-EO decides shield vs sword**, not field-EO; the vice is a nailed starter. *(Origin: GW2, −20 to Alex.)*
-17. **Chips fire only from a rationale written in `chip-plan.md` the day before**, with the baseline logged; never reactive. TC/BB cancellable before the deadline; WC/FH not. *(Origin: strategy E5; chip set 1 expires at the GW19 deadline — verify the date in the API.)*
+17. **Chips fire from a rationale written in `chip-plan.md` the day before**, with the baseline logged. **Same-day exception:** a chip may fire on deadline day only when three things are in the chat before activation: (1) value now vs the planned window, in model points; (2) for BB or FH, a minutes gate: every player involved is a predicted starter in two sources; (3) a screenshot of the confirm screen showing the chip's name. TC/BB cancellable before the deadline; WC/FH not. *(Origin: strategy E5; amended 9 Nov by D-S3 after FH1 was fired instead of WC1 in GW6 while same-day WC1 (+22) and BB1 (+27) paid.)*
 18. **League beats overall rank in any conflict.** The rival of service is the league leader. More than 20 points behind the leader: sword posture (differential captaincy first, structural differentials second). Within 20 or ahead: shield (league-EO). Alex and the pack are watched weekly for open chips. *(Origin: strategy §1, §7; amended 9 Nov by D-G4 after the leader changed from Alex to Jason.)*
 
 ## Evidence
@@ -34,3 +34,4 @@
 |---|---|
 | 2026-10-07 | v3.0 — first operational rule book, consolidated from `strategy.md` §11 and the Phase 1 retro (`docs/06`). |
 | 2026-11-09 | v3.1 — rule 18 amended (rival of service = league leader, sword beyond 20 behind) by D-G4, agreed by Erik. Rules 4a, 4b and 17 follow in step F. |
+| 2026-11-09 | v3.1 — rule 17 amended (same-day chip with value check, minutes gate and confirm-screen screenshot) by D-S3, agreed by Erik. |
