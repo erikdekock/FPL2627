@@ -1,17 +1,17 @@
-xp table xp_gw11-15.csv · snapshot fpl_2026-11-09T103051Z.json · horizon GW11-15 · team value £99.9
+xp table xp_gw11-15.csv · snapshot fpl_2026-11-09T180115Z.json · horizon GW11-15 · team value £99.9
 
 === BASELINE: current 15, best XI per GW · cost £100.4 of £99.9 (bank £-0.5) ===
 pos name          team £     tag      own%   gw11   gw12   gw13   gw14   gw15    dec
 GK  Trafford      LEE  5.0   nailed    6.4   4.72   5.99   4.39   5.53   4.85  18.54
 GK  Tzolakis      HUL  4.7   nailed   13.5   4.08   4.61   4.98   4.05   5.10  16.41
-DEF De Cuyper     BHA  5.5   nailed   47.4   5.26   6.41   4.58   4.95   5.83  19.71
-DEF Vuskovic      BHA  5.3   nailed    8.7   5.10   5.73   4.42   4.82   5.44  18.60
+DEF De Cuyper     BHA  5.5   nailed   47.5   5.26   6.41   4.58   4.95   5.83  19.71
+DEF Vuskovic      BHA  5.3   nailed    8.8   5.10   5.73   4.42   4.82   5.44  18.60
 DEF Muharemović   LEE  5.1   nailed    6.3   4.34   5.69   4.01   5.22   4.47  17.27
 DEF Tarkowski     EVE  6.2   nailed   19.4   3.96   4.52   4.16   4.81   3.32  15.20
-DEF Bogle         LEE  4.8   nailed   11.1   3.93   5.75   3.61   5.24   4.00  16.40
-MID Tavernier     BOU  6.7   nailed   31.0   5.97   5.40   5.54   6.13   4.48  20.28
+DEF Bogle         LEE  4.8   nailed   11.2   3.93   5.75   3.61   5.24   4.00  16.40
+MID Tavernier     BOU  6.7   nailed   31.1   5.97   5.40   5.54   6.13   4.48  20.28
 MID Ødegaard      ARS  6.7   nailed   16.5   5.17   5.26   4.77   4.70   5.28  18.37
-MID Groß          BHA  6.3   nailed   47.8   4.89   6.00   4.76   4.76   5.38  18.79
+MID Groß          BHA  6.3   nailed   47.9   4.89   6.00   4.76   4.76   5.38  18.79
 MID Mbeumo        MUN  7.9   nailed   19.3   4.58   5.44   5.23   6.20   5.47  19.24
 MID Iwobi         FUL  5.4   nailed    1.5   4.18   4.67   4.21   4.23   4.72  15.93
 FWD Haaland       MCI  15.8  nailed   79.0   6.76   4.95   6.24   5.98   6.69  22.20
