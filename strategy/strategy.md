@@ -129,7 +129,7 @@ When inputs disagree, higher beats lower:
 |---|---|---|---|
 | Evidence | 1–5 | Minimal moves, bank FTs, watch new-manager minutes | ≤3 FTs used · watchlist has verified minutes tags for all 20 clubs · no panic hits |
 | Structure | 6–12 | WC1 in/around the break; lock the core | Core 11 stable · captain pool confirmed · rival archetypes noted |
-| Congestion & burn-down | 13–19 | Rotation vigilance; fire remaining first-half chips on plan | Zero chips expired at the 2 Jan cliff · rotation losses ≤ field's |
+| Congestion & burn-down | 13–19 | Rotation vigilance; fire remaining first-half chips on plan | Zero chips expired at the 1 Jan cliff (GW19 deadline) · rotation losses ≤ field's |
 | Window fallout | 20–26 | January entrants watch; WC2 timing | Spring chip block scheduled on Crellin data |
 | Chip block | 27–33 | BGW/DGW execution | Chips landed in doubles/blanks as planned |
 | Endgame | 34–38 | League-first with full weight (the §1 rule was always on; here it dominates every call) | Decisions graded vs primary rival, not vs field |

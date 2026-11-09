@@ -37,5 +37,5 @@ scripts/    fpl_pull.py (API snapshot; run locally / Claude Code)
 - GW1 deadline: **Fri 21 Aug 2026, 18:30 BST / 19:30 NL** (confirm at launch). GW1 runs Fri–Mon.
 - Transfer window closes **Tue 1 Sep 23:00 UK** — after GW2.
 - Three-week break between GW5 and GW6 (21 Sep – 6 Oct, merged international window).
-- Chips: two sets of WC/FH/TC/BB. First set expires at the **GW19 deadline, 13:30 GMT Sat 2 Jan 2027**. One chip per GW. No Free Hit in GW1.
+- Chips: two sets of WC/FH/TC/BB. First set expires at the **GW19 deadline, Fri 1 Jan 2027 18:30 GMT (19:30 NL)** (API events[19]). One chip per GW. No Free Hit in GW1.
 - Scores lock at 09:00 UK the day after each GW's final match — review after lockdown, not at full time.

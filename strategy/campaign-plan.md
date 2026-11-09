@@ -14,7 +14,7 @@ Relationship to the other layers: `strategy.md` says *why* we win (edges, postur
 | **International break 1 (merged Sep+Oct)** | — | **21 Sep – 6 Oct** — three weeks, nations play up to FOUR matches (Nations League league phase) |
 | Autumn | GW6–10 | **9–11 Oct (GW6, wildcard weekend)** · 17 Oct · 24 Oct · 31 Oct · 7 Nov |
 | **International break 2** | — | **9–17 Nov** (no league weekend 14 Nov) |
-| Winter run | GW11–19 | 21 Nov → **GW19 deadline Sat 2 Jan, 13:30 GMT — first chip set dies here** · festive congestion incl. midweek rounds; no two rounds within 60h |
+| Winter run | GW11–19 | 21 Nov → **GW19 deadline Fri 1 Jan, 18:30 GMT (19:30 NL) — first chip set dies here** · festive congestion incl. midweek rounds; no two rounds within 60h |
 | New year | GW20–26 | Jan–Feb · January transfer window · UCL league phase ends late Jan; knockout play-offs 18/25 Feb |
 | **International break 3** | — | **22–30 Mar** (no league weekend 27 Mar) — Nations League QFs + Euro 2028 qualifying begins |
 | Spring | GW27–33 | Mar–Apr · FA Cup R5/QF + UCL R16/QF = blank/double season |
@@ -85,7 +85,7 @@ Squad players (not nailed starters) at the nine European clubs, and anyone at a 
 **Sub-strategy:** the WC build weights archetype B heavily (the value band will have revealed its winners), adds the first F-Punt, and applies the G-overlay for the winter ahead. Post-break captaincy: prefer players whose national teams played two, not four, matches.
 
 ### FASE 3 · CONGESTIE & DE CHIP-KLIF — GW11–19 · 21 Nov – 2/3 Jan
-**Calendar:** UCL MD5 (26 Nov) and MD6 (10 Dec) · two midweek PL rounds · festive schedule with the 60-hour rule · **the cliff: GW19 deadline, Sat 2 Jan 13:30 GMT — every unfired first-half chip evaporates.**
+**Calendar:** UCL MD5 (26 Nov) and MD6 (10 Dec) · two midweek PL rounds · festive schedule with the 60-hour rule · **the cliff: GW19 deadline, Fri 1 Jan 18:30 GMT (19:30 NL) — every unfired first-half chip evaporates.**
 **Who suffers:** the nine European clubs hit peak rotation — this is when pre-planned G-archetype exposure (Spurs/Newcastle/Forest/Chelsea + Everton/Leeds/Brentford/Fulham assets) pays. Managers rest players around UCL MD6 and festive triples.
 **Sub-goals:** zero chips expired unused · rotation losses (points on bench / benched-by-manager) at or below what the log shows for rivals · **Q2 review mid-Dec:** rank gate ~top 150k, posture check, first calibration verdict (two named biases).
 **Sub-strategy:** **FH1's planned burn: GW17–18 if still alive** — never GW19 (blocks FH2 in GW20) · captaincy shifts rotation-proof: the Ankers still, but verify midweek minutes before every armband · transfer tempo rises to the weekly FT, spent on fixture swings and congestion-dodging · Monday/festive late kickoffs get the blind-lineup discount every single week.

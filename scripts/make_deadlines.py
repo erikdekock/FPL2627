@@ -14,8 +14,8 @@ UK, NL = ZoneInfo("Europe/London"), ZoneInfo("Europe/Amsterdam")
 
 PHASES = [
     (1, 5, "1 Evidence", "Bank FTs, verify minutes, observe rivals"),
-    (6, 10, "2 Reset & Structure", "WC1 GW6 · TC1 GW7 · BB1 GW8-12"),
-    (11, 19, "3 Congestion & chip cliff", "FH1 burn GW17-18 · all set-1 chips die at GW19"),
+    (6, 10, "2 Reset & Structure", "WC1 GW7 (FH1 burned in GW6 by mistake) · BB1 GW10 played"),
+    (11, 19, "3 Congestion & chip cliff", "TC1 is the only set-1 chip left: plan GW11, else GW16/GW19 · set 1 dies at the GW19 deadline"),
     (20, 26, "4 Winter rebuild", "January entrants · WC2"),
     (27, 33, "5 Spring block", "FH2/BB2/TC2 on blanks & doubles"),
     (34, 38, "6 Endgame", "League above all"),
