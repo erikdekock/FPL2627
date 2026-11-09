@@ -131,3 +131,4 @@ _To be written in step H._
 |---|---|
 | 2026-11-08 | v0.1 — programme written after the read-back; nothing decided yet. |
 | 2026-11-09 | v0.2: step A1/A3 done, audit B1-B3 written (section 6), artifact published. |
+| 2026-11-09 | **D-G1 decided (Erik): A.** Season goal = win league 348280; plus an honest OR band for GW38 set once GW10 is final. GW10 Monday snapshot confirms 123 pts, GW rank 37, OR 806,347 (still data_checked=false). |
