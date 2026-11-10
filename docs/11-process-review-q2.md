@@ -123,6 +123,21 @@ GW6 D1–D5 and GW7 D2 closed from the API (commit 18539de). GW6: FH played inst
 ### Not yet done in B
 B4 time per chat and B5 template/top-10k comparison; GW10 final after lockdown. Rival picks exist only for GW6–10 in snapshots (GW1–5: histories only).
 
+## 8. Models — E1 backtest (v0.3, 10 Nov 2026)
+Harness: `scripts/backtest_xp.py` (last snapshot before each deadline GW2-10, xp_model horizon 1, judged on every player with >= 2 expected points by any forecast; ~220-310 per GW). Output `data/model/backtest_gw.csv`, `backtest_pos.csv`.
+
+| Forecast | MAE | Bias | Spearman rho | Top-10 actual | Top pick actual |
+|---|---|---|---|---|---|
+| xp_model v0 | 2.23 | -0.05 | 0.34 | 4.50 | 6.33 |
+| FPL ep_next | 2.52 | +0.30 | 0.22 | 4.34 | 5.00 |
+| Form (naive) | 2.67 | +0.50 | 0.18 | 3.74 | 3.44 |
+
+Findings:
+1. **The model beats ep_next and form on every metric**, in 8 of 9 GWs on MAE (GW2 is the exception, 5 games of evidence missing). No position bias worth fixing (all within ±0.2).
+2. **Model top pick vs our captain A.** The model's highest-xP player was Mbeumo (GW6), Haaland (GW7-9) and Barry (GW10). Claude's captain A went against the model twice: Mbeumo in GW8 (model: Haaland; A lost 12) and Haaland in GW10 (model: Barry; A lost 14). Both times the B that won was the model's own pick. This is the concrete form of the plan-anchoring finding: **A was anchored to a captain story (sword in GW8, shield in GW10), not to the model.**
+3. Rank correlation 0.34 is modest: single-GW points are noisy. The model is good for ranking options, not for promising a score (EXP lines should use ranges).
+Next (E3/E4): finishing term (G - xG), defence-strength fix (GW9 De Cuyper), Europe/rotation minutes, captain distribution (ceiling, not only mean).
+
 ## 7. Closing summary
 _To be written in step H._
 
@@ -138,3 +153,4 @@ _To be written in step H._
 | 2026-11-09 | **D-S3 decided: A** (rule 17 same-day exception with three checks). |
 | 2026-11-09 | **D-W3 decided: A** (rules 4a and 4b added). |
 | 2026-11-09 | **D-W2 decided: A (light version, Erik: 'not daily').** Two one-shot scheduled tasks per GW, created by the review chat from the API deadline: T-48h decide prep (push) and deadline+1h verification (push). Created for GW11: trig_018gVy6VnhGgrCxWzxNUsUgc (Thu 19 Nov 12:00 NL), trig_012PsKGZbtZHfMZ9P8dTuY14 (Sat 21 Nov 13:00 NL), both automatic approval. Fallback: Google Calendar 'beslischat openen' at T-24h for GW11-19, created 9 Nov from data/deadlines.csv. The review skill must create the next GW's two tasks (step G). |
+| 2026-11-10 | v0.3: E1 backtest done (section 8); dashboard built (Weekly Board), league history cache, scouting reports Alex and R.W. |
