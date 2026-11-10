@@ -1,11 +1,15 @@
 import csv, json
-A='41757'
+import sys
+A=sys.argv[1] if len(sys.argv)>1 else '41757'
+MGR={'41757':'Alex Imam','1218083':'R.W. de Kock'}[A]
+TPL={'41757':'docs/reports/alex_template.html','1218083':'docs/reports/rw_template.html'}[A]
+OUT=sys.argv[2] if len(sys.argv)>2 else '/tmp/claude-0/-home-claude/4a9f91a2-7922-5c2e-8370-59a609816362/scratchpad/alex.html'
 R=[r for r in csv.DictReader(open('data/audit/rivals_gw.csv')) if r['entry']==A]
 avg=[50,81,51,69,48,58,59,45,47,55]
 pts=[int(r['points']) for r in R]
 T={}
 for r in csv.DictReader(open('data/audit/rivals_gw.csv')): T.setdefault(int(r['gw']),{})[r['manager']]=int(r['total'])
-lpos=[sorted(T[g].values(),reverse=True).index(T[g]['Alex Imam'])+1 for g in range(1,11)]
+lpos=[sorted(T[g].values(),reverse=True).index(T[g][MGR])+1 for g in range(1,11)]
 C=[r for r in csv.DictReader(open('data/audit/captains.csv')) if r['entry']==A]
 
 # chart 1: bars vs average + league position
@@ -46,6 +50,6 @@ for i,c in enumerate(C):
 s.append('</svg>'); chart2="".join(s)
 
 cap_rows="".join(f'<tr><td>GW{c["gw"]}</td><td>{c["captain"]}{" (TC)" if c["chip"]=="TC" else ""}</td><td>{c["raw"]}</td><td>{c["captain_pts"]}</td><td class="{"pos" if int(c["vs_haaland"])>0 else "neg" if int(c["vs_haaland"])<0 else ""}">{int(c["vs_haaland"]):+d}</td></tr>' for c in C)
-html=open('docs/reports/alex_template.html').read().replace('{{chart1}}',chart1).replace('{{chart2}}',chart2).replace('{{caprows}}',cap_rows)
-open('/tmp/claude-0/-home-claude/4a9f91a2-7922-5c2e-8370-59a609816362/scratchpad/alex.html','w').write(html)
+html=open(TPL).read().replace('{{chart1}}',chart1).replace('{{chart2}}',chart2).replace('{{caprows}}',cap_rows)
+open(OUT,'w').write(html)
 print(lpos, sum(p-a for p,a in zip(pts,avg)))
