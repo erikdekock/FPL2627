@@ -1,5 +1,5 @@
 # Season Strategy — FPL 2026/27
-**v2.2-ACTIVE (Q2 review, 9 Nov 2026: §1, §10 amended by D-G1..G4) · supersedes v2.1 (15 Aug 2026)**
+**v3.0-ACTIVE · 10 Nov 2026 (Q2 review: §1 goals, §3 edge grades, §8 phases, §10 indicators) · supersedes v2.1 (15 Aug 2026)**
 Six days before GW1. Q0 decisions taken 15 Aug: rank target, risk posture, conflict rule (changelog). Still open: rival names + team ID. Everything else is operative now. This revision applies the same treatment the protocol received: criticised, validated where possible, qualified where not, and fleshed out where v1.0 was thin.
 
 **What changed from v1.0 and why (revision notes):**
@@ -32,6 +32,19 @@ A useful validated benchmark for how modest the bar is: simply matching the game
 ## 3. Theory of victory — six edges, each falsifiable
 
 **Format per edge:** Claim → Mechanism → Operationalised by → Measured by → **Breaks when / early warning** → Evidence status.
+
+### Q2 grades (10 Nov 2026, evidence in `docs/11-process-review-q2.md`)
+
+| Edge | Grade after GW10 | Evidence | What changes |
+|---|---|---|---|
+| E1 Process floor | **Failed so far** | App differed from LOCKED in every week GW6-10; Free Hit fired instead of Wildcard (GW6); nothing executed in GW8 | Now the first priority: rules 4a and 4b, the T-48h and deadline+1h tasks, execution score as weekly indicator |
+| E2 Patience arbitrage | **Not supported** | GW1-5 we were +11 on the overall average and 6th in the league; the early movers (Alex +84 in GW1-4) built the lead | Retired for this season (August is over); at the season review decide whether it returns in 2027/28 |
+| E3 Deadline information | **Mixed** | Late information paid (same-day WC1 +22, BB1 +27) but a deadline was misread and three swaps went unwritten | Kept, bounded by rule 4a (deadline is line 1) and rule 17 (same-day chip checks) |
+| E4 Calibration | **Working, slowly** | Brier 0.218 on 22 forecasts (coin flip 0.25); GW6 stayed ungraded for a month | Kept; EXP lines become ranges; the review reports Brier weekly |
+| E5 Chip discipline | **Failed in set 1** | Three of three chips chosen on deadline day, one of them the wrong chip | Rewritten as rule 17 and chip plan v2; TC1 window rule |
+| E6 Small-field game theory | **Supported** | The league, not the average, decided our rank (+21 on the average, 4th to 8th); the GW10 sword captain gained 28 on Haaland | Promoted to the main edge: rival of service = leader (rule 18), rival radar every week |
+| **E7 Model-ranked decisions (new)** | **Supported** | xp_model beat FPL's ep_next on GW2-10 (MAE 2.23 vs 2.52); Claude's two captain calls against the model lost 12 and 14 | Rule 21 (model-default captain); transfers ranked by `one_transfer.py`; deviations logged and measured |
+| **E8 Cheap nailed starters (new)** | **Supported** | 250 of 652 points came from players under £6m; Haaland incl. captaincy 138 | Squad doctrine §6 stays: nailed budget starters first, premiums second |
 
 ### E1 · Process floor — we don't beat ourselves
 **Claim:** a meaningful share of the field's points-loss is self-inflicted; we structurally refuse those losses.
@@ -127,12 +140,14 @@ When inputs disagree, higher beats lower:
 
 | Phase | GWs | Bias | Exit criteria (what "on track" means) |
 |---|---|---|---|
-| Evidence | 1–5 | Minimal moves, bank FTs, watch new-manager minutes | ≤3 FTs used · watchlist has verified minutes tags for all 20 clubs · no panic hits |
-| Structure | 6–12 | WC1 in/around the break; lock the core | Core 11 stable · captain pool confirmed · rival archetypes noted |
-| Congestion & burn-down | 13–19 | Rotation vigilance; fire remaining first-half chips on plan | Zero chips expired at the 1 Jan cliff (GW19 deadline) · rotation losses ≤ field's |
-| Window fallout | 20–26 | January entrants watch; WC2 timing | Spring chip block scheduled on Crellin data |
-| Chip block | 27–33 | BGW/DGW execution | Chips landed in doubles/blanks as planned |
-| Endgame | 34–38 | League-first with full weight (the §1 rule was always on; here it dominates every call) | Decisions graded vs primary rival, not vs field |
+| 1 Evidence | 1–5 | done | 310 pts, 6th in the league (see `docs/06`) |
+| 2 Reset & structure | 6–10 | done | 652 pts, 2nd, 27 behind the leader; FH1, WC1, BB1 used |
+| **3 Congestion & chip cliff** | **11–19** | Execution first; one transfer a week; TC1 in its best window; rotation vigilance at GW17–19 | No chip expires · execution score ≥ 90% (app = LOCKED with screenshot) · at least 2nd in the league at GW19 |
+| 4 Winter rebuild | 20–26 | Set 2 opens; January entrants; build towards WC2 | WC2 only on a written rationale · gap to the leader ≤ 25 · blank/double calendar confirmed on premierleague.com |
+| 5 Spring chip block | 27–33 | WC2 around GW31, FH2 on the big blank (see chip plan v2) | Every chip lands on a verified blank or double |
+| 6 Endgame | 34–38 | League-first with full weight; BB2 and TC2 on the doubles | Every decision graded against the leader, not the field · all chips used |
+
+Dates, deadlines and week types per gameweek: `strategy/season-plan.md`.
 
 One line at the top of every GWxx chat names the phase.
 
@@ -201,3 +216,4 @@ One line at the top of every GWxx chat names the phase.
 | 2026-08-15 | v2.0-PROPOSAL | Per-edge failure modes + evidence status · objective-conflict rule · decision-inputs hierarchy · captain pool, bench, cash-buffer, TV doctrine · expanded trigger table · phase exit criteria · pre-mortem · KPI targets · governance. |
 | 2026-08-15 | v2.1-ACTIVE | Q0 decisions encoded: rank target **top 10k** · default posture **calculated aggression** (2–3 differential budget, aggression in positioning not churn) · conflict rule **league always wins**. Trigger table and KPI bands recalibrated to the 10k trajectory; pre-mortem gains the aggression-vs-league tension and differential-addiction modes. Still open: rival names, team ID. |
 | 2026-11-09 | v2.2 | Q2 review: §1 goals rewritten (league first, rival of service = leader, OR band instead of top 10k), §10 weekly leading indicators added. Phase exit criteria (D-G2, provisional A) and the rest of v3.0 follow in step C6. |
+| 2026-11-10 | v3.0 | Q2 review closed: §3 edges graded (E1 and E5 failed, E2 retired, E6 promoted, E7 model-ranked decisions and E8 cheap nailed starters added), §8 phase map rewritten with the D-G2 exit criteria, links to season-plan and chip plan v2. Decided under Erik's standing delegation of 10 Nov. |

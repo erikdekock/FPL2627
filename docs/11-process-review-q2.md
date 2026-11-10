@@ -156,8 +156,22 @@ Each variant run through `scripts/backtest_xp.py` on GW2-10 (env switches in `xp
 ### G4 — lean repo (10 Nov 2026)
 Moved to `docs/archive/`: docs 01, 02, 03, 04, 07, 10, `engine/`, and the duplicate intelligence stack from the root. Kept: 06 (retro), 08 (operating system), 09 (model stack), 11.
 
-## 7. Closing summary
-_To be written in step H._
+## 7. Closing summary (10 Nov 2026)
+1. **Goal:** win league 348280; the leader is the rival of service; the league is the yardstick.
+2. **Audit:** execution, not prediction, was the leak (app differed from LOCKED every week GW6-10); bench points are not a leak; budget starters carry the points.
+3. **Rules v3.2:** 4a/4b (deadline line 1, LOCKED at T-3h with screenshot, post-LOCKED change = decision), 17 (same-day chip checks), 18 (sword beyond 20 behind the leader), 21 (model-default captain).
+4. **Model:** xp_model beats ep_next on GW2-10 (MAE 2.23 vs 2.52); seven variants tested, none better; v0 stays.
+5. **Chips:** TC1 in the best xP window, earliest wins within 0.5 (today: GW11); chip plan v2 for set 2 (WC2 GW31, FH2 blank GW33, BB2/TC2 on the doubles), calendar predicted from one source.
+6. **Week system:** two one-shot tasks per GW (T-48h prep, deadline+1h verification) created by each review; calendar reminders at T-24h for GW11-19.
+7. **Weekly Board:** English dashboard with execution, rival radar, TC planner, catch-up math, league captains and transfers, team, suggestions, fixtures, potential, progress.
+8. **League data:** all managers' picks and transfers cached daily; scouting reports for Alex and R.W.
+9. **Strategy v3.0:** edges graded (E1, E5 failed; E2 retired; E6 promoted; E7 model-ranked decisions and E8 cheap nailed starters added); phase map with exit criteria; season plan GW11-38.
+10. **Working agreement:** Erik's standing delegation (process, model, dashboard, rules decided by Claude and logged; transfers, captain, chips stay Erik's); skills updated via cards; repo archived.
+
+**Applies in GW11:** everything above. First test of the execution rules and of rule 21.
+**Open:** Erik saves the three skill cards; confirm blank/double dates on premierleague.com when published; B4 (time per chat) and the top-10k template comparison were not done and are dropped as low value.
+**Kickoff GW11:** `docs/prompts/kickoff-gw11.md`.
+**Next review:** Strategy Q3 after GW20 (set 2 open), week of 6-15 Jan 2027, before the GW21 deadline of Sat 16 Jan.
 
 ## Changelog
 | Date | Change |
@@ -175,3 +189,4 @@ _To be written in step H._
 | 2026-11-10 | **Standing delegation (Erik, 10 Nov):** 'go on without asking me for input; always do what works best for us; dynamic, content, quality, data-driven; consistency matters; as long as we win the league.' From here Claude takes the recommended option on process, model, dashboard and rule decisions and logs each one here. Still Erik's: transfers, captain, chips and anything irreversible in the game (decided in the GW chats). **D-M1: A** (rule 21, model-default captain). **D-DB4: A** (rival radar, execution block, TC planner on the Weekly Board). |
 | 2026-11-10 | **D-S2 (delegated): chip plan v2 draft** for set 2 in chip-plan.md; `strategy/season-plan.md` v1.0 written (GW11-38, predicted blanks GW30/33, doubles GW32/35/36 from one source, to be confirmed on premierleague.com). Three skills proposed via cards (decide, review, strategy). |
 | 2026-11-10 | v0.4: E3/E4 done (seven model variants tested, none beats v0, model unchanged); error decomposition; G4 archive. |
+| 2026-11-10 | **v1.0: review closed.** strategy.md v3.0, closing summary, GW11 kickoff, next review Q3 in the week of 6-15 Jan 2027. |
