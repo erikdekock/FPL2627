@@ -136,7 +136,25 @@ Findings:
 1. **The model beats ep_next and form on every metric**, in 8 of 9 GWs on MAE (GW2 is the exception, 5 games of evidence missing). No position bias worth fixing (all within ±0.2).
 2. **Model top pick vs our captain A.** The model's highest-xP player was Mbeumo (GW6), Haaland (GW7-9) and Barry (GW10). Claude's captain A went against the model twice: Mbeumo in GW8 (model: Haaland; A lost 12) and Haaland in GW10 (model: Barry; A lost 14). Both times the B that won was the model's own pick. This is the concrete form of the plan-anchoring finding: **A was anchored to a captain story (sword in GW8, shield in GW10), not to the model.**
 3. Rank correlation 0.34 is modest: single-GW points are noisy. The model is good for ranking options, not for promising a score (EXP lines should use ranges).
-Next (E3/E4): finishing term (G - xG), defence-strength fix (GW9 De Cuyper), Europe/rotation minutes, captain distribution (ceiling, not only mean).
+Next: see E3/E4 below.
+
+### E3/E4 — candidates tested (10 Nov 2026)
+Each variant run through `scripts/backtest_xp.py` on GW2-10 (env switches in `xp_model.py`: XP_FIN, XP_AST, XP_WEV, XP_HOME; defaults = v0).
+
+| Variant | MAE | rho | Top-10 actual | Top pick actual | Verdict |
+|---|---|---|---|---|---|
+| v0 (baseline) | 2.23 | 0.34 | 4.50 | 6.33 | keep |
+| Finishing term 0.2 / 0.4 of (G - xG) | 2.23 / 2.24 | 0.33 | 4.49 | 4.00 / 4.78 | rejected: no gain, worse top pick |
+| Assist term 0.3 of (A - xA) | 2.23 | 0.33 | 4.48 | 5.22 | rejected |
+| Season evidence weight 0.8 / 0.5 (was 0.67) | 2.23 | 0.34 | 4.62 / 4.48 | 5.67 / 6.33 | no clear gain; keep 0.67 |
+| Home factor 1.20 / 1.05 (was 1.12) | 2.24 / 2.23 | 0.33 | 4.57 / 4.62 | 5.67 / 5.56 | no clear gain; keep 1.12 |
+
+**Nothing goes in:** no variant measures better than v0; the differences are inside the noise of nine gameweeks. The 'known gaps' (finishing, strong defences) were stories from single weeks (GW9 De Cuyper), not measurable errors.
+**Where the error is:** 82% of the total error comes from players who played 60+ minutes (pure match variance); players who did not play at all are 6% of cases and 7% of the error; 4.7% of 'nailed' players did not play. A minutes model for the whole league would move little. For our own 15 the minutes gate (two sources, press conferences) stays the right tool.
+**Backlog (not built):** captain ceiling (distribution, not mean) for sword weeks; Europe/rotation flag for our 15 only; re-run this table at the Q3 review with 19+ gameweeks.
+
+### G4 — lean repo (10 Nov 2026)
+Moved to `docs/archive/`: docs 01, 02, 03, 04, 07, 10, `engine/`, and the duplicate intelligence stack from the root. Kept: 06 (retro), 08 (operating system), 09 (model stack), 11.
 
 ## 7. Closing summary
 _To be written in step H._
@@ -156,3 +174,4 @@ _To be written in step H._
 | 2026-11-10 | v0.3: E1 backtest done (section 8); dashboard built (Weekly Board), league history cache, scouting reports Alex and R.W. |
 | 2026-11-10 | **Standing delegation (Erik, 10 Nov):** 'go on without asking me for input; always do what works best for us; dynamic, content, quality, data-driven; consistency matters; as long as we win the league.' From here Claude takes the recommended option on process, model, dashboard and rule decisions and logs each one here. Still Erik's: transfers, captain, chips and anything irreversible in the game (decided in the GW chats). **D-M1: A** (rule 21, model-default captain). **D-DB4: A** (rival radar, execution block, TC planner on the Weekly Board). |
 | 2026-11-10 | **D-S2 (delegated): chip plan v2 draft** for set 2 in chip-plan.md; `strategy/season-plan.md` v1.0 written (GW11-38, predicted blanks GW30/33, doubles GW32/35/36 from one source, to be confirmed on premierleague.com). Three skills proposed via cards (decide, review, strategy). |
+| 2026-11-10 | v0.4: E3/E4 done (seven model variants tested, none beats v0, model unchanged); error decomposition; G4 archive. |

@@ -53,7 +53,10 @@ GOAL_PTS = {1: 10, 2: 6, 3: 5, 4: 4}
 CS_PTS = {1: 4, 2: 4, 3: 1, 4: 0}
 DEFCON_THRESHOLD = {1: 10, 2: 10, 3: 12, 4: 12}
 DECAY = 0.84
-HOME_FACTOR = 1.12  # ~home teams score 12% more; league-wide constant, fitted roughly
+HOME_FACTOR = float(os.environ.get("XP_HOME", "1.12"))  # ~home teams score 12% more; league-wide constant
+W_EV_CAP = float(os.environ.get("XP_WEV", "0.67"))      # max weight of this season's evidence vs the FPL prior
+FINISH_K = float(os.environ.get("XP_FIN", "0.0"))       # share of (goals - xG) per 90 credited as finishing skill
+ASSIST_K = float(os.environ.get("XP_AST", "0.0"))       # share of (assists - xA) per 90 credited
 
 
 def latest_snapshot() -> str:
@@ -116,7 +119,7 @@ def team_strengths(bootstrap: dict, fixtures: list) -> dict:
         prior_att = att_prior[t] / att_mean
         prior_def = def_mean / def_prior[t]  # higher defence rating -> concede less
         # weights: evidence grows with games played; at 5 games the prior still carries a third
-        w_ev = min(0.67, p / 7.5)
+        w_ev = min(W_EV_CAP, p / 7.5)
         att = w_ev * (0.5 * actual_att + 0.5 * x_att) + (1 - w_ev) * prior_att
         dfc = w_ev * (0.5 * actual_def + 0.5 * x_def) + (1 - w_ev) * prior_def
         out[t] = {"att": att, "def": dfc, "played": p, "gf": gf[t], "ga": ga[t]}
@@ -201,6 +204,10 @@ def player_fixture_xp(e: dict, lam_for: float, lam_against: float, p_play: float
     fix = lam_for / team_avg_lambda if team_avg_lambda else 1.0
     xg90 = rate("expected_goals_per_90", float(e["expected_goals_per_90"]))
     xa90 = rate("expected_assists_per_90", float(e["expected_assists_per_90"]))
+    if e["minutes"] >= 270:
+        n90 = e["minutes"] / 90.0
+        xg90 = max(0.0, xg90 + FINISH_K * (e["goals_scored"] / n90 - float(e["expected_goals_per_90"])))
+        xa90 = max(0.0, xa90 + ASSIST_K * (e["assists"] / n90 - float(e["expected_assists_per_90"])))
     goals = xg90 * share * fix * GOAL_PTS[pos]
     assists = xa90 * share * fix * 3
     p_cs = math.exp(-lam_against)

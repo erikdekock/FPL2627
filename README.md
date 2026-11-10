@@ -39,3 +39,9 @@ scripts/    fpl_pull.py (API snapshot; run locally / Claude Code)
 - Three-week break between GW5 and GW6 (21 Sep – 6 Oct, merged international window).
 - Chips: two sets of WC/FH/TC/BB. First set expires at the **GW19 deadline, Fri 1 Jan 2027 18:30 GMT (19:30 NL)** (API events[19]). One chip per GW. No Free Hit in GW1.
 - Scores lock at 09:00 UK the day after each GW's final match — review after lockdown, not at full time.
+
+## Where things are (10 Nov 2026)
+- Start with `CLAUDE.md`, then `strategy/rules.md`, `strategy/season-plan.md`, `strategy/chip-plan.md`.
+- The Q2 review and every decision since: `docs/11-process-review-q2.md`.
+- Weekly Board source and refresh recipe: `docs/dashboard/`. Scouting reports: `docs/reports/`.
+- Older plans and the pre-season research: `docs/archive/`.

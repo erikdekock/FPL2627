@@ -72,8 +72,8 @@ def main():
                 out_pos.append(dict(gw=g, forecast=k, pos=pos, n=len(sub),
                                     mae=round(sum(abs(x[3][k] - x[2]) for x in sub) / len(sub), 3),
                                     bias=round(sum(x[3][k] - x[2] for x in sub) / len(sub), 3)))
-        print(g, os.path.basename(snap), len(rows))
-    for fn, rows in (("backtest_gw.csv", out_gw), ("backtest_pos.csv", out_pos)):
+        if not os.environ.get('BT_NOWRITE'): print(g, os.path.basename(snap), len(rows))
+    for fn, rows in ((("backtest_gw.csv", out_gw), ("backtest_pos.csv", out_pos)) if not os.environ.get("BT_NOWRITE") else ()):
         with open(os.path.join(ROOT, "data/model", fn), "w", newline="") as fh:
             w = csv.DictWriter(fh, fieldnames=list(rows[0].keys())); w.writeheader(); w.writerows(rows)
     # summary
