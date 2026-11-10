@@ -29,8 +29,8 @@ def main():
     nxt = [e for e in b["events"] if e["is_next"]][0]
     dl = dt.datetime.fromisoformat(nxt["deadline_time"].replace("Z", "+00:00"))
     uk, nl = dl.astimezone(ZoneInfo("Europe/London")), dl.astimezone(ZoneInfo("Europe/Amsterdam"))
-    days = ["ma", "di", "wo", "do", "vr", "za", "zo"]
-    mon = ["jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec"]
+    days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+    mon = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
     dstr = f"{days[nl.weekday()]} {nl.day} {mon[nl.month-1]}"
     locked_by = (nl - dt.timedelta(hours=3)).strftime("%H:%M")
 
@@ -49,7 +49,7 @@ def main():
         trend = [cur_h.get(g) for g in range(max(1, cur["id"] - 5), cur["id"] + 1)]
         league.append(dict(rank=r["rank"], manager=SHORT.get(eid, r["player_name"]), entry=eid,
                            total=r["total"], gw_points=r["event_total"], gap_leader=r["total"] - lead_total,
-                           chips_left=" ".join(left) or "geen", open_wc_fh=int(any(c in left for c in ["WC", "FH"])),
+                           chips_left=" ".join(left) or "none", open_wc_fh=int(any(c in left for c in ["WC", "FH"])),
                            trend=" ".join(str(x) for x in trend if x is not None), me=int(eid == ME)))
     league.sort(key=lambda x: x["rank"])
     me = [x for x in league if x["me"]][0]
@@ -91,7 +91,7 @@ def main():
         for g in gws:
             lst = fx.get((club, g), [])
             if not lst: out.append(("BLANK", 0)); continue
-            out.append(("+".join(f"{o}{'(T)' if hm else '(U)'}" for o, hm in lst), max(diff(o, hm) for o, hm in lst)))
+            out.append(("+".join(f"{o}{'(H)' if hm else '(A)'}" for o, hm in lst), max(diff(o, hm) for o, hm in lst)))
         return out
 
     # ---------- minutes per GW from audit extract (cumulative minutes of the last snapshot per GW)
@@ -108,7 +108,7 @@ def main():
         e = els[q["element"]]; x = xp.get(e["id"], {})
         cells = fixcells(team[e["team"]])
         row = dict(slot=q["position"], name=e["web_name"], club=team[e["team"]], pos=POS[e["element_type"]],
-                   price=e["now_cost"] / 10, status={"a": "fit", "d": "twijfel", "i": "geblesseerd", "s": "geschorst", "u": "weg", "n": "niet beschikbaar"}.get(e["status"], e["status"]),
+                   price=e["now_cost"] / 10, status={"a": "fit", "d": "doubt", "i": "injured", "s": "suspended", "u": "left club", "n": "unavailable"}.get(e["status"], e["status"]),
                    chance=e["chance_of_playing_next_round"], news=e["news"], tag=x.get("tag", ""),
                    min_last3=" ".join(str(mins(e["id"], g)) for g in range(cur["id"] - 2, cur["id"] + 1)),
                    pts=e["total_points"], form=float(e["form"]), xp_next=float(x.get(f"xp_gw{gws[0]}", 0)),
@@ -134,12 +134,12 @@ def main():
     # ---------- transfers via one_transfer.py
     out = subprocess.run([sys.executable, p("scripts/one_transfer.py"), "--xp", xpf, "--show", "8"],
                          capture_output=True, text=True, cwd=ROOT).stdout
-    transfers = [dict(rank=0, move="Rollen (transfer bewaren)", obj_delta=0.0, next_gw_delta=0.0, bank_after=None, note="baseline")]
+    transfers = [dict(rank=0, move="Roll (save the transfer)", obj_delta=0.0, next_gw_delta=0.0, bank_after=None, note="baseline")]
     for line in out.splitlines():
         m = re.match(r"\s*([+-][\d.]+) obj \| ([+-][\d.]+) GW\d+ \| (.+?) \(sell £([\d.]+)\) -> (.+?) £([\d.]+) · own ([\d.]+)% · bank after £([\d.]+)", line)
         if m:
             transfers.append(dict(rank=len(transfers), move=f"{m[3]} → {m[5]}", obj_delta=float(m[1]),
-                                  next_gw_delta=float(m[2]), bank_after=float(m[8]), note=f"verkoop £{m[4]}, koop £{m[6]}, {m[7]}% eigenaar"))
+                                  next_gw_delta=float(m[2]), bank_after=float(m[8]), note=f"sell £{m[4]}, buy £{m[6]}, owned by {m[7]}%"))
 
     # ---------- potential: best xP over the horizon, not in our 15
     mine = {q["element"] for q in s["picks"]["picks"]}
@@ -190,22 +190,22 @@ def main():
 
     # ---------- indicators (D-G3); values from the Q2 audit, refreshed by the review chat
     indicators = [
-        dict(indicator="Uitvoering: app = LOCKED", value="0 van 5 weken", target="≥ 90%", state="rood", basis="GW6–10"),
-        dict(indicator="Captain tegen league", value="90 vs gem. 55", target="≥ league-gemiddelde", state="groen", basis="GW6–10"),
-        dict(indicator="Bankpunten (4 weken)", value="36 vs gem. 43", target="≤ league-gemiddelde", state="groen", basis="GW6–9"),
-        dict(indicator="Brier voorspellingen", value="0.218", target="≤ 0.22", state="groen", basis="22 regels"),
-        dict(indicator="Chipreden vooraf (dagen)", value="0 van 3", target="≥ 1 dag", state="rood", basis="FH1, WC1, BB1"),
-        dict(indicator="Gat naar leider / Alex", value=f"{me['gap_leader']} / {me['total']-alex['total']:+d}", target="trend", state="info", basis=f"na GW{cur['id']}"),
+        dict(indicator="Execution: app = LOCKED", value="0 of 5 weeks", target="≥ 90%", state="red", basis="GW6–10"),
+        dict(indicator="Captain vs league", value="90 vs avg 55", target="≥ league average", state="green", basis="GW6–10"),
+        dict(indicator="Bench points (4 weeks)", value="36 vs avg 43", target="≤ league average", state="green", basis="GW6–9"),
+        dict(indicator="Forecast Brier score", value="0.218", target="≤ 0.22", state="green", basis="22 forecasts"),
+        dict(indicator="Chip rationale written ahead", value="0 of 3", target="≥ 1 day", state="red", basis="FH1, WC1, BB1"),
+        dict(indicator="Gap to leader / Alex", value=f"{me['gap_leader']} / {me['total']-alex['total']:+d}", target="trend", state="info", basis=f"after GW{cur['id']}"),
     ]
     phase = [
-        dict(criterion="TC1 gespeeld vóór GW19-deadline", status="open", note="vensters GW11 / GW16 / GW19 (D-S1)"),
-        dict(criterion="Uitvoeringsscore ≥ 90%", status="open", note="vanaf GW11 meten (regel 4a/4b)"),
-        dict(criterion="Minimaal P2 in de league bij GW19", status="op koers" if me["rank"] <= 2 else "achter", note=f"nu P{me['rank']}"),
+        dict(criterion="TC1 played before the GW19 deadline", status="open", note="windows GW11 / GW16 / GW19 (D-S1)"),
+        dict(criterion="Execution score ≥ 90%", status="open", note="measured from GW11 (rules 4a/4b)"),
+        dict(criterion="At least P2 in the league at GW19", status="on track" if me["rank"] <= 2 else "behind", note=f"now P{me['rank']}"),
     ]
 
     sh = me["gap_leader"]
-    headline = (f"{leader['manager']} {abs(sh)} voor" if sh < 0 else f"Wij {sh} voor op {leader['manager']}") + \
-               f"; hij heeft nog {leader['chips_left']}. Alex {me['total']-alex['total']:+d} met {alex['chips_left']}. Wij: {me['chips_left']}."
+    headline = (f"{leader['manager']} leads by {abs(sh)}" if sh < 0 else f"We lead {leader['manager']} by {sh}") + \
+               f"; he still has {leader['chips_left']}. Alex {me['total']-alex['total']:+d} with {alex['chips_left']}. Us: {me['chips_left']}."
 
     meta = [dict(gw=nxt["id"], deadline_uk=f"{uk:%a %d %b %H:%M} UK", deadline_nl=f"{dstr} {nl:%H:%M} NL",
                  deadline_utc=nxt["deadline_time"], locked_by=f"{locked_by} NL", phase="3 · Congestion & chip cliff" if nxt["id"] <= 19 else "",

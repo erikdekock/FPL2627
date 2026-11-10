@@ -46,139 +46,139 @@
 
 <div class="ws">
   <header class="ws-head" id="kop">
-    <p class="ws-muted">Brobbeytrap · Fantasy Fellas · weekscherm</p>
-    <h1>Op weg naar GW<span data-draw="gw" data-source="meta" data-field="gw" data-row="0">—</span></h1>
+    <p class="ws-muted">Brobbeytrap · Fantasy Fellas · weekly board</p>
+    <h1>Road to GW<span data-draw="gw" data-source="meta" data-field="gw" data-row="0">—</span></h1>
     <p class="ws-lead" data-draw="headline" data-source="meta" data-field="headline" data-row="0">—</p>
   </header>
 
   <section class="ws-tiles" id="tegels">
     <div class="ws-tile"><span class="ws-muted">Deadline</span><span class="ws-big" data-draw="dl" data-source="meta" data-field="deadline_nl" data-row="0">—</span><span class="ws-muted" data-draw="dluk" data-source="meta" data-field="deadline_uk" data-row="0">—</span></div>
-    <div class="ws-tile"><span class="ws-muted">LOCKED uiterlijk (regel 4a)</span><span class="ws-big" data-draw="locked" data-source="meta" data-field="locked_by" data-row="0">—</span><span class="ws-muted">op de deadlinedag, met screenshot</span></div>
-    <div class="ws-tile"><span class="ws-muted">League</span><span class="ws-big">P<span data-draw="lrank" data-source="meta" data-field="league_rank" data-row="0">—</span></span><span class="ws-muted">gat naar de leider: <span data-draw="gap" data-source="meta" data-field="gap_leader" data-row="0">—</span> · houding: <span data-draw="posture" data-source="meta" data-field="posture" data-row="0">—</span> (regel 18)</span></div>
-    <div class="ws-tile"><span class="ws-muted">Chips over (set 1)</span><span class="ws-big" data-draw="chips" data-source="meta" data-field="chips_left" data-row="0">—</span><span class="ws-muted"><span data-draw="todl" data-source="meta" data-field="deadlines_to_gw19" data-row="0">—</span> deadlines tot ze vervallen (GW19)</span></div>
-    <div class="ws-tile"><span class="ws-muted">Totaal · OR</span><span class="ws-big" data-draw="total" data-source="meta" data-field="total" data-row="0">—</span><span class="ws-muted">OR <span data-draw="or" data-source="meta" data-field="overall_rank" data-row="0">—</span> · bank £<span data-draw="bank" data-source="meta" data-field="bank" data-row="0">—</span></span></div>
+    <div class="ws-tile"><span class="ws-muted">LOCKED by (rule 4a)</span><span class="ws-big" data-draw="locked" data-source="meta" data-field="locked_by" data-row="0">—</span><span class="ws-muted">on deadline day, with a screenshot</span></div>
+    <div class="ws-tile"><span class="ws-muted">League</span><span class="ws-big">P<span data-draw="lrank" data-source="meta" data-field="league_rank" data-row="0">—</span></span><span class="ws-muted">gap to leader: <span data-draw="gap" data-source="meta" data-field="gap_leader" data-row="0">—</span> · stance: <span data-draw="posture" data-source="meta" data-field="posture" data-row="0">—</span> (rule 18)</span></div>
+    <div class="ws-tile"><span class="ws-muted">Chips left (set 1)</span><span class="ws-big" data-draw="chips" data-source="meta" data-field="chips_left" data-row="0">—</span><span class="ws-muted"><span data-draw="todl" data-source="meta" data-field="deadlines_to_gw19" data-row="0">—</span> deadlines until they expire (GW19)</span></div>
+    <div class="ws-tile"><span class="ws-muted">Total · OR</span><span class="ws-big" data-draw="total" data-source="meta" data-field="total" data-row="0">—</span><span class="ws-muted">OR <span data-draw="or" data-source="meta" data-field="overall_rank" data-row="0">—</span> · bank £<span data-draw="bank" data-source="meta" data-field="bank" data-row="0">—</span></span></div>
   </section>
 
   <section class="ws-sec" id="league">
-    <h2>De league</h2>
-    <p class="ws-muted">Stand na de laatste speelweek, het gat naar de leider en welke chips iedereen nog heeft. Een open Wildcard of Free Hit is gemarkeerd: daarmee kan een rivaal in één week veel goedmaken.</p>
+    <h2>The league</h2>
+    <p class="ws-muted">Standings after the last gameweek, the gap to the leader and the chips everyone has left. An open Wildcard or Free Hit is highlighted: with one, a rival can make up a lot of ground in a single week.</p>
     <div class="ws-scroll"><table data-source="league" data-row-key="manager">
-      <thead><tr><th>#</th><th class="l" data-field="manager">Manager</th><th data-field="total">Totaal</th><th data-field="gw_points">Vorige GW</th><th data-field="gap_leader">Gat leider</th><th class="l" data-field="chips_left">Chips over</th><th class="l" data-field="trend">Totaal laatste 6 GW</th></tr></thead>
+      <thead><tr><th>#</th><th class="l" data-field="manager">Manager</th><th data-field="total">Total</th><th data-field="gw_points">Last GW</th><th data-field="gap_leader">Gap to leader</th><th class="l" data-field="chips_left">Chips left</th><th class="l" data-field="trend">Total, last 6 GWs</th></tr></thead>
       <tbody data-draw="t-league"></tbody>
     </table></div>
   </section>
 
   <section class="ws-sec" id="seizoen">
-    <h2>Onze punten per speelweek</h2>
-    <p class="ws-muted">Onze score tegen het league-gemiddelde en het veldgemiddelde. De league is de maatstaf (D-G1).</p>
-    <div class="ws-legend"><span><i data-draw="lg0"></i>Brobbeytrap</span><span><i data-draw="lg1"></i>League-gemiddelde</span><span><i data-draw="lg2"></i>Veldgemiddelde</span></div>
-    <div class="ws-chart" data-draw="season" data-source="season" role="img" aria-label="Punten per speelweek tegen league- en veldgemiddelde"></div>
+    <h2>Our points per gameweek</h2>
+    <p class="ws-muted">Our score against the league average and the overall average. The league is the yardstick (D-G1).</p>
+    <div class="ws-legend"><span><i data-draw="lg0"></i>Brobbeytrap</span><span><i data-draw="lg1"></i>League average</span><span><i data-draw="lg2"></i>Overall average</span></div>
+    <div class="ws-chart" data-draw="season" data-source="season" role="img" aria-label="Points per gameweek against the league and overall averages"></div>
   </section>
 
   <section class="ws-sec" id="vorige-week">
-    <h2>Vorige week</h2>
-    <p class="ws-muted">GW<span data-draw="lgw" data-source="meta" data-field="last_gw" data-row="0">—</span>: <span data-draw="lpts" data-source="meta" data-field="last_points" data-row="0">—</span> punten, veldgemiddelde <span data-draw="lavg" data-source="meta" data-field="last_avg" data-row="0">—</span>. Les van de week: <span data-draw="lesson" data-source="meta" data-field="last_lesson" data-row="0">—</span></p>
+    <h2>Last week</h2>
+    <p class="ws-muted">GW<span data-draw="lgw" data-source="meta" data-field="last_gw" data-row="0">—</span>: <span data-draw="lpts" data-source="meta" data-field="last_points" data-row="0">—</span> points, overall average <span data-draw="lavg" data-source="meta" data-field="last_avg" data-row="0">—</span>. Lesson of the week: <span data-draw="lesson" data-source="meta" data-field="last_lesson" data-row="0">—</span></p>
     <div class="ws-grid2">
       <div class="ws-scroll"><table data-source="lastweek" data-row-key="manager">
-        <thead><tr><th class="l" data-field="manager">Manager</th><th data-field="points">Punten</th><th class="l" data-field="captain">Captain</th><th data-field="captain_pts">Captainpunten</th></tr></thead>
+        <thead><tr><th class="l" data-field="manager">Manager</th><th data-field="points">Points</th><th class="l" data-field="captain">Captain</th><th data-field="captain_pts">Captain points</th></tr></thead>
         <tbody data-draw="t-lastweek"></tbody>
       </table></div>
       <div class="ws-scroll"><table data-source="decisions" data-row-key="id">
-        <thead><tr><th class="l" data-field="id">Besluit</th><th class="l" data-field="type">Soort</th><th class="l" data-field="process">Proces</th><th class="l" data-field="result">Uitkomst</th><th class="l" data-field="outcome">Wat er gebeurde</th></tr></thead>
+        <thead><tr><th class="l" data-field="id">Decision</th><th class="l" data-field="type">Type</th><th class="l" data-field="process">Process</th><th class="l" data-field="result">Outcome</th><th class="l" data-field="outcome">What happened</th></tr></thead>
         <tbody data-draw="t-decisions"></tbody>
       </table></div>
     </div>
   </section>
 
   <section class="ws-sec" id="captains">
-    <h2>Captains in de league</h2>
-    <p class="ws-muted">Wie gaf wie de band, en wat leverde dat op. Captainpunten zijn de punten van de captain maal twee (maal drie met Triple Captain). "Tegen altijd Haaland" laat zien hoeveel punten een manager won of verloor door niet gewoon elke week Haaland te kiezen. "Gemist" is hoeveel meer de beste speler in zijn eigen elftal had opgeleverd: dat weet je pas achteraf, dus het is alleen ter vergelijking.</p>
+    <h2>Captains in the league</h2>
+    <p class="ws-muted">Who got the armband, and what it brought. Captain points are the captain's points times two (times three with Triple Captain). "Vs always Haaland" shows how many points a manager won or lost by not simply picking Haaland every week. "Missed" is how much more the best player in his own XI would have given: you only know that afterwards, so it is for comparison only.</p>
     <div class="ws-scroll"><table data-source="managers" data-row-key="manager">
-      <thead><tr><th class="l" data-field="manager">Manager</th><th data-field="captain_total">Captainpunten</th><th data-field="haaland_weeks">Weken Haaland</th><th data-field="vs_always_haaland">Tegen altijd Haaland</th><th data-field="missed_vs_best">Gemist (achteraf)</th><th data-field="tc_gw">TC in GW</th><th class="l" data-field="tc_captain">TC op</th><th data-field="tc_extra">Extra door TC</th></tr></thead>
+      <thead><tr><th class="l" data-field="manager">Manager</th><th data-field="captain_total">Captain points</th><th data-field="haaland_weeks">Weeks on Haaland</th><th data-field="vs_always_haaland">Vs always Haaland</th><th data-field="missed_vs_best">Missed (hindsight)</th><th data-field="tc_gw">TC in GW</th><th class="l" data-field="tc_captain">TC on</th><th data-field="tc_extra">Extra from TC</th></tr></thead>
       <tbody data-draw="t-managers-c"></tbody>
     </table></div>
-    <h2>Captain per speelweek</h2>
-    <p class="ws-muted">Groen: beter dan Haaland die week. Rood: slechter. Een omlijnd vak is een Triple Captain-week. Wijs een vak aan voor de details.</p>
+    <h2>Captain per gameweek</h2>
+    <p class="ws-muted">Green: better than Haaland that week. Red: worse. An outlined cell is a Triple Captain week. Point at a cell for the details.</p>
     <div class="ws-scroll ws-chart" style="min-height:0" data-draw="capgrid" data-source="captains_league"></div>
-    <h2>Triple Captain: wanneer en hoe goed</h2>
-    <p class="ws-muted">Een Triple Captain levert één keer de punten van de captain extra op. Vuistregel in dit overzicht: 10 of meer punten voor de speler is een goede TC, 6 tot 9 matig, minder dan 6 slecht.</p>
+    <h2>Triple Captain: when, and how good</h2>
+    <p class="ws-muted">A Triple Captain adds the captain's points one extra time. Rule of thumb here: 10 or more points for the player is a good TC, 6 to 9 fair, under 6 poor.</p>
     <div class="ws-scroll"><table data-source="tc_used" data-row-key="manager">
-      <thead><tr><th class="l" data-field="manager">Manager</th><th data-field="gw">GW</th><th class="l" data-field="captain">Speler</th><th class="l" data-field="club">Club</th><th data-field="raw">Punten speler</th><th data-field="tc_extra">Extra door TC</th><th data-field="haaland_pts">Haaland x3 die week</th><th class="l">Oordeel</th></tr></thead>
+      <thead><tr><th class="l" data-field="manager">Manager</th><th data-field="gw">GW</th><th class="l" data-field="captain">Player</th><th class="l" data-field="club">Club</th><th data-field="raw">Player points</th><th data-field="tc_extra">Extra from TC</th><th data-field="haaland_pts">Haaland x3 that week</th><th class="l">Verdict</th></tr></thead>
       <tbody data-draw="t-tc"></tbody>
     </table></div>
   </section>
 
   <section class="ws-sec" id="transfers-league">
-    <h2>Transfers in de league</h2>
-    <p class="ws-muted">Elke transfer van GW1 tot nu. Een transfer wordt beoordeeld over de weken dat de manager de nieuwe speler hield: punten van de nieuwe speler min punten van de verkochte speler in precies die weken. Positief is een goede ruil. Een hit (−4) is over de transfers van die week verdeeld. Free Hit-weken tellen niet mee, want dan komt het oude team terug. Bij een Wildcard koppelt de API eruit en erin willekeurig, dus die staan wel in de lijst maar tellen niet mee in de totalen per manager.</p>
+    <h2>Transfers in the league</h2>
+    <p class="ws-muted">Every transfer from GW1 until now. A transfer is judged over the weeks the manager kept the new player: the new player's points minus the sold player's points in exactly those weeks. Positive is a good swap. A hit (−4) is split over that week's transfers. Free Hit weeks do not count, because the old team comes back. On a Wildcard the API pairs out and in at random, so those transfers are listed but do not count in the manager totals.</p>
     <div class="ws-scroll"><table data-source="managers" data-row-key="manager">
-      <thead><tr><th class="l" data-field="manager">Manager</th><th data-field="transfers">Transfers</th><th data-field="wc_transfers">Op Wildcard</th><th data-field="transfer_net">Netto punten</th><th data-field="hits">Hits</th><th class="l" data-field="best_transfer">Beste transfer (in)</th><th data-field="best_net">Netto</th><th class="l" data-field="worst_transfer">Slechtste transfer (in)</th><th data-field="worst_net">Netto</th></tr></thead>
+      <thead><tr><th class="l" data-field="manager">Manager</th><th data-field="transfers">Transfers</th><th data-field="wc_transfers">On Wildcard</th><th data-field="transfer_net">Net points</th><th data-field="hits">Hits</th><th class="l" data-field="best_transfer">Best transfer (in)</th><th data-field="best_net">Net</th><th class="l" data-field="worst_transfer">Worst transfer (in)</th><th data-field="worst_net">Net</th></tr></thead>
       <tbody data-draw="t-managers-t"></tbody>
     </table></div>
-    <label class="ws-muted" for="ws-mgr">Toon transfers van</label>
+    <label class="ws-muted" for="ws-mgr">Show transfers of</label>
     <select class="dash-select" id="ws-mgr" data-draw="mgr-select" aria-label="Manager" data-source="managers"></select>
     <div class="ws-scroll"><table data-source="transfers_league" data-row-key="key">
-      <thead><tr><th class="l" data-field="manager">Manager</th><th data-field="gw">GW</th><th class="l" data-field="out">Eruit</th><th class="l" data-field="into">Erin</th><th data-field="weeks">Weken</th><th data-field="pts_out">Punten eruit</th><th data-field="pts_in">Punten erin</th><th data-field="net">Netto</th><th data-field="hit">Hit</th><th class="l" data-field="chip">Chip</th><th class="l" data-field="kept_until">Gehouden tot</th></tr></thead>
+      <thead><tr><th class="l" data-field="manager">Manager</th><th data-field="gw">GW</th><th class="l" data-field="out">Out</th><th class="l" data-field="into">In</th><th data-field="weeks">Weeks</th><th data-field="pts_out">Points out</th><th data-field="pts_in">Points in</th><th data-field="net">Net</th><th data-field="hit">Hit</th><th class="l" data-field="chip">Chip</th><th class="l" data-field="kept_until">Kept until</th></tr></thead>
       <tbody data-draw="t-transfers-league"></tbody>
     </table></div>
   </section>
 
   <section class="ws-sec" id="team">
-    <h2>Mijn team</h2>
-    <p class="ws-muted">De 15 met status, minuten van de laatste drie speelweken, xP voor volgende week en de komende zes tegenstanders. Kleur: groen is makkelijk, rood is zwaar, op teamsterkte (model v0). T = thuis, U = uit. Grijze rijen staan op de bank.</p>
+    <h2>My team</h2>
+    <p class="ws-muted">The 15 with status, minutes in the last three gameweeks, xP for next week and the next six opponents. Colour: green is easy, red is hard, by team strength (model v0). H = home, A = away. Grey rows are on the bench.</p>
     <div class="ws-scroll"><table data-source="team" data-row-key="name">
-      <thead><tr><th class="l" data-field="name">Speler</th><th class="l" data-field="pos">Pos</th><th class="l" data-field="club">Club</th><th data-field="price">£</th><th class="l" data-field="status">Status</th><th class="l" data-field="min_last3">Minuten</th><th data-field="pts">Punten</th><th data-field="xp_next">xP volgende</th><th data-field="xp_6">xP 6 GW</th><th data-field="league_owners">In league</th><th class="l" data-field="f1">GW+1</th><th class="l" data-field="f2">+2</th><th class="l" data-field="f3">+3</th><th class="l" data-field="f4">+4</th><th class="l" data-field="f5">+5</th><th class="l" data-field="f6">+6</th></tr></thead>
+      <thead><tr><th class="l" data-field="name">Player</th><th class="l" data-field="pos">Pos</th><th class="l" data-field="club">Club</th><th data-field="price">£</th><th class="l" data-field="status">Status</th><th class="l" data-field="min_last3">Minutes</th><th data-field="pts">Points</th><th data-field="xp_next">xP next</th><th data-field="xp_6">xP 6 GW</th><th data-field="league_owners">In league</th><th class="l" data-field="f1">GW+1</th><th class="l" data-field="f2">+2</th><th class="l" data-field="f3">+3</th><th class="l" data-field="f4">+4</th><th class="l" data-field="f5">+5</th><th class="l" data-field="f6">+6</th></tr></thead>
       <tbody data-draw="t-team"></tbody>
     </table></div>
   </section>
 
   <section class="ws-sec" id="suggesties">
-    <h2>Suggesties voor deze week</h2>
-    <p class="ws-muted">Uit het model; een startpunt voor de beslischat, geen besluit. Captain-label: shield als de helft of meer van de rivalen hem heeft, anders sword. TC1-regel (D-S1): alleen als xP minstens 3 boven het seizoensgemiddelde ligt. Grootste marge deze week: <b data-draw="tcbest" data-source="captains" data-field="tc_margin">—</b>.</p>
+    <h2>Suggestions for this week</h2>
+    <p class="ws-muted">From the model: a starting point for the decide chat, not a decision. Captain label: shield if half or more of the rivals own him, otherwise sword. TC1 rule (D-S1): only if xP is at least 3 above the season average. Biggest margin this week: <b data-draw="tcbest" data-source="captains" data-field="tc_margin">—</b>.</p>
     <div class="ws-grid2">
       <div class="ws-scroll"><table data-source="captains" data-row-key="name">
-        <thead><tr><th class="l" data-field="name">Captain</th><th class="l" data-field="fixture">Wedstrijd</th><th data-field="xp">xP</th><th data-field="league_owners">Rivalen</th><th class="l" data-field="label">Label</th><th data-field="season_ppg">Gem./wedstr.</th><th data-field="tc_margin">TC-marge</th></tr></thead>
+        <thead><tr><th class="l" data-field="name">Captain</th><th class="l" data-field="fixture">Fixture</th><th data-field="xp">xP</th><th data-field="league_owners">Rivals</th><th class="l" data-field="label">Label</th><th data-field="season_ppg">Avg per game</th><th data-field="tc_margin">TC margin</th></tr></thead>
         <tbody data-draw="t-captains"></tbody>
       </table></div>
       <div class="ws-scroll"><table data-source="transfers" data-row-key="move">
-        <thead><tr><th class="l" data-field="move">Transfer</th><th data-field="obj_delta">Δ 6 GW</th><th data-field="next_gw_delta">Δ volgende</th><th data-field="bank_after">Bank na</th><th class="l" data-field="note">Toelichting</th></tr></thead>
+        <thead><tr><th class="l" data-field="move">Transfer</th><th data-field="obj_delta">Δ 6 GW</th><th data-field="next_gw_delta">Δ next</th><th data-field="bank_after">Bank after</th><th class="l" data-field="note">Note</th></tr></thead>
         <tbody data-draw="t-transfers"></tbody>
       </table></div>
     </div>
   </section>
 
   <section class="ws-sec" id="vooruitblik">
-    <h2>Fixture-ticker, alle clubs</h2>
-    <p class="ws-muted">De komende zes speelweken per club. Oranje is een blank (geen wedstrijd).</p>
+    <h2>Fixture ticker, all clubs</h2>
+    <p class="ws-muted">The next six gameweeks per club. Orange is a blank (no match).</p>
     <div class="ws-scroll"><table data-source="fixtures" data-row-key="club">
-      <thead><tr><th class="l" data-field="club">Club</th><th data-field="strength">Sterkte</th><th class="l" data-field="f1">GW+1</th><th class="l" data-field="f2">+2</th><th class="l" data-field="f3">+3</th><th class="l" data-field="f4">+4</th><th class="l" data-field="f5">+5</th><th class="l" data-field="f6">+6</th></tr></thead>
+      <thead><tr><th class="l" data-field="club">Club</th><th data-field="strength">Strength</th><th class="l" data-field="f1">GW+1</th><th class="l" data-field="f2">+2</th><th class="l" data-field="f3">+3</th><th class="l" data-field="f4">+4</th><th class="l" data-field="f5">+5</th><th class="l" data-field="f6">+6</th></tr></thead>
       <tbody data-draw="t-fixtures"></tbody>
     </table></div>
   </section>
 
   <section class="ws-sec" id="potentie">
-    <h2>Spelers met potentie</h2>
-    <p class="ws-muted">De 20 spelers met de hoogste verwachte punten (xP) over de komende zes speelweken, gerangschikt op potentie, niet in onze 15, alleen vaste of waarschijnlijke starters. "In league" is het aantal rivalen dat hem heeft.</p>
+    <h2>Players with potential</h2>
+    <p class="ws-muted">The 20 players with the highest expected points (xP) over the next six gameweeks, ranked by potential, not in our 15, nailed or likely starters only. "In league" is the number of rivals who own him.</p>
     <div class="ws-scroll"><table data-source="potential" data-row-key="name">
-      <thead><tr><th data-field="rank">#</th><th class="l" data-field="name">Speler</th><th class="l" data-field="pos">Pos</th><th class="l" data-field="club">Club</th><th data-field="price">£</th><th data-field="xp_6">xP 6 GW</th><th data-field="xp_per_m">xP per £</th><th data-field="sel">Eigenaar %</th><th data-field="league_owners">In league</th><th class="l" data-field="fixtures">Tegenstanders</th></tr></thead>
+      <thead><tr><th data-field="rank">#</th><th class="l" data-field="name">Player</th><th class="l" data-field="pos">Pos</th><th class="l" data-field="club">Club</th><th data-field="price">£</th><th data-field="xp_6">xP 6 GW</th><th data-field="xp_per_m">xP per £</th><th data-field="sel">Owned %</th><th data-field="league_owners">In league</th><th class="l" data-field="fixtures">Opponents</th></tr></thead>
       <tbody data-draw="t-potential"></tbody>
     </table></div>
   </section>
 
   <section class="ws-sec" id="voortgang">
-    <h2>Voortgang</h2>
-    <p class="ws-muted">De zes weekindicatoren (D-G3) en de exitcriteria van deze fase (D-G2).</p>
+    <h2>Progress</h2>
+    <p class="ws-muted">The six weekly indicators (D-G3) and the exit criteria for this phase (D-G2).</p>
     <div class="ws-grid2">
       <div class="ws-scroll"><table data-source="indicators" data-row-key="indicator">
-        <thead><tr><th class="l" data-field="indicator">Indicator</th><th class="l" data-field="value">Nu</th><th class="l" data-field="target">Doel</th><th class="l" data-field="state">Stand</th><th class="l" data-field="basis">Over</th></tr></thead>
+        <thead><tr><th class="l" data-field="indicator">Indicator</th><th class="l" data-field="value">Now</th><th class="l" data-field="target">Target</th><th class="l" data-field="state">State</th><th class="l" data-field="basis">Over</th></tr></thead>
         <tbody data-draw="t-indicators"></tbody>
       </table></div>
       <div class="ws-scroll"><table data-source="phase" data-row-key="criterion">
-        <thead><tr><th class="l" data-field="criterion">Fase 3 exitcriterium</th><th class="l" data-field="status">Status</th><th class="l" data-field="note">Toelichting</th></tr></thead>
+        <thead><tr><th class="l" data-field="criterion">Phase 3 exit criterion</th><th class="l" data-field="status">Status</th><th class="l" data-field="note">Note</th></tr></thead>
         <tbody data-draw="t-phase"></tbody>
       </table></div>
     </div>
-    <p class="ws-muted">Data: snapshot <span data-draw="snap" data-source="meta" data-field="snapshot" data-row="0">—</span>, xP-tabel <span data-draw="xpt" data-source="meta" data-field="xp_table" data-row="0">—</span>, gemaakt <span data-draw="gen" data-source="meta" data-field="generated" data-row="0">—</span>.</p>
+    <p class="ws-muted">Data: snapshot <span data-draw="snap" data-source="meta" data-field="snapshot" data-row="0">—</span>, xP table <span data-draw="xpt" data-source="meta" data-field="xp_table" data-row="0">—</span>, built <span data-draw="gen" data-source="meta" data-field="generated" data-row="0">—</span>.</p>
   </section>
 </div>
 
@@ -231,7 +231,7 @@ window.wsRows = (el, id, cols, rowFn) => {
 </script>
 
 <script>
-const nf = new Intl.NumberFormat('nl-NL');
+const nf = new Intl.NumberFormat('en-GB');
 dash.draw('gw', wsMeta('gw'));
 dash.draw('headline', wsMeta('headline'));
 dash.draw('dl', wsMeta('deadline_nl'));
@@ -267,7 +267,7 @@ dash.draw('t-decisions', (el) => wsRows(el, 'decisions', [
   {f: 'id', l: true}, {f: 'type', l: true}, {f: 'process', l: true, pill: (r) => grade(r.process)},
   {f: 'result', l: true, pill: (r) => grade(r.result)}, {f: 'outcome', l: true, wrap: true}]));
 
-const st = (r) => r.status === 'fit' ? 'ok' : r.status === 'twijfel' ? 'warn' : 'bad';
+const st = (r) => r.status === 'fit' ? 'ok' : r.status === 'doubt' ? 'warn' : 'bad';
 dash.draw('t-team', (el) => wsRows(el, 'team', [
   {f: 'name', l: true}, {f: 'pos', l: true}, {f: 'club', l: true}, {f: 'price'}, {f: 'status', l: true, pill: st},
   {f: 'min_last3', l: true}, {f: 'pts'}, {f: 'xp_next'}, {f: 'xp_6'}, {f: 'league_owners'}, ...fixCols
@@ -291,7 +291,7 @@ dash.draw('t-fixtures', (el) => wsRows(el, 'fixtures', [{f: 'club', l: true}, {f
 dash.draw('t-potential', (el) => wsRows(el, 'potential', [
   {f: 'rank'}, {f: 'name', l: true}, {f: 'pos', l: true}, {f: 'club', l: true}, {f: 'price'}, {f: 'xp_6'}, {f: 'xp_per_m'},
   {f: 'sel'}, {f: 'league_owners'}, {f: 'fixtures', l: true}]));
-const ind = (r) => r.state === 'groen' || r.state === 'op koers' ? 'ok' : r.state === 'rood' || r.state === 'achter' ? 'bad' : 'warn';
+const ind = (r) => r.state === 'green' || r.state === 'on track' ? 'ok' : r.state === 'red' || r.state === 'behind' ? 'bad' : 'warn';
 dash.draw('t-indicators', (el) => wsRows(el, 'indicators', [
   {f: 'indicator', l: true}, {f: 'value', l: true}, {f: 'target', l: true}, {f: 'state', l: true, pill: ind}, {f: 'basis', l: true}]));
 dash.draw('t-phase', (el) => wsRows(el, 'phase', [
@@ -306,7 +306,7 @@ dash.draw('season', (el) => {
   const W = el.clientWidth || 600, H = 240, m = {t: 12, r: 12, b: 26, l: 36};
   el.replaceChildren();
   const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img')
-    .attr('aria-label', 'Punten per speelweek tegen league- en veldgemiddelde');
+    .attr('aria-label', 'Points per gameweek against the league and overall averages');
   const x = d3.scaleBand().domain(rows.map((r) => r.gw)).range([m.l, W - m.r]).padding(0.3);
   const ymax = d3.max(rows, (r) => Math.max(r.points, r.league, r.field));
   const y = d3.scaleLinear().domain([0, ymax]).nice().range([H - m.b, m.t]);
@@ -330,7 +330,7 @@ dash.draw('season', (el) => {
     .on('pointermove', (ev, r) => {
       const [px, py] = d3.pointer(ev, el);
       tip.property('hidden', false).style('left', Math.min(px + 12, el.clientWidth - 170) + 'px').style('top', (py + 8) + 'px')
-        .text(`GW${r.gw}: wij ${r.points} · league ${r.league} · veld ${r.field}`);
+        .text(`GW${r.gw}: us ${r.points} · league ${r.league} · overall ${r.field}`);
     }).on('pointerleave', () => tip.property('hidden', true));
 });
 </script>
@@ -343,11 +343,11 @@ dash.draw('t-managers-c', (el) => wsRows(el, 'managers', [
 dash.draw('t-managers-t', (el) => wsRows(el, 'managers', [
   {f: 'manager', l: true}, {f: 'transfers'}, {f: 'wc_transfers'}, {f: 'transfer_net', cls: (r) => sgn(r.transfer_net)}, {f: 'hits'},
   {f: 'best_transfer', l: true}, {f: 'best_net'}, {f: 'worst_transfer', l: true}, {f: 'worst_net'}], (tr, r) => { if (r.manager === 'Erik') tr.className = 'ws-me'; }));
-const tcVerdict = (raw) => (+raw >= 10 ? 'goed' : +raw >= 6 ? 'matig' : 'slecht');
+const tcVerdict = (raw) => (+raw >= 10 ? 'good' : +raw >= 6 ? 'fair' : 'poor');
 dash.draw('t-tc', (el) => {
   wsRows(el, 'tc_used', [{f: 'manager', l: true}, {f: 'gw'}, {f: 'captain', l: true}, {f: 'club', l: true}, {f: 'raw'}, {f: 'tc_extra'}, {f: 'haaland_pts'}],
     (tr, r) => { const td = document.createElement('td'); td.className = 'l'; const sp = document.createElement('span');
-      const v = tcVerdict(r.raw); sp.className = 'ws-pill ' + (v === 'goed' ? 'ok' : v === 'matig' ? 'warn' : 'bad'); sp.textContent = v; td.appendChild(sp); tr.appendChild(td); });
+      const v = tcVerdict(r.raw); sp.className = 'ws-pill ' + (v === 'good' ? 'ok' : v === 'fair' ? 'warn' : 'bad'); sp.textContent = v; td.appendChild(sp); tr.appendChild(td); });
 });
 dash.draw('capgrid', {
   mount: (el) => {
@@ -379,7 +379,7 @@ dash.draw('capgrid', {
           td.onpointerenter = (ev) => {
             const b = box.getBoundingClientRect(), c = td.getBoundingClientRect();
             tip.hidden = false; tip.style.left = Math.min(c.left - b.left + box.scrollLeft, box.clientWidth - 220) + 'px'; tip.style.top = (c.bottom - b.top + 4) + 'px';
-            tip.textContent = `${r.manager} GW${r.gw}: ${r.captain} ${r.raw} x${r.mult} = ${r.captain_pts}. Haaland zou ${r.haaland_pts} geven (${+r.vs_haaland >= 0 ? '+' : ''}${r.vs_haaland}). Beste in XI: ${r.best_pick} ${r.best_pts}.${r.note ? ' ' + r.note + '.' : ''}`;
+            tip.textContent = `${r.manager} GW${r.gw}: ${r.captain} ${r.raw} x${r.mult} = ${r.captain_pts}. Haaland would have given ${r.haaland_pts} (${+r.vs_haaland >= 0 ? '+' : ''}${r.vs_haaland}). Best in XI: ${r.best_pick} ${r.best_pts}.${r.note ? ' ' + r.note + '.' : ''}`;
           };
           td.onpointerleave = () => { tip.hidden = true; };
         }
@@ -393,7 +393,7 @@ dash.draw('capgrid', {
 window.wsMgr = '';
 dash.draw('mgr-select', (sel) => {
   const g = dash.data('managers');
-  sel.replaceChildren(new Option('Iedereen', ''), ...(g.status === 'ok' ? g.data : []).map((r) => new Option(r.manager)));
+  sel.replaceChildren(new Option('Everyone', ''), ...(g.status === 'ok' ? g.data : []).map((r) => new Option(r.manager)));
   sel.value = window.wsMgr;
   sel.onchange = () => { window.wsMgr = sel.value; dash.draw('t-transfers-league'); };
 });
