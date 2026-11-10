@@ -32,3 +32,18 @@ No chip fires without a written rationale in this file *before* the deadline, wr
 | 2026-11-06 | **BB1 (fired)** | 10 | Erik's call at 06:30 NL on deadline day, 12 h out. Bench after Janelt → Iwobi: Tzolakis (ARS A 3.8), Vuskovic (BRE H 4.9, 45 min UECL Thu, predicted starter), Iwobi (NEW H 5.5), Bogle (TOT H 4.9) — all fifteen play, no flags (snapshot 06 Nov 05:29 UTC). Bench xP ≈ 18 vs ≈ 19 for GW12 after a GW11 upgrade; GW12 carries break-injury and Thursday-UECL risk, so the EV gap is ~1. Claude's A was hold for GW12 on rule 17. **Rule 17 deviation (rule 5): rationale written on deadline day — third chip in a row (FH1 GW6, WC1 GW7, BB1 GW10).** Bias to name at the GW12 bias review: *same-day chip*. | Baseline: best XI GW10 ≈ 62 xP (C Haaland); BB value = bench points. **Outcome (provisional, 8 Nov): bench 27 (Vuskovic 12, Bogle 7, Tzolakis 6, Iwobi 2) v ~18 modelled; GW 123 v 96 without the chip.** Counterfactual A: the GW12 bench, logged in the GW12 review. |
 | 2026-11-09 | — | — | **D-S1 (Strategy Q2, Erik: A).** TC1 is not auto-fired in GW11. Three candidate windows stay: GW11 (Haaland H Fulham), GW16 (H Hull), GW19 (H Spurs, last legal week). Fire only when the captain's modelled score beats his season mean by >= 3 points AND he is not needed as the league sword; rationale written the day before (rule 17). The captain model from step E quantifies the three windows before the GW11 decide chat. |
 | 2026-11-10 | — | — | **D-S1 amended (standing delegation).** The '+3 above season mean' threshold cannot be met by a mean-based model (Haaland xP GW11 6.76, GW16 6.72, GW19 6.47 vs 7.0 per game), so it would never fire. New rule: TC1 goes on the model's top captain in the window with the highest xP; windows within 0.5 xP count as level and the earliest wins, because waiting adds injury and rotation risk and the chip dies at the GW19 deadline. On today's numbers that is GW11 (Haaland v FUL H). Erik decides in the GW11 chat; rationale is written the day before (rule 17). |
+
+## Chip plan v2 — set 2 (draft, 10 Nov 2026; D-S2 under the standing delegation)
+
+Set 2 (WC2, FH2, BB2, TC2) opens at GW20 and runs to GW38. Calendar assumptions are in `strategy/season-plan.md` (predicted, one source). The plan is a default that the data can overrule; every fire still follows rule 17.
+
+| Chip | Default window | Why | Decide when |
+|---|---|---|---|
+| WC2 | GW31 (after the March international break) | FA Cup quarter-finals are known, so the squad can be built for blank GW33 and doubles GW32/35/36 at once | GW30 review; earlier only if 4+ of our 15 are broken |
+| FH2 | Blank GW33 (FA Cup semi-finals) | the largest blank; a Free Hit fields eleven players where others field seven | after the quarter-finals (3 Apr); switch to blank GW30 if that one hits more of our squad |
+| BB2 | The biggest double of GW35/36 | 15 players, most with two matches | when the Premier League confirms the doubles |
+| TC2 | The best double-gameweek captain (GW32, 35 or 36) | two matches for the model's top pick | same rule as TC1: best xP window, earliest wins within 0.5 |
+
+**Until GW19 (set 1):** we hold only TC1. Jason holds WC1, FH1 and BB1 and must use them by the GW19 deadline or lose them; Alex holds WC1 and FH1. Expect both to gain from them in GW11-19 (rough rule of thumb: BB ~15, WC ~15, FH ~10 points). Our counter is execution and the captaincy edge, not a chip. Watch their chip use weekly on the Weekly Board.
+
+**Rule of thumb for same-week chips:** never two chips in one week (the game forbids it); never WC2 and FH2 in consecutive weeks without a written reason.

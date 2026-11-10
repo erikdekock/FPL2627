@@ -54,3 +54,16 @@ Read-back eerst: vat de stand in 5 regels samen en noem wat je niet kon vinden.
 - Grading outcomes only ("it scored, so it was right"): the luck cell exists for a reason.
 - A lesson that is a feeling ("be braver"); a lesson names a decision, the evidence and the rule it touches.
 - Skipping the kickoff: the next chat then starts from zero, which is how Phase 1 was lost.
+
+## Since the Q2 review (10 Nov 2026) — add these to every review
+
+Read `docs/11-process-review-q2.md` first. Erik's standing delegation: take the recommended option on process, model, dashboard and rule questions without asking and log it in docs/11; transfers, captain and chips stay his.
+
+1. **Refresh the data first:** `git pull` (the history workflow caches every manager's picks and transfers), then `python3 scripts/season_audit.py extract && python3 scripts/season_audit.py rivals && python3 scripts/league_analysis.py`.
+2. **Report the six weekly indicators** (strategy §10) with green/red: execution score (app = LOCKED), captain result vs the league, bench points 4-week sum vs league mean, Brier of the non-execution EXP lines, days between chip rationale and play, gap to the leader and to Alex. Update their rows in `scripts/dashboard_data.py`.
+3. **The league is the yardstick:** compare our GW with the league average and the leader, not only the overall average.
+4. **Grade captain deviations from the model (rule 21) and every post-LOCKED change (rule 4b) as their own decisions.** Keep the running A-vs-B tally (plan-anchoring test).
+5. **Model line:** run `python3 scripts/backtest_xp.py` and note model vs ep_next MAE for the week.
+6. **Refresh the Weekly Board** exactly as `docs/dashboard/REFRESH.md` says.
+7. **Create the next GW's two scheduled tasks** from the API deadline: decide prep at T-48h (push) and verification at deadline+1h (push), modelled on the GW11 pair in docs/11. Check the Google Calendar item "FPL GWxx · beslischat openen" at T-24h still matches the deadline; fix it if the round moved.
+8. The kickoff's first line is the next deadline from the API in UK and NL time, plus the LOCKED-by time (deadline minus 3 hours).
