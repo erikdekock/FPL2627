@@ -59,6 +59,50 @@
     <div class="ws-tile"><span class="ws-muted">Total · OR</span><span class="ws-big" data-draw="total" data-source="meta" data-field="total" data-row="0">—</span><span class="ws-muted">OR <span data-draw="or" data-source="meta" data-field="overall_rank" data-row="0">—</span> · bank £<span data-draw="bank" data-source="meta" data-field="bank" data-row="0">—</span></span></div>
   </section>
 
+  <section class="ws-sec" id="execution">
+    <h2>Execution</h2>
+    <p class="ws-muted">Our red indicator. The plan only counts once the app matches LOCKED (rules 4, 4a, 4b).</p>
+    <div class="ws-scroll"><table data-source="execution" data-row-key="item">
+      <thead><tr><th class="l" data-field="item">Step</th><th class="l" data-field="state">State</th><th class="l" data-field="detail">Detail</th></tr></thead>
+      <tbody data-draw="t-execution"></tbody>
+    </table></div>
+  </section>
+
+  <section class="ws-sec" id="radar">
+    <h2>Rival radar</h2>
+    <p class="ws-muted">Shared players cancel out; the gap only moves on the differences. "Swing" is the expected points of our starters the rival does not own, minus his starters we do not own, for next gameweek. Positive means the model expects us to gain. XI or bench is as each team lined up last week.</p>
+    <div class="ws-scroll"><table data-source="radar_sum" data-row-key="rival">
+      <thead><tr><th class="l" data-field="rival">Rival</th><th data-field="gap">Our gap</th><th data-field="shared">Shared players</th><th data-field="our_diff_xp">Our differentials xP</th><th data-field="their_diff_xp">His differentials xP</th><th data-field="swing">Swing</th><th class="l" data-field="likely_captain">Likely captain</th><th class="l" data-field="haaland_weeks">Captained Haaland</th></tr></thead>
+      <tbody data-draw="t-radar-sum"></tbody>
+    </table></div>
+    <label class="ws-muted" for="ws-rival">Show differences with</label>
+    <select class="dash-select" id="ws-rival" data-draw="rival-select" aria-label="Rival" data-source="radar_sum"></select>
+    <div class="ws-scroll"><table data-source="radar" data-row-key="key">
+      <thead><tr><th class="l" data-field="side">Owned by</th><th class="l" data-field="name">Player</th><th class="l" data-field="pos">Pos</th><th class="l" data-field="club">Club</th><th class="l" data-field="fixture">Next</th><th data-field="xp_next">xP next</th><th class="l" data-field="starter">Last week</th></tr></thead>
+      <tbody data-draw="t-radar"></tbody>
+    </table></div>
+  </section>
+
+  <section class="ws-sec" id="tc-planner">
+    <h2>Triple Captain planner</h2>
+    <p class="ws-muted">Our last set-1 chip, in the three candidate windows. Rule (chip plan, 10 Nov): the window with the highest xP wins; windows within 0.5 count as level and the earliest wins, because waiting adds injury risk and the chip expires at the GW19 deadline.</p>
+    <div class="ws-scroll"><table data-source="tc_plan" data-row-key="window">
+      <thead><tr><th class="l" data-field="window">Window</th><th class="l" data-field="deadline">Deadline</th><th class="l" data-field="haaland_fixture">Haaland plays</th><th data-field="haaland_xp">Haaland xP</th><th data-field="season_ppg">His avg per game</th><th class="l" data-field="best_alt">Our best alternative</th><th data-field="alt_xp">xP</th><th class="l" data-field="verdict">Verdict</th></tr></thead>
+      <tbody data-draw="t-tc-plan"></tbody>
+    </table></div>
+  </section>
+
+  <section class="ws-sec" id="catch-up">
+    <h2>Catching the leader</h2>
+    <p class="ws-muted">Our gap to the leader and to Alex after each gameweek, and how many points per week we need to gain. The chip estimates are rough rules of thumb, not model output.</p>
+    <div class="ws-legend"><span><i data-draw="lg3"></i>Gap to leader</span><span><i data-draw="lg4"></i>Gap to Alex</span></div>
+    <div class="ws-chart" data-draw="gapchart" data-source="gaprows" role="img" aria-label="Gap to the leader and to Alex per gameweek"></div>
+    <div class="ws-scroll"><table data-source="catchup" data-row-key="target">
+      <thead><tr><th class="l" data-field="target">Target</th><th data-field="weeks">Weeks left</th><th data-field="per_week">Points to gain per week</th></tr></thead>
+      <tbody data-draw="t-catchup"></tbody>
+    </table></div>
+  </section>
+
   <section class="ws-sec" id="league">
     <h2>The league</h2>
     <p class="ws-muted">Standings after the last gameweek, the gap to the leader and the chips everyone has left. An open Wildcard or Free Hit is highlighted: with one, a rival can make up a lot of ground in a single week.</p>
@@ -134,7 +178,7 @@
 
   <section class="ws-sec" id="suggesties">
     <h2>Suggestions for this week</h2>
-    <p class="ws-muted">From the model: a starting point for the decide chat, not a decision. Captain label: shield if half or more of the rivals own him, otherwise sword. TC1 rule (D-S1): only if xP is at least 3 above the season average. Biggest margin this week: <b data-draw="tcbest" data-source="captains" data-field="tc_margin">—</b>.</p>
+    <p class="ws-muted">From the model: a starting point for the decide chat, not a decision. Captain label: shield if half or more of the rivals own him, otherwise sword. The captain default is the highest xP in our XI (rule 21). Margin of the best pick over his own season average: <b data-draw="tcbest" data-source="captains" data-field="tc_margin">—</b>.</p>
     <div class="ws-grid2">
       <div class="ws-scroll"><table data-source="captains" data-row-key="name">
         <thead><tr><th class="l" data-field="name">Captain</th><th class="l" data-field="fixture">Fixture</th><th data-field="xp">xP</th><th data-field="league_owners">Rivals</th><th class="l" data-field="label">Label</th><th data-field="season_ppg">Avg per game</th><th data-field="tc_margin">TC margin</th></tr></thead>
@@ -198,6 +242,12 @@ dash.loader('captains_league', {description: 'Takes the "captains_league" part o
 dash.loader('tc_used', {description: 'Takes the "tc_used" part of weekscherm.json', fn: ({answer}) => answer.tc_used});
 dash.loader('transfers_league', {description: 'Takes the "transfers_league" part of weekscherm.json', fn: ({answer}) => answer.transfers_league});
 dash.loader('managers', {description: 'Takes the "managers" part of weekscherm.json', fn: ({answer}) => answer.managers});
+dash.loader('radar', {description: 'Takes the "radar" part of weekscherm.json', fn: ({answer}) => answer.radar});
+dash.loader('radar_sum', {description: 'Takes the "radar_sum" part of weekscherm.json', fn: ({answer}) => answer.radar_sum});
+dash.loader('tc_plan', {description: 'Takes the "tc_plan" part of weekscherm.json', fn: ({answer}) => answer.tc_plan});
+dash.loader('execution', {description: 'Takes the "execution" part of weekscherm.json', fn: ({answer}) => answer.execution});
+dash.loader('gaprows', {description: 'Takes the "gaprows" part of weekscherm.json', fn: ({answer}) => answer.gaprows});
+dash.loader('catchup', {description: 'Takes the "catchup" part of weekscherm.json', fn: ({answer}) => answer.catchup});
 dash.loader('phase', {description: 'Takes the "phase" part of weekscherm.json', fn: ({answer}) => answer.phase});
 </script>
 
@@ -408,5 +458,66 @@ dash.draw('t-transfers-league', (el) => {
     return tr;
   });
   el.replaceChildren(...rows);
+});
+</script>
+
+<script>
+const sg2 = (v) => (+v > 0 ? 'pos' : +v < 0 ? 'neg' : '');
+dash.draw('t-execution', (el) => wsRows(el, 'execution', [{f: 'item', l: true},
+  {f: 'state', l: true, pill: (r) => (r.state === 'posted' || r.state === 'matches' ? 'ok' : r.state === 'model' ? '' : 'warn')}, {f: 'detail', l: true, wrap: true}]));
+dash.draw('t-radar-sum', (el) => wsRows(el, 'radar_sum', [{f: 'rival', l: true}, {f: 'gap', cls: (r) => sg2(r.gap)}, {f: 'shared'}, {f: 'our_diff_xp'}, {f: 'their_diff_xp'},
+  {f: 'swing', cls: (r) => sg2(r.swing)}, {f: 'likely_captain', l: true}, {f: 'haaland_weeks', l: true}]));
+window.wsRival = '';
+dash.draw('rival-select', (sel) => {
+  const g = dash.data('radar_sum');
+  const names = g.status === 'ok' ? g.data.map((r) => r.rival) : [];
+  if (!window.wsRival && names.length) window.wsRival = names[0];
+  sel.replaceChildren(...names.map((n) => new Option(n)));
+  sel.value = window.wsRival;
+  sel.onchange = () => { window.wsRival = sel.value; dash.draw('t-radar'); };
+});
+dash.draw('t-radar', (el) => {
+  const g = dash.data('radar'); const gs = dash.data('radar_sum');
+  if (g.status !== 'ok') { el.replaceChildren(); return; }
+  const rv = window.wsRival || (gs.status === 'ok' && gs.data.length ? gs.data[0].rival : '');
+  const cols = ['side', 'name', 'pos', 'club', 'fixture', 'xp_next', 'starter'];
+  el.replaceChildren(...g.data.filter((r) => r.rival === rv).map((r) => {
+    const tr = document.createElement('tr'); tr.setAttribute('data-key', encodeURIComponent(r.key));
+    if (r.starter === 'bench') tr.className = 'ws-bench';
+    cols.forEach((c) => { const td = document.createElement('td'); if (c !== 'xp_next') td.className = 'l';
+      if (c === 'side') td.classList.add(r.side === 'only us' ? 'pos' : 'neg'); td.textContent = wsFmt(r[c]); tr.appendChild(td); });
+    return tr;
+  }));
+});
+dash.draw('t-tc-plan', (el) => wsRows(el, 'tc_plan', [{f: 'window', l: true}, {f: 'deadline', l: true}, {f: 'haaland_fixture', l: true}, {f: 'haaland_xp'}, {f: 'season_ppg'},
+  {f: 'best_alt', l: true}, {f: 'alt_xp'}, {f: 'verdict', l: true, pill: (r) => (r.verdict.startsWith('play') ? 'ok' : r.verdict.startsWith('level') ? '' : 'warn')}]));
+dash.draw('t-catchup', (el) => wsRows(el, 'catchup', [{f: 'target', l: true}, {f: 'weeks'}, {f: 'per_week'}]));
+['lg3', 'lg4'].forEach((n, i) => dash.draw(n, (el) => { el.style.background = dash.colors[i]; }));
+dash.draw('gapchart', (el) => {
+  const g = dash.data('gaprows');
+  if (g.status !== 'ok' || !g.data.length) { el.replaceChildren(); return; }
+  const rows = g.data.map((r) => ({gw: +r.gw, a: +r.gap_leader, b: +r.gap_alex}));
+  const W = el.clientWidth || 600, H = 220, m = {t: 14, r: 46, b: 24, l: 40};
+  el.replaceChildren();
+  const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', 'Gap to the leader and to Alex per gameweek');
+  const x = d3.scalePoint().domain(rows.map((r) => r.gw)).range([m.l, W - m.r]);
+  const ext = d3.extent(rows.flatMap((r) => [r.a, r.b, 0]));
+  const y = d3.scaleLinear().domain(ext).nice().range([H - m.b, m.t]);
+  svg.append('g').selectAll('line').data(y.ticks(5)).join('line').attr('x1', m.l).attr('x2', W - m.r).attr('y1', (d) => y(d)).attr('y2', (d) => y(d))
+    .style('stroke', (d) => (d === 0 ? 'var(--cds-chart-axis)' : 'var(--cds-chart-grid)'));
+  svg.append('g').selectAll('text').data(y.ticks(5)).join('text').attr('x', m.l - 6).attr('y', (d) => y(d) + 4).attr('text-anchor', 'end').text((d) => (d > 0 ? '+' : '') + d);
+  svg.append('g').selectAll('text').data(rows).join('text').attr('x', (r) => x(r.gw)).attr('y', H - 6).attr('text-anchor', 'middle').text((r) => 'GW' + r.gw);
+  [['a', 0], ['b', 1]].forEach(([k, i]) => {
+    svg.append('path').datum(rows).attr('d', d3.line().x((r) => x(r.gw)).y((r) => y(r[k]))).style('fill', 'none').style('stroke', dash.colors[i]).style('stroke-width', 2);
+    svg.append('g').selectAll('circle').data(rows).join('circle').attr('cx', (r) => x(r.gw)).attr('cy', (r) => y(r[k])).attr('r', 3).style('fill', dash.colors[i]);
+    const last = rows[rows.length - 1];
+    svg.append('text').attr('x', x(last.gw) + 8).attr('y', y(last[k]) + 4).text((last[k] > 0 ? '+' : '') + last[k]).style('fill', 'var(--color-fg)');
+  });
+  const tip = d3.select(el).append('div').attr('class', 'ws-tip').property('hidden', true);
+  svg.append('g').selectAll('rect').data(rows).join('rect').attr('x', (r) => x(r.gw) - x.step() / 2).attr('width', x.step()).attr('y', m.t).attr('height', H - m.b - m.t)
+    .style('fill', 'transparent').on('pointermove', (ev, r) => { const [px, py] = d3.pointer(ev, el);
+      tip.property('hidden', false).style('left', Math.min(px + 12, el.clientWidth - 190) + 'px').style('top', (py + 8) + 'px')
+        .text(`After GW${r.gw}: leader ${r.a > 0 ? '+' : ''}${r.a} · Alex ${r.b > 0 ? '+' : ''}${r.b}`); })
+    .on('pointerleave', () => tip.property('hidden', true));
 });
 </script>

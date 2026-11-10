@@ -228,7 +228,102 @@ def main():
     for r in transfers_league: r["key"] = f"{r['manager']} GW{r['gw']} {r['out']}>{r['into']}"
     managers = sorted(rd("managers.csv"), key=lambda r: -int(r["captain_total"]))
 
-    allout = dict(captains_league=captains_league, tc_used=tc_used, transfers_league=transfers_league, managers=managers, meta=meta, league=league, team=teamrows, captains=captains, transfers=transfers,
+    # ---------- rival radar, TC planner, execution, catch-up (D-DB4)
+    def squad_of(eid):
+        g = cur["id"]
+        while g >= 1:
+            f = p("data/history/picks", f"{eid}_{g}.json")
+            if os.path.exists(f):
+                q = json.load(open(f))
+                if q.get("active_chip") != "freehit": return q["picks"]
+            g -= 1
+        return picks.get(eid, [])
+    xpn = lambda el: float(xp.get(el, {}).get(f"xp_gw{gws[0]}", 0))
+    ours = {q["element"]: q for q in s["picks"]["picks"]}
+    radar, radar_sum = [], []
+    for rid in ([leader["entry"]] + (["41757"] if leader["entry"] != "41757" else [])):
+        theirs = {q["element"]: q for q in squad_of(rid)}
+        rn = SHORT.get(rid, rid)
+        only_us = sorted([e for e in ours if e not in theirs], key=lambda e: -xpn(e))
+        only_them = sorted([e for e in theirs if e not in ours], key=lambda e: -xpn(e))
+        for side, lst, sq in (("only us", only_us, ours), ("only " + rn, only_them, theirs)):
+            for e in lst:
+                radar.append(dict(key=f"{rn}|{els[e]['web_name']}", rival=rn, side=side, name=els[e]["web_name"], club=team[els[e]["team"]],
+                                  pos=POS[els[e]["element_type"]], xp_next=round(xpn(e), 2),
+                                  starter="XI" if sq[e]["position"] <= 11 else "bench", fixture=fixcells(team[els[e]["team"]])[0][0]))
+        su = sum(xpn(e) for e in only_us if ours[e]["position"] <= 11); st = sum(xpn(e) for e in only_them if theirs[e]["position"] <= 11)
+        hist_c = [r for r in captains_league if r["entry"] == rid]
+        hw = sum(1 for r in hist_c if r["captain"] == "Haaland")
+        txi = [e for e in theirs if theirs[e]["position"] <= 11]
+        likely = max(txi, key=xpn) if txi else None
+        radar_sum.append(dict(rival=rn, shared=len([e for e in ours if e in theirs]), our_diff_xp=round(su, 1), their_diff_xp=round(st, 1),
+                              swing=round(su - st, 1), haaland_weeks=f"{hw} of {len(hist_c)}",
+                              likely_captain=els[likely]["web_name"] if likely else "", gap=me["total"] - [x for x in league if x["entry"] == rid][0]["total"]))
+
+    # TC planner: Haaland (and our best alternative) in the three windows, horizon to GW19
+    import tempfile
+    tmp = tempfile.mkdtemp()
+    subprocess.run([sys.executable, p("scripts/xp_model.py"), "--horizon", str(max(1, 19 - nxt["id"] + 1)), "--out", tmp], capture_output=True, cwd=ROOT)
+    lf = glob.glob(os.path.join(tmp, "xp_gw*.csv"))
+    tc_plan = []
+    if lf:
+        lx = {int(r["id"]): r for r in csv.DictReader(open(lf[0]))}
+        fx19 = {}
+        for f in s["fixtures"]:
+            if f["event"]:
+                fx19.setdefault((team[f["team_h"]], f["event"]), []).append(team[f["team_a"]] + "(H)")
+                fx19.setdefault((team[f["team_a"]], f["event"]), []).append(team[f["team_h"]] + "(A)")
+        hid = [e["id"] for e in b["elements"] if e["web_name"] == "Haaland"][0]
+        hppg = [c for c in captains if c["name"] == "Haaland"]
+        hppg = hppg[0]["season_ppg"] if hppg else round(els[hid]["total_points"] / max(1, cur["id"]), 2)
+        dls = {e["id"]: e["deadline_time"] for e in b["events"]}
+        for g in (11, 16, 19):
+            if g < nxt["id"] or f"xp_gw{g}" not in lx[hid]: continue
+            hx = float(lx[hid][f"xp_gw{g}"])
+            alt = max((e for e in ours if e != hid), key=lambda e: float(lx.get(e, {}).get(f"xp_gw{g}", 0)))
+            d = dt.datetime.fromisoformat(dls[g].replace("Z", "+00:00")).astimezone(ZoneInfo("Europe/Amsterdam"))
+            tc_plan.append(dict(window=f"GW{g}", deadline=f"{days[d.weekday()]} {d.day} {mon[d.month-1]} {d:%H:%M} NL",
+                                haaland_fixture=" + ".join(fx19.get(("MCI", g), ["blank"])), haaland_xp=round(hx, 2), season_ppg=hppg,
+                                margin=round(hx - hppg, 2),
+                                best_alt=els[alt]["web_name"], alt_xp=round(float(lx[alt][f"xp_gw{g}"]), 2),
+                                note="last legal week for set 1" if g == 19 else ""))
+
+    if tc_plan:
+        bestx = max(r["haaland_xp"] for r in tc_plan)
+        first = True
+        for r in tc_plan:
+            close = bestx - r["haaland_xp"] < 0.5
+            r["verdict"] = "play here (earliest window within 0.5 of the best)" if close and first else ("level with the best" if close else "weaker window")
+            if close and first: first = False
+    # execution: LOCKED block and verification from the brief of the next / last GW
+    def brief(g):
+        f = p("briefs", f"GW{g:02d}.md")
+        return open(f).read() if os.path.exists(f) else ""
+    bn, bl = brief(nxt["id"]), brief(cur["id"])
+    lk = re.search(r"^LOCKED GW.*$", bn, re.M)
+    ver = re.search(r"Verification[^\n]*\n(.{0,400})", bl, re.S)
+    execution = [dict(item=f"GW{nxt['id']} LOCKED", state="posted" if lk else "not yet", detail=lk.group(0)[:200] if lk else f"due by {locked_by} NL on deadline day (rule 4a)"),
+                 dict(item="Screenshot check at T-3h", state="open", detail="one app screenshot, compared line by line with LOCKED"),
+                 dict(item=f"GW{cur['id']} app vs LOCKED", state="1 difference", detail="GW10: captain swapped to Barry after the screenshot, not announced (rule 4b). Weeks fully matching in a row: 0."),
+                 dict(item="Captain default (rule 21)", state="model", detail=f"highest xP in our XI: {captains[0]['name']} ({captains[0]['xp']}); deviation needs a written reason")]
+
+    # catch-up math vs the leader
+    lh = {c["event"]: c["total_points"] for c in hist[leader["entry"]]["current"]}
+    mh = {c["event"]: c["total_points"] for c in hist[ME]["current"]}
+    ah = {c["event"]: c["total_points"] for c in hist["41757"]["current"]}
+    lastg = cur["id"]; fix = lambda h, g: h.get(g) if g < lastg else [x for x in league if True][0]["total"]
+    gaprows = []
+    tot = {x["entry"]: x["total"] for x in league}
+    for g in range(1, lastg + 1):
+        m_ = mh[g] if g < lastg else tot[ME]; l_ = lh[g] if g < lastg else tot[leader["entry"]]; a_ = ah[g] if g < lastg else tot["41757"]
+        gaprows.append(dict(gw=g, gap_leader=m_ - l_, gap_alex=m_ - a_))
+    gap = -me["gap_leader"]
+    catchup = [dict(target="Level by the GW19 deadline (set-1 chips expire)", weeks=19 - lastg, per_week=round(gap / max(1, 19 - lastg), 1)),
+               dict(target="Level by GW38", weeks=38 - lastg, per_week=round(gap / (38 - lastg), 1)),
+               dict(target=f"{leader['manager']}'s open chips (rough: BB ~15, FH ~10, WC ~15)", weeks=38 - lastg,
+                    per_week=round((gap + sum({"BB": 15, "FH": 10, "WC": 15, "TC": 9}.get(c, 0) for c in leader["chips_left"].split()) - 9) / (38 - lastg), 1))]
+
+    allout = dict(radar=radar, radar_sum=radar_sum, tc_plan=tc_plan, execution=execution, gaprows=gaprows, catchup=catchup, captains_league=captains_league, tc_used=tc_used, transfers_league=transfers_league, managers=managers, meta=meta, league=league, team=teamrows, captains=captains, transfers=transfers,
                   potential=potential, fixtures=fixtures, lastweek=lastweek, decisions=decisions,
                   season=season, indicators=indicators, phase=phase)
     os.makedirs(p("data/dashboard"), exist_ok=True)

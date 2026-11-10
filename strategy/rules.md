@@ -1,5 +1,5 @@
 # Standing rules — read first in every chat
-**v3.1 · 9 Nov 2026 · operational rules only; the theory lives in `strategy.md`. Changed only in a review chat, with a changelog line. Each rule names its origin.**
+**v3.2 · 10 Nov 2026 · operational rules only; the theory lives in `strategy.md`. Changed only in a review chat, with a changelog line. Each rule names its origin.**
 
 ## Process
 1. **Read-back before analysis.** Every chat opens with the repo state in five lines plus what it could not find. *(Origin: Phase 1 — every chat re-derived context from zero.)*
@@ -30,6 +30,7 @@
 ## Evidence
 19. **Pull, never remember.** Prices, flags, ownership, squads, points come from the API or the snapshot, every time. `ep_next` is a baseline, never an input. xP and the solver are a prior to argue with, never the decision. *(Origin: every documented LLM-for-FPL failure is a number from memory.)*
 20. **Decisions are graded process × outcome; luck is flagged and never repeated.** A lesson becomes a rule only when it recurs or a bias review promotes it. *(Origin: strategy E4.)*
+21. **The captain is the highest-xP player in our XI (model default).** Deviating needs a written reason before LOCKED: a minutes risk, or rule 18's shield when the xP gap is under 0.5. Every deviation is logged in `decisions.csv` as its own decision so we measure whether deviating pays. *(Origin: Q2 backtest, D-M1: the model beat ep_next on GW2-10; Claude's captain A went against the model in GW8 and GW10 and lost 12 and 14.)*
 
 ## Changelog
 | Date | Change |
@@ -38,3 +39,4 @@
 | 2026-11-09 | v3.1 — rule 18 amended (rival of service = league leader, sword beyond 20 behind) by D-G4, agreed by Erik.  |
 | 2026-11-09 | v3.1 — rule 17 amended (same-day chip with value check, minutes gate and confirm-screen screenshot) by D-S3, agreed by Erik. |
 | 2026-11-09 | v3.1 — rules 4a (deadline line 1, LOCKED at T−3h with screenshot check) and 4b (change after LOCKED = logged decision with screenshot) added by D-W3, agreed by Erik. |
+| 2026-11-10 | v3.2 — rule 21 added (model-default captain, logged deviations) by D-M1, decided under Erik's standing delegation of 10 Nov. |

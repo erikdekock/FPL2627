@@ -1,4 +1,597 @@
 {
+ "radar": [
+  {
+   "key": "Jason|Isak",
+   "rival": "Jason",
+   "side": "only us",
+   "name": "Isak",
+   "club": "LIV",
+   "pos": "FWD",
+   "xp_next": 6.33,
+   "starter": "XI",
+   "fixture": "MUN(H)"
+  },
+  {
+   "key": "Jason|Barry",
+   "rival": "Jason",
+   "side": "only us",
+   "name": "Barry",
+   "club": "EVE",
+   "pos": "FWD",
+   "xp_next": 5.39,
+   "starter": "XI",
+   "fixture": "BRE(A)"
+  },
+  {
+   "key": "Jason|Vuskovic",
+   "rival": "Jason",
+   "side": "only us",
+   "name": "Vuskovic",
+   "club": "BHA",
+   "pos": "DEF",
+   "xp_next": 5.1,
+   "starter": "bench",
+   "fixture": "HUL(A)"
+  },
+  {
+   "key": "Jason|Trafford",
+   "rival": "Jason",
+   "side": "only us",
+   "name": "Trafford",
+   "club": "LEE",
+   "pos": "GK",
+   "xp_next": 4.72,
+   "starter": "XI",
+   "fixture": "CHE(A)"
+  },
+  {
+   "key": "Jason|Mbeumo",
+   "rival": "Jason",
+   "side": "only us",
+   "name": "Mbeumo",
+   "club": "MUN",
+   "pos": "MID",
+   "xp_next": 4.58,
+   "starter": "XI",
+   "fixture": "LIV(A)"
+  },
+  {
+   "key": "Jason|Muharemović",
+   "rival": "Jason",
+   "side": "only us",
+   "name": "Muharemović",
+   "club": "LEE",
+   "pos": "DEF",
+   "xp_next": 4.34,
+   "starter": "XI",
+   "fixture": "CHE(A)"
+  },
+  {
+   "key": "Jason|Iwobi",
+   "rival": "Jason",
+   "side": "only us",
+   "name": "Iwobi",
+   "club": "FUL",
+   "pos": "MID",
+   "xp_next": 4.18,
+   "starter": "bench",
+   "fixture": "MCI(A)"
+  },
+  {
+   "key": "Jason|Tzolakis",
+   "rival": "Jason",
+   "side": "only us",
+   "name": "Tzolakis",
+   "club": "HUL",
+   "pos": "GK",
+   "xp_next": 4.08,
+   "starter": "bench",
+   "fixture": "BHA(H)"
+  },
+  {
+   "key": "Jason|Tarkowski",
+   "rival": "Jason",
+   "side": "only us",
+   "name": "Tarkowski",
+   "club": "EVE",
+   "pos": "DEF",
+   "xp_next": 3.96,
+   "starter": "XI",
+   "fixture": "BRE(A)"
+  },
+  {
+   "key": "Jason|Bogle",
+   "rival": "Jason",
+   "side": "only us",
+   "name": "Bogle",
+   "club": "LEE",
+   "pos": "DEF",
+   "xp_next": 3.93,
+   "starter": "bench",
+   "fixture": "CHE(A)"
+  },
+  {
+   "key": "Jason|Van Hecke",
+   "rival": "Jason",
+   "side": "only Jason",
+   "name": "Van Hecke",
+   "club": "TOT",
+   "pos": "DEF",
+   "xp_next": 5.68,
+   "starter": "bench",
+   "fixture": "IPS(H)"
+  },
+  {
+   "key": "Jason|Gabriel",
+   "rival": "Jason",
+   "side": "only Jason",
+   "name": "Gabriel",
+   "club": "ARS",
+   "pos": "DEF",
+   "xp_next": 5.49,
+   "starter": "XI",
+   "fixture": "NEW(A)"
+  },
+  {
+   "key": "Jason|Evanilson",
+   "rival": "Jason",
+   "side": "only Jason",
+   "name": "Evanilson",
+   "club": "BOU",
+   "pos": "FWD",
+   "xp_next": 5.13,
+   "starter": "XI",
+   "fixture": "NFO(H)"
+  },
+  {
+   "key": "Jason|N.Jackson",
+   "rival": "Jason",
+   "side": "only Jason",
+   "name": "N.Jackson",
+   "club": "AVL",
+   "pos": "FWD",
+   "xp_next": 5.05,
+   "starter": "XI",
+   "fixture": "SUN(H)"
+  },
+  {
+   "key": "Jason|Verbruggen",
+   "rival": "Jason",
+   "side": "only Jason",
+   "name": "Verbruggen",
+   "club": "BHA",
+   "pos": "GK",
+   "xp_next": 4.46,
+   "starter": "XI",
+   "fixture": "HUL(A)"
+  },
+  {
+   "key": "Jason|Calafiori",
+   "rival": "Jason",
+   "side": "only Jason",
+   "name": "Calafiori",
+   "club": "ARS",
+   "pos": "DEF",
+   "xp_next": 4.38,
+   "starter": "XI",
+   "fixture": "NEW(A)"
+  },
+  {
+   "key": "Jason|Palmer",
+   "rival": "Jason",
+   "side": "only Jason",
+   "name": "Palmer",
+   "club": "CHE",
+   "pos": "MID",
+   "xp_next": 3.99,
+   "starter": "XI",
+   "fixture": "LEE(H)"
+  },
+  {
+   "key": "Jason|Kinsky",
+   "rival": "Jason",
+   "side": "only Jason",
+   "name": "Kinsky",
+   "club": "TOT",
+   "pos": "GK",
+   "xp_next": 3.92,
+   "starter": "bench",
+   "fixture": "IPS(H)"
+  },
+  {
+   "key": "Jason|Diop",
+   "rival": "Jason",
+   "side": "only Jason",
+   "name": "Diop",
+   "club": "IPS",
+   "pos": "DEF",
+   "xp_next": 2.99,
+   "starter": "bench",
+   "fixture": "TOT(A)"
+  },
+  {
+   "key": "Jason|Slater",
+   "rival": "Jason",
+   "side": "only Jason",
+   "name": "Slater",
+   "club": "HUL",
+   "pos": "MID",
+   "xp_next": 2.41,
+   "starter": "bench",
+   "fixture": "BHA(H)"
+  },
+  {
+   "key": "Alex|Isak",
+   "rival": "Alex",
+   "side": "only us",
+   "name": "Isak",
+   "club": "LIV",
+   "pos": "FWD",
+   "xp_next": 6.33,
+   "starter": "XI",
+   "fixture": "MUN(H)"
+  },
+  {
+   "key": "Alex|Barry",
+   "rival": "Alex",
+   "side": "only us",
+   "name": "Barry",
+   "club": "EVE",
+   "pos": "FWD",
+   "xp_next": 5.39,
+   "starter": "XI",
+   "fixture": "BRE(A)"
+  },
+  {
+   "key": "Alex|Ødegaard",
+   "rival": "Alex",
+   "side": "only us",
+   "name": "Ødegaard",
+   "club": "ARS",
+   "pos": "MID",
+   "xp_next": 5.17,
+   "starter": "XI",
+   "fixture": "NEW(A)"
+  },
+  {
+   "key": "Alex|Vuskovic",
+   "rival": "Alex",
+   "side": "only us",
+   "name": "Vuskovic",
+   "club": "BHA",
+   "pos": "DEF",
+   "xp_next": 5.1,
+   "starter": "bench",
+   "fixture": "HUL(A)"
+  },
+  {
+   "key": "Alex|Trafford",
+   "rival": "Alex",
+   "side": "only us",
+   "name": "Trafford",
+   "club": "LEE",
+   "pos": "GK",
+   "xp_next": 4.72,
+   "starter": "XI",
+   "fixture": "CHE(A)"
+  },
+  {
+   "key": "Alex|Mbeumo",
+   "rival": "Alex",
+   "side": "only us",
+   "name": "Mbeumo",
+   "club": "MUN",
+   "pos": "MID",
+   "xp_next": 4.58,
+   "starter": "XI",
+   "fixture": "LIV(A)"
+  },
+  {
+   "key": "Alex|Muharemović",
+   "rival": "Alex",
+   "side": "only us",
+   "name": "Muharemović",
+   "club": "LEE",
+   "pos": "DEF",
+   "xp_next": 4.34,
+   "starter": "XI",
+   "fixture": "CHE(A)"
+  },
+  {
+   "key": "Alex|Iwobi",
+   "rival": "Alex",
+   "side": "only us",
+   "name": "Iwobi",
+   "club": "FUL",
+   "pos": "MID",
+   "xp_next": 4.18,
+   "starter": "bench",
+   "fixture": "MCI(A)"
+  },
+  {
+   "key": "Alex|Tzolakis",
+   "rival": "Alex",
+   "side": "only us",
+   "name": "Tzolakis",
+   "club": "HUL",
+   "pos": "GK",
+   "xp_next": 4.08,
+   "starter": "bench",
+   "fixture": "BHA(H)"
+  },
+  {
+   "key": "Alex|Tarkowski",
+   "rival": "Alex",
+   "side": "only us",
+   "name": "Tarkowski",
+   "club": "EVE",
+   "pos": "DEF",
+   "xp_next": 3.96,
+   "starter": "XI",
+   "fixture": "BRE(A)"
+  },
+  {
+   "key": "Alex|Evanilson",
+   "rival": "Alex",
+   "side": "only Alex",
+   "name": "Evanilson",
+   "club": "BOU",
+   "pos": "FWD",
+   "xp_next": 5.13,
+   "starter": "XI",
+   "fixture": "NFO(H)"
+  },
+  {
+   "key": "Alex|Raya",
+   "rival": "Alex",
+   "side": "only Alex",
+   "name": "Raya",
+   "club": "ARS",
+   "pos": "GK",
+   "xp_next": 4.53,
+   "starter": "XI",
+   "fixture": "NEW(A)"
+  },
+  {
+   "key": "Alex|Verbruggen",
+   "rival": "Alex",
+   "side": "only Alex",
+   "name": "Verbruggen",
+   "club": "BHA",
+   "pos": "GK",
+   "xp_next": 4.46,
+   "starter": "bench",
+   "fixture": "HUL(A)"
+  },
+  {
+   "key": "Alex|Calafiori",
+   "rival": "Alex",
+   "side": "only Alex",
+   "name": "Calafiori",
+   "club": "ARS",
+   "pos": "DEF",
+   "xp_next": 4.38,
+   "starter": "XI",
+   "fixture": "NEW(A)"
+  },
+  {
+   "key": "Alex|Rogers",
+   "rival": "Alex",
+   "side": "only Alex",
+   "name": "Rogers",
+   "club": "CHE",
+   "pos": "MID",
+   "xp_next": 4.36,
+   "starter": "XI",
+   "fixture": "LEE(H)"
+  },
+  {
+   "key": "Alex|Palmer",
+   "rival": "Alex",
+   "side": "only Alex",
+   "name": "Palmer",
+   "club": "CHE",
+   "pos": "MID",
+   "xp_next": 3.99,
+   "starter": "XI",
+   "fixture": "LEE(H)"
+  },
+  {
+   "key": "Alex|Calvert-Lewin",
+   "rival": "Alex",
+   "side": "only Alex",
+   "name": "Calvert-Lewin",
+   "club": "LEE",
+   "pos": "FWD",
+   "xp_next": 3.89,
+   "starter": "XI",
+   "fixture": "CHE(A)"
+  },
+  {
+   "key": "Alex|O'Shea",
+   "rival": "Alex",
+   "side": "only Alex",
+   "name": "O'Shea",
+   "club": "IPS",
+   "pos": "DEF",
+   "xp_next": 3.82,
+   "starter": "bench",
+   "fixture": "TOT(A)"
+  },
+  {
+   "key": "Alex|Ndiaye",
+   "rival": "Alex",
+   "side": "only Alex",
+   "name": "Ndiaye",
+   "club": "MCI",
+   "pos": "MID",
+   "xp_next": 3.57,
+   "starter": "bench",
+   "fixture": "FUL(H)"
+  },
+  {
+   "key": "Alex|Egan",
+   "rival": "Alex",
+   "side": "only Alex",
+   "name": "Egan",
+   "club": "HUL",
+   "pos": "DEF",
+   "xp_next": 3.47,
+   "starter": "bench",
+   "fixture": "BHA(H)"
+  }
+ ],
+ "radar_sum": [
+  {
+   "rival": "Jason",
+   "shared": 5,
+   "our_diff_xp": 29.3,
+   "their_diff_xp": 28.5,
+   "swing": 0.8,
+   "haaland_weeks": "4 of 10",
+   "likely_captain": "Haaland",
+   "gap": -27
+  },
+  {
+   "rival": "Alex",
+   "shared": 5,
+   "our_diff_xp": 34.5,
+   "their_diff_xp": 26.3,
+   "swing": 8.2,
+   "haaland_weeks": "5 of 10",
+   "likely_captain": "Haaland",
+   "gap": 9
+  }
+ ],
+ "tc_plan": [
+  {
+   "window": "GW11",
+   "deadline": "Sat 21 Nov 12:00 NL",
+   "haaland_fixture": "FUL(H)",
+   "haaland_xp": 6.76,
+   "season_ppg": 7.0,
+   "margin": -0.24,
+   "best_alt": "Isak",
+   "alt_xp": 6.33,
+   "note": "",
+   "verdict": "play here (earliest window within 0.5 of the best)"
+  },
+  {
+   "window": "GW16",
+   "deadline": "Sat 19 Dec 12:00 NL",
+   "haaland_fixture": "HUL(H)",
+   "haaland_xp": 6.72,
+   "season_ppg": 7.0,
+   "margin": -0.28,
+   "best_alt": "Tavernier",
+   "alt_xp": 6.84,
+   "note": "",
+   "verdict": "level with the best"
+  },
+  {
+   "window": "GW19",
+   "deadline": "Fri 1 Jan 19:30 NL",
+   "haaland_fixture": "TOT(H)",
+   "haaland_xp": 6.47,
+   "season_ppg": 7.0,
+   "margin": -0.53,
+   "best_alt": "Tavernier",
+   "alt_xp": 6.58,
+   "note": "last legal week for set 1",
+   "verdict": "level with the best"
+  }
+ ],
+ "execution": [
+  {
+   "item": "GW11 LOCKED",
+   "state": "not yet",
+   "detail": "due by 09:00 NL on deadline day (rule 4a)"
+  },
+  {
+   "item": "Screenshot check at T-3h",
+   "state": "open",
+   "detail": "one app screenshot, compared line by line with LOCKED"
+  },
+  {
+   "item": "GW10 app vs LOCKED",
+   "state": "1 difference",
+   "detail": "GW10: captain swapped to Barry after the screenshot, not announced (rule 4b). Weeks fully matching in a row: 0."
+  },
+  {
+   "item": "Captain default (rule 21)",
+   "state": "model",
+   "detail": "highest xP in our XI: Haaland (6.76); deviation needs a written reason"
+  }
+ ],
+ "gaprows": [
+  {
+   "gw": 1,
+   "gap_leader": 2,
+   "gap_alex": -5
+  },
+  {
+   "gw": 2,
+   "gap_leader": -5,
+   "gap_alex": -25
+  },
+  {
+   "gw": 3,
+   "gap_leader": -8,
+   "gap_alex": -39
+  },
+  {
+   "gw": 4,
+   "gap_leader": -38,
+   "gap_alex": -71
+  },
+  {
+   "gw": 5,
+   "gap_leader": -32,
+   "gap_alex": -69
+  },
+  {
+   "gw": 6,
+   "gap_leader": -46,
+   "gap_alex": -75
+  },
+  {
+   "gw": 7,
+   "gap_leader": -46,
+   "gap_alex": -78
+  },
+  {
+   "gw": 8,
+   "gap_leader": -53,
+   "gap_alex": -58
+  },
+  {
+   "gw": 9,
+   "gap_leader": -60,
+   "gap_alex": -57
+  },
+  {
+   "gw": 10,
+   "gap_leader": -27,
+   "gap_alex": 9
+  }
+ ],
+ "catchup": [
+  {
+   "target": "Level by the GW19 deadline (set-1 chips expire)",
+   "weeks": 9,
+   "per_week": 3.0
+  },
+  {
+   "target": "Level by GW38",
+   "weeks": 28,
+   "per_week": 1.0
+  },
+  {
+   "target": "Jason's open chips (rough: BB ~15, FH ~10, WC ~15)",
+   "weeks": 28,
+   "per_week": 2.1
+  }
+ ],
  "captains_league": [
   {
    "gw": "1",
@@ -5434,7 +6027,7 @@
    "last_lesson": "Erik's conviction B has beaten Claude's A four times in a row.",
    "snapshot": "fpl_2026-11-09T203722Z.json",
    "xp_table": "xp_gw11-16.csv",
-   "generated": "2026-11-10T13:19Z"
+   "generated": "2026-11-10T13:46Z"
   }
  ],
  "league": [
