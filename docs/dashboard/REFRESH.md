@@ -2,11 +2,13 @@
 
 Run by the T-48h prep task and by every review chat.
 
-1. `python3 scripts/season_audit.py extract && python3 scripts/xp_model.py --horizon 6 && python3 scripts/dashboard_data.py`
+1. `git pull` (the history workflow caches all picks and transfers in data/history/), then
+   `python3 scripts/season_audit.py extract && python3 scripts/league_analysis.py && python3 scripts/xp_model.py --horizon 6 && python3 scripts/dashboard_data.py`
    (writes `data/dashboard/weekscherm.json`; needs `pip install "pulp<4" highspy`).
 2. Upload it: Artifact tool, `url` = the dashboard, `asset: true`, `file_path` = data/dashboard/weekscherm.json. Note the returned `/_blob/<id>`.
-3. ArtifactData `batch` of `update` on `datasets/<id>` for the 12 ids
-   meta, league, team, captains, transfers, potential, fixtures, lastweek, decisions, season, indicators, phase:
+3. ArtifactData `batch` of `update` on `datasets/<id>` for the 16 ids
+   meta, league, team, captains, transfers, potential, fixtures, lastweek, decisions, season, indicators, phase,
+   captains_league, tc_used, transfers_league, managers:
    `{"source": {"url": "/_blob/<id>"}, "updated": {"at": <UTC now>, "by": "Claude (scripts/dashboard_data.py)"}, "edit": {"via": "claude", "at": <UTC now>}}`
    (read each document first for its version; pass it as if_version).
 4. Delete the previous blob (Artifact `delete` with `path` = old id) only after step 3 succeeded.

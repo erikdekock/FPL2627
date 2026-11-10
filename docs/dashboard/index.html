@@ -36,6 +36,11 @@
 .ws-chart text{fill:var(--cds-text-secondary);font-size:var(--cds-font-size-caption)}
 .ws-legend{display:flex;gap:14px;flex-wrap:wrap;font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
 .ws-legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.ws-matrix td{text-align:left;vertical-align:top;line-height:1.25}
+.ws-matrix td small{display:block;color:var(--color-fg-muted)}
+.ws-matrix td.tc{outline:2px solid var(--color-fg);outline-offset:-2px}
+.ws .pos{background:color-mix(in srgb,var(--color-ok) 24%,transparent)}
+.ws .neg{background:color-mix(in srgb,var(--color-bad) 22%,transparent)}
 [data-dash-source-state=refreshing]{opacity:.5}
 </style>
 
@@ -85,6 +90,42 @@
     </div>
   </section>
 
+  <section class="ws-sec" id="captains">
+    <h2>Captains in de league</h2>
+    <p class="ws-muted">Wie gaf wie de band, en wat leverde dat op. Captainpunten zijn de punten van de captain maal twee (maal drie met Triple Captain). "Tegen altijd Haaland" laat zien hoeveel punten een manager won of verloor door niet gewoon elke week Haaland te kiezen. "Gemist" is hoeveel meer de beste speler in zijn eigen elftal had opgeleverd: dat weet je pas achteraf, dus het is alleen ter vergelijking.</p>
+    <div class="ws-scroll"><table data-source="managers" data-row-key="manager">
+      <thead><tr><th class="l" data-field="manager">Manager</th><th data-field="captain_total">Captainpunten</th><th data-field="haaland_weeks">Weken Haaland</th><th data-field="vs_always_haaland">Tegen altijd Haaland</th><th data-field="missed_vs_best">Gemist (achteraf)</th><th data-field="tc_gw">TC in GW</th><th class="l" data-field="tc_captain">TC op</th><th data-field="tc_extra">Extra door TC</th></tr></thead>
+      <tbody data-draw="t-managers-c"></tbody>
+    </table></div>
+    <h2>Captain per speelweek</h2>
+    <p class="ws-muted">Groen: beter dan Haaland die week. Rood: slechter. Een omlijnd vak is een Triple Captain-week. Wijs een vak aan voor de details.</p>
+    <div class="ws-scroll ws-chart" style="min-height:0"><table class="ws-matrix">
+      <thead data-draw="capgrid-head"></thead>
+      <tbody data-draw="capgrid" data-source="captains_league"></tbody>
+    </table></div>
+    <h2>Triple Captain: wanneer en hoe goed</h2>
+    <p class="ws-muted">Een Triple Captain levert één keer de punten van de captain extra op. Vuistregel in dit overzicht: 10 of meer punten voor de speler is een goede TC, 6 tot 9 matig, minder dan 6 slecht.</p>
+    <div class="ws-scroll"><table data-source="tc_used" data-row-key="manager">
+      <thead><tr><th class="l" data-field="manager">Manager</th><th data-field="gw">GW</th><th class="l" data-field="captain">Speler</th><th class="l" data-field="club">Club</th><th data-field="raw">Punten speler</th><th data-field="tc_extra">Extra door TC</th><th data-field="haaland_pts">Haaland x3 die week</th><th class="l">Oordeel</th></tr></thead>
+      <tbody data-draw="t-tc"></tbody>
+    </table></div>
+  </section>
+
+  <section class="ws-sec" id="transfers-league">
+    <h2>Transfers in de league</h2>
+    <p class="ws-muted">Elke transfer van GW1 tot nu. Een transfer wordt beoordeeld over de weken dat de manager de nieuwe speler hield: punten van de nieuwe speler min punten van de verkochte speler in precies die weken. Positief is een goede ruil. Een hit (−4) is over de transfers van die week verdeeld. Free Hit-weken tellen niet mee, want dan komt het oude team terug. Bij een Wildcard koppelt de API eruit en erin willekeurig, dus die staan wel in de lijst maar tellen niet mee in de totalen per manager.</p>
+    <div class="ws-scroll"><table data-source="managers" data-row-key="manager">
+      <thead><tr><th class="l" data-field="manager">Manager</th><th data-field="transfers">Transfers</th><th data-field="wc_transfers">Op Wildcard</th><th data-field="transfer_net">Netto punten</th><th data-field="hits">Hits</th><th class="l" data-field="best_transfer">Beste transfer (in)</th><th data-field="best_net">Netto</th><th class="l" data-field="worst_transfer">Slechtste transfer (in)</th><th data-field="worst_net">Netto</th></tr></thead>
+      <tbody data-draw="t-managers-t"></tbody>
+    </table></div>
+    <label class="ws-muted" for="ws-mgr">Toon transfers van</label>
+    <select class="dash-select" id="ws-mgr" data-draw="mgr-select" aria-label="Manager" data-source="managers"></select>
+    <div class="ws-scroll"><table data-source="transfers_league" data-row-key="key">
+      <thead><tr><th class="l" data-field="manager">Manager</th><th data-field="gw">GW</th><th class="l" data-field="out">Eruit</th><th class="l" data-field="into">Erin</th><th data-field="weeks">Weken</th><th data-field="pts_out">Punten eruit</th><th data-field="pts_in">Punten erin</th><th data-field="net">Netto</th><th data-field="hit">Hit</th><th class="l" data-field="chip">Chip</th><th class="l" data-field="kept_until">Gehouden tot</th></tr></thead>
+      <tbody data-draw="t-transfers-league"></tbody>
+    </table></div>
+  </section>
+
   <section class="ws-sec" id="team">
     <h2>Mijn team</h2>
     <p class="ws-muted">De 15 met status, minuten van de laatste drie speelweken, xP voor volgende week en de komende zes tegenstanders. Kleur: groen is makkelijk, rood is zwaar, op teamsterkte (model v0). T = thuis, U = uit. Grijze rijen staan op de bank.</p>
@@ -120,9 +161,9 @@
 
   <section class="ws-sec" id="potentie">
     <h2>Spelers met potentie</h2>
-    <p class="ws-muted">Hoogste xP over zes speelweken per positie, niet in onze 15, alleen vaste of waarschijnlijke starters. "In league" is het aantal rivalen dat hem heeft.</p>
+    <p class="ws-muted">De 20 spelers met de hoogste verwachte punten (xP) over de komende zes speelweken, gerangschikt op potentie, niet in onze 15, alleen vaste of waarschijnlijke starters. "In league" is het aantal rivalen dat hem heeft.</p>
     <div class="ws-scroll"><table data-source="potential" data-row-key="name">
-      <thead><tr><th class="l" data-field="name">Speler</th><th class="l" data-field="pos">Pos</th><th class="l" data-field="club">Club</th><th data-field="price">£</th><th data-field="xp_6">xP 6 GW</th><th data-field="xp_per_m">xP per £</th><th data-field="sel">Eigenaar %</th><th data-field="league_owners">In league</th><th class="l" data-field="fixtures">Tegenstanders</th></tr></thead>
+      <thead><tr><th data-field="rank">#</th><th class="l" data-field="name">Speler</th><th class="l" data-field="pos">Pos</th><th class="l" data-field="club">Club</th><th data-field="price">£</th><th data-field="xp_6">xP 6 GW</th><th data-field="xp_per_m">xP per £</th><th data-field="sel">Eigenaar %</th><th data-field="league_owners">In league</th><th class="l" data-field="fixtures">Tegenstanders</th></tr></thead>
       <tbody data-draw="t-potential"></tbody>
     </table></div>
   </section>
@@ -156,6 +197,10 @@ dash.loader('lastweek', {description: 'Takes the "lastweek" part of weekscherm.j
 dash.loader('decisions', {description: 'Takes the "decisions" part of weekscherm.json', fn: ({answer}) => answer.decisions});
 dash.loader('season', {description: 'Takes the "season" part of weekscherm.json', fn: ({answer}) => answer.season});
 dash.loader('indicators', {description: 'Takes the "indicators" part of weekscherm.json', fn: ({answer}) => answer.indicators});
+dash.loader('captains_league', {description: 'Takes the "captains_league" part of weekscherm.json', fn: ({answer}) => answer.captains_league});
+dash.loader('tc_used', {description: 'Takes the "tc_used" part of weekscherm.json', fn: ({answer}) => answer.tc_used});
+dash.loader('transfers_league', {description: 'Takes the "transfers_league" part of weekscherm.json', fn: ({answer}) => answer.transfers_league});
+dash.loader('managers', {description: 'Takes the "managers" part of weekscherm.json', fn: ({answer}) => answer.managers});
 dash.loader('phase', {description: 'Takes the "phase" part of weekscherm.json', fn: ({answer}) => answer.phase});
 </script>
 
@@ -247,7 +292,7 @@ dash.draw('t-transfers', (el) => wsRows(el, 'transfers', [
   {f: 'move', l: true}, {f: 'obj_delta'}, {f: 'next_gw_delta'}, {f: 'bank_after'}, {f: 'note', l: true}]));
 dash.draw('t-fixtures', (el) => wsRows(el, 'fixtures', [{f: 'club', l: true}, {f: 'strength'}, ...fixCols]));
 dash.draw('t-potential', (el) => wsRows(el, 'potential', [
-  {f: 'name', l: true}, {f: 'pos', l: true}, {f: 'club', l: true}, {f: 'price'}, {f: 'xp_6'}, {f: 'xp_per_m'},
+  {f: 'rank'}, {f: 'name', l: true}, {f: 'pos', l: true}, {f: 'club', l: true}, {f: 'price'}, {f: 'xp_6'}, {f: 'xp_per_m'},
   {f: 'sel'}, {f: 'league_owners'}, {f: 'fixtures', l: true}]));
 const ind = (r) => r.state === 'groen' || r.state === 'op koers' ? 'ok' : r.state === 'rood' || r.state === 'achter' ? 'bad' : 'warn';
 dash.draw('t-indicators', (el) => wsRows(el, 'indicators', [
@@ -290,5 +335,83 @@ dash.draw('season', (el) => {
       tip.property('hidden', false).style('left', Math.min(px + 12, el.clientWidth - 170) + 'px').style('top', (py + 8) + 'px')
         .text(`GW${r.gw}: wij ${r.points} · league ${r.league} · veld ${r.field}`);
     }).on('pointerleave', () => tip.property('hidden', true));
+});
+</script>
+
+<script>
+const sgn = (v) => (+v > 0 ? 'pos' : +v < 0 ? 'neg' : '');
+dash.draw('t-managers-c', (el) => wsRows(el, 'managers', [
+  {f: 'manager', l: true}, {f: 'captain_total'}, {f: 'haaland_weeks'}, {f: 'vs_always_haaland', cls: (r) => sgn(r.vs_always_haaland)},
+  {f: 'missed_vs_best'}, {f: 'tc_gw'}, {f: 'tc_captain', l: true}, {f: 'tc_extra'}], (tr, r) => { if (r.manager === 'Erik') tr.className = 'ws-me'; }));
+dash.draw('t-managers-t', (el) => wsRows(el, 'managers', [
+  {f: 'manager', l: true}, {f: 'transfers'}, {f: 'wc_transfers'}, {f: 'transfer_net', cls: (r) => sgn(r.transfer_net)}, {f: 'hits'},
+  {f: 'best_transfer', l: true}, {f: 'best_net'}, {f: 'worst_transfer', l: true}, {f: 'worst_net'}], (tr, r) => { if (r.manager === 'Erik') tr.className = 'ws-me'; }));
+const tcVerdict = (raw) => (+raw >= 10 ? 'goed' : +raw >= 6 ? 'matig' : 'slecht');
+dash.draw('t-tc', (el) => {
+  wsRows(el, 'tc_used', [{f: 'manager', l: true}, {f: 'gw'}, {f: 'captain', l: true}, {f: 'club', l: true}, {f: 'raw'}, {f: 'tc_extra'}, {f: 'haaland_pts'}],
+    (tr, r) => { const td = document.createElement('td'); td.className = 'l'; const sp = document.createElement('span');
+      const v = tcVerdict(r.raw); sp.className = 'ws-pill ' + (v === 'goed' ? 'ok' : v === 'matig' ? 'warn' : 'bad'); sp.textContent = v; td.appendChild(sp); tr.appendChild(td); });
+});
+dash.draw('capgrid-head', (el) => {
+  const g = dash.data('captains_league');
+  if (g.status !== 'ok') { el.replaceChildren(); return; }
+  const gws = [...new Set(g.data.map((r) => +r.gw))].sort((a, b) => a - b);
+  const tr = document.createElement('tr'); const th0 = document.createElement('th'); th0.className = 'l'; th0.textContent = 'Manager'; tr.appendChild(th0);
+  gws.forEach((w) => { const th = document.createElement('th'); th.className = 'l'; th.textContent = 'GW' + w; tr.appendChild(th); });
+  el.replaceChildren(tr);
+});
+dash.draw('capgrid', {
+  mount: (el) => {
+    const box = el.closest('.ws-chart'); const tip = document.createElement('div'); tip.className = 'ws-tip'; tip.hidden = true; box.appendChild(tip); return {tip, box};
+  },
+  update: (el, {tip, box}) => {
+    const g = dash.data('captains_league');
+    if (g.status !== 'ok') { el.replaceChildren(); return; }
+    const gws = [...new Set(g.data.map((r) => +r.gw))].sort((a, b) => a - b);
+    const mgrs = [...new Set(g.data.map((r) => r.manager))];
+    const by = new Map(g.data.map((r) => [r.manager + '|' + r.gw, r]));
+    const rows = mgrs.map((m) => {
+      const tr = document.createElement('tr'); if (m === 'Erik') tr.className = 'ws-me';
+      const th = document.createElement('td'); th.textContent = m; th.className = 'l'; tr.appendChild(th);
+      gws.forEach((w) => {
+        const r = by.get(m + '|' + w); const td = document.createElement('td');
+        if (r) {
+          td.classList.add(sgn(r.vs_haaland) || 'x'); if (r.chip === 'TC') td.classList.add('tc');
+          const n = document.createElement('span'); n.textContent = r.captain_pts;
+          n.setAttribute('data-source', 'captains_league'); n.setAttribute('data-field', 'captain_pts'); n.setAttribute('data-where', 'key=' + encodeURIComponent(r.key));
+          const sm = document.createElement('small'); sm.textContent = r.captain;
+          td.append(n, sm);
+          td.onpointerenter = (ev) => {
+            const b = box.getBoundingClientRect(), c = td.getBoundingClientRect();
+            tip.hidden = false; tip.style.left = Math.min(c.left - b.left + box.scrollLeft, box.clientWidth - 220) + 'px'; tip.style.top = (c.bottom - b.top + 4) + 'px';
+            tip.textContent = `${r.manager} GW${r.gw}: ${r.captain} ${r.raw} x${r.mult} = ${r.captain_pts}. Haaland zou ${r.haaland_pts} geven (${+r.vs_haaland >= 0 ? '+' : ''}${r.vs_haaland}). Beste in XI: ${r.best_pick} ${r.best_pts}.${r.note ? ' ' + r.note + '.' : ''}`;
+          };
+          td.onpointerleave = () => { tip.hidden = true; };
+        }
+        tr.appendChild(td);
+      });
+      return tr;
+    });
+    el.replaceChildren(...rows);
+  }
+});
+window.wsMgr = '';
+dash.draw('mgr-select', (sel) => {
+  const g = dash.data('managers');
+  sel.replaceChildren(new Option('Iedereen', ''), ...(g.status === 'ok' ? g.data : []).map((r) => new Option(r.manager)));
+  sel.value = window.wsMgr;
+  sel.onchange = () => { window.wsMgr = sel.value; dash.draw('t-transfers-league'); };
+});
+dash.draw('t-transfers-league', (el) => {
+  const g = dash.data('transfers_league');
+  if (g.status !== 'ok') { el.replaceChildren(); return; }
+  const cols = [{f: 'manager', l: true}, {f: 'gw'}, {f: 'out', l: true}, {f: 'into', l: true}, {f: 'weeks'}, {f: 'pts_out'}, {f: 'pts_in'},
+    {f: 'net', cls: (r) => sgn(r.net)}, {f: 'hit'}, {f: 'chip', l: true}, {f: 'kept_until', l: true}];
+  const rows = g.data.filter((r) => !window.wsMgr || r.manager === window.wsMgr).map((r) => {
+    const tr = document.createElement('tr'); tr.setAttribute('data-key', encodeURIComponent(r.key)); if (r.manager === 'Erik') tr.className = 'ws-me';
+    cols.forEach((c) => { const td = document.createElement('td'); if (c.l) td.className = 'l'; if (c.cls) { const k = c.cls(r); if (k) td.classList.add(k); } td.textContent = wsFmt(r[c.f]); tr.appendChild(td); });
+    return tr;
+  });
+  el.replaceChildren(...rows);
 });
 </script>

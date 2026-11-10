@@ -149,9 +149,8 @@ def main():
         pot.append(dict(name=x["name"], club=x["team"], pos=x["pos"], price=float(x["price"]), xp_6=float(x["xp_total"]),
                         xp_per_m=float(x["xp_per_m"]), sel=float(x["own_pct"]), league_owners=own.get(pid, 0),
                         fixtures=x["fixtures"]))
-    potential = []
-    for pos in ["GK", "DEF", "MID", "FWD"]:
-        potential += sorted([r for r in pot if r["pos"] == pos], key=lambda r: -r["xp_6"])[:4]
+    potential = sorted(pot, key=lambda r: -r["xp_6"])[:20]
+    for i, r in enumerate(potential): r["rank"] = i + 1
 
     # ---------- fixture ticker
     fixtures = []
@@ -218,7 +217,18 @@ def main():
                  snapshot=os.path.basename(snapf), xp_table=os.path.basename(xpf),
                  generated=dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%MZ"))]
 
-    allout = dict(meta=meta, league=league, team=teamrows, captains=captains, transfers=transfers,
+    # ---------- league analysis (scripts/league_analysis.py)
+    def rd(fn):
+        f = p("data/audit", fn)
+        return list(csv.DictReader(open(f))) if os.path.exists(f) else []
+    captains_league = rd("captains.csv")
+    for r in captains_league: r["key"] = f"{r['manager']} GW{r['gw']}"
+    tc_used = [r for r in captains_league if r["chip"] == "TC"]
+    transfers_league = sorted(rd("transfers_league.csv"), key=lambda r: (-int(r["gw"]), r["manager"]))
+    for r in transfers_league: r["key"] = f"{r['manager']} GW{r['gw']} {r['out']}>{r['into']}"
+    managers = sorted(rd("managers.csv"), key=lambda r: -int(r["captain_total"]))
+
+    allout = dict(captains_league=captains_league, tc_used=tc_used, transfers_league=transfers_league, managers=managers, meta=meta, league=league, team=teamrows, captains=captains, transfers=transfers,
                   potential=potential, fixtures=fixtures, lastweek=lastweek, decisions=decisions,
                   season=season, indicators=indicators, phase=phase)
     os.makedirs(p("data/dashboard"), exist_ok=True)
