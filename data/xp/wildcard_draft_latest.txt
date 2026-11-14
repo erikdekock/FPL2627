@@ -1,6 +1,6 @@
 Running HiGHS 1.16.0 (git hash: f3f113d): Copyright (c) 2026 under MIT licence terms
 Includes third-party software components, see THIRD_PARTY_NOTICES.md for full details
-xp table xp_gw11-16.csv · snapshot fpl_2026-11-13T173701Z.json · horizon GW11-16 · team value £99.9
+xp table xp_gw11-16.csv · snapshot fpl_2026-11-14T162922Z.json · horizon GW11-16 · team value £99.9
 
 === WILDCARD draft · min tag likely · cost £99.6 of £99.6 (bank £0.0) ===
 pos name          team £     tag      own%   gw11   gw12   gw13   gw14   gw15   gw16    dec
