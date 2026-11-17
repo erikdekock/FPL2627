@@ -6025,9 +6025,9 @@
    "last_points": 123,
    "last_avg": 55,
    "last_lesson": "Erik's conviction B has beaten Claude's A four times in a row.",
-   "snapshot": "fpl_2026-11-09T203722Z.json",
-   "xp_table": "xp_gw11-16.csv",
-   "generated": "2026-11-10T13:46Z"
+   "snapshot": "fpl_2026-11-16T201408Z.json",
+   "xp_table": "xp_gw11-19.csv",
+   "generated": "2026-11-17T14:27Z"
   }
  ],
  "league": [
@@ -6167,9 +6167,9 @@
    "pts": 54,
    "form": 6.0,
    "xp_next": 4.72,
-   "xp_6": 31.13,
+   "xp_6": 47.07,
    "league_owners": 0,
-   "sel": 6.4,
+   "sel": 6.5,
    "bench": 0,
    "f1": "CHE(A)",
    "d1": 5,
@@ -6182,7 +6182,13 @@
    "f5": "LIV(A)",
    "d5": 5,
    "f6": "FUL(H)",
-   "d6": 3
+   "d6": 3,
+   "f7": "AVL(A)",
+   "d7": 3,
+   "f8": "HUL(A)",
+   "d8": 3,
+   "f9": "EVE(H)",
+   "d9": 3
   },
   {
    "slot": 2,
@@ -6196,11 +6202,11 @@
    "tag": "nailed",
    "min_last3": "90 90 90",
    "pts": 56,
-   "form": 2.6,
+   "form": 3.3,
    "xp_next": 3.96,
-   "xp_6": 25.01,
+   "xp_6": 38.3,
    "league_owners": 0,
-   "sel": 19.3,
+   "sel": 19.2,
    "bench": 0,
    "f1": "BRE(A)",
    "d1": 4,
@@ -6213,7 +6219,13 @@
    "f5": "BHA(A)",
    "d5": 5,
    "f6": "NFO(A)",
-   "d6": 4
+   "d6": 4,
+   "f7": "SUN(H)",
+   "d7": 2,
+   "f8": "MCI(H)",
+   "d8": 4,
+   "f9": "LEE(A)",
+   "d9": 4
   },
   {
    "slot": 3,
@@ -6229,9 +6241,9 @@
    "pts": 75,
    "form": 5.5,
    "xp_next": 5.26,
-   "xp_6": 33.25,
+   "xp_6": 49.65,
    "league_owners": 7,
-   "sel": 47.6,
+   "sel": 48.0,
    "bench": 0,
    "f1": "HUL(A)",
    "d1": 3,
@@ -6244,7 +6256,13 @@
    "f5": "EVE(H)",
    "d5": 3,
    "f6": "IPS(H)",
-   "d6": 2
+   "d6": 2,
+   "f7": "FUL(A)",
+   "d7": 4,
+   "f8": "TOT(A)",
+   "d8": 4,
+   "f9": "MUN(H)",
+   "d9": 2
   },
   {
    "slot": 4,
@@ -6260,9 +6278,9 @@
    "pts": 56,
    "form": 6.8,
    "xp_next": 4.34,
-   "xp_6": 29.04,
+   "xp_6": 43.9,
    "league_owners": 2,
-   "sel": 6.4,
+   "sel": 6.5,
    "bench": 0,
    "f1": "CHE(A)",
    "d1": 5,
@@ -6275,7 +6293,13 @@
    "f5": "LIV(A)",
    "d5": 5,
    "f6": "FUL(H)",
-   "d6": 3
+   "d6": 3,
+   "f7": "AVL(A)",
+   "d7": 3,
+   "f8": "HUL(A)",
+   "d8": 3,
+   "f9": "EVE(H)",
+   "d9": 3
   },
   {
    "slot": 5,
@@ -6291,9 +6315,9 @@
    "pts": 70,
    "form": 4.2,
    "xp_next": 4.89,
-   "xp_6": 31.75,
+   "xp_6": 47.56,
    "league_owners": 7,
-   "sel": 47.9,
+   "sel": 48.2,
    "bench": 0,
    "f1": "HUL(A)",
    "d1": 3,
@@ -6306,7 +6330,13 @@
    "f5": "EVE(H)",
    "d5": 3,
    "f6": "IPS(H)",
-   "d6": 2
+   "d6": 2,
+   "f7": "FUL(A)",
+   "d7": 4,
+   "f8": "TOT(A)",
+   "d8": 4,
+   "f9": "MUN(H)",
+   "d9": 2
   },
   {
    "slot": 6,
@@ -6322,9 +6352,9 @@
    "pts": 46,
    "form": 3.2,
    "xp_next": 4.58,
-   "xp_6": 30.83,
+   "xp_6": 46.62,
    "league_owners": 1,
-   "sel": 19.3,
+   "sel": 19.0,
    "bench": 0,
    "f1": "LIV(A)",
    "d1": 5,
@@ -6337,7 +6367,13 @@
    "f5": "CRY(A)",
    "d5": 3,
    "f6": "ARS(A)",
-   "d6": 5
+   "d6": 5,
+   "f7": "NFO(H)",
+   "d7": 3,
+   "f8": "SUN(H)",
+   "d8": 2,
+   "f9": "BHA(A)",
+   "d9": 5
   },
   {
    "slot": 7,
@@ -6353,9 +6389,9 @@
    "pts": 58,
    "form": 6.5,
    "xp_next": 5.97,
-   "xp_6": 34.36,
+   "xp_6": 52.25,
    "league_owners": 4,
-   "sel": 31.1,
+   "sel": 31.5,
    "bench": 0,
    "f1": "NFO(H)",
    "d1": 3,
@@ -6368,7 +6404,13 @@
    "f5": "ARS(A)",
    "d5": 5,
    "f6": "COV(H)",
-   "d6": 1
+   "d6": 1,
+   "f7": "TOT(A)",
+   "d7": 4,
+   "f8": "CRY(A)",
+   "d8": 3,
+   "f9": "AVL(H)",
+   "d9": 2
   },
   {
    "slot": 8,
@@ -6384,7 +6426,7 @@
    "pts": 50,
    "form": 5.0,
    "xp_next": 5.17,
-   "xp_6": 31.19,
+   "xp_6": 47.16,
    "league_owners": 3,
    "sel": 16.5,
    "bench": 0,
@@ -6399,7 +6441,13 @@
    "f5": "BOU(H)",
    "d5": 4,
    "f6": "MUN(H)",
-   "d6": 2
+   "d6": 2,
+   "f7": "CRY(A)",
+   "d7": 3,
+   "f8": "FUL(A)",
+   "d8": 4,
+   "f9": "IPS(H)",
+   "d9": 2
   },
   {
    "slot": 9,
@@ -6413,11 +6461,11 @@
    "tag": "nailed",
    "min_last3": "90 79 90",
    "pts": 55,
-   "form": 7.0,
+   "form": 9.0,
    "xp_next": 5.39,
-   "xp_6": 33.5,
+   "xp_6": 51.43,
    "league_owners": 1,
-   "sel": 10.5,
+   "sel": 10.8,
    "bench": 0,
    "f1": "BRE(A)",
    "d1": 4,
@@ -6430,7 +6478,13 @@
    "f5": "BHA(A)",
    "d5": 5,
    "f6": "NFO(A)",
-   "d6": 4
+   "d6": 4,
+   "f7": "SUN(H)",
+   "d7": 2,
+   "f8": "MCI(H)",
+   "d8": 4,
+   "f9": "LEE(A)",
+   "d9": 4
   },
   {
    "slot": 10,
@@ -6444,11 +6498,11 @@
    "tag": "nailed",
    "min_last3": "90 90 90",
    "pts": 70,
-   "form": 6.2,
+   "form": 4.0,
    "xp_next": 6.76,
-   "xp_6": 37.34,
+   "xp_6": 56.18,
    "league_owners": 9,
-   "sel": 78.9,
+   "sel": 78.8,
    "bench": 0,
    "f1": "FUL(H)",
    "d1": 3,
@@ -6461,7 +6515,13 @@
    "f5": "CHE(H)",
    "d5": 4,
    "f6": "HUL(H)",
-   "d6": 2
+   "d6": 2,
+   "f7": "NEW(A)",
+   "d7": 3,
+   "f8": "EVE(A)",
+   "d8": 4,
+   "f9": "TOT(H)",
+   "d9": 3
   },
   {
    "slot": 11,
@@ -6475,11 +6535,11 @@
    "tag": "nailed",
    "min_last3": "76 90 90",
    "pts": 61,
-   "form": 5.6,
+   "form": 6.3,
    "xp_next": 6.33,
-   "xp_6": 32.77,
+   "xp_6": 49.19,
    "league_owners": 0,
-   "sel": 24.9,
+   "sel": 25.2,
    "bench": 0,
    "f1": "MUN(H)",
    "d1": 2,
@@ -6492,7 +6552,13 @@
    "f5": "LEE(H)",
    "d5": 3,
    "f6": "TOT(H)",
-   "d6": 3
+   "d6": 3,
+   "f7": "HUL(A)",
+   "d7": 3,
+   "f8": "AVL(A)",
+   "d8": 3,
+   "f9": "COV(H)",
+   "d9": 1
   },
   {
    "slot": 12,
@@ -6506,11 +6572,11 @@
    "tag": "nailed",
    "min_last3": "90 90 90",
    "pts": 49,
-   "form": 3.0,
+   "form": 3.3,
    "xp_next": 4.08,
-   "xp_6": 26.58,
+   "xp_6": 40.96,
    "league_owners": 2,
-   "sel": 13.5,
+   "sel": 13.4,
    "bench": 1,
    "f1": "BHA(H)",
    "d1": 5,
@@ -6523,7 +6589,13 @@
    "f5": "TOT(H)",
    "d5": 3,
    "f6": "MCI(A)",
-   "d6": 5
+   "d6": 5,
+   "f7": "LIV(H)",
+   "d7": 4,
+   "f8": "LEE(H)",
+   "d8": 3,
+   "f9": "SUN(A)",
+   "d9": 3
   },
   {
    "slot": 13,
@@ -6539,9 +6611,9 @@
    "pts": 70,
    "form": 7.5,
    "xp_next": 5.1,
-   "xp_6": 31.05,
+   "xp_6": 46.38,
    "league_owners": 0,
-   "sel": 8.9,
+   "sel": 9.6,
    "bench": 1,
    "f1": "HUL(A)",
    "d1": 3,
@@ -6554,7 +6626,13 @@
    "f5": "EVE(H)",
    "d5": 3,
    "f6": "IPS(H)",
-   "d6": 2
+   "d6": 2,
+   "f7": "FUL(A)",
+   "d7": 4,
+   "f8": "TOT(A)",
+   "d8": 4,
+   "f9": "MUN(H)",
+   "d9": 2
   },
   {
    "slot": 14,
@@ -6568,9 +6646,9 @@
    "tag": "nailed",
    "min_last3": "73 74 90",
    "pts": 40,
-   "form": 5.5,
+   "form": 3.7,
    "xp_next": 4.18,
-   "xp_6": 26.12,
+   "xp_6": 38.79,
    "league_owners": 0,
    "sel": 1.5,
    "bench": 1,
@@ -6585,7 +6663,13 @@
    "f5": "BRE(H)",
    "d5": 3,
    "f6": "LEE(A)",
-   "d6": 4
+   "d6": 4,
+   "f7": "BHA(H)",
+   "d7": 5,
+   "f8": "ARS(H)",
+   "d8": 5,
+   "f9": "NFO(A)",
+   "d9": 4
   },
   {
    "slot": 15,
@@ -6601,7 +6685,7 @@
    "pts": 58,
    "form": 3.8,
    "xp_next": 3.93,
-   "xp_6": 27.67,
+   "xp_6": 41.65,
    "league_owners": 2,
    "sel": 11.2,
    "bench": 1,
@@ -6616,7 +6700,13 @@
    "f5": "LIV(A)",
    "d5": 5,
    "f6": "FUL(H)",
-   "d6": 3
+   "d6": 3,
+   "f7": "AVL(A)",
+   "d7": 3,
+   "f8": "HUL(A)",
+   "d8": 3,
+   "f9": "EVE(H)",
+   "d9": 3
   }
  ],
  "captains": [
@@ -6688,15 +6778,15 @@
   {
    "rank": 1,
    "move": "Tarkowski → Van Hecke TOT",
-   "obj_delta": 2.9,
+   "obj_delta": 3.0,
    "next_gw_delta": 1.3,
    "bank_after": 1.2,
-   "note": "sell £6.2, buy £5.1, owned by 14.3%"
+   "note": "sell £6.2, buy £5.1, owned by 14.4%"
   },
   {
    "rank": 2,
    "move": "Tarkowski → Hill BOU",
-   "obj_delta": 1.9,
+   "obj_delta": 2.0,
    "next_gw_delta": 0.9,
    "bank_after": 0.7,
    "note": "sell £6.2, buy £5.6, owned by 2.9%"
@@ -6704,10 +6794,10 @@
   {
    "rank": 3,
    "move": "Muharemović → Van Hecke TOT",
-   "obj_delta": 1.6,
+   "obj_delta": 1.3,
    "next_gw_delta": 1.3,
    "bank_after": 0.0,
-   "note": "sell £5.0, buy £5.1, owned by 14.3%"
+   "note": "sell £5.0, buy £5.1, owned by 14.4%"
   },
   {
    "rank": 4,
@@ -6720,7 +6810,7 @@
   {
    "rank": 5,
    "move": "Tarkowski → Jacquet LIV",
-   "obj_delta": 0.5,
+   "obj_delta": 0.4,
    "next_gw_delta": 0.1,
    "bank_after": 1.2,
    "note": "sell £6.2, buy £5.1, owned by 4.6%"
@@ -6728,7 +6818,7 @@
   {
    "rank": 6,
    "move": "Iwobi → McGinn AVL",
-   "obj_delta": 0.4,
+   "obj_delta": 0.3,
    "next_gw_delta": 0.3,
    "bank_after": 0.1,
    "note": "sell £5.4, buy £5.4, owned by 3.5%"
@@ -6736,7 +6826,7 @@
   {
    "rank": 7,
    "move": "Tarkowski → Murillo NFO",
-   "obj_delta": 0.3,
+   "obj_delta": 0.2,
    "next_gw_delta": 0.0,
    "bank_after": 0.8,
    "note": "sell £6.2, buy £5.5, owned by 2.0%"
@@ -6744,7 +6834,7 @@
   {
    "rank": 8,
    "move": "Ødegaard → E.Le Fée SUN",
-   "obj_delta": 0.3,
+   "obj_delta": 0.2,
    "next_gw_delta": -0.0,
    "bank_after": 1.1,
    "note": "sell £6.7, buy £5.7, owned by 2.7%"
@@ -6756,11 +6846,11 @@
    "club": "ARS",
    "pos": "DEF",
    "price": 8.1,
-   "xp_6": 32.7,
-   "xp_per_m": 2.71,
-   "sel": 25.9,
+   "xp_6": 49.65,
+   "xp_per_m": 3.33,
+   "sel": 26.0,
    "league_owners": 1,
-   "fixtures": "NEW(A) MCI(H) BRE(A) TOT(A) BOU(H) MUN(H)",
+   "fixtures": "NEW(A) MCI(H) BRE(A) TOT(A) BOU(H) MUN(H) CRY(A) FUL(A) IPS(H)",
    "rank": 1
   },
   {
@@ -6768,23 +6858,23 @@
    "club": "SUN",
    "pos": "MID",
    "price": 5.7,
-   "xp_6": 31.91,
-   "xp_per_m": 3.73,
+   "xp_6": 47.54,
+   "xp_per_m": 4.54,
    "sel": 2.7,
    "league_owners": 0,
-   "fixtures": "AVL(A) TOT(H) LIV(A) NEW(A) NFO(H) CRY(H)",
+   "fixtures": "AVL(A) TOT(H) LIV(A) NEW(A) NFO(H) CRY(H) EVE(A) MUN(A) HUL(H)",
    "rank": 2
   },
   {
-   "name": "Van Hecke",
-   "club": "TOT",
-   "pos": "DEF",
-   "price": 5.1,
-   "xp_6": 30.7,
-   "xp_per_m": 4.15,
-   "sel": 14.3,
-   "league_owners": 3,
-   "fixtures": "IPS(H) SUN(A) FUL(H) ARS(H) HUL(A) LIV(A)",
+   "name": "Evanilson",
+   "club": "BOU",
+   "pos": "FWD",
+   "price": 6.5,
+   "xp_6": 45.33,
+   "xp_per_m": 3.79,
+   "sel": 23.3,
+   "league_owners": 6,
+   "fixtures": "NFO(H) FUL(A) BHA(H) HUL(H) ARS(A) COV(H) TOT(A) CRY(A) AVL(H)",
    "rank": 3
   },
   {
@@ -6792,23 +6882,23 @@
    "club": "BOU",
    "pos": "DEF",
    "price": 5.6,
-   "xp_6": 29.83,
-   "xp_per_m": 3.59,
+   "xp_6": 44.83,
+   "xp_per_m": 4.38,
    "sel": 2.9,
    "league_owners": 0,
-   "fixtures": "NFO(H) FUL(A) BHA(H) HUL(H) ARS(A) COV(H)",
+   "fixtures": "NFO(H) FUL(A) BHA(H) HUL(H) ARS(A) COV(H) TOT(A) CRY(A) AVL(H)",
    "rank": 4
   },
   {
-   "name": "Evanilson",
-   "club": "BOU",
-   "pos": "FWD",
-   "price": 6.5,
-   "xp_6": 29.82,
-   "xp_per_m": 3.09,
-   "sel": 23.3,
-   "league_owners": 6,
-   "fixtures": "NFO(H) FUL(A) BHA(H) HUL(H) ARS(A) COV(H)",
+   "name": "Van Hecke",
+   "club": "TOT",
+   "pos": "DEF",
+   "price": 5.1,
+   "xp_6": 44.44,
+   "xp_per_m": 4.96,
+   "sel": 14.4,
+   "league_owners": 3,
+   "fixtures": "IPS(H) SUN(A) FUL(H) ARS(H) HUL(A) LIV(A) BOU(H) BHA(H) MCI(A)",
    "rank": 5
   },
   {
@@ -6816,59 +6906,59 @@
    "club": "BOU",
    "pos": "DEF",
    "price": 5.1,
-   "xp_6": 28.52,
-   "xp_per_m": 3.76,
+   "xp_6": 42.96,
+   "xp_per_m": 4.6,
    "sel": 3.6,
    "league_owners": 1,
-   "fixtures": "NFO(H) FUL(A) BHA(H) HUL(H) ARS(A) COV(H)",
+   "fixtures": "NFO(H) FUL(A) BHA(H) HUL(H) ARS(A) COV(H) TOT(A) CRY(A) AVL(H)",
    "rank": 6
-  },
-  {
-   "name": "N.Jackson",
-   "club": "AVL",
-   "pos": "FWD",
-   "price": 7.1,
-   "xp_6": 28.01,
-   "xp_per_m": 2.69,
-   "sel": 30.4,
-   "league_owners": 6,
-   "fixtures": "SUN(H) IPS(A) EVE(H) CRY(H) COV(A) CHE(A)",
-   "rank": 7
   },
   {
    "name": "B.Fernandes",
    "club": "MUN",
    "pos": "MID",
    "price": 11.6,
-   "xp_6": 27.98,
-   "xp_per_m": 1.63,
+   "xp_6": 42.33,
+   "xp_per_m": 2.01,
    "sel": 20.4,
    "league_owners": 0,
-   "fixtures": "LIV(A) BRE(H) NEW(A) COV(H) CRY(A) ARS(A)",
-   "rank": 8
+   "fixtures": "LIV(A) BRE(H) NEW(A) COV(H) CRY(A) ARS(A) NFO(H) SUN(H) BHA(A)",
+   "rank": 7
   },
   {
    "name": "Gibbs-White",
    "club": "NFO",
    "pos": "MID",
    "price": 7.8,
-   "xp_6": 27.11,
-   "xp_per_m": 2.33,
+   "xp_6": 41.39,
+   "xp_per_m": 2.88,
    "sel": 9.3,
    "league_owners": 0,
-   "fixtures": "BOU(A) CHE(H) HUL(A) BHA(H) SUN(A) EVE(H)",
-   "rank": 9
+   "fixtures": "BOU(A) CHE(H) HUL(A) BHA(H) SUN(A) EVE(H) MUN(A) NEW(A) FUL(H)",
+   "rank": 8
   },
   {
    "name": "Rogers",
    "club": "CHE",
    "pos": "MID",
    "price": 8.2,
-   "xp_6": 27.04,
-   "xp_per_m": 2.21,
+   "xp_6": 41.01,
+   "xp_per_m": 2.72,
    "sel": 53.9,
    "league_owners": 8,
-   "fixtures": "LEE(H) NFO(A) CRY(H) LIV(H) MCI(A) AVL(H)",
+   "fixtures": "LEE(H) NFO(A) CRY(H) LIV(H) MCI(A) AVL(H) COV(A) IPS(A) NEW(H)",
+   "rank": 9
+  },
+  {
+   "name": "N.Jackson",
+   "club": "AVL",
+   "pos": "FWD",
+   "price": 7.1,
+   "xp_6": 40.97,
+   "xp_per_m": 3.24,
+   "sel": 30.5,
+   "league_owners": 6,
+   "fixtures": "SUN(H) IPS(A) EVE(H) CRY(H) COV(A) CHE(A) LEE(H) LIV(H) BOU(A)",
    "rank": 10
   },
   {
@@ -6876,35 +6966,35 @@
    "club": "ARS",
    "pos": "GK",
    "price": 6.2,
-   "xp_6": 26.85,
-   "xp_per_m": 2.91,
+   "xp_6": 40.75,
+   "xp_per_m": 3.58,
    "sel": 47.4,
    "league_owners": 4,
-   "fixtures": "NEW(A) MCI(H) BRE(A) TOT(A) BOU(H) MUN(H)",
+   "fixtures": "NEW(A) MCI(H) BRE(A) TOT(A) BOU(H) MUN(H) CRY(A) FUL(A) IPS(H)",
    "rank": 11
-  },
-  {
-   "name": "McGinn",
-   "club": "AVL",
-   "pos": "MID",
-   "price": 5.4,
-   "xp_6": 26.71,
-   "xp_per_m": 3.38,
-   "sel": 3.5,
-   "league_owners": 0,
-   "fixtures": "SUN(H) IPS(A) EVE(H) CRY(H) COV(A) CHE(A)",
-   "rank": 12
   },
   {
    "name": "Dewsbury-Hall",
    "club": "EVE",
    "pos": "MID",
    "price": 6.6,
-   "xp_6": 26.63,
-   "xp_per_m": 2.74,
+   "xp_6": 40.63,
+   "xp_per_m": 3.38,
    "sel": 7.1,
    "league_owners": 1,
-   "fixtures": "BRE(A) LIV(H) AVL(A) FUL(H) BHA(A) NFO(A)",
+   "fixtures": "BRE(A) LIV(H) AVL(A) FUL(H) BHA(A) NFO(A) SUN(H) MCI(H) LEE(A)",
+   "rank": 12
+  },
+  {
+   "name": "Murillo",
+   "club": "NFO",
+   "pos": "DEF",
+   "price": 5.5,
+   "xp_6": 40.16,
+   "xp_per_m": 3.94,
+   "sel": 2.0,
+   "league_owners": 0,
+   "fixtures": "BOU(A) CHE(H) HUL(A) BHA(H) SUN(A) EVE(H) MUN(A) NEW(A) FUL(H)",
    "rank": 13
   },
   {
@@ -6912,59 +7002,59 @@
    "club": "LEE",
    "pos": "DEF",
    "price": 4.5,
-   "xp_6": 26.58,
-   "xp_per_m": 3.96,
+   "xp_6": 40.15,
+   "xp_per_m": 4.85,
    "sel": 2.4,
    "league_owners": 0,
-   "fixtures": "CHE(A) COV(H) MCI(A) IPS(H) LIV(A) FUL(H)",
+   "fixtures": "CHE(A) COV(H) MCI(A) IPS(H) LIV(A) FUL(H) AVL(A) HUL(A) EVE(H)",
    "rank": 14
-  },
-  {
-   "name": "Verbruggen",
-   "club": "BHA",
-   "pos": "GK",
-   "price": 4.6,
-   "xp_6": 26.47,
-   "xp_per_m": 3.89,
-   "sel": 23.9,
-   "league_owners": 6,
-   "fixtures": "HUL(A) NEW(H) BOU(A) NFO(A) EVE(H) IPS(H)",
-   "rank": 15
-  },
-  {
-   "name": "Murillo",
-   "club": "NFO",
-   "pos": "DEF",
-   "price": 5.5,
-   "xp_6": 26.44,
-   "xp_per_m": 3.2,
-   "sel": 2.0,
-   "league_owners": 0,
-   "fixtures": "BOU(A) CHE(H) HUL(A) BHA(H) SUN(A) EVE(H)",
-   "rank": 16
   },
   {
    "name": "Calafiori",
    "club": "ARS",
    "pos": "DEF",
    "price": 5.9,
-   "xp_6": 26.12,
-   "xp_per_m": 2.96,
+   "xp_6": 39.72,
+   "xp_per_m": 3.65,
    "sel": 48.7,
    "league_owners": 8,
-   "fixtures": "NEW(A) MCI(H) BRE(A) TOT(A) BOU(H) MUN(H)",
-   "rank": 17
+   "fixtures": "NEW(A) MCI(H) BRE(A) TOT(A) BOU(H) MUN(H) CRY(A) FUL(A) IPS(H)",
+   "rank": 15
+  },
+  {
+   "name": "Verbruggen",
+   "club": "BHA",
+   "pos": "GK",
+   "price": 4.6,
+   "xp_6": 39.51,
+   "xp_per_m": 4.73,
+   "sel": 23.9,
+   "league_owners": 6,
+   "fixtures": "HUL(A) NEW(H) BOU(A) NFO(A) EVE(H) IPS(H) FUL(A) TOT(A) MUN(H)",
+   "rank": 16
   },
   {
    "name": "Jacquet",
    "club": "LIV",
    "pos": "DEF",
    "price": 5.1,
-   "xp_6": 25.97,
-   "xp_per_m": 3.42,
+   "xp_6": 39.15,
+   "xp_per_m": 4.19,
    "sel": 4.6,
    "league_owners": 2,
-   "fixtures": "MUN(H) EVE(A) SUN(H) CHE(A) LEE(H) TOT(H)",
+   "fixtures": "MUN(H) EVE(A) SUN(H) CHE(A) LEE(H) TOT(H) HUL(A) AVL(A) COV(H)",
+   "rank": 17
+  },
+  {
+   "name": "McGinn",
+   "club": "AVL",
+   "pos": "MID",
+   "price": 5.4,
+   "xp_6": 38.99,
+   "xp_per_m": 4.06,
+   "sel": 3.5,
+   "league_owners": 0,
+   "fixtures": "SUN(H) IPS(A) EVE(H) CRY(H) COV(A) CHE(A) LEE(H) LIV(H) BOU(A)",
    "rank": 18
   },
   {
@@ -6972,11 +7062,11 @@
    "club": "LEE",
    "pos": "FWD",
    "price": 6.0,
-   "xp_6": 25.55,
-   "xp_per_m": 2.87,
-   "sel": 17.8,
+   "xp_6": 37.92,
+   "xp_per_m": 3.49,
+   "sel": 17.7,
    "league_owners": 3,
-   "fixtures": "CHE(A) COV(H) MCI(A) IPS(H) LIV(A) FUL(H)",
+   "fixtures": "CHE(A) COV(H) MCI(A) IPS(H) LIV(A) FUL(H) AVL(A) HUL(A) EVE(H)",
    "rank": 19
   },
   {
@@ -6984,11 +7074,11 @@
    "club": "LIV",
    "pos": "GK",
    "price": 5.5,
-   "xp_6": 24.81,
-   "xp_per_m": 3.02,
+   "xp_6": 37.39,
+   "xp_per_m": 3.7,
    "sel": 4.1,
    "league_owners": 0,
-   "fixtures": "MUN(H) EVE(A) SUN(H) CHE(A) LEE(H) TOT(H)",
+   "fixtures": "MUN(H) EVE(A) SUN(H) CHE(A) LEE(H) TOT(H) HUL(A) AVL(A) COV(H)",
    "rank": 20
   }
  ],
@@ -7007,7 +7097,13 @@
    "f5": "BOU(H)",
    "d5": 4,
    "f6": "MUN(H)",
-   "d6": 2
+   "d6": 2,
+   "f7": "CRY(A)",
+   "d7": 3,
+   "f8": "FUL(A)",
+   "d8": 4,
+   "f9": "IPS(H)",
+   "d9": 2
   },
   {
    "club": "AVL",
@@ -7023,7 +7119,13 @@
    "f5": "COV(A)",
    "d5": 2,
    "f6": "CHE(A)",
-   "d6": 5
+   "d6": 5,
+   "f7": "LEE(H)",
+   "d7": 3,
+   "f8": "LIV(H)",
+   "d8": 4,
+   "f9": "BOU(A)",
+   "d9": 5
   },
   {
    "club": "BHA",
@@ -7039,7 +7141,13 @@
    "f5": "EVE(H)",
    "d5": 3,
    "f6": "IPS(H)",
-   "d6": 2
+   "d6": 2,
+   "f7": "FUL(A)",
+   "d7": 4,
+   "f8": "TOT(A)",
+   "d8": 4,
+   "f9": "MUN(H)",
+   "d9": 2
   },
   {
    "club": "BOU",
@@ -7055,7 +7163,13 @@
    "f5": "ARS(A)",
    "d5": 5,
    "f6": "COV(H)",
-   "d6": 1
+   "d6": 1,
+   "f7": "TOT(A)",
+   "d7": 4,
+   "f8": "CRY(A)",
+   "d8": 3,
+   "f9": "AVL(H)",
+   "d9": 2
   },
   {
    "club": "BRE",
@@ -7071,7 +7185,13 @@
    "f5": "FUL(A)",
    "d5": 4,
    "f6": "NEW(H)",
-   "d6": 2
+   "d6": 2,
+   "f7": "IPS(A)",
+   "d7": 3,
+   "f8": "COV(A)",
+   "d8": 2,
+   "f9": "CRY(H)",
+   "d9": 2
   },
   {
    "club": "CHE",
@@ -7087,7 +7207,13 @@
    "f5": "MCI(A)",
    "d5": 5,
    "f6": "AVL(H)",
-   "d6": 2
+   "d6": 2,
+   "f7": "COV(A)",
+   "d7": 2,
+   "f8": "IPS(A)",
+   "d8": 3,
+   "f9": "NEW(H)",
+   "d9": 2
   },
   {
    "club": "COV",
@@ -7103,7 +7229,13 @@
    "f5": "AVL(H)",
    "d5": 2,
    "f6": "BOU(A)",
-   "d6": 5
+   "d6": 5,
+   "f7": "CHE(H)",
+   "d7": 4,
+   "f8": "BRE(H)",
+   "d8": 3,
+   "f9": "LIV(A)",
+   "d9": 5
   },
   {
    "club": "CRY",
@@ -7119,7 +7251,13 @@
    "f5": "MUN(H)",
    "d5": 2,
    "f6": "SUN(A)",
-   "d6": 3
+   "d6": 3,
+   "f7": "ARS(H)",
+   "d7": 5,
+   "f8": "BOU(H)",
+   "d8": 4,
+   "f9": "BRE(A)",
+   "d9": 4
   },
   {
    "club": "EVE",
@@ -7135,7 +7273,13 @@
    "f5": "BHA(A)",
    "d5": 5,
    "f6": "NFO(A)",
-   "d6": 4
+   "d6": 4,
+   "f7": "SUN(H)",
+   "d7": 2,
+   "f8": "MCI(H)",
+   "d8": 4,
+   "f9": "LEE(A)",
+   "d9": 4
   },
   {
    "club": "FUL",
@@ -7151,7 +7295,13 @@
    "f5": "BRE(H)",
    "d5": 3,
    "f6": "LEE(A)",
-   "d6": 4
+   "d6": 4,
+   "f7": "BHA(H)",
+   "d7": 5,
+   "f8": "ARS(H)",
+   "d8": 5,
+   "f9": "NFO(A)",
+   "d9": 4
   },
   {
    "club": "HUL",
@@ -7167,7 +7317,13 @@
    "f5": "TOT(H)",
    "d5": 3,
    "f6": "MCI(A)",
-   "d6": 5
+   "d6": 5,
+   "f7": "LIV(H)",
+   "d7": 4,
+   "f8": "LEE(H)",
+   "d8": 3,
+   "f9": "SUN(A)",
+   "d9": 3
   },
   {
    "club": "IPS",
@@ -7183,7 +7339,13 @@
    "f5": "NEW(H)",
    "d5": 2,
    "f6": "BHA(A)",
-   "d6": 5
+   "d6": 5,
+   "f7": "BRE(H)",
+   "d7": 3,
+   "f8": "CHE(H)",
+   "d8": 4,
+   "f9": "ARS(A)",
+   "d9": 5
   },
   {
    "club": "LEE",
@@ -7199,7 +7361,13 @@
    "f5": "LIV(A)",
    "d5": 5,
    "f6": "FUL(H)",
-   "d6": 3
+   "d6": 3,
+   "f7": "AVL(A)",
+   "d7": 3,
+   "f8": "HUL(A)",
+   "d8": 3,
+   "f9": "EVE(H)",
+   "d9": 3
   },
   {
    "club": "LIV",
@@ -7215,7 +7383,13 @@
    "f5": "LEE(H)",
    "d5": 3,
    "f6": "TOT(H)",
-   "d6": 3
+   "d6": 3,
+   "f7": "HUL(A)",
+   "d7": 3,
+   "f8": "AVL(A)",
+   "d8": 3,
+   "f9": "COV(H)",
+   "d9": 1
   },
   {
    "club": "MCI",
@@ -7231,7 +7405,13 @@
    "f5": "CHE(H)",
    "d5": 4,
    "f6": "HUL(H)",
-   "d6": 2
+   "d6": 2,
+   "f7": "NEW(A)",
+   "d7": 3,
+   "f8": "EVE(A)",
+   "d8": 4,
+   "f9": "TOT(H)",
+   "d9": 3
   },
   {
    "club": "MUN",
@@ -7247,7 +7427,13 @@
    "f5": "CRY(A)",
    "d5": 3,
    "f6": "ARS(A)",
-   "d6": 5
+   "d6": 5,
+   "f7": "NFO(H)",
+   "d7": 3,
+   "f8": "SUN(H)",
+   "d8": 2,
+   "f9": "BHA(A)",
+   "d9": 5
   },
   {
    "club": "NEW",
@@ -7263,7 +7449,13 @@
    "f5": "IPS(A)",
    "d5": 3,
    "f6": "BRE(A)",
-   "d6": 4
+   "d6": 4,
+   "f7": "MCI(H)",
+   "d7": 4,
+   "f8": "NFO(H)",
+   "d8": 3,
+   "f9": "CHE(A)",
+   "d9": 5
   },
   {
    "club": "NFO",
@@ -7279,7 +7471,13 @@
    "f5": "SUN(A)",
    "d5": 3,
    "f6": "EVE(H)",
-   "d6": 3
+   "d6": 3,
+   "f7": "MUN(A)",
+   "d7": 4,
+   "f8": "NEW(A)",
+   "d8": 3,
+   "f9": "FUL(H)",
+   "d9": 3
   },
   {
    "club": "SUN",
@@ -7295,7 +7493,13 @@
    "f5": "NFO(H)",
    "d5": 3,
    "f6": "CRY(H)",
-   "d6": 2
+   "d6": 2,
+   "f7": "EVE(A)",
+   "d7": 4,
+   "f8": "MUN(A)",
+   "d8": 4,
+   "f9": "HUL(H)",
+   "d9": 2
   },
   {
    "club": "TOT",
@@ -7311,7 +7515,13 @@
    "f5": "HUL(A)",
    "d5": 3,
    "f6": "LIV(A)",
-   "d6": 5
+   "d6": 5,
+   "f7": "BOU(H)",
+   "d7": 4,
+   "f8": "BHA(H)",
+   "d8": 5,
+   "f9": "MCI(A)",
+   "d9": 5
   }
  ],
  "lastweek": [
