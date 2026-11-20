@@ -6025,9 +6025,9 @@
    "last_points": 123,
    "last_avg": 55,
    "last_lesson": "Erik's conviction B has beaten Claude's A four times in a row.",
-   "snapshot": "fpl_2026-11-19T110619Z.json",
+   "snapshot": "fpl_2026-11-19T225153Z.json",
    "xp_table": "xp_gw11-19.csv",
-   "generated": "2026-11-19T11:08Z"
+   "generated": "2026-11-20T05:51Z"
   }
  ],
  "league": [
@@ -6169,7 +6169,7 @@
    "xp_next": 4.72,
    "xp_6": 47.07,
    "league_owners": 0,
-   "sel": 6.5,
+   "sel": 6.6,
    "bench": 0,
    "f1": "CHE(A)",
    "d1": 5,
@@ -6243,7 +6243,7 @@
    "xp_next": 5.26,
    "xp_6": 49.65,
    "league_owners": 7,
-   "sel": 48.2,
+   "sel": 48.4,
    "bench": 0,
    "f1": "HUL(A)",
    "d1": 3,
@@ -6280,7 +6280,7 @@
    "xp_next": 4.34,
    "xp_6": 43.9,
    "league_owners": 2,
-   "sel": 6.5,
+   "sel": 6.6,
    "bench": 0,
    "f1": "CHE(A)",
    "d1": 5,
@@ -6317,7 +6317,7 @@
    "xp_next": 4.89,
    "xp_6": 47.56,
    "league_owners": 7,
-   "sel": 48.4,
+   "sel": 48.5,
    "bench": 0,
    "f1": "HUL(A)",
    "d1": 3,
@@ -6354,7 +6354,7 @@
    "xp_next": 4.58,
    "xp_6": 46.62,
    "league_owners": 1,
-   "sel": 18.9,
+   "sel": 18.8,
    "bench": 0,
    "f1": "LIV(A)",
    "d1": 5,
@@ -6391,7 +6391,7 @@
    "xp_next": 5.97,
    "xp_6": 52.25,
    "league_owners": 4,
-   "sel": 31.7,
+   "sel": 31.8,
    "bench": 0,
    "f1": "NFO(H)",
    "d1": 3,
@@ -6539,7 +6539,7 @@
    "xp_next": 6.33,
    "xp_6": 49.19,
    "league_owners": 0,
-   "sel": 25.4,
+   "sel": 25.5,
    "bench": 0,
    "f1": "MUN(H)",
    "d1": 2,
@@ -6613,7 +6613,7 @@
    "xp_next": 5.1,
    "xp_6": 46.38,
    "league_owners": 0,
-   "sel": 9.9,
+   "sel": 10.1,
    "bench": 1,
    "f1": "HUL(A)",
    "d1": 3,
@@ -6687,7 +6687,7 @@
    "xp_next": 3.93,
    "xp_6": 41.65,
    "league_owners": 2,
-   "sel": 11.2,
+   "sel": 11.3,
    "bench": 1,
    "f1": "CHE(A)",
    "d1": 5,
@@ -6781,7 +6781,7 @@
    "obj_delta": 3.0,
    "next_gw_delta": 1.3,
    "bank_after": 1.2,
-   "note": "sell £6.2, buy £5.1, owned by 14.4%"
+   "note": "sell £6.2, buy £5.1, owned by 15.7%"
   },
   {
    "rank": 2,
@@ -6789,7 +6789,7 @@
    "obj_delta": 2.0,
    "next_gw_delta": 0.9,
    "bank_after": 0.7,
-   "note": "sell £6.2, buy £5.6, owned by 2.9%"
+   "note": "sell £6.2, buy £5.6, owned by 3.2%"
   },
   {
    "rank": 3,
@@ -6797,7 +6797,7 @@
    "obj_delta": 1.3,
    "next_gw_delta": 1.3,
    "bank_after": 0.0,
-   "note": "sell £5.0, buy £5.1, owned by 14.4%"
+   "note": "sell £5.0, buy £5.1, owned by 15.7%"
   },
   {
    "rank": 4,
@@ -6805,7 +6805,7 @@
    "obj_delta": 1.3,
    "next_gw_delta": 0.7,
    "bank_after": 1.2,
-   "note": "sell £6.2, buy £5.1, owned by 3.6%"
+   "note": "sell £6.2, buy £5.1, owned by 3.7%"
   },
   {
    "rank": 5,
@@ -6813,15 +6813,15 @@
    "obj_delta": 0.4,
    "next_gw_delta": 0.1,
    "bank_after": 1.2,
-   "note": "sell £6.2, buy £5.1, owned by 4.6%"
+   "note": "sell £6.2, buy £5.1, owned by 4.7%"
   },
   {
    "rank": 6,
    "move": "Iwobi → McGinn AVL",
    "obj_delta": 0.3,
    "next_gw_delta": 0.3,
-   "bank_after": 0.1,
-   "note": "sell £5.4, buy £5.4, owned by 3.5%"
+   "bank_after": 0.0,
+   "note": "sell £5.4, buy £5.5, owned by 4.1%"
   },
   {
    "rank": 7,
@@ -6837,7 +6837,7 @@
    "obj_delta": 0.2,
    "next_gw_delta": -0.0,
    "bank_after": 1.1,
-   "note": "sell £6.7, buy £5.7, owned by 2.7%"
+   "note": "sell £6.7, buy £5.7, owned by 2.9%"
   }
  ],
  "potential": [
@@ -6848,7 +6848,7 @@
    "price": 8.1,
    "xp_6": 49.65,
    "xp_per_m": 3.33,
-   "sel": 26.0,
+   "sel": 26.4,
    "league_owners": 1,
    "fixtures": "NEW(A) MCI(H) BRE(A) TOT(A) BOU(H) MUN(H) CRY(A) FUL(A) IPS(H)",
    "rank": 1
@@ -6860,7 +6860,7 @@
    "price": 5.7,
    "xp_6": 47.54,
    "xp_per_m": 4.54,
-   "sel": 2.7,
+   "sel": 2.9,
    "league_owners": 0,
    "fixtures": "AVL(A) TOT(H) LIV(A) NEW(A) NFO(H) CRY(H) EVE(A) MUN(A) HUL(H)",
    "rank": 2
@@ -6872,7 +6872,7 @@
    "price": 6.5,
    "xp_6": 45.33,
    "xp_per_m": 3.79,
-   "sel": 23.3,
+   "sel": 24.5,
    "league_owners": 6,
    "fixtures": "NFO(H) FUL(A) BHA(H) HUL(H) ARS(A) COV(H) TOT(A) CRY(A) AVL(H)",
    "rank": 3
@@ -6884,7 +6884,7 @@
    "price": 5.6,
    "xp_6": 44.83,
    "xp_per_m": 4.38,
-   "sel": 2.9,
+   "sel": 3.2,
    "league_owners": 0,
    "fixtures": "NFO(H) FUL(A) BHA(H) HUL(H) ARS(A) COV(H) TOT(A) CRY(A) AVL(H)",
    "rank": 4
@@ -6896,7 +6896,7 @@
    "price": 5.1,
    "xp_6": 44.44,
    "xp_per_m": 4.96,
-   "sel": 14.4,
+   "sel": 15.7,
    "league_owners": 3,
    "fixtures": "IPS(H) SUN(A) FUL(H) ARS(H) HUL(A) LIV(A) BOU(H) BHA(H) MCI(A)",
    "rank": 5
@@ -6908,7 +6908,7 @@
    "price": 5.1,
    "xp_6": 42.96,
    "xp_per_m": 4.6,
-   "sel": 3.6,
+   "sel": 3.7,
    "league_owners": 1,
    "fixtures": "NFO(H) FUL(A) BHA(H) HUL(H) ARS(A) COV(H) TOT(A) CRY(A) AVL(H)",
    "rank": 6
@@ -6920,7 +6920,7 @@
    "price": 11.6,
    "xp_6": 42.33,
    "xp_per_m": 2.01,
-   "sel": 20.4,
+   "sel": 20.2,
    "league_owners": 0,
    "fixtures": "LIV(A) BRE(H) NEW(A) COV(H) CRY(A) ARS(A) NFO(H) SUN(H) BHA(A)",
    "rank": 7
@@ -6932,7 +6932,7 @@
    "price": 7.8,
    "xp_6": 41.39,
    "xp_per_m": 2.88,
-   "sel": 9.3,
+   "sel": 9.2,
    "league_owners": 0,
    "fixtures": "BOU(A) CHE(H) HUL(A) BHA(H) SUN(A) EVE(H) MUN(A) NEW(A) FUL(H)",
    "rank": 8
@@ -6944,7 +6944,7 @@
    "price": 8.2,
    "xp_6": 41.01,
    "xp_per_m": 2.72,
-   "sel": 53.9,
+   "sel": 54.1,
    "league_owners": 8,
    "fixtures": "LEE(H) NFO(A) CRY(H) LIV(H) MCI(A) AVL(H) COV(A) IPS(A) NEW(H)",
    "rank": 9
@@ -6956,7 +6956,7 @@
    "price": 7.1,
    "xp_6": 40.97,
    "xp_per_m": 3.24,
-   "sel": 30.5,
+   "sel": 32.6,
    "league_owners": 6,
    "fixtures": "SUN(H) IPS(A) EVE(H) CRY(H) COV(A) CHE(A) LEE(H) LIV(H) BOU(A)",
    "rank": 10
@@ -6968,7 +6968,7 @@
    "price": 6.2,
    "xp_6": 40.75,
    "xp_per_m": 3.58,
-   "sel": 47.4,
+   "sel": 47.6,
    "league_owners": 4,
    "fixtures": "NEW(A) MCI(H) BRE(A) TOT(A) BOU(H) MUN(H) CRY(A) FUL(A) IPS(H)",
    "rank": 11
@@ -6977,10 +6977,10 @@
    "name": "Dewsbury-Hall",
    "club": "EVE",
    "pos": "MID",
-   "price": 6.6,
+   "price": 6.7,
    "xp_6": 40.63,
-   "xp_per_m": 3.38,
-   "sel": 7.1,
+   "xp_per_m": 3.33,
+   "sel": 7.2,
    "league_owners": 1,
    "fixtures": "BRE(A) LIV(H) AVL(A) FUL(H) BHA(A) NFO(A) SUN(H) MCI(H) LEE(A)",
    "rank": 12
@@ -7025,10 +7025,10 @@
    "name": "Verbruggen",
    "club": "BHA",
    "pos": "GK",
-   "price": 4.6,
+   "price": 4.7,
    "xp_6": 39.51,
-   "xp_per_m": 4.73,
-   "sel": 23.9,
+   "xp_per_m": 4.63,
+   "sel": 24.1,
    "league_owners": 6,
    "fixtures": "HUL(A) NEW(H) BOU(A) NFO(A) EVE(H) IPS(H) FUL(A) TOT(A) MUN(H)",
    "rank": 16
@@ -7040,7 +7040,7 @@
    "price": 5.1,
    "xp_6": 39.15,
    "xp_per_m": 4.19,
-   "sel": 4.6,
+   "sel": 4.7,
    "league_owners": 2,
    "fixtures": "MUN(H) EVE(A) SUN(H) CHE(A) LEE(H) TOT(H) HUL(A) AVL(A) COV(H)",
    "rank": 17
@@ -7049,10 +7049,10 @@
    "name": "McGinn",
    "club": "AVL",
    "pos": "MID",
-   "price": 5.4,
+   "price": 5.5,
    "xp_6": 38.99,
-   "xp_per_m": 4.06,
-   "sel": 3.5,
+   "xp_per_m": 3.99,
+   "sel": 4.1,
    "league_owners": 0,
    "fixtures": "SUN(H) IPS(A) EVE(H) CRY(H) COV(A) CHE(A) LEE(H) LIV(H) BOU(A)",
    "rank": 18
@@ -7064,7 +7064,7 @@
    "price": 6.0,
    "xp_6": 37.92,
    "xp_per_m": 3.49,
-   "sel": 17.7,
+   "sel": 17.1,
    "league_owners": 3,
    "fixtures": "CHE(A) COV(H) MCI(A) IPS(H) LIV(A) FUL(H) AVL(A) HUL(A) EVE(H)",
    "rank": 19
