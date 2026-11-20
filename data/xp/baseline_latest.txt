@@ -1,24 +1,24 @@
 Running HiGHS 1.16.0 (git hash: f3f113d): Copyright (c) 2026 under MIT licence terms
 Includes third-party software components, see THIRD_PARTY_NOTICES.md for full details
-xp table xp_gw11-19.csv · snapshot fpl_2026-11-20T055019Z.json · horizon GW11-19 · team value £99.9
+xp table xp_gw11-19.csv · snapshot fpl_2026-11-20T182832Z.json · horizon GW11-19 · team value £99.9
 
 === BASELINE: current 15, best XI per GW · cost £100.4 of £99.9 (bank £-0.5) ===
 pos name          team £     tag      own%   gw11   gw12   gw13   gw14   gw15   gw16   gw17   gw18   gw19    dec
-GK  Trafford      LEE  5.0   nailed    6.4   4.72   5.99   4.39   5.53   4.85   5.65   5.01   5.35   5.58  25.63
-GK  Tzolakis      HUL  4.7   nailed   13.5   4.08   4.61   4.98   4.05   5.10   3.76   4.74   5.04   4.60  22.27
-DEF De Cuyper     BHA  5.5   nailed   47.6   5.26   6.41   4.58   4.95   5.83   6.22   5.06   5.03   6.31  27.14
-DEF Vuskovic      BHA  5.3   nailed    8.9   5.10   5.73   4.42   4.82   5.44   5.54   4.89   4.94   5.50  25.45
-DEF Muharemović   LEE  5.1   nailed    6.4   4.34   5.69   4.01   5.22   4.47   5.31   4.66   4.97   5.23  23.89
-DEF Tarkowski     EVE  6.2   nailed   19.3   3.96   4.52   4.16   4.81   3.32   4.24   4.93   4.07   4.29  20.97
-DEF Bogle         LEE  4.8   nailed   11.2   3.93   5.75   3.61   5.24   4.00   5.14   4.40   4.57   5.01  22.69
-MID Tavernier     BOU  6.7   nailed   31.1   5.97   5.40   5.54   6.13   4.48   6.84   5.22   6.09   6.58  28.40
+GK  Trafford      LEE  5.0   nailed    6.6   4.72   5.99   4.39   5.53   4.85   5.65   5.01   5.35   5.58  25.63
+GK  Tzolakis      HUL  4.7   nailed   13.4   4.08   4.61   4.98   4.05   5.10   3.76   4.74   5.04   4.60  22.27
+DEF De Cuyper     BHA  5.5   nailed   48.5   5.26   6.41   4.58   4.95   5.83   6.22   5.06   5.03   6.31  27.14
+DEF Vuskovic      BHA  5.3   nailed   10.1   5.10   5.73   4.42   4.82   5.44   5.54   4.89   4.94   5.50  25.45
+DEF Muharemović   LEE  5.1   nailed    6.6   4.34   5.69   4.01   5.22   4.47   5.31   4.66   4.97   5.23  23.89
+DEF Tarkowski     EVE  6.2   nailed   19.1   3.96   4.52   4.16   4.81   3.32   4.24   4.93   4.07   4.29  20.97
+DEF Bogle         LEE  4.8   nailed   11.3   3.93   5.75   3.61   5.24   4.00   5.14   4.40   4.57   5.01  22.69
+MID Tavernier     BOU  6.7   nailed   31.8   5.97   5.40   5.54   6.13   4.48   6.84   5.22   6.09   6.58  28.40
 MID Ødegaard      ARS  6.7   nailed   16.5   5.17   5.26   4.77   4.70   5.28   6.01   5.36   4.83   5.78  25.62
-MID Groß          BHA  6.3   nailed   47.9   4.89   6.00   4.76   4.76   5.38   5.96   4.87   4.72   6.22  25.93
-MID Mbeumo        MUN  7.9   nailed   19.3   4.58   5.44   5.23   6.20   5.47   3.91   5.34   6.10   4.35  25.63
+MID Groß          BHA  6.3   nailed   48.5   4.89   6.00   4.76   4.76   5.38   5.96   4.87   4.72   6.22  25.93
+MID Mbeumo        MUN  7.9   nailed   18.7   4.58   5.44   5.23   6.20   5.47   3.91   5.34   6.10   4.35  25.63
 MID Iwobi         FUL  5.4   nailed    1.5   4.18   4.67   4.21   4.23   4.72   4.11   4.37   4.07   4.23  21.43
-FWD Haaland       MCI  15.8  nailed   78.9   6.76   4.95   6.24   5.98   6.69   6.72   6.52   5.85   6.47  30.63
-FWD Isak          LIV  9.3   nailed   24.9   6.33   4.89   6.08   4.95   5.18   5.34   4.97   5.32   6.13  27.31
-FWD Barry         EVE  5.7   nailed   10.5   5.39   5.88   5.83   6.13   5.01   5.26   6.81   6.11   5.01  28.21
+FWD Haaland       MCI  15.8  nailed   78.8   6.76   4.95   6.24   5.98   6.69   6.72   6.52   5.85   6.47  30.63
+FWD Isak          LIV  9.3   nailed   25.5   6.33   4.89   6.08   4.95   5.18   5.34   4.97   5.32   6.13  27.31
+FWD Barry         EVE  5.7   nailed   11.1   5.39   5.88   5.83   6.13   5.01   5.26   6.81   6.11   5.01  28.21
 GW11: XI xP 65.3 (3-4-3) · C Haaland · bench Tzolakis, Iwobi, Tarkowski, Bogle
 GW12: XI xP 68.9 (4-4-2) · C De Cuyper · bench Tzolakis, Isak, Iwobi, Tarkowski
 GW13: XI xP 62.8 (3-4-3) · C Haaland · bench Trafford, Iwobi, Muharemović, Bogle
