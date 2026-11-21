@@ -1,31 +1,27 @@
 Running HiGHS 1.16.0 (git hash: f3f113d): Copyright (c) 2026 under MIT licence terms
 Includes third-party software components, see THIRD_PARTY_NOTICES.md for full details
-xp table xp_gw11-19.csv · snapshot fpl_2026-11-20T182832Z.json · horizon GW11-19 · team value £99.9
+xp table xp_gw12-16.csv · snapshot fpl_2026-11-21T120616Z.json · horizon GW12-16 · team value £100.5
 
-=== WILDCARD draft · min tag likely · cost £99.6 of £99.6 (bank £0.0) ===
-pos name          team £     tag      own%   gw11   gw12   gw13   gw14   gw15   gw16   gw17   gw18   gw19    dec
-GK  Trafford      LEE  5.0   nailed    6.6   4.72   5.99   4.39   5.53   4.85   5.65   5.01   5.35   5.58  25.63
-GK  Tzolakis      HUL  4.7   nailed   13.4   4.08   4.61   4.98   4.05   5.10   3.76   4.74   5.04   4.60  22.27
-DEF Van Hecke     TOT  5.1   nailed   15.8   5.68   5.12   5.60   4.76   5.05   4.49   5.14   4.51   4.09  25.30
-DEF De Cuyper     BHA  5.5   nailed   48.5   5.26   6.41   4.58   4.95   5.83   6.22   5.06   5.03   6.31  27.14
-DEF Vuskovic      BHA  5.3   nailed   10.1   5.10   5.73   4.42   4.82   5.44   5.54   4.89   4.94   5.50  25.45
-DEF Muharemović   LEE  5.1   nailed    6.6   4.34   5.69   4.01   5.22   4.47   5.31   4.66   4.97   5.23  23.89
-DEF Bogle         LEE  4.8   nailed   11.3   3.93   5.75   3.61   5.24   4.00   5.14   4.40   4.57   5.01  22.69
-MID Tavernier     BOU  6.7   nailed   31.8   5.97   5.40   5.54   6.13   4.48   6.84   5.22   6.09   6.58  28.40
-MID Ødegaard      ARS  6.7   nailed   16.5   5.17   5.26   4.77   4.70   5.28   6.01   5.36   4.83   5.78  25.62
-MID E.Le Fée      SUN  5.7   nailed    2.9   5.15   5.29   4.63   5.23   5.34   6.27   4.72   5.41   5.50  25.86
-MID Groß          BHA  6.3   nailed   48.5   4.89   6.00   4.76   4.76   5.38   5.96   4.87   4.72   6.22  25.93
-MID Mbeumo        MUN  7.9   nailed   18.7   4.58   5.44   5.23   6.20   5.47   3.91   5.34   6.10   4.35  25.63
-FWD Haaland       MCI  15.8  nailed   78.8   6.76   4.95   6.24   5.98   6.69   6.72   6.52   5.85   6.47  30.63
-FWD Isak          LIV  9.3   nailed   25.5   6.33   4.89   6.08   4.95   5.18   5.34   4.97   5.32   6.13  27.31
-FWD Barry         EVE  5.7   nailed   11.1   5.39   5.88   5.83   6.13   5.01   5.26   6.81   6.11   5.01  28.21
-GW11: XI xP 67.2 (3-4-3) · C Haaland · bench Tzolakis, Mbeumo, Muharemović, Bogle
-GW12: XI xP 69.2 (4-5-1) · C De Cuyper · bench Tzolakis, Van Hecke, Haaland, Isak
-GW13: XI xP 64.3 (3-4-3) · C Haaland · bench Trafford, E.Le Fée, Muharemović, Bogle
-GW14: XI xP 66.6 (4-3-3) · C Mbeumo · bench Tzolakis, Van Hecke, Groß, Ødegaard
-GW15: XI xP 66.5 (3-4-3) · C Haaland · bench Trafford, Tavernier, Muharemović, Bogle
-GW16: XI xP 72.0 (3-4-3) · C Tavernier · bench Tzolakis, Bogle, Van Hecke, Mbeumo
-GW17: XI xP 66.0 (3-4-3) · C Barry · bench Tzolakis, E.Le Fée, Muharemović, Bogle
-GW18: XI xP 66.1 (3-4-3) · C Barry · bench Tzolakis, Groß, Bogle, Van Hecke
-GW19: XI xP 70.9 (3-4-3) · C Tavernier · bench Tzolakis, Bogle, Mbeumo, Van Hecke
-objective (decayed horizon xP incl. captain, bench x0.1): 342.5
+=== WILDCARD draft · min tag likely · cost £100.0 of £100.2 (bank £0.2) ===
+pos name          team £     tag      own%   gw12   gw13   gw14   gw15   gw16    dec
+GK  Trafford      LEE  5.0   nailed    6.7   5.99   4.39   5.53   4.85   5.65  19.27
+GK  Tzolakis      HUL  4.7   nailed   13.3   4.61   4.98   4.05   5.10   3.76  16.55
+DEF De Cuyper     BHA  5.5   nailed   49.8   6.41   4.58   4.95   5.83   6.22  20.30
+DEF Vuskovic      BHA  5.3   nailed   11.3   5.73   4.42   4.82   5.44   5.54  18.83
+DEF Muharemović   LEE  5.1   nailed    6.7   5.69   4.01   5.22   4.47   5.31  18.03
+DEF Gabriel       ARS  8.1   nailed   26.6   5.30   5.02   5.35   5.55   5.99  19.56
+DEF Van Hecke     TOT  5.1   nailed   18.1   5.12   5.60   4.76   5.05   4.49  18.41
+MID Groß          BHA  6.3   nailed   49.3   6.00   4.76   4.76   5.38   5.96  19.51
+MID Mbeumo        MUN  7.8   nailed   17.9   5.44   5.23   6.20   5.47   3.91  19.40
+MID Tavernier     BOU  6.7   nailed   32.5   5.40   5.54   6.13   4.48   6.84  20.44
+MID E.Le Fée      SUN  5.7   nailed    3.0   5.29   4.63   5.23   5.34   6.27  19.16
+MID Ødegaard      ARS  6.7   nailed   16.6   5.26   4.77   4.70   5.28   6.01  18.70
+FWD Barry         EVE  5.7   nailed   11.5   5.88   5.83   6.13   5.01   5.26  20.69
+FWD Haaland       MCI  15.8  nailed   78.9   4.95   6.24   5.98   6.69   6.72  21.72
+FWD Evanilson     BOU  6.5   nailed   26.0   4.73   4.90   5.23   4.02   5.81  17.81
+GW12: XI xP 68.8 (4-5-1) · C De Cuyper · bench Tzolakis, Van Hecke, Haaland, Evanilson
+GW13: XI xP 63.7 (3-4-3) · C Haaland · bench Trafford, E.Le Fée, Vuskovic, Muharemović
+GW14: XI xP 67.0 (4-3-3) · C Mbeumo · bench Tzolakis, Van Hecke, Groß, Ødegaard
+GW15: XI xP 66.8 (4-4-2) · C Haaland · bench Trafford, Tavernier, Muharemović, Evanilson
+GW16: XI xP 73.2 (4-4-2) · C Tavernier · bench Tzolakis, Barry, Van Hecke, Mbeumo
+objective (decayed horizon xP incl. captain, bench x0.1): 252.2
