@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GW12 Decide Board</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+/* VOICE: newspaper graphics desk; the decision is the headline, every number traceable
+   IDEA: the match-day decision sheet a manager signs before the deadline
+   PICTURE: the pitch with the XI as it will be submitted, recalculating on every click
+   COLOUR and TYPE: pale pink ground, ink, teal = better/ours, claret = worse/Jason; Libre Franklin
+   LAYOUT: verdict strip, five answers, then tabs Transfers / Selection / Captain / Chip / Rivals */
+:root{color-scheme:light dark;--bg:light-dark(#ffe3dc,#1c1512);--ink:light-dark(#1a1817,#f3ebe6);--mut:light-dark(#5f5450,#b8aaa3);--teal:light-dark(#0d7680,#52c3cb);--tl:light-dark(#cfe8e6,#173a3c);--cla:light-dark(#990f3d,#ff7a9c);--cl:light-dark(#f4c9d2,#4a1a28);--line:light-dark(#ebc7bd,#3b2c26);--card:light-dark(#fff3ef,#261c18);--pitch:light-dark(#0d7680,#0f4f55)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Libre Franklin",system-ui,sans-serif;overflow-x:clip}
+.band{padding:clamp(20px,3.5vw,48px) max(4vw,14px);max-width:1240px;margin:auto}
+h1{font-weight:800;font-size:clamp(28px,4.2vw,46px);line-height:1.05;text-wrap:balance;margin:0 0 10px}
+h2{font-size:22px;margin:0 0 10px;line-height:1.15}
+.sub{color:var(--mut);margin:0;max-width:75ch}
+.strip{display:flex;flex-wrap:wrap;gap:8px 22px;margin:16px 0 0;font-size:15px}
+.strip b{font-size:20px;display:block;font-variant-numeric:tabular-nums}
+.answers{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:22px}
+.ans{background:var(--card);border:1px solid var(--line);padding:12px 14px;border-radius:4px}
+.ans small{color:var(--mut);display:block;font-size:13px}.ans b{font-size:18px;display:block;line-height:1.25}
+.ans .alt{font-size:13px;color:var(--mut);margin-top:4px}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin:26px 0 14px;border-bottom:2px solid var(--ink)}
+.tabs button{font:600 15px "Libre Franklin",sans-serif;background:none;border:0;padding:12px 14px;min-height:44px;color:var(--mut);cursor:pointer;border-bottom:4px solid transparent;margin-bottom:-2px}
+.tabs button[aria-selected=true]{color:var(--ink);border-color:var(--teal)}
+.ctl{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;margin:0 0 14px;font-size:15px}
+.ctl label{display:flex;gap:8px;align-items:center}
+input[type=range]{width:170px;accent-color:var(--teal)}
+select,button.b{font:15px "Libre Franklin",sans-serif;min-height:40px;padding:6px 10px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:4px}
+button.b{cursor:pointer;font-weight:600}button.b:hover{border-color:var(--teal)}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.panel[hidden]{display:none}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14px;background:var(--card)}
+th,td{padding:7px 8px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+th{font-weight:600;cursor:pointer;user-select:none;position:sticky;top:0;background:var(--card)}
+th.nosort{cursor:default}
+td.l,th.l{text-align:left}
+tr.pick td{background:var(--tl)}tr.roll td{color:var(--mut);font-style:italic}
+tr.click{cursor:pointer}tr.click:hover td{background:var(--tl)}
+td.w{color:var(--teal);font-weight:800}td.neg{color:var(--cla)}
+.fx{display:inline-block;padding:1px 5px;margin-right:2px;border-radius:2px;font-size:12px;font-weight:600}
+.d1,.d2{background:var(--tl)}.d3{background:transparent;border:1px solid var(--line)}.d4{background:var(--cl)}.d5{background:var(--cla);color:#fff}
+.tagj{color:var(--cla);font-weight:800}
+.grid2{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:18px}
+@media(max-width:860px){.grid2{grid-template-columns:minmax(0,1fr)}}
+.pitch{background:var(--pitch);border-radius:6px;padding:14px 8px;display:grid;gap:12px;min-height:380px;position:relative}
+.row{display:flex;justify-content:space-evenly;gap:6px;flex-wrap:wrap}
+.pl{background:#fff;color:#1a1817;border-radius:4px;padding:6px 6px 5px;width:92px;text-align:center;cursor:pointer;font-size:12px;line-height:1.25;border:2px solid transparent;box-shadow:0 2px 0 rgba(0,0,0,.25)}
+.pl b{display:block;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pl .x{font-weight:800;font-size:14px}
+.pl.sel{border-color:#ffb3c6;outline:3px solid #ffb3c6}
+.pl .cap{display:inline-block;background:#1a1817;color:#fff;border-radius:50%;width:18px;height:18px;line-height:18px;font-size:11px;font-weight:800}
+.pl.bad{opacity:.55}
+.bench{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;background:rgba(0,0,0,.18);border-radius:4px;padding:8px}
+.bench .pl{width:96px}
+.note{font-size:14px;color:var(--mut);margin:8px 0 0}
+.kpi{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:10px}.kpi div{background:var(--card);border:1px solid var(--line);padding:8px 12px;border-radius:4px}
+.kpi b{display:block;font-size:20px}
+.warn{background:var(--cl);padding:8px 12px;border-radius:4px;font-size:14px;margin:8px 0}
+.ok{background:var(--tl);padding:8px 12px;border-radius:4px;font-size:14px;margin:8px 0}
+.bars .bar{display:grid;grid-template-columns:4em minmax(0,1fr) 9em;gap:10px;align-items:center;margin:4px 0;font-size:14px}
+.bars .t{height:20px;background:var(--line);border-radius:2px;position:relative}.bars .t i{position:absolute;inset:0 auto 0 0;background:var(--teal);border-radius:2px}
+.bars .bar.hl .t i{background:var(--cla)}
+pre{background:var(--card);border:1px solid var(--line);padding:12px;font-size:13px;white-space:pre-wrap;border-radius:4px}
+footer{color:var(--mut);font-size:13px}
+@media(max-width:600px){table{font-size:13px}.pl{width:74px;font-size:11px}.bench .pl{width:74px}input[type=range]{width:120px}}
+</style></head><body>
+<div class="band">
+<h1 id="head">GW12 decision sheet</h1>
+<p class="sub" id="sub">Loading data…</p>
+<div class="strip" id="strip"></div>
+<div class="answers" id="answers"></div>
+
+<div class="tabs" role="tablist">
+<button role="tab" data-t="tr" aria-selected="true">1 · Transfer</button>
+<button role="tab" data-t="se" aria-selected="false">2 · Selection</button>
+<button role="tab" data-t="ca" aria-selected="false">3 · Captain</button>
+<button role="tab" data-t="ch" aria-selected="false">4 · Chip</button>
+<button role="tab" data-t="ri" aria-selected="false">5 · Rivals</button>
+<button role="tab" data-t="lo" aria-selected="false">LOCKED</button>
+</div>
+<div class="ctl">
+<label>Horizon <input type="range" id="hz" min="1" max="10" value="5"> <b id="hzv">5 GWs</b></label>
+<label>Decay <select id="dc"><option value="0.84" selected>0.84 / GW (model)</option><option value="1">none</option><option value="0.7">0.70 (short-term)</option></select></label>
+<button class="b" id="reset">Back to the recommendation</button>
+</div>
+
+<section class="panel" id="p-tr">
+<div class="grid2">
+<div>
+<h2>Who goes out?</h2>
+<p class="note" style="margin-top:0">Click a player to see his replacements. Ranked by what he adds to our horizon xP (best XI + captain each week).</p>
+<div class="scroll"><table id="outT"></table></div>
+</div>
+<div>
+<h2 id="inH">Who comes in?</h2>
+<p class="note" style="margin-top:0" id="inNote"></p>
+<div class="ctl"><label>Max £ <select id="maxp"></select></label><label><input type="checkbox" id="onlyDiff"> only players Jason doesn't own</label></div>
+<div class="scroll" style="max-height:620px"><table id="inT"></table></div>
+</div>
+</div>
+</section>
+
+<section class="panel" id="p-se" hidden>
+<div class="kpi" id="seK"></div>
+<div class="grid2">
+<div><div class="pitch" id="pitch"></div><p class="note">Click a starter, then a bench player to swap them (only legal formations). Use the arrows to reorder the bench. C and VC are set on the Captain tab.</p></div>
+<div><h2>Minutes check, GW12</h2><div class="scroll"><table id="minT"></table></div></div>
+</div>
+</section>
+
+<section class="panel" id="p-ca" hidden>
+<div class="ctl"><label>Captain <select id="cSel"></select></label><label>Vice <select id="vSel"></select></label></div>
+<div id="caMsg"></div>
+<div class="scroll"><table id="caT"></table></div>
+<p class="note">Captaincy gain against Jason = our captain's xP minus his captain's xP (he captained Haaland in GW11, assumed again). Ownership is of the nine rivals' GW11 squads; their GW12 moves are hidden until the deadline.</p>
+</section>
+
+<section class="panel" id="p-ch" hidden>
+<div id="chMsg"></div>
+<h2>Triple Captain: best captain in our squad per gameweek</h2>
+<div class="bars" id="tcBars"></div>
+<p class="note">Rule (chip plan, amended D-S1): TC1 goes in the window with the highest xP; windows within 0.5 are level and the earliest wins. It expires at the GW19 deadline. FH1, WC1 and BB1 are used (GW6, GW7, GW10). xP after GW13 is a prior: it will move.</p>
+</section>
+
+<section class="panel" id="p-ri" hidden>
+<div class="grid2">
+<div><h2>League</h2><div class="scroll"><table id="stT"></table></div></div>
+<div><h2>Radar against Jason (GW12 xP)</h2><div id="radar"></div></div>
+</div>
+</section>
+
+<section class="panel" id="p-lo" hidden>
+<h2>LOCKED block for the chat (reflects your current choices)</h2>
+<pre id="lockTxt"></pre>
+<button class="b" id="copy">Copy</button> <span id="copied" class="note"></span>
+</section>
+
+<footer class="band" id="foot"></footer>
+</div>
+<script>{
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const NOTES={"De Cuyper":"UECL Thu 26 Nov (minutes unverified); benched in UECL on 5 Nov, starts PL","Vuskovic":"UECL Thu 26 Nov; Boscagli doubt (illness)","Groß":"Hurzeler: any rest decided with the player","Barry":"early sub at Brentford GW11 (cause not found); no flag","Tavernier":"BOU rotated for UEL Thu (Rose)","Hill":"BOU rotated for UEL Thu (Rose)","Wirtz":"UCL midweek; 'in a good place' (FFScout)","Isak":"UCL midweek; 'in a good place' (FFScout)","Haaland":"UCL Tue, quiet; 979 of 990 min","Trafford":"Farke: everyone fit","Muharemović":"Farke: everyone fit","Bogle":"Farke: everyone fit","Tarkowski":"suspended until 13 Dec"};
+let D,P,S,G,st={};
+const NEED={GK:2,DEF:5,MID:5,FWD:3};
+fetch('data.json').then(r=>r.json()).then(d=>{D=d;P=Object.fromEntries(d.players.map(p=>[p.id,p]));G=d.meta.gws;init()}).catch(e=>{$('#sub').textContent='Could not load data.json: '+e});
+
+function xpAt(id,k){return P[id].xp[k]||0}
+// best XI for one GW index: GK best, enumerate legal outfield formations
+function best(ids,k){
+  const by={GK:[],DEF:[],MID:[],FWD:[]};ids.forEach(i=>by[P[i].p].push(i));
+  for(const p in by)by[p].sort((a,b)=>xpAt(b,k)-xpAt(a,k));
+  let bestT=-1,bx=null;
+  for(let d=3;d<=5;d++)for(let m=2;m<=5;m++){const f=10-d-m;if(f<1||f>3)continue;
+    const xi=[by.GK[0],...by.DEF.slice(0,d),...by.MID.slice(0,m),...by.FWD.slice(0,f)];
+    const t=xi.reduce((s,i)=>s+xpAt(i,k),0);if(t>bestT){bestT=t;bx=xi}}
+  const cap=Math.max(...bx.map(i=>xpAt(i,k)));
+  const bench=ids.filter(i=>!bx.includes(i)&&P[i].p!=='GK').reduce((s,i)=>s+xpAt(i,k),0);
+  return{xi:bx,total:bestT,cap,score:bestT+cap+0.1*bench};
+}
+function horizon(ids){const H=+$('#hz').value,dc=+$('#dc').value;let s=0;for(let k=0;k<H&&k<G.length;k++)s+=Math.pow(dc,k)*best(ids,k).score;return s}
+function hxp(id){const H=+$('#hz').value;let s=0;for(let k=0;k<H&&k<G.length;k++)s+=xpAt(id,k);return s}
+function clubOK(ids){const c={};for(const i of ids){c[P[i].t]=(c[P[i].t]||0)+1;if(c[P[i].t]>3)return false}return true}
+function budget(out){return P[out].sell+D.meta.bank}
+function squadNow(){return D.squad.map(i=>i===st.out?st.in:i).filter(Boolean)}
+function cands(out){
+  const base=horizon(D.squad),b0=best(D.squad,0).score,pos=P[out].p,bud=budget(out);
+  return D.players.filter(p=>p.p===pos&&!D.squad.includes(p.id)&&p.c<=bud+1e-9&&['nailed','likely'].includes(p.tag)).map(p=>{
+    const sq=D.squad.map(i=>i===out?p.id:i);if(!clubOK(sq))return null;
+    return{p,d:horizon(sq)-base,d1:best(sq,0).score-b0,bank:bud-p.c};}).filter(Boolean).sort((a,b)=>b.d-a.d);
+}
+function fxh(p,from,n){let h='';for(let k=from;k<Math.min(G.length,from+n);k++){const f=p.fx[k];if(!f.length){h+='<span class="fx d5">—</span>';continue}
+  f.forEach(x=>h+=`<span class="fx d${x[2]}" title="GW${G[k]} FDR ${x[2]}">${esc(x[0])}${x[1]==='H'?'':'a'}</span>`)}return h}
+const jason=()=>D.rivals.find(r=>r.name==='Jason');
+const jOwns=id=>jason().squad.includes(id);
+
+function recommend(){
+  // transfer: best single move over the current horizon (or roll if none positive)
+  let bestMove=null;
+  for(const o of D.squad){const c=cands(o)[0];if(c&&(!bestMove||c.d>bestMove.d))bestMove={out:o,in:c.p.id,d:c.d}}
+  st.out=bestMove&&bestMove.d>0?bestMove.out:null;st.in=st.out?bestMove.in:null;
+  setXIfromBest();
+}
+function setXIfromBest(){
+  const sq=squadNow(),b=best(sq,0);st.xi=[...b.xi];st.tie=null;
+  // tie-break: a benched outfielder within 0.10 xP of a starter, with clearly more attacking ceiling (xGI/90), starts
+  for(const bn of sq.filter(i=>!st.xi.includes(i)&&P[i].p!=='GK')){
+    const x=st.xi.filter(i=>P[i].p!=='GK'&&xpAt(i,0)-xpAt(bn,0)<0.10&&P[bn].xgi90>P[i].xgi90+0.2).sort((a,c)=>xpAt(a,0)-xpAt(c,0))[0];
+    if(x){const nx=st.xi.map(z=>z===x?bn:z);if(legal(nx)){st.tie={in:bn,out:x,gap:xpAt(x,0)-xpAt(bn,0)};st.xi=nx}}}
+  const rest=sq.filter(i=>!st.xi.includes(i));
+  st.bench=[...rest.filter(i=>P[i].p!=='GK').sort((a,c)=>xpAt(c,0)-xpAt(a,0)),...rest.filter(i=>P[i].p==='GK')];
+  const order=[...st.xi].sort((a,c)=>xpAt(c,0)-xpAt(a,0));
+  st.c=order[0];st.v=order.find(i=>i!==st.c&&P[i].t!==P[st.c].t&&P[i].p!=='GK')||order[1];
+}
+function xiTotal(){return st.xi.reduce((s,i)=>s+xpAt(i,0),0)+xpAt(st.c,0)}
+function formation(xi){const c={DEF:0,MID:0,FWD:0};xi.forEach(i=>{if(P[i].p!=='GK')c[P[i].p]++});return`${c.DEF}-${c.MID}-${c.FWD}`}
+function legal(xi){const c={GK:0,DEF:0,MID:0,FWD:0};xi.forEach(i=>c[P[i].p]++);return c.GK===1&&c.DEF>=3&&c.MID>=2&&c.FWD>=1&&xi.length===11}
+
+function header(){
+  const m=D.meta,dl=new Date(m.deadline_utc),j=D.standings.find(s=>s.name.startsWith('Jason')),me=D.standings.find(s=>s.id===6756883),al=D.standings.find(s=>s.name.startsWith('Alex'));
+  const uk=dl.toLocaleString('en-GB',{timeZone:'Europe/London',weekday:'short',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}),nl=dl.toLocaleTimeString('en-GB',{timeZone:'Europe/Amsterdam',hour:'2-digit',minute:'2-digit'});
+  const lockT=new Date(dl-3*3600e3).toLocaleTimeString('en-GB',{timeZone:'Europe/Amsterdam',hour:'2-digit',minute:'2-digit'});
+  const hrs=((dl-Date.now())/3600e3);
+  $('#sub').innerHTML=`Deadline <b>${esc(uk)} UK / ${esc(nl)} NL</b> · LOCKED by ${esc(lockT)} NL${hrs>0?` · ${hrs.toFixed(1)} h left`:' · deadline passed'} · data ${esc(m.snapshot.replace('fpl_','').replace('.json',''))} · model ${esc(m.xp_file)}`;
+  $('#strip').innerHTML=[[me.total,'points'],['P'+me.rank,'league'],[(me.total-j.total),'gap to Jason'],['+'+(me.total-al.total),'on Alex'],['£'+m.bank.toFixed(1),'bank'],[m.ft,'free transfer'],[m.chips_left.join(', '),'chips left'],[m.overall_rank.toLocaleString('en-GB'),'overall rank']].map(x=>`<div><b>${esc(x[0])}</b>${esc(x[1])}</div>`).join('');
+}
+function answers(){
+  const sq=squadNow(),out=st.out,inn=st.in;
+  const tc=tcBest();
+  const roll=!out;
+  const c=cands(out||D.squad[0]);const alt=out?c.find(x=>x.p.id!==inn):null;
+  const dMove=out?horizon(sq)-horizon(D.squad):0;
+  $('#head').textContent=roll?`GW12: roll the transfer, ${P[st.c].n} captain`:`GW12: ${P[out].n} out, ${P[inn].n} in, ${P[st.c].n} captain, no chip`;
+  const capOrder=[...st.xi].sort((a,b)=>xpAt(b,0)-xpAt(a,0));const c2=capOrder.find(i=>i!==st.c);
+  $('#answers').innerHTML=[
+   ['Out',out?`${P[out].n} (${P[out].t})`:'nobody (roll)',out?`${esc(P[out].news||'')} · sells £${P[out].sell.toFixed(1)}`:''],
+   ['In',inn?`${P[inn].n} (${P[inn].t} £${P[inn].c.toFixed(1)})`:'—',inn?`${dMove>=0?'+':''}${dMove.toFixed(1)} xP over ${$('#hz').value} GWs · bank after £${(budget(out)-P[inn].c).toFixed(1)}${alt?` · B: ${esc(alt.p.n)} ${alt.d>=0?'+':''}${alt.d.toFixed(1)}`:''}`:''],
+   ['Captain',`${P[st.c].n} ${xpAt(st.c,0).toFixed(2)}`,`B: ${esc(P[c2].n)} ${xpAt(c2,0).toFixed(2)} · Haaland ${xpAt(D.squad.find(i=>P[i].n==='Haaland'),0).toFixed(2)}`],
+   ['Vice',`${P[st.v].n} ${xpAt(st.v,0).toFixed(2)}`,'nailed, different club from the captain'],
+   ['XI',`${formation(st.xi)} · ${xiTotal().toFixed(1)} xP`,`incl. captain · bench ${st.bench.map(i=>esc(P[i].n)).join(', ')}${st.tie?` · tie-break: ${esc(P[st.tie.in].n)} starts over ${esc(P[st.tie.out].n)} (${st.tie.gap.toFixed(2)} xP apart, higher ceiling)`:''}`],
+   ['Chip','none',`TC1 best window GW${tc.win} (${esc(tc.name)} ${tc.val.toFixed(2)}) vs GW12 ${tc.gw12.toFixed(2)}`]
+  ].map(a=>`<div class="ans"><small>${a[0]}</small><b>${esc(a[1])}</b><div class="alt">${a[2]}</div></div>`).join('');
+}
+function renderOut(){
+  const base=horizon(D.squad);
+  const rows=D.squad.map(i=>{const c=cands(i)[0];return{i,h:hxp(i),best:c,d:c?c.d:0}}).sort((a,b)=>b.d-a.d);
+  $('#outT').innerHTML=`<thead><tr><th class="l nosort">Player</th><th class="nosort">xP GW12</th><th class="nosort">xP ${$('#hz').value} GW</th><th class="nosort">Best swap</th><th class="nosort">Δ</th></tr></thead><tbody>`+
+  `<tr class="click roll ${!st.out?'pick':''}" data-o=""><td class="l">Roll (keep FT → 2 FT in GW13)</td><td></td><td></td><td class="l">—</td><td>0.0</td></tr>`+
+  rows.map(r=>`<tr class="click ${st.out===r.i?'pick':''}" data-o="${r.i}"><td class="l">${esc(P[r.i].n)} <small>${esc(P[r.i].t)} ${esc(P[r.i].p)}</small>${P[r.i].st!=='a'?' <span class="tagj">'+esc(P[r.i].st.toUpperCase())+'</span>':''}</td><td>${xpAt(r.i,0).toFixed(2)}</td><td>${r.h.toFixed(1)}</td><td class="l">${r.best?esc(r.best.p.n):'—'}</td><td class="${r.d>0?'w':'neg'}">${r.d>=0?'+':''}${r.d.toFixed(1)}</td></tr>`).join('')+'</tbody>';
+  $$('#outT tr[data-o]').forEach(tr=>tr.onclick=()=>{const o=tr.dataset.o?+tr.dataset.o:null;st.out=o;st.in=o?(cands(o)[0]||{}).p?.id||null:null;if(!st.in)st.out=null;setXIfromBest();render()});
+}
+let sk='d',sd=-1;
+function renderIn(){
+  const o=st.out||st.view||D.squad.find(i=>P[i].st!=='a')||D.squad[0];
+  st.view=o;const bud=budget(o);
+  const ms=$('#maxp');if(!ms.dataset.o||ms.dataset.o!=o){ms.dataset.o=o;ms.innerHTML=[...new Set([bud,6.5,6,5.5,5,4.5].filter(x=>x<=bud))].sort((a,b)=>b-a).map(x=>`<option value="${x}">£${x.toFixed(1)}</option>`).join('')}
+  $('#inH').textContent=`Who comes in for ${P[o].n}?`;
+  $('#inNote').innerHTML=`Budget £${bud.toFixed(1)} (sell £${P[o].sell.toFixed(1)} + bank £${D.meta.bank.toFixed(1)}). Δ = change in horizon score vs rolling; ΔGW12 = this week only. <span class="tagj">J</span> = Jason owns him. Click a row to pick.`;
+  let c=cands(o).filter(x=>x.p.c<=+ms.value+1e-9);if($('#onlyDiff').checked)c=c.filter(x=>!jOwns(x.p.id));
+  const H=+$('#hz').value;
+  const key={d:x=>x.d,d1:x=>x.d1,c:x=>x.p.c,h:x=>hxp(x.p.id),pts:x=>x.p.pts,last:x=>x.p.last,xgi:x=>x.p.xgi90,dc:x=>x.p.dc90,sel:x=>x.p.sel,lg:x=>x.p.lg,bank:x=>x.bank,mins:x=>x.p.mins};
+  c.sort((a,b)=>(key[sk](a)-key[sk](b))*sd);
+  const top={};['d','d1','h','pts','xgi','dc'].forEach(k=>top[k]=Math.max(...c.map(key[k])));
+  const th=(k,l)=>`<th data-k="${k}">${l}${sk===k?(sd<0?' ▾':' ▴'):''}</th>`;
+  $('#inT').innerHTML=`<thead><tr><th class="l nosort">Player</th>${th('c','£')}${th('d','Δ '+H+'GW')}${th('d1','ΔGW12')}${th('h','xP '+H+'GW')}${th('pts','Pts')}${th('last','GW11')}<th class="nosort">G/xG</th><th class="nosort">A/xA</th>${th('xgi','xGI/90')}${th('dc','DefCon/90')}<th class="nosort">Pen/Cor</th>${th('mins','Min')}${th('sel','Own%')}${th('lg','League')}${th('bank','Bank')}<th class="l nosort">Fixtures</th></tr></thead><tbody>`+
+  `<tr class="click roll ${!st.out?'pick':''}" data-i=""><td class="l">Roll (row zero)</td><td></td><td>0.0</td><td>0.0</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>£${D.meta.bank.toFixed(1)}</td><td></td></tr>`+
+  c.slice(0,40).map(x=>{const p=x.p,w=k=>key[k](x)===top[k]?'w':'';return`<tr class="click ${st.in===p.id&&st.out===o?'pick':''}" data-i="${p.id}"><td class="l">${esc(p.n)} <small>${esc(p.t)}</small>${jOwns(p.id)?' <span class="tagj">J</span>':''}</td><td>${p.c.toFixed(1)}${p.dprice>0?' ▲':''}</td><td class="${w('d')} ${x.d<0?'neg':''}">${x.d>=0?'+':''}${x.d.toFixed(1)}</td><td class="${w('d1')}">${x.d1>=0?'+':''}${x.d1.toFixed(1)}</td><td class="${w('h')}">${hxp(p.id).toFixed(1)}</td><td class="${w('pts')}">${p.pts}</td><td>${p.last}</td><td>${p.g}/${p.xg.toFixed(1)}</td><td>${p.a}/${p.xa.toFixed(1)}</td><td class="${w('xgi')}">${p.xgi90.toFixed(2)}</td><td class="${w('dc')}">${p.dc90.toFixed(1)}</td><td>${p.pen||'–'}/${p.cor||'–'}</td><td>${p.mins}</td><td>${p.sel.toFixed(1)}</td><td>${p.lg}/9</td><td>£${x.bank.toFixed(1)}</td><td class="l">${fxh(p,0,Math.min(H,6))}</td></tr>`}).join('')+'</tbody>';
+  $$('#inT th[data-k]').forEach(t=>t.onclick=()=>{const k=t.dataset.k;sd=sk===k?-sd:-1;sk=k;renderIn()});
+  $$('#inT tr[data-i]').forEach(tr=>tr.onclick=()=>{if(!tr.dataset.i){st.out=null;st.in=null}else{st.out=o;st.in=+tr.dataset.i}setXIfromBest();render()});
+}
+let selA=null;
+function card(i,bench){const p=P[i],bad=p.st!=='a'||xpAt(i,0)===0;return`<div class="pl ${selA===i?'sel':''} ${bad?'bad':''}" data-p="${i}" tabindex="0"><b>${esc(p.n)}</b>${esc(p.t)} ${esc(fxt(p))}<div class="x">${xpAt(i,0).toFixed(1)} ${st.c===i?'<span class="cap">C</span>':st.v===i?'<span class="cap">V</span>':''}</div>${bench?`<div><button class="b" style="min-height:24px;padding:0 6px" data-up="${i}" aria-label="move up">◀</button> <button class="b" style="min-height:24px;padding:0 6px" data-dn="${i}" aria-label="move down">▶</button></div>`:''}</div>`}
+function fxt(p){const f=p.fx[0];return f.length?f.map(x=>x[0]+(x[1]==='H'?' (H)':' (A)')).join(' '):'—'}
+function renderSel(){
+  const sq=squadNow(),b=best(sq,0),mine=xiTotal(),opt=b.total+b.cap;
+  const j=jason(),jx=j.xi.reduce((s,i)=>s+(P[i]?xpAt(i,0):0),0)+(P[j.captain]?xpAt(j.captain,0):0);
+  $('#seK').innerHTML=`<div><b>${mine.toFixed(1)}</b>our XI xP incl. C</div><div><b>${opt.toFixed(1)}</b>model-best XI</div><div><b class="${mine-opt<-0.05?'neg':''}">${Math.abs(mine-opt)<0.05?'0.0':(mine-opt).toFixed(1)}</b>cost of your choices</div><div><b>${formation(st.xi)}</b>formation</div><div><b>${(mine-jx)>=0?'+':''}${(mine-jx).toFixed(1)}</b>exp. swing vs Jason's GW11 XI</div>`;
+  const rows=['GK','DEF','MID','FWD'].map(pos=>`<div class="row">${st.xi.filter(i=>P[i].p===pos).map(i=>card(i)).join('')}</div>`).join('');
+  $('#pitch').innerHTML=rows+`<div class="bench">${st.bench.map(i=>card(i,true)).join('')}</div>`;
+  $$('#pitch .pl').forEach(el=>el.onclick=e=>{if(e.target.closest('button'))return;const i=+el.dataset.p;
+    if(selA===null){selA=i}else if(selA===i){selA=null}else{
+      const a=selA,inA=st.xi.includes(a),inB=st.xi.includes(i);
+      if(inA!==inB){const x=inA?a:i,y=inA?i:a,nx=st.xi.map(z=>z===x?y:z);
+        if(legal(nx)){st.xi=nx;st.bench=st.bench.map(z=>z===y?x:z);if(!st.xi.includes(st.c))st.c=[...st.xi].sort((p,q)=>xpAt(q,0)-xpAt(p,0))[0];if(!st.xi.includes(st.v)||st.v===st.c)st.v=[...st.xi].sort((p,q)=>xpAt(q,0)-xpAt(p,0)).find(z=>z!==st.c)}
+        else alert2('That swap makes an illegal formation.')}
+      selA=null}
+    render()});
+  $$('#pitch [data-up],#pitch [data-dn]').forEach(bt=>bt.onclick=()=>{const i=+(bt.dataset.up||bt.dataset.dn),out=st.bench.filter(z=>P[z].p!=='GK'),gk=st.bench.filter(z=>P[z].p==='GK');const k=out.indexOf(i);if(k<0)return;const t=bt.dataset.up?k-1:k+1;if(t<0||t>=out.length)return;[out[k],out[t]]=[out[t],out[k]];st.bench=[...out,...gk];render()});
+  const all=[...st.xi,...st.bench];
+  $('#minT').innerHTML=`<thead><tr><th class="l nosort">Player</th><th class="nosort">xP</th><th class="nosort">Tag</th><th class="nosort">Start%</th><th class="l nosort">Kickoff</th><th class="l nosort">Note</th></tr></thead><tbody>`+
+   all.map(i=>{const p=P[i],k=D.kickoff[p.t];return`<tr><td class="l">${st.xi.includes(i)?'':'<small>bench</small> '}${esc(p.n)}</td><td>${xpAt(i,0).toFixed(2)}</td><td>${esc(p.tag)}</td><td>${Math.round(p.pst*100)}</td><td class="l">${k?esc(new Date(k).toLocaleString('en-GB',{timeZone:'Europe/London',weekday:'short',hour:'2-digit',minute:'2-digit'})):'—'}</td><td class="l" style="white-space:normal">${esc(NOTES[p.n]||p.news||'')}</td></tr>`}).join('')+'</tbody>';
+}
+function alert2(t){const n=document.createElement('div');n.className='warn';n.textContent=t;$('#seK').after(n);setTimeout(()=>n.remove(),2500)}
+function renderCap(){
+  const j=jason(),jc=P[j.captain],jcx=jc?xpAt(j.captain,0):0;
+  const xi=[...st.xi].sort((a,b)=>xpAt(b,0)-xpAt(a,0));
+  const opt=xi.map(i=>`<option value="${i}">${esc(P[i].n)} ${xpAt(i,0).toFixed(2)}</option>`).join('');
+  $('#cSel').innerHTML=opt;$('#vSel').innerHTML=opt;$('#cSel').value=st.c;$('#vSel').value=st.v;
+  const top=xi[0],gap=xpAt(top,0)-xpAt(st.c,0);
+  $('#caMsg').innerHTML=st.c===top?`<div class="ok">Rule 21 met: ${esc(P[st.c].n)} is the highest xP in our XI (${xpAt(st.c,0).toFixed(2)}). Expected captaincy gain on Jason (C ${esc(jc?jc.n:'?')} ${jcx.toFixed(2)}): ${(xpAt(st.c,0)-jcx>=0?'+':'')}${(xpAt(st.c,0)-jcx).toFixed(2)}.</div>`:`<div class="warn">Rule 21 deviation: ${esc(P[st.c].n)} is ${gap.toFixed(2)} xP below ${esc(P[top].n)}. Needs a written reason (minutes risk, or shield when the gap is under 0.5) and its own row in decisions.csv. We are 43 behind Jason: sword posture, so a shield reason does not apply.</div>`+(st.v===st.c?'<div class="warn">Vice equals captain.</div>':'');
+  $('#caT').innerHTML=`<thead><tr><th class="l nosort">Player</th><th class="nosort">xP GW12</th><th class="nosort">x2</th><th class="nosort">Gain vs Jason C</th><th class="nosort">Jason owns</th><th class="nosort">League own</th><th class="nosort">League C (GW11)</th><th class="nosort">Pen</th><th class="l nosort">Fixture</th><th class="l nosort">Minutes note</th></tr></thead><tbody>`+
+  xi.map(i=>{const p=P[i];return`<tr class="${i===st.c?'pick':''}"><td class="l">${esc(p.n)} ${i===st.c?'(C)':i===st.v?'(VC)':''}</td><td>${xpAt(i,0).toFixed(2)}</td><td>${(2*xpAt(i,0)).toFixed(1)}</td><td class="${xpAt(i,0)-jcx>=0?'w':'neg'}">${(xpAt(i,0)-jcx>=0?'+':'')}${(xpAt(i,0)-jcx).toFixed(2)}</td><td>${jOwns(i)?'<span class="tagj">yes</span>':'no'}</td><td>${p.lg}/9</td><td>${p.lgc}</td><td>${p.pen||'–'}</td><td class="l">${fxh(p,0,1)}</td><td class="l" style="white-space:normal">${esc(NOTES[p.n]||'')}</td></tr>`}).join('')+'</tbody>';
+}
+function tcBest(){
+  const sq=squadNow(),rows=[];
+  for(let k=0;k<G.length&&G[k]<=19;k++){const xi=best(sq,k).xi;const c=xi.reduce((a,b)=>xpAt(b,k)>xpAt(a,k)?b:a);rows.push({gw:G[k],id:c,val:xpAt(c,k),k})}
+  const mx=Math.max(...rows.map(r=>r.val)),win=rows.find(r=>r.val>=mx-0.5);
+  return{rows,win:win.gw,val:win.val,name:P[win.id].n,gw12:rows[0].val,mx};
+}
+function renderChip(){
+  const t=tcBest();
+  $('#chMsg').innerHTML=`<div class="${t.win===12?'warn':'ok'}">${t.win===12?'The model puts the TC window in GW12: write the rationale and fire only under rule 17.':`No chip in GW12. Our best captain this week scores ${t.gw12.toFixed(2)}; the rule window is <b>GW${t.win}</b> (${esc(t.name)} ${t.val.toFixed(2)}), ${(t.val-t.gw12).toFixed(2)} higher. The chip plan still names GW16/GW19; on this run GW${t.win} is the earliest window within 0.5 of the best.`}</div>`;
+  $('#tcBars').innerHTML=t.rows.map(r=>`<div class="bar ${r.gw===t.win?'hl':''}"><span>GW${r.gw}</span><div class="t"><i style="width:${r.val/t.mx*100}%"></i></div><span>${esc(P[r.id].n)} ${r.val.toFixed(2)} ${fxh(P[r.id],r.k,1)}</span></div>`).join('');
+}
+function renderRiv(){
+  const me=D.standings.find(s=>s.id===6756883);
+  $('#stT').innerHTML=`<thead><tr><th class="nosort">#</th><th class="l nosort">Manager</th><th class="nosort">GW11</th><th class="nosort">Total</th><th class="nosort">Gap</th><th class="l nosort">Chips left (set 1)</th></tr></thead><tbody>`+
+  D.standings.map(s=>{const r=D.rivals.find(x=>+x.id===s.id);return`<tr class="${s.id===6756883?'pick':''}"><td>${s.rank}</td><td class="l">${esc(s.name)}</td><td>${s.gw}</td><td>${s.total}</td><td>${s.total-me.total>=0?'+':''}${s.total-me.total}</td><td class="l">${r?esc(r.chips_left.join(' ')||'none'):esc(D.meta.chips_left.join(' '))}</td></tr>`}).join('')+'</tbody>';
+  const j=jason(),ours=st.xi,his=j.xi.filter(i=>P[i]);
+  const shared=ours.filter(i=>his.includes(i)),oo=ours.filter(i=>!his.includes(i)),ho=his.filter(i=>!ours.includes(i));
+  const sum=a=>a.reduce((s,i)=>s+xpAt(i,0),0);
+  const li=a=>a.map(i=>`${esc(P[i].n)} <small>${xpAt(i,0).toFixed(1)}</small>`).join(', ')||'—';
+  const cg=xpAt(st.c,0)-(P[j.captain]?xpAt(j.captain,0):0);
+  $('#radar').innerHTML=`<table><tbody><tr><td class="l" style="white-space:normal"><b>Shared (cancel out)</b><br>${li(shared)}</td><td>${sum(shared).toFixed(1)}</td></tr><tr><td class="l" style="white-space:normal"><b>Only ours</b><br>${li(oo)}</td><td class="w">${sum(oo).toFixed(1)}</td></tr><tr><td class="l" style="white-space:normal"><b>Only Jason's</b> (GW11 XI)<br>${li(ho)}</td><td class="neg">${sum(ho).toFixed(1)}</td></tr><tr><td class="l">Captain gain (ours v his ${esc(P[j.captain]?.n||'?')})</td><td>${cg>=0?'+':''}${cg.toFixed(1)}</td></tr><tr><td class="l"><b>Expected GW12 swing</b></td><td class="w"><b>${(sum(oo)-sum(ho)+cg>=0?'+':'')}${(sum(oo)-sum(ho)+cg).toFixed(1)}</b></td></tr></tbody></table><p class="note">Jason still holds WC and FH; a wildcard this week would change his side. Alex holds WC and FH.</p>`;
+}
+function renderLock(){
+  const dl=new Date(D.meta.deadline_utc);
+  const uk=dl.toLocaleString('en-GB',{timeZone:'Europe/London',weekday:'short',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}),nl=dl.toLocaleTimeString('en-GB',{timeZone:'Europe/Amsterdam',hour:'2-digit',minute:'2-digit'});
+  const byP=pos=>st.xi.filter(i=>P[i].p===pos).map(i=>P[i].n).join(', ');
+  const bo=st.bench.filter(i=>P[i].p!=='GK'),gk=st.bench.find(i=>P[i].p==='GK');
+  const bankAfter=st.out?budget(st.out)-P[st.in].c:D.meta.bank;
+  $('#lockTxt').textContent=`LOCKED GW12 · deadline ${uk} UK / ${nl} NL · chip: none
+OUT → IN: ${st.out?`${P[st.out].n} → ${P[st.in].n} (FT, hit 0)`:'roll (2 FT in GW13)'} · bank after: £${bankAfter.toFixed(1)}
+C: ${P[st.c].n} · VC: ${P[st.v].n}
+XI (${formation(st.xi)}): ${byP('GK')} · ${byP('DEF')} · ${byP('MID')} · ${byP('FWD')}
+Bench: ${bo.map((i,k)=>`${k+1}. ${P[i].n}`).join(' ')} · GK ${gk?P[gk].n:'—'}
+EXP-C ${P[st.c].n} ${Math.max(1,Math.round(xpAt(st.c,0)-4))}-${Math.round(xpAt(st.c,0)+4)} (p=0.6) · EXP-X no autosub loss (p=0.85) · EXP-GW ${Math.round(xiTotal()-15)}-${Math.round(xiTotal()+12)} vs avg ~45 (p=0.6)
+Verify after deadline: picks + transfers from the API → briefs/GW12.md`;
+}
+function render(){answers();renderOut();renderIn();renderSel();renderCap();renderChip();renderRiv();renderLock()}
+function init(){
+  header();recommend();st.view=st.out;render();
+  $('#hz').oninput=()=>{$('#hzv').textContent=$('#hz').value+' GWs';render()};
+  $('#dc').onchange=render;$('#maxp').onchange=renderIn;$('#onlyDiff').onchange=renderIn;
+  $('#reset').onclick=()=>{$('#hz').value=5;$('#hzv').textContent='5 GWs';$('#dc').value='0.84';recommend();render()};
+  $('#cSel').onchange=e=>{st.c=+e.target.value;if(st.v===st.c)st.v=[...st.xi].sort((a,b)=>xpAt(b,0)-xpAt(a,0)).find(i=>i!==st.c);render()};
+  $('#vSel').onchange=e=>{st.v=+e.target.value;render()};
+  $$('.tabs button').forEach(b=>b.onclick=()=>{$$('.tabs button').forEach(x=>x.setAttribute('aria-selected',x===b));$$('.panel').forEach(p=>p.hidden=p.id!=='p-'+b.dataset.t)});
+  $('#copy').onclick=()=>navigator.clipboard.writeText($('#lockTxt').textContent).then(()=>$('#copied').textContent='copied',()=>$('#copied').textContent='select and copy by hand');
+  $('#foot').innerHTML=`Sources: FPL API via repo snapshot ${esc(D.meta.snapshot)}; xP from scripts/xp_model.py (${esc(D.meta.xp_file)}); score = best XI + captain + 0.1 × bench per GW, decayed; rivals' squads are their GW11 picks. Minutes notes: FFScout team news 25-26 Nov and predicted XIs (updated 23-25 Nov). Data: scripts/decide_board_data.py → data/dashboard/decide_gw12.json.`;
+}
+}</script></body></html>
