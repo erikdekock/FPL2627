@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GW12 Tarkowski replacement</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+/* VOICE: newspaper graphics desk, decision first
+   IDEA: a sports-desk comparison table with the verdict as headline
+   PICTURE: a bar strip of 5-GW xP per option, then the sortable table
+   COLOUR and TYPE: pale pink ground, ink, teal for winners, claret for the dead slot; Libre Franklin
+   LAYOUT: finding top, bars, table, notes */
+:root{color-scheme:light dark;--bg:light-dark(#ffe3dc,#1c1512);--ink:light-dark(#1a1817,#f3ebe6);--mut:light-dark(#5c524d,#b9aca5);--teal:light-dark(#0d7680,#4fc1c9);--cla:light-dark(#990f3d,#ff7a9c);--line:light-dark(#e9c6bc,#3a2c26);--card:light-dark(#fff1ed,#261c18)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Libre Franklin",system-ui,sans-serif;overflow-x:clip}
+.band{padding:clamp(24px,4vw,56px) max(5vw,16px);max-width:1240px;margin:auto}
+h1{font-weight:800;font-size:clamp(28px,4.4vw,46px);line-height:1.05;text-wrap:balance;margin:0 0 12px}
+.sub{color:var(--mut);max-width:70ch;margin:0}
+.bars{margin:28px 0 8px;display:grid;gap:8px}
+.bar{display:grid;grid-template-columns:9.5em minmax(0,1fr) 4em;align-items:center;gap:10px}
+.bar .t{height:22px;background:var(--line);border-radius:2px;position:relative}
+.bar .t i{position:absolute;inset:0 auto 0 0;background:var(--teal);border-radius:2px}
+.bar.roll .t i{background:var(--cla)}
+.bar b{text-align:right;font-variant-numeric:tabular-nums}
+table{border-collapse:collapse;width:100%;font-size:15px;background:var(--card)}
+th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th:first-child,td:first-child,td.fx{text-align:left}
+th{cursor:pointer;font-weight:600;user-select:none}th:hover{color:var(--teal)}
+td.win{color:var(--teal);font-weight:800}
+tr.roll td{color:var(--cla)}
+.scroll{overflow-x:auto;margin-top:24px}
+.notes{margin-top:24px;max-width:75ch}.notes li{margin:4px 0}
+small{color:var(--mut)}
+@media(max-width:600px){.bar{grid-template-columns:7em minmax(0,1fr) 3.4em}table{font-size:13px}}
+</style></head><body>
+<div class="band">
+<h1>Hill is the best Tarkowski replacement: +3.9 xP over GW12-16, and no rival of the leader owns him</h1>
+<p class="sub">Tarkowski is suspended until 13 Dec (0 xP to GW16). None of the options enters the GW12 XI; the gain is GW13-16 and bench cover. Snapshot 27 Nov 00:14 UTC, <code>one_transfer.py</code> on <code>xp_gw12-16.csv</code>; league ownership from rivals' GW11 picks.</p>
+<div class="bars" id="bars"></div>
+<div class="scroll"><table id="t"><thead><tr>
+<th data-k="n">Option</th><th data-k="p">£</th><th data-k="obj">Δ obj</th><th data-k="g12">xP GW12</th><th data-k="x5">xP 12-16</th><th data-k="pts">Pts</th><th data-k="l">GW11</th><th data-k="xgi">xGI</th><th data-k="dc">DefCon/90</th><th data-k="own">Own %</th><th data-k="lg">League own</th><th data-k="bank">Bank after</th><th data-k="fx">Fixtures GW12-16</th>
+</tr></thead><tbody></tbody></table></div>
+<ul class="notes">
+<li><b>A: Hill</b> (BOU) wins objective, DefCon and the sword angle (0/9 rivals; Jason owns Van Hecke and Silva). Price +0.1 this GW, 145k in.</li>
+<li><b>B: Van Hecke</b> (TOT) wins on xGI and GW13 (FUL H) and leaves £1.7; shared with Jason and Alex, so it is a shield pick.</li>
+<li><b>Roll</b> scores 0 in GW12 just like every move here; its only edge is seeing GW12 injuries before Tuesday's GW13 deadline. Cost: Tarkowski (225k out) may drop tonight, Hill may rise.</li>
+<li>Bournemouth played the Europa League on Thursday; Rose said Thursday's team would look different from the weekend's.</li>
+</ul>
+<small>Data from the FPL API via the repo snapshot; xP from scripts/xp_model.py. Bold teal = row winner per column.</small>
+</div>
+<script>{
+const R=[
+{n:"Roll (Tarkowski stays, 0 xP)",p:6.2,obj:0,g12:0,x5:0,pts:52,l:-4,xgi:0.29,dc:9.87,own:16.7,lg:0,bank:0.7,fx:"suspended to 13 Dec",roll:1},
+{n:"Hill (BOU)",p:5.7,obj:3.9,g12:5.07,x5:26.03,pts:56,l:14,xgi:1.37,dc:11.73,own:4.9,lg:0,bank:1.2,fx:"FUL(A) BHA(H) HUL(H) ARS(A) COV(H)"},
+{n:"Van Hecke (TOT)",p:5.2,obj:3.5,g12:5.03,x5:24.18,pts:63,l:6,xgi:2.54,dc:8.0,own:20.3,lg:5,bank:1.7,fx:"SUN(A) FUL(H) ARS(H) HUL(A) LIV(A)"},
+{n:"Silva (BOU)",p:5.1,obj:3.0,g12:4.69,x5:24.26,pts:48,l:8,xgi:1.92,dc:11.09,own:4.2,lg:2,bank:1.8,fx:"FUL(A) BHA(H) HUL(H) ARS(A) COV(H)"},
+{n:"Jacquet (LIV)",p:5.1,obj:2.2,g12:4.04,x5:21.17,pts:50,l:6,xgi:0.83,dc:9.17,own:5.0,lg:2,bank:1.8,fx:"EVE(A) SUN(H) CHE(A) LEE(H) TOT(H)"},
+{n:"Virgil (LIV)",p:6.4,obj:2.1,g12:3.98,x5:20.88,pts:49,l:6,xgi:0.98,dc:9.36,own:14.8,lg:0,bank:0.5,fx:"EVE(A) SUN(H) CHE(A) LEE(H) TOT(H)"},
+{n:"Murillo (NFO)",p:5.5,obj:1.7,g12:4.38,x5:21.21,pts:35,l:0,xgi:1.95,dc:9.83,own:1.9,lg:0,bank:1.4,fx:"CHE(H) HUL(A) BHA(H) SUN(A) EVE(H)"}];
+const low={p:1,own:1,lg:1};const keys=["p","obj","g12","x5","pts","l","xgi","dc","own","lg","bank"];
+const best={};keys.forEach(k=>{const v=R.filter(r=>!r.roll).map(r=>r[k]);best[k]=low[k]?Math.min(...v):Math.max(...v)});
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const tb=document.querySelector("#t tbody");let sk="obj",dir=-1;
+function render(){const rows=[...R].sort((a,b)=>a.roll?-1:b.roll?1:(typeof a[sk]=="string"?a[sk].localeCompare(b[sk]):(a[sk]-b[sk]))*dir);
+tb.innerHTML=rows.map(r=>`<tr class="${r.roll?'roll':''}"><td>${esc(r.n)}</td>${keys.map(k=>`<td class="${!r.roll&&r[k]===best[k]?'win':''}">${k=="p"||k=="bank"?'£'+r[k].toFixed(1):k=="obj"?(r[k]>0?'+':'')+r[k].toFixed(1):r[k]}</td>`).join('')}<td class="fx">${esc(r.fx)}</td></tr>`).join('')}
+document.querySelectorAll("th").forEach(th=>th.addEventListener("click",()=>{const k=th.dataset.k;dir=sk===k?-dir:-1;sk=k;render()}));
+render();
+const mx=Math.max(...R.map(r=>r.x5));
+document.getElementById("bars").innerHTML=[...R].sort((a,b)=>b.x5-a.x5).map(r=>`<div class="bar ${r.roll?'roll':''}"><span>${esc(r.n.split(' (')[0])}</span><div class="t"><i style="width:${Math.max(1,r.x5/mx*100)}%"></i></div><b>${r.x5.toFixed(1)}</b></div>`).join('');
+}</script></body></html>
