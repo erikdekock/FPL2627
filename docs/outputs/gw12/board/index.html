@@ -194,6 +194,7 @@ function setXIfromBest(){
     if(x){const nx=st.xi.map(z=>z===x?bn:z);if(legal(nx)){st.tie={in:bn,out:x,gap:xpAt(x,0)-xpAt(bn,0)};st.xi=nx}}}
   const rest=sq.filter(i=>!st.xi.includes(i));
   st.bench=[...rest.filter(i=>P[i].p!=='GK').sort((a,c)=>xpAt(c,0)-xpAt(a,0)),...rest.filter(i=>P[i].p==='GK')];
+  const A=D.meta.advice;if(A&&A.xi&&A.bench&&[...A.xi,...A.bench].every(i=>sq.includes(i))&&legal(A.xi)){st.xi=[...A.xi];st.bench=[...A.bench];st.tie=null}
   const order=[...st.xi].sort((a,c)=>xpAt(c,0)-xpAt(a,0));
   st.c=order[0];st.v=order.find(i=>i!==st.c&&P[i].t!==P[st.c].t&&P[i].p!=='GK')||order[1];
 }
@@ -224,7 +225,7 @@ function answers(){
    ['In',inn?`${P[inn].n} (${P[inn].t} £${P[inn].c.toFixed(1)})`:'—',inn?`${dMove>=0?'+':''}${dMove.toFixed(1)} xP over ${$('#hz').value} GWs · bank after £${(budget(out)-P[inn].c).toFixed(1)}${alt?` · B: ${esc(alt.p.n)} ${alt.d>=0?'+':''}${alt.d.toFixed(1)}`:''}`:'']]),
    ['Captain',`${P[st.c].n} ${xpAt(st.c,0).toFixed(2)}`,`B: ${esc(P[c2].n)} ${xpAt(c2,0).toFixed(2)} · Haaland ${xpAt(D.squad.find(i=>P[i].n==='Haaland'),0).toFixed(2)}`],
    ['Vice',`${P[st.v].n} ${xpAt(st.v,0).toFixed(2)}`,'nailed, different club from the captain'],
-   ['XI',`${formation(st.xi)} · ${xiTotal().toFixed(1)} xP`,`incl. captain · bench ${st.bench.map(i=>esc(P[i].n)).join(', ')}${st.tie?` · tie-break: ${esc(P[st.tie.in].n)} starts over ${esc(P[st.tie.out].n)} (${st.tie.gap.toFixed(2)} xP apart, higher ceiling)`:''}`],
+   ['XI',`${formation(st.xi)} · ${xiTotal().toFixed(1)} xP`,`incl. captain · bench ${st.bench.map(i=>esc(P[i].n)).join(', ')}${D.meta.advice&&D.meta.advice.xi&&D.meta.advice.xi.every(i=>st.xi.includes(i))?' · '+esc(D.meta.advice.note):''}${st.tie?` · tie-break: ${esc(P[st.tie.in].n)} starts over ${esc(P[st.tie.out].n)} (${st.tie.gap.toFixed(2)} xP apart, higher ceiling)`:''}`],
    ['Chip','none',`TC1 best window GW${tc.win} (${esc(tc.name)} ${tc.val.toFixed(2)}) vs GW12 ${tc.gw12.toFixed(2)}`]
   ].map(a=>`<div class="ans"><small>${a[0]}</small><b>${esc(a[1])}</b><div class="alt">${a[2]}</div></div>`).join('');
 }
