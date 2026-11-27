@@ -1,27 +1,27 @@
 Running HiGHS 1.16.0 (git hash: f3f113d): Copyright (c) 2026 under MIT licence terms
 Includes third-party software components, see THIRD_PARTY_NOTICES.md for full details
-xp table xp_gw12-16.csv · snapshot fpl_2026-11-27T065931Z.json · horizon GW12-16 · team value £100.5
+xp table xp_gw13-17.csv · snapshot fpl_2026-11-27T192454Z.json · horizon GW13-17 · team value £101.1
 
-=== WILDCARD draft · min tag likely · cost £100.2 of £100.2 (bank £0.0) ===
-pos name          team £     tag      own%   gw12   gw13   gw14   gw15   gw16    dec
-GK  Trafford      LEE  5.1   nailed    8.7   5.71   4.31   5.51   4.50   5.55  18.65
-GK  Tzolakis      HUL  4.7   nailed   13.9   4.78   5.25   4.22   5.21   4.02  17.26
-DEF De Cuyper     BHA  5.6   nailed   50.6   6.12   4.29   4.88   5.93   6.14  19.74
-DEF Vuskovic      BHA  5.3   nailed   12.0   5.33   4.03   4.57   5.31   5.32  17.74
-DEF Justin        LEE  4.5   nailed    2.8   5.19   3.60   4.99   3.77   4.95  16.43
-DEF Hill          BOU  5.7   nailed    5.0   5.07   4.76   5.76   4.52   5.92  18.76
-DEF Van Hecke     TOT  5.2   nailed   20.5   5.03   5.49   4.72   4.83   4.11  17.88
-MID Groß          BHA  6.3   nailed   49.7   5.77   4.57   4.73   5.46   5.83  19.09
-MID Tavernier     BOU  6.8   nailed   34.0   5.53   5.80   6.21   4.71   6.96  21.04
-MID Ødegaard      ARS  6.7   nailed   16.7   5.08   4.52   4.48   5.10   6.12  18.11
-MID E.Le Fée      SUN  5.7   nailed    3.1   4.97   4.37   5.03   5.30   6.07  18.35
-MID Mbeumo        MUN  7.8   nailed   17.1   4.94   4.93   5.80   5.21   3.84  18.17
-FWD Barry         EVE  5.7   nailed   11.2   5.45   5.36   5.83   4.89   5.16  19.53
-FWD Isak          LIV  9.4   nailed   28.2   5.24   6.14   5.31   5.29   5.37  19.95
-FWD Haaland       MCI  15.7  nailed   76.3   5.04   6.15   5.75   7.01   6.64  21.72
-GW12: XI xP 65.7 (4-3-3) · C De Cuyper · bench Tzolakis, Van Hecke, E.Le Fée, Mbeumo
-GW13: XI xP 63.4 (3-4-3) · C Haaland · bench Trafford, E.Le Fée, Vuskovic, Justin
-GW14: XI xP 66.0 (3-4-3) · C Tavernier · bench Tzolakis, Van Hecke, Vuskovic, Ødegaard
-GW15: XI xP 66.5 (3-4-3) · C Haaland · bench Trafford, Tavernier, Hill, Justin
-GW16: XI xP 72.0 (3-4-3) · C Tavernier · bench Tzolakis, Justin, Van Hecke, Mbeumo
-objective (decayed horizon xP incl. captain, bench x0.1): 247.3
+=== WILDCARD draft · min tag likely · cost £100.8 of £100.8 (bank £0.0) ===
+pos name          team £     tag      own%   gw13   gw14   gw15   gw16   gw17    dec
+GK  Tzolakis      HUL  4.7   nailed   14.4   5.25   4.22   5.21   4.02   4.74  17.21
+GK  Trafford      LEE  5.1   nailed   10.0   4.31   5.51   4.50   5.55   4.95  17.87
+DEF Van Hecke     TOT  5.2   nailed   22.2   5.49   4.72   4.83   4.11   4.92  17.75
+DEF Hill          BOU  5.7   nailed    5.9   4.76   5.76   4.52   5.92   4.96  18.77
+DEF Silva         BOU  5.1   nailed    4.4   4.41   5.43   4.06   5.67   4.54  17.46
+DEF De Cuyper     BHA  5.6   nailed   51.3   4.29   4.88   5.93   6.14   4.90  18.65
+DEF Vuskovic      BHA  5.3   nailed   12.5   4.03   4.57   5.31   5.32   4.60  17.06
+MID Tavernier     BOU  6.8   nailed   34.8   5.80   6.21   4.71   6.96   5.20  21.05
+MID Mbeumo        MUN  7.8   nailed   16.7   4.93   5.80   5.21   3.84   5.20  18.34
+MID Groß          BHA  6.3   nailed   50.0   4.57   4.73   5.46   5.83   4.73  18.21
+MID Ødegaard      ARS  6.7   nailed   16.6   4.52   4.48   5.10   6.12   5.27  18.13
+MID E.Le Fée      SUN  5.7   nailed    3.1   4.37   5.03   5.30   6.07   4.78  18.31
+FWD Haaland       MCI  15.7  nailed   74.1   6.15   5.75   7.01   6.64   6.48  23.09
+FWD Isak          LIV  9.4   nailed   29.9   6.14   5.31   5.29   5.37   5.07  20.04
+FWD Barry         EVE  5.7   nailed   10.5   5.36   5.83   4.89   5.16   6.27  19.89
+GW13: XI xP 63.5 (3-4-3) · C Haaland · bench Trafford, E.Le Fée, De Cuyper, Vuskovic
+GW14: XI xP 66.5 (3-4-3) · C Tavernier · bench Tzolakis, Van Hecke, Vuskovic, Ødegaard
+GW15: XI xP 66.5 (3-4-3) · C Haaland · bench Trafford, Tavernier, Hill, Silva
+GW16: XI xP 72.5 (4-4-2) · C Tavernier · bench Tzolakis, Barry, Van Hecke, Mbeumo
+GW17: XI xP 64.5 (3-4-3) · C Haaland · bench Tzolakis, Groß, Vuskovic, Silva
+objective (decayed horizon xP incl. captain, bench x0.1): 247.8
