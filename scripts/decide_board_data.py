@@ -17,7 +17,7 @@ RIVALS = {"6913443": "Jason", "41757": "Alex", "888210": "Thomas", "8205933": "R
           "6376934": "Kelvin", "2107617": "Lawrence", "2171229": "Robert", "1218083": "R.W."}
 CHIPS = {"wildcard": "WC", "freehit": "FH", "bboost": "BB", "3xc": "TC"}
 
-ap = argparse.ArgumentParser(); ap.add_argument("--xp"); ap.add_argument("--out"); a = ap.parse_args()
+ap = argparse.ArgumentParser(); ap.add_argument("--xp"); ap.add_argument("--out"); ap.add_argument("--done", help="transfer already made in the app this GW but not yet in the API: OUT_ID:IN_ID:IN_COST_TENTHS"); a = ap.parse_args()
 snapf = sorted(glob.glob(os.path.join(ROOT, "data/snapshots/fpl_*.json")))[-1]; s = json.load(open(snapf))
 xpf = a.xp or sorted(glob.glob(os.path.join(ROOT, "data/xp/xp_gw*.csv")), key=os.path.getmtime)[-1]
 rows = list(csv.DictReader(open(xpf)))
@@ -44,6 +44,11 @@ def sell(i):
     now = els[i]["now_cost"]; bb = buy.get(i, now)
     return (bb + (now - bb) // 2 if now > bb else now) / 10
 
+prev = list(cur); done = None; bank = s["history"]["current"][-1]["bank"] / 10; ft = 1
+if a.done:
+    o, n, c = (int(x) for x in a.done.split(":"))
+    done = {"out": o, "in": n, "out_name": els[o]["web_name"], "in_name": els[n]["web_name"], "cost": c / 10, "sell": sell(o)}
+    bank = round(bank + sell(o) - c / 10, 1); cur = [n if x == o else x for x in cur]; buy[n] = c; ft = 0
 own = Counter(); cap = Counter(); rivals = []
 for rid, name in RIVALS.items():
     r = s["rivals"].get(rid)
@@ -57,7 +62,7 @@ for rid, name in RIVALS.items():
                    "captain": c, "chips_left": [x for x in ["WC", "FH", "TC", "BB"] if x not in used],
                    "bank": pk["entry_history"]["bank"] / 10})
 
-pool = set(cur) | set(own)
+pool = set(cur) | set(prev) | set(own)
 for pos in ("GK", "DEF", "MID", "FWD"):
     c = [r for r in rows if r["pos"] == pos and r["tag"] in ("nailed", "likely")]
     c.sort(key=lambda r: -float(r["xp_decayed"]))
@@ -91,12 +96,12 @@ h = s["history"]["current"][-1]
 used = [CHIPS.get(c["name"], c["name"]) for c in s["history"]["chips"] if c["event"] <= 19]
 out = {
     "meta": {"snapshot": os.path.basename(snapf), "taken_utc": s.get("taken_utc"), "xp_file": os.path.basename(xpf), "gws": gws,
-             "gw": nxt["id"], "deadline_utc": nxt["deadline_time"], "bank": h["bank"] / 10, "value": h["value"] / 10,
-             "points": h["total_points"], "overall_rank": h["overall_rank"], "last_gw_points": h["points"], "ft": 1,
+             "gw": nxt["id"], "deadline_utc": nxt["deadline_time"], "bank": bank, "bank_before": h["bank"] / 10, "done": done, "value": h["value"] / 10,
+             "points": h["total_points"], "overall_rank": h["overall_rank"], "last_gw_points": h["points"], "ft": ft,
              "chips_left": [x for x in ["WC", "FH", "TC", "BB"] if x not in used],
              "tc_expires": "GW19 deadline, Fri 1 Jan 2027 18:30 GMT"},
     "kickoff": {T[t]: k for t, k in ko.items()},
-    "squad": cur, "players": players, "standings": st, "rivals": rivals,
+    "squad": cur, "prev_squad": prev, "players": players, "standings": st, "rivals": rivals,
 }
 dst = a.out or os.path.join(ROOT, "data", "dashboard", f"decide_gw{nxt['id']:02d}.json")
 os.makedirs(os.path.dirname(dst), exist_ok=True)

@@ -171,7 +171,7 @@ function cands(out){
   const base=horizon(D.squad),b0=best(D.squad,0).score,pos=P[out].p,bud=budget(out);
   return D.players.filter(p=>p.p===pos&&!D.squad.includes(p.id)&&p.c<=bud+1e-9&&['nailed','likely'].includes(p.tag)).map(p=>{
     const sq=D.squad.map(i=>i===out?p.id:i);if(!clubOK(sq))return null;
-    return{p,d:horizon(sq)-base,d1:best(sq,0).score-b0,bank:bud-p.c};}).filter(Boolean).sort((a,b)=>b.d-a.d);
+    const hit=D.meta.ft>0?0:4;return{p,d:horizon(sq)-base-hit,d1:best(sq,0).score-b0-hit,bank:bud-p.c};}).filter(Boolean).sort((a,b)=>b.d-a.d);
 }
 function fxh(p,from,n){let h='';for(let k=from;k<Math.min(G.length,from+n);k++){const f=p.fx[k];if(!f.length){h+='<span class="fx d5">—</span>';continue}
   f.forEach(x=>h+=`<span class="fx d${x[2]}" title="GW${G[k]} FDR ${x[2]}">${esc(x[0])}${x[1]==='H'?'':'a'}</span>`)}return h}
@@ -183,6 +183,7 @@ function recommend(){
   let bestMove=null;
   for(const o of D.squad){const c=cands(o)[0];if(c&&(!bestMove||c.d>bestMove.d))bestMove={out:o,in:c.p.id,d:c.d}}
   st.out=bestMove&&bestMove.d>0?bestMove.out:null;st.in=st.out?bestMove.in:null;
+  if(D.meta.done&&!(bestMove&&bestMove.d>0)){st.out=null;st.in=null}
   setXIfromBest();
 }
 function setXIfromBest(){
@@ -214,11 +215,13 @@ function answers(){
   const roll=!out;
   const c=cands(out||D.squad[0]);const alt=out?c.find(x=>x.p.id!==inn):null;
   const dMove=out?horizon(sq)-horizon(D.squad):0;
-  $('#head').textContent=roll?`GW12: roll the transfer, ${P[st.c].n} captain`:`GW12: ${P[out].n} out, ${P[inn].n} in, ${P[st.c].n} captain, no chip`;
+  const dn=D.meta.done;
+  $('#head').textContent=dn&&roll?`GW12: ${dn.in_name} in for ${dn.out_name} (done), ${P[st.c].n} captain, no chip`:roll?`GW12: roll the transfer, ${P[st.c].n} captain`:`GW12: ${P[out].n} out, ${P[inn].n} in, ${P[st.c].n} captain, no chip`;
   const capOrder=[...st.xi].sort((a,b)=>xpAt(b,0)-xpAt(a,0));const c2=capOrder.find(i=>i!==st.c);
   $('#answers').innerHTML=[
-   ['Out',out?`${P[out].n} (${P[out].t})`:'nobody (roll)',out?`${esc(P[out].news||'')} · sells £${P[out].sell.toFixed(1)}`:''],
-   ['In',inn?`${P[inn].n} (${P[inn].t} £${P[inn].c.toFixed(1)})`:'—',inn?`${dMove>=0?'+':''}${dMove.toFixed(1)} xP over ${$('#hz').value} GWs · bank after £${(budget(out)-P[inn].c).toFixed(1)}${alt?` · B: ${esc(alt.p.n)} ${alt.d>=0?'+':''}${alt.d.toFixed(1)}`:''}`:''],
+   ...(dn&&roll?[['Out ✓ done',`${dn.out_name} (sold £${dn.sell.toFixed(1)})`,esc(P[dn.out]?.news||'')],['In ✓ done',`${dn.in_name} (£${dn.cost.toFixed(1)})`,`bank now £${D.meta.bank.toFixed(1)} · FT used, a second move costs −4 · made in the app 27 Nov, API not yet showing it`]]:[
+   ['Out',out?`${P[out].n} (${P[out].t})`:'nobody (roll)',out?`${esc(P[out].news||'')} · sells £${P[out].sell.toFixed(1)}${D.meta.ft?'':' · −4 hit'}`:''],
+   ['In',inn?`${P[inn].n} (${P[inn].t} £${P[inn].c.toFixed(1)})`:'—',inn?`${dMove>=0?'+':''}${dMove.toFixed(1)} xP over ${$('#hz').value} GWs · bank after £${(budget(out)-P[inn].c).toFixed(1)}${alt?` · B: ${esc(alt.p.n)} ${alt.d>=0?'+':''}${alt.d.toFixed(1)}`:''}`:'']]),
    ['Captain',`${P[st.c].n} ${xpAt(st.c,0).toFixed(2)}`,`B: ${esc(P[c2].n)} ${xpAt(c2,0).toFixed(2)} · Haaland ${xpAt(D.squad.find(i=>P[i].n==='Haaland'),0).toFixed(2)}`],
    ['Vice',`${P[st.v].n} ${xpAt(st.v,0).toFixed(2)}`,'nailed, different club from the captain'],
    ['XI',`${formation(st.xi)} · ${xiTotal().toFixed(1)} xP`,`incl. captain · bench ${st.bench.map(i=>esc(P[i].n)).join(', ')}${st.tie?` · tie-break: ${esc(P[st.tie.in].n)} starts over ${esc(P[st.tie.out].n)} (${st.tie.gap.toFixed(2)} xP apart, higher ceiling)`:''}`],
@@ -229,17 +232,17 @@ function renderOut(){
   const base=horizon(D.squad);
   const rows=D.squad.map(i=>{const c=cands(i)[0];return{i,h:hxp(i),best:c,d:c?c.d:0}}).sort((a,b)=>b.d-a.d);
   $('#outT').innerHTML=`<thead><tr><th class="l nosort">Player</th><th class="nosort">xP GW12</th><th class="nosort">xP ${$('#hz').value} GW</th><th class="nosort">Best swap</th><th class="nosort">Δ</th></tr></thead><tbody>`+
-  `<tr class="click roll ${!st.out?'pick':''}" data-o=""><td class="l">Roll (keep FT → 2 FT in GW13)</td><td></td><td></td><td class="l">—</td><td>0.0</td></tr>`+
+  `<tr class="click roll ${!st.out?'pick':''}" data-o=""><td class="l">${D.meta.done?'No further move (recommended)':'Roll (keep FT → 2 FT in GW13)'}</td><td></td><td></td><td class="l">—</td><td>0.0</td></tr>`+
   rows.map(r=>`<tr class="click ${st.out===r.i?'pick':''}" data-o="${r.i}"><td class="l">${esc(P[r.i].n)} <small>${esc(P[r.i].t)} ${esc(P[r.i].p)}</small>${P[r.i].st!=='a'?' <span class="tagj">'+esc(P[r.i].st.toUpperCase())+'</span>':''}</td><td>${xpAt(r.i,0).toFixed(2)}</td><td>${r.h.toFixed(1)}</td><td class="l">${r.best?esc(r.best.p.n):'—'}</td><td class="${r.d>0?'w':'neg'}">${r.d>=0?'+':''}${r.d.toFixed(1)}</td></tr>`).join('')+'</tbody>';
   $$('#outT tr[data-o]').forEach(tr=>tr.onclick=()=>{const o=tr.dataset.o?+tr.dataset.o:null;st.out=o;st.in=o?(cands(o)[0]||{}).p?.id||null:null;if(!st.in)st.out=null;setXIfromBest();render()});
 }
 let sk='d',sd=-1;
 function renderIn(){
-  const o=st.out||st.view||D.squad.find(i=>P[i].st!=='a')||D.squad[0];
+  const o=st.out||st.view||D.squad.find(i=>P[i].st!=='a')||[...D.squad].sort((x,y)=>((cands(y)[0]||{d:-99}).d)-((cands(x)[0]||{d:-99}).d))[0];
   st.view=o;const bud=budget(o);
   const ms=$('#maxp');if(!ms.dataset.o||ms.dataset.o!=o){ms.dataset.o=o;ms.innerHTML=[...new Set([bud,6.5,6,5.5,5,4.5].filter(x=>x<=bud))].sort((a,b)=>b-a).map(x=>`<option value="${x}">£${x.toFixed(1)}</option>`).join('')}
   $('#inH').textContent=`Who comes in for ${P[o].n}?`;
-  $('#inNote').innerHTML=`Budget £${bud.toFixed(1)} (sell £${P[o].sell.toFixed(1)} + bank £${D.meta.bank.toFixed(1)}). Δ = change in horizon score vs rolling; ΔGW12 = this week only. <span class="tagj">J</span> = Jason owns him. Click a row to pick.`;
+  $('#inNote').innerHTML=(D.meta.done?`<b>${esc(D.meta.done.out_name)} → ${esc(D.meta.done.in_name)} is done; the free transfer is used, so every Δ below already includes the −4 hit.</b> `:'')+`Budget £${bud.toFixed(1)} (sell £${P[o].sell.toFixed(1)} + bank £${D.meta.bank.toFixed(1)}). Δ = change in horizon score vs rolling; ΔGW12 = this week only. <span class="tagj">J</span> = Jason owns him. Click a row to pick.`;
   let c=cands(o).filter(x=>x.p.c<=+ms.value+1e-9);if($('#onlyDiff').checked)c=c.filter(x=>!jOwns(x.p.id));
   const H=+$('#hz').value;
   const key={d:x=>x.d,d1:x=>x.d1,c:x=>x.p.c,h:x=>hxp(x.p.id),pts:x=>x.p.pts,last:x=>x.p.last,xgi:x=>x.p.xgi90,dc:x=>x.p.dc90,sel:x=>x.p.sel,lg:x=>x.p.lg,bank:x=>x.bank,mins:x=>x.p.mins};
@@ -247,7 +250,7 @@ function renderIn(){
   const top={};['d','d1','h','pts','xgi','dc'].forEach(k=>top[k]=Math.max(...c.map(key[k])));
   const th=(k,l)=>`<th data-k="${k}">${l}${sk===k?(sd<0?' ▾':' ▴'):''}</th>`;
   $('#inT').innerHTML=`<thead><tr><th class="l nosort">Player</th>${th('c','£')}${th('d','Δ '+H+'GW')}${th('d1','ΔGW12')}${th('h','xP '+H+'GW')}${th('pts','Pts')}${th('last','GW11')}<th class="nosort">G/xG</th><th class="nosort">A/xA</th>${th('xgi','xGI/90')}${th('dc','DefCon/90')}<th class="nosort">Pen/Cor</th>${th('mins','Min')}${th('sel','Own%')}${th('lg','League')}${th('bank','Bank')}<th class="l nosort">Fixtures</th></tr></thead><tbody>`+
-  `<tr class="click roll ${!st.out?'pick':''}" data-i=""><td class="l">Roll (row zero)</td><td></td><td>0.0</td><td>0.0</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>£${D.meta.bank.toFixed(1)}</td><td></td></tr>`+
+  `<tr class="click roll ${!st.out?'pick':''}" data-i=""><td class="l">${D.meta.done?'No further move (row zero)':'Roll (row zero)'}</td><td></td><td>0.0</td><td>0.0</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>£${D.meta.bank.toFixed(1)}</td><td></td></tr>`+
   c.slice(0,40).map(x=>{const p=x.p,w=k=>key[k](x)===top[k]?'w':'';return`<tr class="click ${st.in===p.id&&st.out===o?'pick':''}" data-i="${p.id}"><td class="l">${esc(p.n)} <small>${esc(p.t)}</small>${jOwns(p.id)?' <span class="tagj">J</span>':''}</td><td>${p.c.toFixed(1)}${p.dprice>0?' ▲':''}</td><td class="${w('d')} ${x.d<0?'neg':''}">${x.d>=0?'+':''}${x.d.toFixed(1)}</td><td class="${w('d1')}">${x.d1>=0?'+':''}${x.d1.toFixed(1)}</td><td class="${w('h')}">${hxp(p.id).toFixed(1)}</td><td class="${w('pts')}">${p.pts}</td><td>${p.last}</td><td>${p.g}/${p.xg.toFixed(1)}</td><td>${p.a}/${p.xa.toFixed(1)}</td><td class="${w('xgi')}">${p.xgi90.toFixed(2)}</td><td class="${w('dc')}">${p.dc90.toFixed(1)}</td><td>${p.pen||'–'}/${p.cor||'–'}</td><td>${p.mins}</td><td>${p.sel.toFixed(1)}</td><td>${p.lg}/9</td><td>£${x.bank.toFixed(1)}</td><td class="l">${fxh(p,0,Math.min(H,6))}</td></tr>`}).join('')+'</tbody>';
   $$('#inT th[data-k]').forEach(t=>t.onclick=()=>{const k=t.dataset.k;sd=sk===k?-sd:-1;sk=k;renderIn()});
   $$('#inT tr[data-i]').forEach(tr=>tr.onclick=()=>{if(!tr.dataset.i){st.out=null;st.in=null}else{st.out=o;st.in=+tr.dataset.i}setXIfromBest();render()});
@@ -314,7 +317,7 @@ function renderLock(){
   const bo=st.bench.filter(i=>P[i].p!=='GK'),gk=st.bench.find(i=>P[i].p==='GK');
   const bankAfter=st.out?budget(st.out)-P[st.in].c:D.meta.bank;
   $('#lockTxt').textContent=`LOCKED GW12 · deadline ${uk} UK / ${nl} NL · chip: none
-OUT → IN: ${st.out?`${P[st.out].n} → ${P[st.in].n} (FT, hit 0)`:'roll (2 FT in GW13)'} · bank after: £${bankAfter.toFixed(1)}
+OUT → IN: ${D.meta.done?`${D.meta.done.out_name} → ${D.meta.done.in_name} (FT, hit 0, made in app 27 Nov; API to verify)`+(st.out?` + ${P[st.out].n} → ${P[st.in].n} (hit −4)`:''):st.out?`${P[st.out].n} → ${P[st.in].n} (FT, hit 0)`:'roll (2 FT in GW13)'} · bank after: £${bankAfter.toFixed(1)}
 C: ${P[st.c].n} · VC: ${P[st.v].n}
 XI (${formation(st.xi)}): ${byP('GK')} · ${byP('DEF')} · ${byP('MID')} · ${byP('FWD')}
 Bench: ${bo.map((i,k)=>`${k+1}. ${P[i].n}`).join(' ')} · GK ${gk?P[gk].n:'—'}
